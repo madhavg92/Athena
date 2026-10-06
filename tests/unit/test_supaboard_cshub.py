@@ -41,3 +41,17 @@ def test_live_waits_for_gate(cfg, cls, ds, monkeypatch) -> None:
         monkeypatch.setenv(var, "x")
     with pytest.raises(NotConfigured, match=r"G2|G3"):
         cls(cfg, run_mode="live").read(ds)
+
+
+def test_off_target_uses_metric_direction(cfg) -> None:
+    rows = {
+        r.get("metric"): r
+        for r in SupaboardConnector(cfg, clock=lambda: ANCHOR, run_mode="fixture").read(
+            "latest_metrics", client="northwind_ortho"
+        )
+    }
+    assert len(rows) == 4
+    backlog = rows["backlog"]  # lower is better
+    assert backlog.get("off_target") is (backlog.get("actual") > backlog.get("target"))
+    fpr = rows["first_pass_rate"]  # higher is better
+    assert fpr.get("off_target") is (fpr.get("actual") < fpr.get("target"))

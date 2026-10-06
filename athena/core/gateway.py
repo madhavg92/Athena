@@ -200,7 +200,7 @@ class Gateway:
         if a.mode == "shadow":
             return "shadow", None
         # 8 work hours
-        if a.type == "notify" and a.delivery == "now":
+        if a.type == "notify" and a.delivery == "now" and not a.payload.get("scheduled_digest"):
             start = next_work_start(self.cfg, recipient, now)
             if start is not None:
                 return "held", start

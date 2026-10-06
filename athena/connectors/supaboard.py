@@ -25,6 +25,7 @@ class SupaboardConnector(Connector):
                 "target",
                 "query_id",
                 "client_metric",
+                "off_target",
             ],
             "dates": ["date"],
             "fixture_age_minutes": 180,
