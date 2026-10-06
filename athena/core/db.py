@@ -120,6 +120,7 @@ class RuleState(Base):
     rule_id: Mapped[str] = mapped_column(String(20), primary_key=True)
     phase: Mapped[int | None] = mapped_column(Integer, default=None)
     phase_reason: Mapped[str | None] = mapped_column(Text)
+    phase_changed_at: Mapped[datetime | None] = mapped_column(default=None)
     stale: Mapped[bool] = mapped_column(Boolean, default=False)
     last_run_at: Mapped[datetime | None] = mapped_column(default=None)
     updated_at: Mapped[datetime] = mapped_column(default=utcnow)

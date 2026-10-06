@@ -7,7 +7,9 @@ Create Date: ${create_date}
 
 import sqlalchemy as sa
 from alembic import op
-${imports if imports else ""}
+% if imports:
+${imports}
+% endif
 
 revision = ${repr(up_revision)}
 down_revision = ${repr(down_revision)}
