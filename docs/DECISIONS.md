@@ -34,3 +34,4 @@
 - 2026-10-06 — Fixture times are stored against a fixed anchor (`fixtures/meta.json`) and shifted to the clock at read time, so `athena ask` works today and tests stay deterministic.
 - 2026-10-06 — MSAL token calls (Entra token endpoint) and model calls (OpenAI SDK to the model endpoint) do not go through `connectors/http.py`. Both are non-connector HTTP: token endpoints are allowed by the rules; model calls send only scrubbed prompts. Reverse: wrap both SDKs with an httpx transport from http.py.
 - 2026-10-06 — Tool calls are authorised by the gateway (kill switch + scope) but do not write receipts; the question log records the tools used and the answer gets one receipt.
+- 2026-10-06 — A question routed to a rule that is not in the persona's `rules` falls back to R1 (e.g. a hub leader asking for a brief gets a normal answer, not a refusal). Reverse: refuse instead in `Asker.ask`.

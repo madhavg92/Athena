@@ -112,6 +112,9 @@ class Asker:
         started = time.monotonic()
         user = user.lower()
         rule_id = pick_rule(question)
+        persona = self.cfg.persona_of(user)
+        if persona is not None and rule_id not in persona.rules:
+            rule_id = "R1"  # e.g. a hub leader asking for a brief gets a normal answer
         conversation_id = conversation_id or user
         if self.cfg.person(user) is None:
             return AskResult(

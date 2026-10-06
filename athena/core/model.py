@@ -219,10 +219,34 @@ class StubModel:
             lines += _summarise(name, data)
         if not any(lines):
             return "I do not know. The tools returned no data for this question."
+        if question.lower().lstrip().startswith("brief"):
+            lines = _brief(results)
         text = "\n".join(line for line in lines if line)
         if stale_as_of:
             text = f"Data is not current ({'; '.join(stale_as_of)}).\n" + text
         return text
+
+
+BRIEF_SECTIONS = [
+    ("Health and open tickets", ("get_tickets",)),
+    ("Metrics", ("get_metrics",)),
+    ("Open tasks", ("get_tasks",)),
+    ("Recent documents", ("search_documents",)),
+    ("Profile", ("get_client_profile",)),
+]
+
+
+def _brief(results: list[dict]) -> list[str]:
+    out: list[str] = []
+    for title, names in BRIEF_SECTIONS:
+        body: list[str] = []
+        for msg in results:
+            data = json.loads(msg["content"])
+            if msg.get("name") in names and data.get("ok"):
+                body += _summarise(msg["name"], data)
+        out.append(f"**{title}**")
+        out += body or ["No data."]
+    return out
 
 
 def _summarise(name: str, data: dict) -> list[str]:
