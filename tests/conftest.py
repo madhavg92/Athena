@@ -12,3 +12,17 @@ def config_copy(tmp_path: Path) -> Path:
     for name in ("rules", "personas", "context"):
         shutil.copytree(ROOT / name, tmp_path / name)
     return tmp_path
+
+
+@pytest.fixture
+def db():
+    from athena.core.db import Database
+
+    return Database("sqlite://")
+
+
+@pytest.fixture
+def cfg():
+    from athena.core.config import load_config
+
+    return load_config(ROOT)

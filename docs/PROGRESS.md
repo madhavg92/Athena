@@ -6,7 +6,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M0 Scaffold from ATHENA_BOOTSTRAP.md
 - [x] M1.1 Package, pyproject, CLI entry point
 - [x] M1.2 Config models, loader, `athena rules validate`
-- [ ] M1.3 Database layer and tables
+- [x] M1.3 Database layer and tables
 - [ ] M1.4 Kill switches
 - [ ] M1.5 PHI scrub and lint
 - [ ] M1.6 Gateway and receipts
@@ -52,3 +52,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M0: scaffold written from the bootstrap.
 - M1.1: pyproject, athena package, Typer CLI; athena --help works.
 - M1.2: Pydantic models for all config; errors name file, field, reason; added synthetic metrics/models/smartsheet_map seeds.
+- M1.3: All SPEC 9 tables plus rule_state (phase override, staleness); DATABASE_URL, default sqlite:///athena.db.
