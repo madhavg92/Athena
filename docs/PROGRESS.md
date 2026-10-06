@@ -8,7 +8,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M1.2 Config models, loader, `athena rules validate`
 - [x] M1.3 Database layer and tables
 - [x] M1.4 Kill switches
-- [ ] M1.5 PHI scrub and lint
+- [x] M1.5 PHI scrub and lint
 - [ ] M1.6 Gateway and receipts
 - [ ] M1.7 `athena whoami`
 - [ ] M2.1 Read-only HTTP client
@@ -54,3 +54,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M1.2: Pydantic models for all config; errors name file, field, reason; added synthetic metrics/models/smartsheet_map seeds.
 - M1.3: All SPEC 9 tables plus rule_state (phase override, staleness); DATABASE_URL, default sqlite:///athena.db.
 - M1.4: Global/rule/user switches in DB; athena kill lists, sets and clears them.
+- M1.5: scrub() masks SSN, DOB, IDs, phones, external emails, names after patient/pt/member; lint() returns labels; table-driven tests.
