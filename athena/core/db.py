@@ -125,15 +125,25 @@ class RuleState(Base):
     updated_at: Mapped[datetime] = mapped_column(default=utcnow)
 
 
+def database_url(url: str | None = None) -> str:
+    """DATABASE_URL, default SQLite. `postgres://` and `postgresql://` use the psycopg 3 driver."""
+    url = url or os.environ.get("DATABASE_URL", "sqlite:///athena.db")
+    for prefix in ("postgres://", "postgresql://"):
+        if url.startswith(prefix):
+            return "postgresql+psycopg://" + url[len(prefix) :]
+    return url
+
+
 class Database:
     def __init__(self, url: str | None = None) -> None:
-        self.url = url or os.environ.get("DATABASE_URL", "sqlite:///athena.db")
-        kwargs: dict[str, Any] = {}
+        self.url = database_url(url)
+        kwargs: dict[str, Any] = {"pool_pre_ping": True}
         if self.url in ("sqlite://", "sqlite:///:memory:"):
             kwargs = {"connect_args": {"check_same_thread": False}, "poolclass": StaticPool}
         self.engine = create_engine(self.url, **kwargs)
         self._sessions = sessionmaker(self.engine, expire_on_commit=False)
-        Base.metadata.create_all(self.engine)
+        if self.engine.dialect.name == "sqlite":
+            Base.metadata.create_all(self.engine)  # local convenience; Postgres uses Alembic
 
     @contextmanager
     def session(self) -> Iterator[Session]:

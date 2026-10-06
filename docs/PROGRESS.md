@@ -31,7 +31,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [ ] M5.2 Azure Functions entry point — G6, GD — code and tests done; real Teams/Azure run waits for G6 and GD
 - [x] M5.3 Teams user mapping
 - [x] M5.4 Adaptive Cards
-- [ ] M5.5 Postgres and Alembic
+- [x] M5.5 Postgres and Alembic
 - [ ] M5.6 RUNBOOK
 
 ## Release 2
@@ -77,3 +77,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M5.2: function_app.py: timer -> scheduler.tick(), POST /api/messages -> JWT check -> Agents SDK -> bot -> ask loop; real run waits for G6/GD.
 - M5.3: Teams user -> owner map by UPN or Entra object ID (fixture users have IDs); unknown -> 'You are not set up for Athena yet.'
 - M5.4: Answer card (text, stale warning, Sources with links + as_of); alert card with Correct/Wrong review buttons for shadow mode.
+- M5.5: psycopg 3 + Alembic; migration 0001 for all tables; athena db upgrade [--sql]; tested on SQLite and a temporary Postgres 16.

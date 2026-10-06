@@ -42,3 +42,4 @@
 - 2026-10-06 — Teams user identity: the activity gives the Entra object ID; Athena maps it to an email with the Entra connector (users now include `id`), then to the owner map. Unknown users get "You are not set up for Athena yet."
 - 2026-10-06 — Local test tool: Microsoft 365 Agents Playground (to confirm against current docs; it replaces the Bot Framework Emulator). Not run in the build environment.
 
+- 2026-10-06 — Postgres: psycopg 3 driver (`postgresql+psycopg://`; `postgres://` URLs are normalised). SQLite keeps `create_all` for local use; Postgres tables are created only by Alembic (`athena db upgrade`). Initial migration 0001 covers all tables; tested on a temporary Postgres 16. Optional deps `.[postgres]`.

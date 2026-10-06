@@ -207,3 +207,19 @@ def eval_summary() -> None:
     (cfg.root / "reports").mkdir(exist_ok=True)
     (cfg.root / "reports" / "eval-summary.md").write_text("# Model bake-off\n\n" + table)
     typer.echo(table)
+
+
+db_app = typer.Typer(help="Database.", no_args_is_help=True)
+app.add_typer(db_app, name="db")
+
+
+@db_app.command("upgrade")
+def db_upgrade(
+    sql: bool = typer.Option(False, "--sql", help="Print the SQL instead of running it."),
+) -> None:
+    """Apply Alembic migrations to DATABASE_URL (Postgres in production)."""
+    from alembic import command
+    from alembic.config import Config
+
+    cfg = _config()
+    command.upgrade(Config(str(cfg.root / "alembic.ini")), "head", sql=sql)
