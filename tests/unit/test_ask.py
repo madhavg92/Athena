@@ -117,3 +117,14 @@ def test_cross_client_questions_without_a_client_name(app) -> None:
     week = app.asker.ask("What meetings do I have this week?", HL)
     assert week.tools_used == ["get_meetings"] and "Northwind weekly call" in week.answer
     assert app.asker.ask("What is the meaning of life?", HL).idk
+
+
+def test_hub_ops_questions(app) -> None:
+    lst = app.asker.ask("What is outstanding today?", HL)
+    assert lst.tools_used == ["get_standing_list"] and "Waiting on the client: 4" in lst.answer
+    cover = app.asker.ask("Who can cover today?", HL)
+    assert cover.tools_used == ["get_capacity"] and "Analyst B1" in cover.answer
+    blocked = app.asker.ask("What is blocked at Northwind?", HL)
+    assert blocked.tools_used == ["get_blocked_work"] and "BL-301" in blocked.answer
+    audit = app.asker.ask("Which audit findings are open?", HL)
+    assert audit.tools_used == ["get_quality"] and "QF-41" in audit.answer

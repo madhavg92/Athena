@@ -362,6 +362,19 @@ TEAM = {
 }
 
 
+# skills to cover, notice periods and sign-off (the hub's people sheet)
+TEAM_EXTRA = {
+    "Analyst N1": {"also_trained": ["Denials"]},
+    "Analyst N3": {"also_trained": ["AR follow-up", "Payment posting"]},
+    "Analyst N4": {
+        "signed_off": False,
+        "sign_off_due": (ANCHOR + timedelta(days=9)).date().isoformat(),
+    },
+    "Analyst B1": {"also_trained": ["Prior auth"]},
+    "Analyst B2": {"also_trained": ["Eligibility"]},
+    "Analyst B3": {"on_notice_until": (ANCHOR + timedelta(days=25)).date().isoformat()},
+}
+
 def claims(metric_rows: list[dict], rng: random.Random) -> tuple[list[dict], list[dict]]:
     """Daily claims (submitted, denied, paid) whose denial rate equals the denial_rate metric, and
     denials split by payer and reason (CARC code)."""
@@ -531,8 +544,13 @@ def team() -> list[dict]:
                         "bluefield_imaging": 92,
                         "cedar_family_clinic": 104,
                     }[client],
+                    **TEAM_EXTRA.get(name, {}),
                 }
             )
+            rows[-1].setdefault("also_trained", [])
+            rows[-1].setdefault("signed_off", True)
+            rows[-1].setdefault("sign_off_due", None)
+            rows[-1].setdefault("on_notice_until", None)
     return rows
 
 
@@ -736,6 +754,123 @@ def calendar() -> list[dict]:
     ]
 
 
+# ---------------------------------------------------------------- hub operations (the hub leader's day)
+
+HUB_DAY = ANCHOR.replace(hour=4, minute=30)  # 10:00 IST, start of the hub's day
+
+
+def attendance() -> list[dict]:
+    """Today's attendance from the roster sheet: who logged in, who is on leave, who is absent."""
+    status = {
+        "Analyst N2": "planned leave",
+        "Analyst B2": "unplanned absence",
+    }
+    rows = []
+    for client, members in TEAM.items():
+        for i, (name, role, _fte, _leave) in enumerate(members):
+            st = status.get(name, "present")
+            rows.append(
+                {
+                    "date": ANCHOR.date().isoformat(),
+                    "client": client,
+                    "member": name,
+                    "role": role,
+                    "status": st,
+                    "logged_in_at": iso(HUB_DAY + timedelta(minutes=4 + 7 * i))
+                    if st == "present"
+                    else None,
+                }
+            )
+    return rows
+
+
+# work type -> (items one FTE does in a day, daily inflow, turnaround target in work days, backlog 14 days ago)
+WORK = {
+    ("northwind_ortho", "Payment posting"): (120, 130, 2, 150),
+    ("northwind_ortho", "AR follow-up"): (60, 55, 5, 160),
+    ("northwind_ortho", "Denials"): (40, 44, 5, 80),
+    ("northwind_ortho", "Charge entry"): (160, 76, 1, 30),
+    ("bluefield_imaging", "Eligibility"): (90, 58, 1, 20),
+    ("bluefield_imaging", "Prior auth"): (35, 33, 1, 12),
+    ("bluefield_imaging", "Charge entry"): (140, 128, 1, 50),
+    ("cedar_family_clinic", "Full cycle"): (80, 74, 3, 120),
+    ("cedar_family_clinic", "AR follow-up"): (60, 28, 5, 70),
+}
+
+
+def workload(rng: random.Random) -> list[dict]:
+    """Daily inflow, work done and backlog by client and work type (Supaboard). Today's row is
+    the expected inflow and the backlog at the start of the day."""
+    rows = []
+    for (client, work_type), (norm, inflow, tat, backlog) in WORK.items():
+        fte_by_role = {m[1]: m[2] for m in TEAM[client]}
+        for back in range(13, -1, -1):
+            day = (ANCHOR - timedelta(days=back)).date()
+            if day.weekday() >= 5:
+                continue
+            fte = fte_by_role.get(work_type, 0.0)
+            if work_type == "Payment posting" and back <= 3:
+                fte = 0.0  # Analyst N2 on leave since Fri
+            if work_type == "Prior auth" and back == 0:
+                fte = 0.0  # Analyst B2 absent today
+            surge = 1.2 if work_type == "Denials" and back <= 9 else 1.0  # Payer B portal change
+            came = round(inflow * surge * rng.uniform(0.9, 1.1))
+            if back == 0:
+                done = 0
+            else:
+                done = min(backlog + came, round(norm * fte * rng.uniform(0.92, 1.05)))
+                backlog = backlog + came - done
+            daily = inflow * surge
+            rows.append(
+                {
+                    "date": day.isoformat(),
+                    "client": client,
+                    "work_type": work_type,
+                    "inflow": came,
+                    "completed": done,
+                    "backlog": backlog,
+                    "oldest_days": max(1, -(-backlog // max(1, round(daily)))),
+                    "tat_days": tat,
+                    "per_fte_day": norm,
+                    "query_id": f"sb.workload.{client}.{work_type.lower().replace(' ', '_')}",
+                }
+            )
+    return rows
+
+
+def blockers() -> list[dict]:
+    """The hub's blocked-work log: logins, things waiting on the client, clearinghouse problems."""
+    t = lambda days=0, hours=0: iso(HUB_DAY + timedelta(days=days, hours=hours))  # noqa: E731
+    rows = [
+        ("BL-301", "northwind_ortho", "access", "Practice system locked out Analyst N1 and Analyst N3; the MFA code goes to the client office manager, who starts at 18:30 IST", "client", 2, 0, 0, t(0, 0.67), None, None, "open", None, "dm.one@fixture.local"),
+        ("BL-302", "bluefield_imaging", "access", "Payer C portal password for Analyst B1 expires; only the client admin can renew it", "client", 0, 0, 0, t(-1, 2), t(1, 6), None, "open", None, "dm.two@fixture.local"),
+        ("BL-303", "northwind_ortho", "waiting_on_client", "Missing EOBs for 18 Payer A payments received since 28 Sep", "client", 0, 18, 9450, t(-7, 1), None, None, "open", None, "dm.one@fixture.local"),
+        ("BL-304", "northwind_ortho", "waiting_on_client", "Fee schedule for the new Payer D contract not received; charges on hold", "client", 0, 34, 12800, t(-12, 3), None, None, "open", None, "dm.one@fixture.local"),
+        ("BL-305", "bluefield_imaging", "waiting_on_client", "Referring physician NPI missing on 9 orders", "client", 0, 9, 4100, t(-3, 2), None, None, "open", None, "dm.two@fixture.local"),
+        ("BL-306", "bluefield_imaging", "waiting_on_client", "Approval to write off 6 small balances", "client", 0, 6, 380, t(-6, 5), None, None, "open", None, "dm.two@fixture.local"),
+        ("BL-307", "northwind_ortho", "clearinghouse", "Clearinghouse rejects Payer B claims after the payer ID change", "payer", 0, 27, 15200, t(-2, 1), None, None, "open", None, "dm.one@fixture.local"),
+        ("BL-308", "northwind_ortho", "access", "User ID for the new joiner who starts Mon 12 Oct requested on 30 Sep; not created yet", "client", 0, 0, 0, t(-5, 1), None, t(7, 0), "open", None, "dm.one@fixture.local"),
+        ("BL-309", "bluefield_imaging", "access", "VPN to the client imaging system down", "it", 3, 0, 0, t(-1, 1), None, None, "closed", t(-1, 3.5), "dm.two@fixture.local"),
+        ("BL-310", "cedar_family_clinic", "waiting_on_client", "Credentialing letters for 2 new providers", "client", 0, 14, 5200, t(-9, 2), None, None, "open", None, "dm.two@fixture.local"),
+    ]
+    keys = ["blocker_id", "client", "kind", "summary", "waiting_on", "people_blocked", "items_held", "amount_usd", "opened_at", "expires_at", "due", "status", "closed_at", "owner"]
+    return [dict(zip(keys, r, strict=True)) for r in rows]
+
+
+def quality() -> list[dict]:
+    """Audit findings from the quality sheet: internal audits and errors the client found."""
+    t = lambda days=0: iso(HUB_DAY + timedelta(days=days, hours=1))  # noqa: E731
+    rows = [
+        ("QF-41", "northwind_ortho", "client", "Payments posted to the wrong date of service on 5 accounts", "high", t(-3), t(-1), "open", None, "dm.one@fixture.local"),
+        ("QF-42", "northwind_ortho", "internal", "Adjustment codes used wrongly on 12 posts", "medium", t(-6), t(2), "open", None, "dm.one@fixture.local"),
+        ("QF-43", "bluefield_imaging", "internal", "Eligibility notes missing on 4 visits", "low", t(-2), t(5), "open", None, "dm.two@fixture.local"),
+        ("QF-44", "bluefield_imaging", "internal", "Wrong modifier on 3 charges", "medium", t(-8), t(-3), "closed", t(-1), "dm.two@fixture.local"),
+        ("QF-45", "cedar_family_clinic", "internal", "Follow-up notes not saved on 7 AR accounts", "medium", t(-4), t(3), "open", None, "dm.two@fixture.local"),
+    ]
+    keys = ["finding_id", "client", "found_by", "summary", "severity", "opened_at", "due", "status", "closed_at", "owner"]
+    return [dict(zip(keys, r, strict=True)) for r in rows]
+
+
 def main() -> None:
     rng = random.Random(SEED)
     write("meta.json", {"anchor": iso(ANCHOR), "seed": SEED, "synthetic": True})
@@ -769,6 +904,10 @@ def main() -> None:
     )
     write("supaboard/economics.json", client_economics())
     write("graph/calendar.json", calendar())
+    write("smartsheet/attendance.json", attendance())
+    write("smartsheet/blockers.json", blockers())
+    write("smartsheet/quality.json", quality())
+    write("supaboard/workload.json", workload(random.Random(SEED + 300)))  # its own stream
 
 
 if __name__ == "__main__":

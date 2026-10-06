@@ -1,92 +1,137 @@
 [
  {
+  "also_trained": [
+   "Denials"
+  ],
   "client": "northwind_ortho",
   "fte": 1.0,
   "leave_until": null,
   "member": "Analyst N1",
   "on_leave_today": false,
+  "on_notice_until": null,
   "open_items": 140,
   "role": "AR follow-up",
+  "sign_off_due": null,
+  "signed_off": true,
   "utilisation_pct": 118
  },
  {
+  "also_trained": [],
   "client": "northwind_ortho",
   "fte": 1.0,
   "leave_until": "2026-10-09",
   "member": "Analyst N2",
   "on_leave_today": true,
+  "on_notice_until": null,
   "open_items": 0,
   "role": "Payment posting",
+  "sign_off_due": null,
+  "signed_off": true,
   "utilisation_pct": 0
  },
  {
+  "also_trained": [
+   "AR follow-up",
+   "Payment posting"
+  ],
   "client": "northwind_ortho",
   "fte": 1.0,
   "leave_until": null,
   "member": "Analyst N3",
   "on_leave_today": false,
+  "on_notice_until": null,
   "open_items": 140,
   "role": "Denials",
+  "sign_off_due": null,
+  "signed_off": true,
   "utilisation_pct": 118
  },
  {
+  "also_trained": [],
   "client": "northwind_ortho",
   "fte": 0.5,
   "leave_until": null,
   "member": "Analyst N4",
   "on_leave_today": false,
+  "on_notice_until": null,
   "open_items": 140,
   "role": "Charge entry",
+  "sign_off_due": "2026-10-14",
+  "signed_off": false,
   "utilisation_pct": 118
  },
  {
+  "also_trained": [
+   "Prior auth"
+  ],
   "client": "bluefield_imaging",
   "fte": 1.0,
   "leave_until": null,
   "member": "Analyst B1",
   "on_leave_today": false,
+  "on_notice_until": null,
   "open_items": 95,
   "role": "Eligibility",
+  "sign_off_due": null,
+  "signed_off": true,
   "utilisation_pct": 92
  },
  {
+  "also_trained": [
+   "Eligibility"
+  ],
   "client": "bluefield_imaging",
   "fte": 1.0,
   "leave_until": null,
   "member": "Analyst B2",
   "on_leave_today": false,
+  "on_notice_until": null,
   "open_items": 95,
   "role": "Prior auth",
+  "sign_off_due": null,
+  "signed_off": true,
   "utilisation_pct": 92
  },
  {
+  "also_trained": [],
   "client": "bluefield_imaging",
   "fte": 1.0,
   "leave_until": null,
   "member": "Analyst B3",
   "on_leave_today": false,
+  "on_notice_until": "2026-10-30",
   "open_items": 95,
   "role": "Charge entry",
+  "sign_off_due": null,
+  "signed_off": true,
   "utilisation_pct": 92
  },
  {
+  "also_trained": [],
   "client": "cedar_family_clinic",
   "fte": 1.0,
   "leave_until": null,
   "member": "Analyst C1",
   "on_leave_today": false,
+  "on_notice_until": null,
   "open_items": 120,
   "role": "Full cycle",
+  "sign_off_due": null,
+  "signed_off": true,
   "utilisation_pct": 104
  },
  {
+  "also_trained": [],
   "client": "cedar_family_clinic",
   "fte": 0.5,
   "leave_until": null,
   "member": "Analyst C2",
   "on_leave_today": false,
+  "on_notice_until": null,
   "open_items": 120,
   "role": "AR follow-up",
+  "sign_off_due": null,
+  "signed_off": true,
   "utilisation_pct": 104
  }
 ]

@@ -101,6 +101,23 @@ class SupaboardConnector(Connector):
             ],
             "fixture_age_minutes": 180,
         },
+        "workload": {  # daily inflow, work done and backlog by client and work type
+            "file": "supaboard/workload.json",
+            "allowed": [
+                "date",
+                "client",
+                "work_type",
+                "inflow",
+                "completed",
+                "backlog",
+                "oldest_days",
+                "tat_days",
+                "per_fte_day",
+                "query_id",
+            ],
+            "dates": ["date"],
+            "fixture_age_minutes": 60,
+        },
         "latest_metrics": {
             "file": "supaboard/metrics.json",
             "allowed": [],

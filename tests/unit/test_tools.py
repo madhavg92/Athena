@@ -38,6 +38,10 @@ def test_tools_with_schemas() -> None:
         "get_money_at_risk",
         "get_client_economics",
         "get_meetings",
+        "get_standing_list",
+        "get_capacity",
+        "get_blocked_work",
+        "get_quality",
     }
     for s in schemas():
         assert s["type"] == "function" and s["function"]["parameters"]["type"] == "object"
@@ -46,6 +50,10 @@ def test_tools_with_schemas() -> None:
             "get_money_at_risk",
             "get_client_economics",
             "get_meetings",
+            "get_standing_list",
+            "get_capacity",
+            "get_blocked_work",
+            "get_quality",
         ):
             assert "client" in s["function"]["parameters"]["required"]
 
@@ -182,3 +190,17 @@ def test_my_alerts(ctx) -> None:
     mine = call(ctx, "get_my_alerts", {}).records
     assert mine and {m["client"] for m in mine} <= {"Northwind Orthopedics", "Bluefield Imaging"}
     assert mine[0]["severity"] == "late"
+
+
+def test_hub_ops_tools(ctx) -> None:
+    standing = call(ctx, "get_standing_list", {})
+    assert standing.ok and standing.records[0]["key"] == "absent"
+    assert standing.records[-1]["key"] == "not_visible" and standing.sources
+    cap = call(ctx, "get_capacity", {"client": "Bluefield"})
+    assert cap.client == "bluefield_imaging" and cap.records[0]["work_type"] == "Prior auth"
+    assert "not in your scope" in call(ctx, "get_capacity", {"client": "Cedar"}).error
+    waiting = call(ctx, "get_blocked_work", {"kind": "waiting_on_client"}).records
+    assert {w["blocker_id"] for w in waiting} == {"BL-303", "BL-304", "BL-305", "BL-306"}
+    assert "kind must be" in call(ctx, "get_blocked_work", {"kind": "joy"}).error
+    quality = call(ctx, "get_quality", {}).records
+    assert quality[0]["finding_id"] == "QF-41" and quality[0]["overdue"]

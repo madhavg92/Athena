@@ -124,3 +124,22 @@ def stale_sources(ctx: ToolContext, sources: list[Source]) -> list[Source]:
 
 def is_stale(ctx: ToolContext, sources: list[Source]) -> bool:
     return bool(stale_sources(ctx, sources))
+
+
+def scope_clients(ctx: ToolContext, name: str, client: str | None) -> list[str] | ToolResult:
+    """All clients in the user's scope, or the one asked for (refused when outside the scope)."""
+    scope = ctx.cfg.scope_of(ctx.actor)
+    if not client:
+        return scope
+    from athena.tools.registry import resolve_client
+
+    key = resolve_client(ctx, client)
+    if key is None or key not in scope:
+        return ToolResult(name=name, ok=False, error=f"refused: {client} is not in your scope")
+    return [key]
+
+
+OPTIONAL_CLIENT = {
+    "type": "object",
+    "properties": {"client": {"type": "string", "description": "Optional: one client."}},
+}

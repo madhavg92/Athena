@@ -1,0 +1,74 @@
+[
+ {
+  "client": "northwind_ortho",
+  "date": "2026-10-05",
+  "logged_in_at": "2026-10-05T04:34:00Z",
+  "member": "Analyst N1",
+  "role": "AR follow-up",
+  "status": "present"
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-10-05",
+  "logged_in_at": null,
+  "member": "Analyst N2",
+  "role": "Payment posting",
+  "status": "planned leave"
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-10-05",
+  "logged_in_at": "2026-10-05T04:48:00Z",
+  "member": "Analyst N3",
+  "role": "Denials",
+  "status": "present"
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-10-05",
+  "logged_in_at": "2026-10-05T04:55:00Z",
+  "member": "Analyst N4",
+  "role": "Charge entry",
+  "status": "present"
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-10-05",
+  "logged_in_at": "2026-10-05T04:34:00Z",
+  "member": "Analyst B1",
+  "role": "Eligibility",
+  "status": "present"
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-10-05",
+  "logged_in_at": null,
+  "member": "Analyst B2",
+  "role": "Prior auth",
+  "status": "unplanned absence"
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-10-05",
+  "logged_in_at": "2026-10-05T04:48:00Z",
+  "member": "Analyst B3",
+  "role": "Charge entry",
+  "status": "present"
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-10-05",
+  "logged_in_at": "2026-10-05T04:34:00Z",
+  "member": "Analyst C1",
+  "role": "Full cycle",
+  "status": "present"
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-10-05",
+  "logged_in_at": "2026-10-05T04:41:00Z",
+  "member": "Analyst C2",
+  "role": "AR follow-up",
+  "status": "present"
+ }
+]

@@ -8,6 +8,8 @@ from typing import Any
 from athena.connectors.base import NotConfigured
 from athena.tools import (
     get_ar_aging,
+    get_blocked_work,
+    get_capacity,
     get_client_activity,
     get_client_economics,
     get_client_profile,
@@ -17,6 +19,8 @@ from athena.tools import (
     get_money_at_risk,
     get_my_alerts,
     get_owner,
+    get_quality,
+    get_standing_list,
     get_task_history,
     get_tasks,
     get_team,
@@ -45,6 +49,10 @@ TOOLS: dict[str, Tool] = {
         get_money_at_risk,
         get_client_economics,
         get_meetings,
+        get_standing_list,
+        get_capacity,
+        get_blocked_work,
+        get_quality,
     )
 }
 
@@ -61,6 +69,10 @@ TOOL_SOURCES = {
     "get_client_activity": "cs_hub",
     "get_money_at_risk": "supaboard",
     "get_client_economics": "economics",
+    "get_standing_list": "smartsheet",
+    "get_capacity": "smartsheet",
+    "get_blocked_work": "smartsheet",
+    "get_quality": "smartsheet",
 }  # get_owner and get_client_profile read Git context files: always allowed
 
 

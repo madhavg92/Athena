@@ -1,0 +1,62 @@
+[
+ {
+  "client": "northwind_ortho",
+  "closed_at": null,
+  "due": "2026-10-04T05:30:00Z",
+  "finding_id": "QF-41",
+  "found_by": "client",
+  "opened_at": "2026-10-02T05:30:00Z",
+  "owner": "dm.one@fixture.local",
+  "severity": "high",
+  "status": "open",
+  "summary": "Payments posted to the wrong date of service on 5 accounts"
+ },
+ {
+  "client": "northwind_ortho",
+  "closed_at": null,
+  "due": "2026-10-07T05:30:00Z",
+  "finding_id": "QF-42",
+  "found_by": "internal",
+  "opened_at": "2026-09-29T05:30:00Z",
+  "owner": "dm.one@fixture.local",
+  "severity": "medium",
+  "status": "open",
+  "summary": "Adjustment codes used wrongly on 12 posts"
+ },
+ {
+  "client": "bluefield_imaging",
+  "closed_at": null,
+  "due": "2026-10-10T05:30:00Z",
+  "finding_id": "QF-43",
+  "found_by": "internal",
+  "opened_at": "2026-10-03T05:30:00Z",
+  "owner": "dm.two@fixture.local",
+  "severity": "low",
+  "status": "open",
+  "summary": "Eligibility notes missing on 4 visits"
+ },
+ {
+  "client": "bluefield_imaging",
+  "closed_at": "2026-10-04T05:30:00Z",
+  "due": "2026-10-02T05:30:00Z",
+  "finding_id": "QF-44",
+  "found_by": "internal",
+  "opened_at": "2026-09-27T05:30:00Z",
+  "owner": "dm.two@fixture.local",
+  "severity": "medium",
+  "status": "closed",
+  "summary": "Wrong modifier on 3 charges"
+ },
+ {
+  "client": "cedar_family_clinic",
+  "closed_at": null,
+  "due": "2026-10-08T05:30:00Z",
+  "finding_id": "QF-45",
+  "found_by": "internal",
+  "opened_at": "2026-10-01T05:30:00Z",
+  "owner": "dm.two@fixture.local",
+  "severity": "medium",
+  "status": "open",
+  "summary": "Follow-up notes not saved on 7 AR accounts"
+ }
+]

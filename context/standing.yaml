@@ -1,0 +1,7 @@
+# PROVISIONAL thresholds for the hub leader's standing list. Synthetic. Management replaces them
+# (Athena does not set targets). An item "needs you" when it crosses one of these lines.
+short_fte: 0.5                 # a work type is short-staffed today when the gap is at least this many FTE
+waiting_on_client_days: 5      # things waiting on the client longer than this are chased by the hub leader
+expiry_warning_hours: 48       # warn about logins that expire within this time
+escalation_no_reply_hours: 24  # a high-priority client ticket with no reply for this long
+access_due_days: 7             # new-joiner access must exist this many days before the start date

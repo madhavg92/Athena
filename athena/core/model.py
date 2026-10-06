@@ -94,9 +94,19 @@ TOOL_WORDS = [
         ),
     ),
     ("get_client_profile", ("profile", "about", "weekly call", "specialty", "watch")),
+    ("get_capacity", ("cover", "short-staffed", "short staffed", "absent", "capacity")),
+    ("get_blocked_work", ("blocked", "locked", "login", "waiting on")),
+    ("get_quality", ("audit", "finding")),
 ]
 # questions across all of the user's clients (no client name needed)
 SCOPE_WORDS = [
+    ("get_standing_list", ("outstanding", "always open", "what is open", "what's open", "my list")),
+    (
+        "get_capacity",
+        ("cover", "short-staffed", "short staffed", "absent", "who is out", "capacity"),
+    ),
+    ("get_blocked_work", ("blocked", "locked", "login", "waiting on", "access")),
+    ("get_quality", ("audit", "finding", "quality")),
     ("get_money_at_risk", ("money", "at risk", "dollars", "losing money", "leak")),
     ("get_client_economics", ("margin", "per fte", "revenue per", "economics", "earns")),
     ("get_meetings", ("meeting", "my week", "calendar")),
@@ -307,6 +317,36 @@ def _summarise(name: str, data: dict) -> list[str]:
         return [f"Revenue per FTE and margin, {last}:"] + [
             f"- {r['client']}: ${r['revenue_per_fte_usd']:,} per FTE, margin {r['margin_pct']}%"
             for r in latest
+        ]
+    if name == "get_standing_list" and rows:
+        return [
+            f"{'! ' if r['needs_you'] else ''}{r['label']}: {r['count']}. {r['detail']}"
+            for r in rows
+            if "label" in r
+        ]
+    if name == "get_capacity" and rows:
+        short = [r for r in rows if r["gap_fte"] > 0] or rows[:1]
+        return [
+            f"{r['client_name']} {r['work_type'].lower()}: {r['gap_fte']:g} FTE short"
+            + (f" ({', '.join(r['absent'])} out)" if r["absent"] else "")
+            + (f". Cover: {'; '.join(r['covers'])}" if r["covers"] else ". No trained cover.")
+            for r in short
+        ]
+    if name == "get_blocked_work" and rows:
+        return [
+            f"- {r['blocker_id']} {r['client']}: {r['summary']}"
+            + (f" ({r['people_blocked']} people blocked)" if r["people_blocked"] else "")
+            + (
+                f" ({r['items_held']} items, ${r['amount_usd']:,}, {r['age_days']:g} days)"
+                if r["items_held"]
+                else ""
+            )
+            for r in rows
+        ]
+    if name == "get_quality" and rows:
+        return [
+            f"- {r['finding_id']} {r['client']}: {r['summary']} ({r['severity']}, found by {r['found_by']}{', overdue' if r['overdue'] else ''})"
+            for r in rows
         ]
     if name == "get_meetings" and rows and "title" in rows[0]:
         return ["Your meetings this week:"] + [f"- {r['start']}: {r['title']}" for r in rows]
