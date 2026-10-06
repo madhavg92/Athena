@@ -351,6 +351,7 @@ def demo(
     ),
     alerts: int = typer.Option(3, "--alerts", help="Alerts to show for each persona and kind."),
     json_out: str = typer.Option(None, "--json", help="Also write the demo as JSON to this path."),
+    html_out: str = typer.Option(None, "--html", help="Also write the demo web page to this path."),
 ) -> None:
     """A synthetic Monday at Anka, persona by persona. Uses fixture data and an in-memory database."""
     from pathlib import Path
@@ -369,3 +370,6 @@ def demo(
     typer.echo(d.as_text(result, alerts))
     if json_out:
         typer.echo(f"JSON: {d.save_json(result, Path(json_out))}")
+    if html_out:
+        page = d.save_html(result, cfg.root / "docs" / "demo" / "template.html", Path(html_out))
+        typer.echo(f"Page: {page}")

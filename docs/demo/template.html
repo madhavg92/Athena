@@ -1,0 +1,223 @@
+<title>Athena Demo Day</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a shift board. Persona tabs on top; one person's day as a time rail on the left with messages on the right. */
+:root {
+  --bg: #f3f5f7;
+  --surface: #ffffff;
+  --ink: #17202b;
+  --muted: #5b6776;
+  --line: #d9dfe6;
+  --accent: #1f5f8b;
+  --accent-soft: #e3eef6;
+  --late: #b4372f;
+  --risk: #a86a12;
+  --ok: #2c7a4b;
+  --note: #f7f1df;
+  --font-display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f151c; --surface: #17202a; --ink: #e5ebf1; --muted: #9aa7b5; --line: #2a3644;
+    --accent: #6fb0dd; --accent-soft: #1b2e3d; --late: #f0857c; --risk: #e6b062; --ok: #74c493; --note: #2a2618;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f151c; --surface: #17202a; --ink: #e5ebf1; --muted: #9aa7b5; --line: #2a3644;
+  --accent: #6fb0dd; --accent-soft: #1b2e3d; --late: #f0857c; --risk: #e6b062; --ok: #74c493; --note: #2a2618;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--font-body); }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 56px; }
+header h1 { font: 600 2rem/1.15 var(--font-display); margin: 0 0 6px; letter-spacing: -0.01em; text-wrap: balance; }
+header p { margin: 0; color: var(--muted); max-width: 68ch; }
+.banner { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font: 500 12px/1 var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+  border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; background: var(--surface); }
+nav { display: flex; flex-wrap: wrap; gap: 6px; margin: 26px 0 18px; border-bottom: 1px solid var(--line); }
+nav button { font: 600 15px/1 var(--font-display); color: var(--muted); background: none; border: 0;
+  padding: 12px 14px 11px; border-bottom: 3px solid transparent; cursor: pointer; letter-spacing: 0.01em; }
+nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.who { display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: baseline; margin-bottom: 18px; }
+.who h2 { font: 600 1.35rem/1.2 var(--font-display); margin: 0; }
+.who span { color: var(--muted); font-size: 14px; }
+.day { display: grid; gap: 14px; }
+.row { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 14px; }
+.time { font: 500 13px/1.4 var(--font-mono); color: var(--muted); padding-top: 12px; text-align: right;
+  font-variant-numeric: tabular-nums; }
+.msg { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; min-width: 0; }
+.msg.late { border-left: 4px solid var(--late); }
+.msg.at_risk, .msg.no_reply, .msg.never_replied { border-left: 4px solid var(--risk); }
+.kind { font: 500 11px/1 var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.kind b { font-weight: 500; color: var(--accent); }
+.sev { padding: 3px 6px; border-radius: 4px; color: var(--surface); }
+.sev.late { background: var(--late); } .sev.at_risk, .sev.no_reply, .sev.never_replied { background: var(--risk); }
+.q { font-weight: 600; margin: 0 0 8px; }
+.q::before { content: "You asked: "; font-weight: 400; color: var(--muted); }
+.body p { margin: 0 0 4px; overflow-wrap: anywhere; }
+.body h4 { font: 600 14px/1.3 var(--font-display); margin: 10px 0 4px; letter-spacing: 0.01em; }
+.body h4:first-child { margin-top: 0; }
+.body ul { margin: 2px 0 6px; padding-left: 18px; }
+.body li { overflow-wrap: anywhere; }
+.sources { margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--line); font-size: 13px; color: var(--muted); }
+.sources code { font-family: var(--font-mono); font-size: 12px; color: var(--ink); }
+.note { margin-top: 8px; font-size: 13px; background: var(--note); border-radius: 6px; padding: 6px 9px; }
+.more { color: var(--muted); font-size: 14px; padding-left: 86px; }
+.ask { margin-top: 28px; background: var(--accent-soft); border-radius: 10px; padding: 16px 18px; }
+.ask h3 { font: 600 1.05rem/1.2 var(--font-display); margin: 0 0 8px; }
+.ask ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.ask small { display: block; color: var(--muted); margin-top: 10px; }
+footer { margin-top: 36px; color: var(--muted); font-size: 13px; max-width: 70ch; }
+@media (max-width: 560px) {
+  .row { grid-template-columns: 1fr; gap: 4px; }
+  .time { text-align: left; padding-top: 0; }
+  .more { padding-left: 0; }
+}
+@media (prefers-reduced-motion: no-preference) { .msg { transition: border-color 0.15s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Athena: one Monday at Anka</h1>
+    <p>What each manager would see from Athena on a normal working day: alerts, the morning digest, report drafts, and answers to their questions. Pick a person below.</p>
+    <div class="banner">
+      <span class="chip">Synthetic clients and people</span>
+      <span class="chip">Scripted stand-in model</span>
+      <span class="chip">Times in IST</span>
+    </div>
+  </header>
+
+  <nav role="tablist" aria-label="Person" id="tabs"></nav>
+  <section id="panel" role="tabpanel" aria-live="polite"></section>
+
+  <footer>
+    Built from the real Athena code running on synthetic data (<code>athena demo</code>). Alerts appear here as delivered; in production every new alert rule starts in shadow mode for a week, where owners mark each alert correct or wrong before anyone receives it. Athena only reads data, never sends anything to clients, and never changes a source system.
+  </footer>
+</div>
+
+<script>
+const DEMO = /*DEMO_DATA*/null;
+const PEOPLE = {
+  dm_am: { tab: "DM/AM", name: "DM One", role: "Delivery manager for Northwind Orthopedics" },
+  hub_leader: { tab: "Hub leader", name: "Hub Leader Key", role: "Leads the key-clients hub: Northwind Orthopedics and Bluefield Imaging" },
+  csm: { tab: "CSM", name: "CSM One", role: "Client success for Northwind Orthopedics and Bluefield Imaging (US hours)" },
+  ba: { tab: "BA", name: "BA One", role: "Builds weekly client reports for all clients" },
+};
+const ASK = {
+  dm_am: [
+    "When is a task really late for you: the moment it passes due, or after a grace period? How long?",
+    "What makes a task 'at risk' in your work? Is 'due within 4 hours and no update for 2 hours' right?",
+    "How many alerts a day is useful before it becomes noise? Should the reminder come after 2 hours?",
+    "Should an alert go to your hub leader after 4 hours, or later?",
+    "What did you want to ask Athena that it could not answer? Write the exact question.",
+  ],
+  hub_leader: [
+    "Is 09:00 IST the right time for the digest? Which days?",
+    "Which numbers should the digest show, and which should it leave out?",
+    "When an alert escalates to you, what do you want it to say and link to?",
+    "Who should see each client: is the scope (your hub only) right?",
+    "Five questions you ask your DMs every week. Exact wording please.",
+  ],
+  csm: [
+    "Is the brief in the right order for a client call? What is missing?",
+    "When should a ticket with no reply alert you: 24 hours, or a different time per priority?",
+    "Who is the CS lead the alert should escalate to, and after how long?",
+    "Which client documents do you search for most often?",
+    "Five questions you ask before or after a client call. Exact wording please.",
+  ],
+  ba: [
+    "Can you share the standard weekly report template (the real .pptx)?",
+    "Which numbers go in the weekly report, and how is each one calculated?",
+    "Which way is good for each metric (higher or lower), and what are the targets?",
+    "Which day and time should the draft be ready?",
+    "Five questions you answer for managers every week. Exact wording please.",
+  ],
+};
+const SHOW = 3; // alerts of one kind to show before folding the rest
+
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+function inline(s) { return esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"); }
+function stripUrls(s) { return s.replace(/\s*https?:\/\/\S+/g, ""); }
+
+function renderBody(text) {
+  const [main, src] = text.split(/\n\nSources:\n/);
+  const out = []; let list = null;
+  for (const raw of stripUrls(main).split("\n")) {
+    const line = raw.trim();
+    if (!line) continue;
+    if (/^\*\*.+\*\*$/.test(line)) { list = null; out.push(`<h4>${esc(line.slice(2, -2))}</h4>`); continue; }
+    if (line.startsWith("- ")) { if (!list) { list = []; out.push(list); } list.push(`<li>${inline(line.slice(2))}</li>`); continue; }
+    list = null; out.push(`<p>${inline(line)}</p>`);
+  }
+  let html = out.map(x => Array.isArray(x) ? `<ul>${x.join("")}</ul>` : x).join("");
+  if (src) {
+    const items = src.split("\n").filter(Boolean).map(l => {
+      const m = l.replace(/^- /, "").match(/^(\S+)(?: \(([^)]*)\))?, as of (.+)$/);
+      return m ? `<code>${esc(m[1])}</code> as of ${esc(m[3])}` : esc(l);
+    });
+    html += `<div class="sources">Sources: ${items.join(" · ")}</div>`;
+  }
+  return html;
+}
+
+function severity(e) {
+  const t = e.text.replace(/^(Reminder: |Escalation \([^)]*\): )/, "");
+  if (/^Late:/.test(t)) return "late";
+  if (/^At risk:/.test(t)) return "at_risk";
+  if (/^Never replied:/.test(t)) return "never_replied";
+  if (/^No reply:/.test(t)) return "no_reply";
+  return "";
+}
+
+const LABEL = { alert: "Alert", reminder: "Reminder", escalation: "Escalated to you", digest: "Morning digest", draft: "Report draft", answer: "Answer" };
+
+function render(key) {
+  const p = PEOPLE[key];
+  const events = DEMO.events.filter(e => e.persona === key);
+  const counts = {}; const rows = []; const hidden = {};
+  for (const e of events) {
+    if (["alert", "reminder", "escalation"].includes(e.kind)) {
+      counts[e.kind] = (counts[e.kind] || 0) + 1;
+      if (counts[e.kind] > SHOW) { hidden[e.kind] = (hidden[e.kind] || 0) + 1; continue; }
+    }
+    const sev = severity(e);
+    const rule = (e.title.match(/\((R\d+)/) || [])[1] || "";
+    rows.push(`<div class="row"><div class="time">${esc(e.time.replace("Mon ", ""))}</div>
+      <article class="msg ${sev}">
+        <div class="kind"><b>${LABEL[e.kind] || e.kind}</b>${rule ? `<span>${rule}</span>` : ""}${sev ? `<span class="sev ${sev}">${sev.replace("_", " ")}</span>` : ""}</div>
+        ${e.question ? `<p class="q">${esc(e.question)}</p>` : ""}
+        <div class="body">${renderBody(e.text.replace(/^(Reminder|Escalation \([^)]*\)): /, ""))}</div>
+        ${e.note ? `<div class="note">${esc(e.note)}</div>` : ""}
+      </article></div>`);
+  }
+  const more = Object.entries(hidden).map(([k, n]) => `${n} more ${LABEL[k].toLowerCase()}${n > 1 ? "s" : ""}`).join(", ");
+  document.getElementById("panel").innerHTML = `
+    <div class="who"><h2>${esc(p.name)}</h2><span>${esc(p.role)}</span></div>
+    <div class="day">${rows.join("")}${more ? `<div class="more">… and ${more}, folded to keep the day readable.</div>` : ""}</div>
+    <div class="ask"><h3>Ask ${esc(p.name.split(" ")[0] === "Hub" ? "the hub leader" : "them")} after the walkthrough</h3>
+      <ol>${ASK[key].map(q => `<li>${esc(q)}</li>`).join("")}</ol>
+      <small>Answers go in docs/DEMO_FEEDBACK.md, so they can go straight into the rule files and the question bank.</small></div>`;
+  for (const b of document.querySelectorAll("nav button")) b.setAttribute("aria-selected", String(b.dataset.key === key));
+  try { localStorage.setItem("athena-demo-tab", key); } catch (_) {}
+}
+
+const tabs = document.getElementById("tabs");
+for (const [key, p] of Object.entries(PEOPLE)) {
+  const b = document.createElement("button");
+  b.type = "button"; b.role = "tab"; b.id = `tab-${key}`; b.dataset.key = key; b.textContent = p.tab;
+  b.addEventListener("click", () => render(key));
+  tabs.appendChild(b);
+}
+let start = "dm_am";
+try { const saved = localStorage.getItem("athena-demo-tab"); if (saved && PEOPLE[saved]) start = saved; } catch (_) {}
+if (location.hash && PEOPLE[location.hash.slice(1)]) start = location.hash.slice(1);
+render(start);
+</script>

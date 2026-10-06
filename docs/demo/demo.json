@@ -1,0 +1,1104 @@
+{
+ "day": "Monday 05 October 2026 (synthetic)",
+ "events": [
+  {
+   "persona": "dm_am",
+   "person": "dm.one@fixture.local",
+   "time": "Mon 11:30",
+   "kind": "alert",
+   "title": "Alert (R2 Late-task alert)",
+   "text": "Late: Post payments batch (Northwind Orthopedics) is due 04 Oct 13:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5001",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Late: Post payments batch (Northwind Orthopedics) is due 04 Oct 13:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5001",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "dm_am",
+   "person": "dm.one@fixture.local",
+   "time": "Mon 11:30",
+   "kind": "alert",
+   "title": "Alert (R2 Late-task alert)",
+   "text": "At risk: Work denial queue (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5002",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "At Risk",
+      "weight": "Bolder",
+      "color": "Warning"
+     },
+     {
+      "type": "TextBlock",
+      "text": "At risk: Work denial queue (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5002",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "dm_am",
+   "person": "dm.one@fixture.local",
+   "time": "Mon 11:30",
+   "kind": "alert",
+   "title": "Alert (R2 Late-task alert)",
+   "text": "Late: AR follow-up over 90 days (Northwind Orthopedics) is due 04 Oct 12:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5006",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Late: AR follow-up over 90 days (Northwind Orthopedics) is due 04 Oct 12:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5006",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "dm_am",
+   "person": "dm.one@fixture.local",
+   "time": "Mon 11:30",
+   "kind": "alert",
+   "title": "Alert (R2 Late-task alert)",
+   "text": "At risk: Coding audit sample (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5009",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "At Risk",
+      "weight": "Bolder",
+      "color": "Warning"
+     },
+     {
+      "type": "TextBlock",
+      "text": "At risk: Coding audit sample (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5009",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "dm_am",
+   "person": "dm.one@fixture.local",
+   "time": "Mon 11:40",
+   "kind": "answer",
+   "title": "Asked Athena (R1)",
+   "text": "Northwind Orthopedics has 8 open tasks; 2 late.\n- T-1006 AR follow-up over 90 days (due 2026-10-04 12:30, In Progress)\n- T-1001 Post payments batch (due 2026-10-04 13:30, In Progress)\n\nSources:\n- smartsheet.tasks (https://app.smartsheet.com/sheets/1000000000000001), as of 2026-10-05 11:35",
+   "question": "Which tasks are late for Northwind?",
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Northwind Orthopedics has 8 open tasks; 2 late.\n- T-1006 AR follow-up over 90 days (due 2026-10-04 12:30, In Progress)\n- T-1001 Post payments batch (due 2026-10-04 13:30, In Progress)",
+      "wrap": true
+     },
+     {
+      "type": "Container",
+      "separator": true,
+      "items": [
+       {
+        "type": "TextBlock",
+        "text": "Sources",
+        "size": "Small",
+        "weight": "Bolder"
+       },
+       {
+        "type": "TextBlock",
+        "text": "[smartsheet.tasks](https://app.smartsheet.com/sheets/1000000000000001) · as of 2026-10-05 11:35",
+        "size": "Small",
+        "isSubtle": true,
+        "wrap": true,
+        "spacing": "None"
+       }
+      ]
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "dm_am",
+   "person": "dm.one@fixture.local",
+   "time": "Mon 11:42",
+   "kind": "answer",
+   "title": "Asked Athena (R1)",
+   "text": "Backlog for Northwind Orthopedics is 483.9 (target 300.0) on 2026-10-04.\n\nSources:\n- supaboard.metrics, as of 2026-10-05 08:30",
+   "question": "What is the backlog for Northwind Orthopedics?",
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Backlog for Northwind Orthopedics is 483.9 (target 300.0) on 2026-10-04.",
+      "wrap": true
+     },
+     {
+      "type": "Container",
+      "separator": true,
+      "items": [
+       {
+        "type": "TextBlock",
+        "text": "Sources",
+        "size": "Small",
+        "weight": "Bolder"
+       },
+       {
+        "type": "TextBlock",
+        "text": "supaboard.metrics · as of 2026-10-05 08:30",
+        "size": "Small",
+        "isSubtle": true,
+        "wrap": true,
+        "spacing": "None"
+       }
+      ]
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "dm_am",
+   "person": "dm.one@fixture.local",
+   "time": "Mon 11:44",
+   "kind": "answer",
+   "title": "Asked Athena (R1)",
+   "text": "I cannot answer this. That client is not in your scope.",
+   "question": "Show late tasks for Cedar Family Clinic",
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "I cannot answer this. That client is not in your scope.",
+      "wrap": true
+     }
+    ]
+   },
+   "note": "Out of scope: DM One does not own Cedar."
+  },
+  {
+   "persona": "dm_am",
+   "person": "dm.one@fixture.local",
+   "time": "Mon 13:31",
+   "kind": "reminder",
+   "title": "Reminder (R2)",
+   "text": "Reminder: Late: Post payments batch (Northwind Orthopedics) is due 04 Oct 13:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5001",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Reminder: Late: Post payments batch (Northwind Orthopedics) is due 04 Oct 13:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5001",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "dm_am",
+   "person": "dm.one@fixture.local",
+   "time": "Mon 13:31",
+   "kind": "reminder",
+   "title": "Reminder (R2)",
+   "text": "Reminder: Late: Work denial queue (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5002",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Reminder: Late: Work denial queue (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5002",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "dm_am",
+   "person": "dm.one@fixture.local",
+   "time": "Mon 13:31",
+   "kind": "reminder",
+   "title": "Reminder (R2)",
+   "text": "Reminder: Late: AR follow-up over 90 days (Northwind Orthopedics) is due 04 Oct 12:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5006",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Reminder: Late: AR follow-up over 90 days (Northwind Orthopedics) is due 04 Oct 12:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5006",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "dm_am",
+   "person": "dm.one@fixture.local",
+   "time": "Mon 13:31",
+   "kind": "reminder",
+   "title": "Reminder (R2)",
+   "text": "Reminder: Late: Coding audit sample (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5009",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Reminder: Late: Coding audit sample (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5009",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "hub_leader",
+   "person": "hl.key@fixture.local",
+   "time": "Mon 09:00",
+   "kind": "digest",
+   "title": "Daily exception digest (R3)",
+   "text": "Daily exception digest: Mon 05 Oct\n- Northwind Orthopedics: backlog is 483.9 against target 300.0 on 2026-10-04.\n- Northwind Orthopedics: first pass rate is 94.4 against target 95.0 on 2026-10-04.\n- Northwind Orthopedics: ar days is 42.7 against target 40.0 on 2026-10-04.\n- Northwind Orthopedics: denial rate is 8.9 against target 8.0 on 2026-10-04.\n- Bluefield Imaging: backlog is 354.7 against target 300.0 on 2026-10-04.",
+   "question": null,
+   "card": null,
+   "note": null
+  },
+  {
+   "persona": "hub_leader",
+   "person": "hl.key@fixture.local",
+   "time": "Mon 09:05",
+   "kind": "answer",
+   "title": "Asked Athena (R1)",
+   "text": "First pass rate for Bluefield Imaging is 95.3 (target 95.0) on 2026-10-04.\n\nSources:\n- supaboard.metrics, as of 2026-10-05 08:30",
+   "question": "What is the first pass rate for Bluefield Imaging?",
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "First pass rate for Bluefield Imaging is 95.3 (target 95.0) on 2026-10-04.",
+      "wrap": true
+     },
+     {
+      "type": "Container",
+      "separator": true,
+      "items": [
+       {
+        "type": "TextBlock",
+        "text": "Sources",
+        "size": "Small",
+        "weight": "Bolder"
+       },
+       {
+        "type": "TextBlock",
+        "text": "supaboard.metrics · as of 2026-10-05 08:30",
+        "size": "Small",
+        "isSubtle": true,
+        "wrap": true,
+        "spacing": "None"
+       }
+      ]
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "hub_leader",
+   "person": "hl.key@fixture.local",
+   "time": "Mon 09:07",
+   "kind": "answer",
+   "title": "Asked Athena (R1)",
+   "text": "Owners for Bluefield Imaging: Hub leader: Hub Leader Key <hl.key@fixture.local>; DM/AM: DM Two <dm.two@fixture.local>; CSM: CSM One <csm.one@fixture.local>; BA: BA One <ba.one@fixture.local>; CS lead: CS Lead <cs.lead@fixture.local>.\n\nSources:\n- owner_map (context/owner_map.yaml), as of 2026-10-05 09:07",
+   "question": "Who owns Bluefield Imaging?",
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Owners for Bluefield Imaging: Hub leader: Hub Leader Key <hl.key@fixture.local>; DM/AM: DM Two <dm.two@fixture.local>; CSM: CSM One <csm.one@fixture.local>; BA: BA One <ba.one@fixture.local>; CS lead: CS Lead <cs.lead@fixture.local>.",
+      "wrap": true
+     },
+     {
+      "type": "Container",
+      "separator": true,
+      "items": [
+       {
+        "type": "TextBlock",
+        "text": "Sources",
+        "size": "Small",
+        "weight": "Bolder"
+       },
+       {
+        "type": "TextBlock",
+        "text": "owner_map · as of 2026-10-05 09:07",
+        "size": "Small",
+        "isSubtle": true,
+        "wrap": true,
+        "spacing": "None"
+       }
+      ]
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "hub_leader",
+   "person": "hl.key@fixture.local",
+   "time": "Mon 09:09",
+   "kind": "answer",
+   "title": "Asked Athena (R1)",
+   "text": "I cannot answer this. That client is not in your scope.",
+   "question": "What is the backlog for Cedar Family Clinic?",
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "I cannot answer this. That client is not in your scope.",
+      "wrap": true
+     }
+    ]
+   },
+   "note": "Out of scope: Cedar is in another hub."
+  },
+  {
+   "persona": "hub_leader",
+   "person": "hl.key@fixture.local",
+   "time": "Mon 15:31",
+   "kind": "escalation",
+   "title": "Escalated to hub leader (R2)",
+   "text": "Escalation (still open after 4h): Late: Post payments batch (Northwind Orthopedics) is due 04 Oct 13:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5001",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Escalation (still open after 4h): Late: Post payments batch (Northwind Orthopedics) is due 04 Oct 13:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5001",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "hub_leader",
+   "person": "hl.key@fixture.local",
+   "time": "Mon 15:31",
+   "kind": "escalation",
+   "title": "Escalated to hub leader (R2)",
+   "text": "Escalation (still open after 4h): Late: Work denial queue (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5002",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Escalation (still open after 4h): Late: Work denial queue (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5002",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "hub_leader",
+   "person": "hl.key@fixture.local",
+   "time": "Mon 15:31",
+   "kind": "escalation",
+   "title": "Escalated to hub leader (R2)",
+   "text": "Escalation (still open after 4h): Late: AR follow-up over 90 days (Northwind Orthopedics) is due 04 Oct 12:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5006",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Escalation (still open after 4h): Late: AR follow-up over 90 days (Northwind Orthopedics) is due 04 Oct 12:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5006",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "hub_leader",
+   "person": "hl.key@fixture.local",
+   "time": "Mon 15:31",
+   "kind": "escalation",
+   "title": "Escalated to hub leader (R2)",
+   "text": "Escalation (still open after 4h): Late: Coding audit sample (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5009",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Escalation (still open after 4h): Late: Coding audit sample (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5009",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "hub_leader",
+   "person": "hl.key@fixture.local",
+   "time": "Mon 15:31",
+   "kind": "escalation",
+   "title": "Escalated to hub leader (R2)",
+   "text": "Escalation (still open after 4h): Late: Post payments batch (Bluefield Imaging) is due 04 Oct 17:30, status In Progress. Owner DM Two. https://app.smartsheet.com/sheets/1000000000000002?rowId=5011",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Escalation (still open after 4h): Late: Post payments batch (Bluefield Imaging) is due 04 Oct 17:30, status In Progress. Owner DM Two. https://app.smartsheet.com/sheets/1000000000000002?rowId=5011",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "hub_leader",
+   "person": "hl.key@fixture.local",
+   "time": "Mon 15:31",
+   "kind": "escalation",
+   "title": "Escalated to hub leader (R2)",
+   "text": "Escalation (still open after 4h): Late: Work denial queue (Bluefield Imaging) is due 05 Oct 14:30, status Not Started. Owner DM Two. https://app.smartsheet.com/sheets/1000000000000002?rowId=5012",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Escalation (still open after 4h): Late: Work denial queue (Bluefield Imaging) is due 05 Oct 14:30, status Not Started. Owner DM Two. https://app.smartsheet.com/sheets/1000000000000002?rowId=5012",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "hub_leader",
+   "person": "hl.key@fixture.local",
+   "time": "Mon 15:31",
+   "kind": "escalation",
+   "title": "Escalated to hub leader (R2)",
+   "text": "Escalation (still open after 4h): Late: AR follow-up over 90 days (Bluefield Imaging) is due 04 Oct 08:30, status In Progress. Owner DM Two. https://app.smartsheet.com/sheets/1000000000000002?rowId=5016",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Escalation (still open after 4h): Late: AR follow-up over 90 days (Bluefield Imaging) is due 04 Oct 08:30, status In Progress. Owner DM Two. https://app.smartsheet.com/sheets/1000000000000002?rowId=5016",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "hub_leader",
+   "person": "hl.key@fixture.local",
+   "time": "Mon 15:31",
+   "kind": "escalation",
+   "title": "Escalated to hub leader (R2)",
+   "text": "Escalation (still open after 4h): Late: Coding audit sample (Bluefield Imaging) is due 05 Oct 12:30, status Not Started. Owner DM Two. https://app.smartsheet.com/sheets/1000000000000002?rowId=5019",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Late",
+      "weight": "Bolder",
+      "color": "Attention"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Escalation (still open after 4h): Late: Coding audit sample (Bluefield Imaging) is due 05 Oct 12:30, status Not Started. Owner DM Two. https://app.smartsheet.com/sheets/1000000000000002?rowId=5019",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "csm",
+   "person": "csm.one@fixture.local",
+   "time": "Mon 17:30",
+   "kind": "answer",
+   "title": "Asked Athena (R4)",
+   "text": "**Health and open tickets**\nHealth score for Northwind Orthopedics is 72 (trend down).\n4 open tickets for Northwind Orthopedics.\n- CS-201 Report shows wrong payer mix (open, high)\n- CS-202 Request for weekly call reschedule (open, low)\n- CS-203 Question on denial trend (pending, medium)\n- CS-205 Access to client portal (open, medium)\n**Metrics**\nBacklog for Northwind Orthopedics is 483.9 (target 300.0) on 2026-10-04.\nFirst pass rate for Northwind Orthopedics is 94.4 (target 95.0) on 2026-10-04.\n**Open tasks**\nNorthwind Orthopedics has 8 open tasks; 4 late.\n- T-1006 AR follow-up over 90 days (due 2026-10-04 12:30, In Progress)\n- T-1001 Post payments batch (due 2026-10-04 13:30, In Progress)\n- T-1002 Work denial queue (due 2026-10-05 12:30, Not Started)\n- T-1009 Coding audit sample (due 2026-10-05 12:30, Not Started)\n**Recent documents**\nDocuments for Northwind Orthopedics:\n- Northwind Orthopedics - Statement of Work: Scope for Northwind Orthopedics: charge entry, payment posting, AR follow-up and denial management. Turnaround for charge entry is 48 hours.\n- Northwind Orthopedics - Escalation SOP: Escalations for Northwind Orthopedics go to the DM/AM first, then the hub leader after 4 hours.\n**Profile**\nProfile of Northwind Orthopedics:\n- Specialty: orthopedics, 3 locations.\n- Services: charge entry, payment posting, AR follow-up, denial management.\n- Contract turnaround: charge entry in 48 hours.\n- Weekly call: Tuesday. Monthly review: first Thursday.\n- Watch: backlog has grown for 3 weeks; client asked for a recovery plan.\n\nSources:\n- cs_hub.tickets, as of 2026-10-05 17:20\n- cs_hub.health, as of 2026-10-05 09:30\n- supaboard.metrics, as of 2026-10-05 08:30\n- smartsheet.tasks (https://app.smartsheet.com/sheets/1000000000000001), as of 2026-10-05 17:25\n- sharepoint.documents (https://example.sharepoint.com/sites/client-context/Shared%20Documents/northwind_ortho/sow.docx), as of 2026-10-05 17:29\n- client_profile (context/clients/northwind_ortho.md), as of 2026-10-05 17:30",
+   "question": "Brief me on Northwind Orthopedics",
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "**Health and open tickets**\nHealth score for Northwind Orthopedics is 72 (trend down).\n4 open tickets for Northwind Orthopedics.\n- CS-201 Report shows wrong payer mix (open, high)\n- CS-202 Request for weekly call reschedule (open, low)\n- CS-203 Question on denial trend (pending, medium)\n- CS-205 Access to client portal (open, medium)\n**Metrics**\nBacklog for Northwind Orthopedics is 483.9 (target 300.0) on 2026-10-04.\nFirst pass rate for Northwind Orthopedics is 94.4 (target 95.0) on 2026-10-04.\n**Open tasks**\nNorthwind Orthopedics has 8 open tasks; 4 late.\n- T-1006 AR follow-up over 90 days (due 2026-10-04 12:30, In Progress)\n- T-1001 Post payments batch (due 2026-10-04 13:30, In Progress)\n- T-1002 Work denial queue (due 2026-10-05 12:30, Not Started)\n- T-1009 Coding audit sample (due 2026-10-05 12:30, Not Started)\n**Recent documents**\nDocuments for Northwind Orthopedics:\n- Northwind Orthopedics - Statement of Work: Scope for Northwind Orthopedics: charge entry, payment posting, AR follow-up and denial management. Turnaround for charge entry is 48 hours.\n- Northwind Orthopedics - Escalation SOP: Escalations for Northwind Orthopedics go to the DM/AM first, then the hub leader after 4 hours.\n**Profile**\nProfile of Northwind Orthopedics:\n- Specialty: orthopedics, 3 locations.\n- Services: charge entry, payment posting, AR follow-up, denial management.\n- Contract turnaround: charge entry in 48 hours.\n- Weekly call: Tuesday. Monthly review: first Thursday.\n- Watch: backlog has grown for 3 weeks; client asked for a recovery plan.",
+      "wrap": true
+     },
+     {
+      "type": "Container",
+      "separator": true,
+      "items": [
+       {
+        "type": "TextBlock",
+        "text": "Sources",
+        "size": "Small",
+        "weight": "Bolder"
+       },
+       {
+        "type": "TextBlock",
+        "text": "cs_hub.tickets · as of 2026-10-05 17:20",
+        "size": "Small",
+        "isSubtle": true,
+        "wrap": true,
+        "spacing": "None"
+       },
+       {
+        "type": "TextBlock",
+        "text": "cs_hub.health · as of 2026-10-05 09:30",
+        "size": "Small",
+        "isSubtle": true,
+        "wrap": true,
+        "spacing": "None"
+       },
+       {
+        "type": "TextBlock",
+        "text": "supaboard.metrics · as of 2026-10-05 08:30",
+        "size": "Small",
+        "isSubtle": true,
+        "wrap": true,
+        "spacing": "None"
+       },
+       {
+        "type": "TextBlock",
+        "text": "[smartsheet.tasks](https://app.smartsheet.com/sheets/1000000000000001) · as of 2026-10-05 17:25",
+        "size": "Small",
+        "isSubtle": true,
+        "wrap": true,
+        "spacing": "None"
+       },
+       {
+        "type": "TextBlock",
+        "text": "[sharepoint.documents](https://example.sharepoint.com/sites/client-context/Shared%20Documents/northwind_ortho/sow.docx) · as of 2026-10-05 17:29",
+        "size": "Small",
+        "isSubtle": true,
+        "wrap": true,
+        "spacing": "None"
+       },
+       {
+        "type": "TextBlock",
+        "text": "client_profile · as of 2026-10-05 17:30",
+        "size": "Small",
+        "isSubtle": true,
+        "wrap": true,
+        "spacing": "None"
+       }
+      ]
+     }
+    ]
+   },
+   "note": "Pre-call brief (R4)."
+  },
+  {
+   "persona": "csm",
+   "person": "csm.one@fixture.local",
+   "time": "Mon 17:35",
+   "kind": "answer",
+   "title": "Asked Athena (R1)",
+   "text": "Documents for Bluefield Imaging:\n- Bluefield Imaging - Escalation SOP: Escalations for Bluefield Imaging go to the DM/AM first, then the hub leader after 4 hours.\n- Bluefield Imaging - Statement of Work: Scope for Bluefield Imaging: charge entry, payment posting, AR follow-up and denial management. Turnaround for charge entry is 48 hours.\n- Bluefield Imaging - Payer list: Top payers for Bluefield Imaging: Payer A, Payer B and Payer C. Timely filing limits differ by payer.\n\nSources:\n- sharepoint.documents (https://example.sharepoint.com/sites/client-context/Shared%20Documents/bluefield_imaging/escalation-sop.docx), as of 2026-10-05 17:34",
+   "question": "What does the escalation SOP say for Bluefield Imaging?",
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Documents for Bluefield Imaging:\n- Bluefield Imaging - Escalation SOP: Escalations for Bluefield Imaging go to the DM/AM first, then the hub leader after 4 hours.\n- Bluefield Imaging - Statement of Work: Scope for Bluefield Imaging: charge entry, payment posting, AR follow-up and denial management. Turnaround for charge entry is 48 hours.\n- Bluefield Imaging - Payer list: Top payers for Bluefield Imaging: Payer A, Payer B and Payer C. Timely filing limits differ by payer.",
+      "wrap": true
+     },
+     {
+      "type": "Container",
+      "separator": true,
+      "items": [
+       {
+        "type": "TextBlock",
+        "text": "Sources",
+        "size": "Small",
+        "weight": "Bolder"
+       },
+       {
+        "type": "TextBlock",
+        "text": "[sharepoint.documents](https://example.sharepoint.com/sites/client-context/Shared%20Documents/bluefield_imaging/escalation-sop.docx) · as of 2026-10-05 17:34",
+        "size": "Small",
+        "isSubtle": true,
+        "wrap": true,
+        "spacing": "None"
+       }
+      ]
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "csm",
+   "person": "csm.one@fixture.local",
+   "time": "Mon 17:37",
+   "kind": "answer",
+   "title": "Asked Athena (R1)",
+   "text": "I do not know. I have no data source that answers this for Northwind Orthopedics.",
+   "question": "What is the NPS for Northwind Orthopedics?",
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "I do not know. I have no data source that answers this for Northwind Orthopedics.",
+      "wrap": true
+     }
+    ]
+   },
+   "note": "Athena has no NPS data, so it must say so."
+  },
+  {
+   "persona": "csm",
+   "person": "csm.one@fixture.local",
+   "time": "Mon 18:30",
+   "kind": "alert",
+   "title": "Alert (R6 Ticket without reply)",
+   "text": "Never replied: ticket CS-201 for Northwind Orthopedics was opened 03 Oct 03:30 and has had no reply. Subject: Report shows wrong payer mix.",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Never Replied",
+      "weight": "Bolder",
+      "color": "Warning"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Never replied: ticket CS-201 for Northwind Orthopedics was opened 03 Oct 03:30 and has had no reply. Subject: Report shows wrong payer mix.",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "csm",
+   "person": "csm.one@fixture.local",
+   "time": "Mon 18:30",
+   "kind": "alert",
+   "title": "Alert (R6 Ticket without reply)",
+   "text": "No reply: ticket CS-203 for Northwind Orthopedics has had no reply since 02 Oct 15:30. Subject: Question on denial trend.",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "No Reply",
+      "weight": "Bolder",
+      "color": "Warning"
+     },
+     {
+      "type": "TextBlock",
+      "text": "No reply: ticket CS-203 for Northwind Orthopedics has had no reply since 02 Oct 15:30. Subject: Question on denial trend.",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "csm",
+   "person": "csm.one@fixture.local",
+   "time": "Mon 18:30",
+   "kind": "alert",
+   "title": "Alert (R6 Ticket without reply)",
+   "text": "No reply: ticket CS-205 for Northwind Orthopedics has had no reply since 02 Oct 01:30. Subject: Access to client portal.",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "No Reply",
+      "weight": "Bolder",
+      "color": "Warning"
+     },
+     {
+      "type": "TextBlock",
+      "text": "No reply: ticket CS-205 for Northwind Orthopedics has had no reply since 02 Oct 01:30. Subject: Access to client portal.",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "csm",
+   "person": "csm.one@fixture.local",
+   "time": "Mon 18:30",
+   "kind": "alert",
+   "title": "Alert (R6 Ticket without reply)",
+   "text": "Never replied: ticket CS-207 for Bluefield Imaging was opened 04 Oct 05:30 and has had no reply. Subject: Report shows wrong payer mix.",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Never Replied",
+      "weight": "Bolder",
+      "color": "Warning"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Never replied: ticket CS-207 for Bluefield Imaging was opened 04 Oct 05:30 and has had no reply. Subject: Report shows wrong payer mix.",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "csm",
+   "person": "csm.one@fixture.local",
+   "time": "Mon 18:30",
+   "kind": "alert",
+   "title": "Alert (R6 Ticket without reply)",
+   "text": "No reply: ticket CS-208 for Bluefield Imaging has had no reply since 04 Oct 00:30. Subject: Request for weekly call reschedule.",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "No Reply",
+      "weight": "Bolder",
+      "color": "Warning"
+     },
+     {
+      "type": "TextBlock",
+      "text": "No reply: ticket CS-208 for Bluefield Imaging has had no reply since 04 Oct 00:30. Subject: Request for weekly call reschedule.",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "csm",
+   "person": "csm.one@fixture.local",
+   "time": "Mon 18:30",
+   "kind": "alert",
+   "title": "Alert (R6 Ticket without reply)",
+   "text": "No reply: ticket CS-209 for Bluefield Imaging has had no reply since 04 Oct 17:30. Subject: Question on denial trend.",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "No Reply",
+      "weight": "Bolder",
+      "color": "Warning"
+     },
+     {
+      "type": "TextBlock",
+      "text": "No reply: ticket CS-209 for Bluefield Imaging has had no reply since 04 Oct 17:30. Subject: Question on denial trend.",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "csm",
+   "person": "csm.one@fixture.local",
+   "time": "Mon 18:30",
+   "kind": "alert",
+   "title": "Alert (R6 Ticket without reply)",
+   "text": "No reply: ticket CS-211 for Bluefield Imaging has had no reply since 02 Oct 18:30. Subject: Access to client portal.",
+   "question": null,
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "No Reply",
+      "weight": "Bolder",
+      "color": "Warning"
+     },
+     {
+      "type": "TextBlock",
+      "text": "No reply: ticket CS-211 for Bluefield Imaging has had no reply since 02 Oct 18:30. Subject: Access to client portal.",
+      "wrap": true
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "ba",
+   "person": "ba.one@fixture.local",
+   "time": "Mon 08:00",
+   "kind": "draft",
+   "title": "Weekly report draft ready (R5)",
+   "text": "Draft weekly report for Northwind Orthopedics (week of 28 Sep) is ready: drafts/northwind_ortho-wbr-2026-09-28.pptx. Please review and edit it before sending. Athena does not send it to the client.",
+   "question": null,
+   "card": null,
+   "note": null
+  },
+  {
+   "persona": "ba",
+   "person": "ba.one@fixture.local",
+   "time": "Mon 08:00",
+   "kind": "draft",
+   "title": "Weekly report draft ready (R5)",
+   "text": "Draft weekly report for Bluefield Imaging (week of 28 Sep) is ready: drafts/bluefield_imaging-wbr-2026-09-28.pptx. Please review and edit it before sending. Athena does not send it to the client.",
+   "question": null,
+   "card": null,
+   "note": null
+  },
+  {
+   "persona": "ba",
+   "person": "ba.one@fixture.local",
+   "time": "Mon 08:10",
+   "kind": "answer",
+   "title": "Asked Athena (R1)",
+   "text": "Backlog for Northwind Orthopedics: average 410.3 over 7 days; latest 483.9 (target 300.0) on 2026-10-04.\n\nSources:\n- supaboard.metrics, as of 2026-10-05 08:30",
+   "question": "What was the average backlog for Northwind Orthopedics last week?",
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Backlog for Northwind Orthopedics: average 410.3 over 7 days; latest 483.9 (target 300.0) on 2026-10-04.",
+      "wrap": true
+     },
+     {
+      "type": "Container",
+      "separator": true,
+      "items": [
+       {
+        "type": "TextBlock",
+        "text": "Sources",
+        "size": "Small",
+        "weight": "Bolder"
+       },
+       {
+        "type": "TextBlock",
+        "text": "supaboard.metrics · as of 2026-10-05 08:30",
+        "size": "Small",
+        "isSubtle": true,
+        "wrap": true,
+        "spacing": "None"
+       }
+      ]
+     }
+    ]
+   },
+   "note": null
+  },
+  {
+   "persona": "ba",
+   "person": "ba.one@fixture.local",
+   "time": "Mon 08:12",
+   "kind": "answer",
+   "title": "Asked Athena (R1)",
+   "text": "I cannot answer this. That data source is not available to you.",
+   "question": "Which tasks are late for Bluefield Imaging?",
+   "card": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "I cannot answer this. That data source is not available to you.",
+      "wrap": true
+     }
+    ]
+   },
+   "note": "BA persona has no Smartsheet access."
+  }
+ ]
+}

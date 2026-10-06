@@ -240,3 +240,13 @@ def save_json(demo: Demo, path: Path) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(demo.model_dump_json(indent=1))
     return path
+
+
+def save_html(demo: Demo, template: Path, path: Path) -> Path:
+    """Fill the demo page template (docs/demo/template.html) with this run's events."""
+    page = template.read_text().replace(
+        "/*DEMO_DATA*/null", demo.model_dump_json().replace("</", "<\\/")
+    )
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(page)
+    return path
