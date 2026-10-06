@@ -96,22 +96,30 @@ def test_hub_day_is_computed_from_the_standing_list(cfg) -> None:
     from athena.core import phi
 
     day = d.hub_day(cfg)
-    rows = {r["id"]: r for r in day["morning"]["rows"]}
-    assert list(rows) == ["posting", "waiting", "audit", "tickets"] and day["morning"]["count"] == 4
-    assert "322 items waiting" in rows["posting"]["text"] and "Analyst N3" in rows["posting"]["why"]
-    assert "$22,630 held" in rows["waiting"]["text"]  # the 3 items older than 5 days
-    assert sum(s["needs_you"] for s in day["standing"]) >= 4 and day["calm"] > 0
-    assert "Analyst B2" in day["absence"]["text"] and "Analyst B1" in day["absence"]["why"]
-    email = day["lockout"]["buttons"][0]["draft"]
+    events = {e["id"]: e for e in day["events"]}
+    assert [e["time"] for e in day["events"]] == ["09:00", "10:32", "12:45", "18:50"]
     assert (
-        email.startswith("To: Northwind office manager")
-        and "never writes to clients" in (day["lockout"]["buttons"][0]["done"])
+        day["start"] < day["events"][0]["time"]
+    )  # the day opens empty: proactive messages arrive later
+    assert all(
+        e["credit"] and e["suggest"] for e in day["events"]
+    )  # who started it; follow-up questions
+    rows = {r["id"]: r for r in events["morning"]["rows"]}
+    assert list(rows) == ["posting", "waiting", "audit", "tickets"]
+    assert all(len(r["text"]) < 70 for r in rows.values())  # short; numbers live in the details
+    assert (
+        "322 items waiting" in rows["posting"]["detail"]
+        and "Analyst N3" in rows["posting"]["detail"]
     )
-    assert day["report"]["text"].startswith("Hub report, Mon 05 Oct 18:50")
-    assert set(day["canned"]) == set(day["suggestions"]) == set(d.DAY_SUGGESTIONS)
-    texts = [r["text"] + r["why"] for r in day["morning"]["rows"]] + [
-        email,
-        *day["canned"].values(),
-    ]
+    assert "$22,630 held" in rows["waiting"]["detail"]  # the 3 items older than 5 days
+    assert sum(s["needs_you"] for s in events["morning"]["standing"]) >= 4
+    assert "Analyst B2" in events["absence"]["text"] and "Analyst B1" in events["absence"]["detail"]
+    email = events["lockout"]["buttons"][0]["draft"]
+    assert email.startswith("To: Northwind office manager")
+    assert "never writes to clients" in events["lockout"]["buttons"][0]["done"]
+    assert events["report"]["report"].startswith("Hub report, Mon 05 Oct 18:50")
+    suggested = {q for e in day["events"] for q in e["suggest"]}
+    assert suggested <= set(day["canned"])  # every suggested question has a prepared answer
+    texts = [r["text"] + r["detail"] for r in rows.values()] + [email, *day["canned"].values()]
     assert all(not phi.lint(t, ["fixture.local"]) for t in texts)
     assert "Cedar" not in " ".join(texts)  # another hub

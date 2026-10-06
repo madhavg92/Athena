@@ -95,6 +95,32 @@ textarea.quote { width: 100%; min-height: 110px; border: 1px solid var(--accent)
   .rail { display: none; }
 }
 
+.sim { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; background: var(--frame); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; }
+.sim .clock { font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; min-width: 64px; }
+.sim .ctl { display: flex; gap: 6px; }
+.track { position: relative; flex: 1; min-width: 220px; height: 34px; }
+.track .line { position: absolute; left: 0; right: 0; top: 11px; height: 4px; border-radius: 2px; background: var(--quote); }
+.track .fill { position: absolute; left: 0; top: 11px; height: 4px; border-radius: 2px; background: var(--accent); }
+.track .tick { position: absolute; top: 4px; transform: translateX(-50%); border: 0; background: none; padding: 0; cursor: pointer; display: grid; justify-items: center; gap: 3px; color: var(--muted); font-size: 11px; }
+.track .tick i { width: 12px; height: 12px; border-radius: 50%; background: var(--frame); border: 2px solid var(--muted); }
+.track .tick.past i { background: var(--accent); border-color: var(--accent); }
+.legend { display: flex; gap: 14px; font-size: 12px; color: var(--muted); width: 100%; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.tag { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; color: var(--muted); margin-top: 6px; }
+.tag b { white-space: nowrap; font-weight: 600; padding: 1px 7px; border-radius: 9px; font-size: 11px; }
+.tag.pro b { background: var(--accent-soft); color: var(--accent); }
+.tag.re b { background: var(--quote); color: var(--ink); }
+.quiet { align-self: center; font-size: 12px; color: var(--muted); border: 1px dashed var(--line); border-radius: 12px; padding: 3px 12px; }
+.detail { margin: 0; color: var(--muted); font-size: 13px; }
+.more { border: 0; background: none; padding: 0; color: var(--accent); cursor: pointer; font-weight: 500; font-size: 13px; text-align: left; justify-self: start; }
+.toast { position: absolute; right: 16px; top: 64px; z-index: 5; background: var(--frame); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 10px; padding: 10px 14px; box-shadow: 0 8px 24px rgb(0 0 0 / 0.14); max-width: 320px; font-size: 13px; display: none; }
+.toast.on { display: block; animation: drop .25s ease-out; }
+.toast b { display: block; font-size: 12px; color: var(--muted); font-weight: 600; }
+@keyframes drop { from { transform: translateY(-8px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .toast.on { animation: none; } }
+.empty { margin: auto; text-align: center; color: var(--muted); max-width: 340px; }
+.empty b { display: block; color: var(--ink); font-size: 15px; margin-bottom: 4px; }
+.main { position: relative; }
 .rows { display: grid; }
 .more { border: 0; background: none; padding: 4px 0 0; color: var(--accent); cursor: pointer; font-weight: 500; text-align: left; }
 .slist { display: grid; gap: 2px; font-size: 13.5px; }
@@ -135,10 +161,17 @@ textarea.quote { width: 100%; min-height: 110px; border: 1px solid var(--accent)
     <span>Illustration: a hub leader's Monday with Athena in their work chat. Made-up clients, people and numbers.</span>
     <span>Viewing as <b id="me"></b></span>
   </div>
+  <div class="sim" aria-label="Simulation controls">
+    <span class="clock" id="clock">08:55</span>
+    <div class="ctl"><button class="btn primary" type="button" id="play">Play the day</button><button class="btn" type="button" id="next">Skip to next</button><button class="btn" type="button" id="reset">Restart</button></div>
+    <div class="track" id="track"></div>
+    <div class="legend"><span><span class="tag pro"><b>Athena started this</b></span> proactive: arrives on its own, from a rule</span><span><span class="tag re"><b>You asked</b></span> reactive: you type, Athena answers</span></div>
+  </div>
   <div class="window">
     <aside class="rail" aria-label="Chats"><h2>Chat</h2><div id="rail"></div></aside>
     <section class="main">
       <div class="head"><div class="av ai" aria-hidden="true" id="headav"></div><div><b>Athena</b><span>Watches your hub's people, blocked work, quality and clients</span></div></div>
+      <div class="toast" id="toast" role="status"></div>
       <div class="log" id="log" aria-live="polite"></div>
       <form class="compose" id="form" autocomplete="off">
         <div class="suggest" id="suggest"></div>
@@ -162,8 +195,8 @@ const SRC = { get_tasks: "smartsheet", get_task_history: "smartsheet", get_team:
 const NOW = new Date(DATA.now), HOUR = 3600e3;
 const person = "hub_leader";
 let state = load(), sampleFn = null, liveTools = false, busy = false;
-function load() { try { return JSON.parse(localStorage.getItem("athena-day-v1") || "{}"); } catch (_) { return {}; } }
-function save() { try { localStorage.setItem("athena-day-v1", JSON.stringify(state)); } catch (_) {} }
+function load() { try { return JSON.parse(localStorage.getItem("athena-day-v2") || "{}"); } catch (_) { return {}; } }
+function save() { try { localStorage.setItem("athena-day-v2", JSON.stringify(state)); } catch (_) {} }
 state.done ||= {}; state.msgs ||= []; state.turns ||= [];
 function esc(s) { return String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 function fmt(iso) { return new Date(iso).toLocaleString("en-GB", { timeZone: "Asia/Kolkata", weekday: "short", day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit", hour12: false }); }
@@ -325,7 +358,7 @@ function renderText(text) {
     const names = { smartsheet: "Smartsheet", supaboard: "Supaboard", cs_hub: "CS Hub", sharepoint: "SharePoint", owner_map: "owner list", client_profile: "client profile", athena: "Athena", graph: "calendar" };
     const used = [...new Set(src.split("\n").filter(Boolean).map(l => names[l.replace(/^- /, "").split(/[.,]/)[0]] || l.split(/[.,]/)[0]))];
     const when = (src.match(/as of (.+)$/m) || [])[1];
-    html += `<div class="src">From ${esc(used.join(", "))}${when ? `, ${esc(when.replace(/^\w+, /, ""))}` : ""}</div>`;
+    html += `<div class="src">From ${esc(used.join(", "))}</div>`;
   }
   return html;
 }
@@ -364,91 +397,134 @@ function dayTools(steps, redraw) {
   ];
 }
 
-// ---------------------------------------------------------------- view
-function row(who, time, inner) {
-  const ai = who === "Athena";
-  return `<div class="row"><div class="av ${ai ? "ai" : ""}" aria-hidden="true">${ai ? SPARK : esc(who.split(" ").map(w => w[0]).join("").slice(0, 2))}</div><div><div class="meta"><b>${esc(who)}</b>${esc(time)}</div>${inner}</div></div>`;
+// ---------------------------------------------------------------- the simulated clock
+const mins = hhmm => { const [h, m] = hhmm.split(":").map(Number); return h * 60 + m; };
+const hhmm = n => String(Math.floor(n / 60)).padStart(2, "0") + ":" + String(n % 60).padStart(2, "0");
+const START = mins(DAY.start), END = mins("19:00"), EVENTS = DAY.events.map(e => ({ ...e, at: mins(e.time) }));
+state.clock ??= START; state.open ||= {};
+let timer = null, toastTimer = null, scrollToEnd = false;
+function arrived() { return EVENTS.filter(e => e.at <= state.clock); }
+function setClock(n, announce = true) {
+  const before = arrived().length;
+  state.clock = Math.min(END, n);
+  const now = arrived();
+  if (announce && now.length > before) { const e = now.at(-1); toast(e); pause(); scrollToEnd = true; }
+  if (state.clock >= END) pause();
+  save(); draw(); drawRail(); drawSim();
 }
+function play() {
+  if (timer) return pause();
+  if (state.clock >= END) return;
+  timer = setInterval(() => {
+    const next = EVENTS.find(e => e.at > state.clock);
+    const step = 3;
+    setClock(next && state.clock + step >= next.at ? next.at : state.clock + step);
+  }, 90);
+  drawSim();
+}
+function pause() { clearInterval(timer); timer = null; drawSim(); }
+function skip() { const next = EVENTS.find(e => e.at > state.clock); setClock(next ? next.at : END); }
+function toast(e) {
+  const t = document.getElementById("toast");
+  t.innerHTML = `<b>Athena · ${esc(e.time)}</b>${esc(e.title || e.text)}`;
+  t.classList.add("on"); clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("on"), 3500);
+}
+function drawSim() {
+  document.getElementById("clock").textContent = hhmm(state.clock);
+  const play = document.getElementById("play");
+  play.textContent = timer ? "Pause" : state.clock >= END ? "Day over" : state.clock > START ? "Play" : "Play the day";
+  play.disabled = state.clock >= END;
+  document.getElementById("next").disabled = state.clock >= END;
+  const pct = n => ((n - START) / (END - START)) * 100;
+  document.getElementById("track").innerHTML = `<div class="line"></div><div class="fill" style="width:${pct(state.clock)}%"></div>` +
+    EVENTS.map(e => `<button class="tick ${e.at <= state.clock ? "past" : ""}" type="button" style="left:${pct(e.at)}%" data-jump="${e.at}" title="${esc(e.title || e.text)}"><i></i>${esc(e.time)}</button>`).join("");
+  for (const b of document.querySelectorAll("[data-jump]")) b.addEventListener("click", () => setClock(Math.max(state.clock, Number(b.dataset.jump))));
+}
+
+// ---------------------------------------------------------------- view
+function row(who, time, inner, tag) {
+  const ai = who === "Athena";
+  return `<div class="row"><div class="av ${ai ? "ai" : ""}" aria-hidden="true">${ai ? SPARK : esc(who.split(" ").map(w => w[0]).join("").slice(0, 2))}</div><div><div class="meta"><b>${esc(who)}</b>${esc(time)}</div>${inner}${tag || ""}</div></div>`;
+}
+const proTag = credit => `<div class="tag pro"><b>Athena started this</b>${esc(credit)}</div>`;
+const reTag = n => `<div class="tag re"><b>You asked</b>${n ? `${n} source${n > 1 ? "s" : ""} checked` : "answered from your data"}</div>`;
 function doneLine(text) { return `<div class="done">${CHECK}<span>${esc(text)}</span></div>`; }
-function buttons(id, bs) {
+function buttons(id, bs, quiet = false) {
   const d = state.done[id];
   if (d) { const b = bs.find(x => x.id === d); return doneLine(b.done) + (b.draft ? `<div class="quote">${esc(b.draft)}</div>` : ""); }
-  return `<div class="btns">${bs.map((b, i) => `<button class="btn ${i ? "" : "primary"}" type="button" data-pick="${id}:${b.id}">${esc(b.label)}</button>`).join("")}</div>`;
+  return `<div class="btns">${bs.map((b, i) => `<button class="btn ${i || quiet ? "" : "primary"}" type="button" data-pick="${id}:${b.id}">${esc(b.label)}</button>`).join("")}</div>`;
 }
-function morningCard() {
-  const m = DAY.morning;
-  return `<div class="card info"><h3>Good morning. ${m.count} things on your list need you today.</h3>
-    <div class="rows">${m.rows.map((r, i) => `<div class="decision"><span class="n">${i + 1}</span><div><p>${esc(r.text)}</p><p class="w">${esc(r.why)}</p>${buttons(r.id, r.buttons)}</div></div>`).join("")}</div>
-    <div class="checked">${SPARK}<span>${DAY.calm} other open items are moving without you.</span></div>
-    <button class="more" type="button" data-act="list">${state.done.list ? "Hide your standing list" : "Show your standing list"}</button>
-    ${state.done.list ? `<div class="slist">${DAY.standing.map(s => `<div class="srow" title="${esc(s.detail)}"><i class="dot ${s.needs_you ? "on" : ""}"></i><span>${esc(s.label)}</span><b>${s.count}</b></div>`).join("")}</div>` : ""}
-  </div>`;
+function detail(id, text) {
+  return state.open[id] ? `<p class="detail">${esc(text)}</p><button class="more" type="button" data-open="${id}">Less</button>` : `<button class="more" type="button" data-open="${id}">Details</button>`;
 }
-function eventCard(id, e, tone, title) {
-  return `<div class="card ${tone}"><h3>${esc(e.text)}</h3><p class="why">${esc(e.why)}</p>${buttons(id, e.buttons)}</div>`;
+function eventHtml(e) {
+  if (e.id === "morning") return `<div class="card info"><h3>${esc(e.title)}</h3>
+    <div class="rows">${e.rows.map((r, i) => `<div class="decision"><span class="n">${i + 1}</span><div><p>${esc(r.text)}</p>${detail(r.id, r.detail)}${buttons(r.id, r.buttons, true)}</div></div>`).join("")}</div>
+    <div class="checked">${SPARK}<span>${e.calm} other open items are moving without you.</span></div>
+    <button class="more" type="button" data-open="list">${state.open.list ? "Hide your standing list" : "Show your standing list"}</button>
+    ${state.open.list ? `<div class="slist">${e.standing.map(s => `<div class="srow" title="${esc(s.detail)}"><i class="dot ${s.needs_you ? "on" : ""}"></i><span>${esc(s.label)}</span><b>${s.count}</b></div>`).join("")}</div>` : ""}</div>`;
+  if (e.id === "report") return `<div class="card info"><h3>${esc(e.text)}</h3>
+    <div class="quote ${state.open.report ? "" : "clip"}" data-open="report" title="Show all">${esc(e.report)}</div>
+    ${state.done.report ? doneLine("Sent to the COO.") : `<div class="btns"><button class="btn primary" type="button" data-pick="report:send">Send to the COO</button></div>`}</div>`;
+  return `<div class="card ${e.tone || "info"}"><h3>${esc(e.text)}</h3>${detail(e.id, e.detail)}${buttons(e.id, e.buttons)}</div>`;
 }
-function reportCard() {
-  const r = DAY.report, sent = state.done.report;
-  return `<div class="card info"><h3>Your hub report for today is ready.</h3><p class="why">Built from your standing list. Edit anything before it goes.</p>
-    <div class="quote ${state.done.full ? "" : "clip"}" ${state.done.full ? "" : 'data-act="full" title="Show all"'}>${esc(r.text)}</div>
-    ${sent ? doneLine("Sent to the COO.") : `<div class="btns"><button class="btn primary" type="button" data-act="report">Send to the COO</button><button class="btn" type="button" data-act="copy">Copy</button></div>`}</div>`;
+function waiting() {
+  let n = 0;
+  for (const e of arrived()) n += e.rows ? e.rows.filter(r => !state.done[r.id]).length : state.done[e.id] ? 0 : 1;
+  return n;
 }
-function openCount() { return DAY.morning.rows.filter(r => !state.done[r.id]).length + ["absence", "lockout"].filter(k => !state.done[k]).length + (state.done.report ? 0 : 1); }
-
 function draw() {
-  const parts = [`<div class="day">Monday</div>`, row("Athena", DAY.morning.time, morningCard()),
-    row("Athena", DAY.absence.time, eventCard("absence", DAY.absence, "risk")),
-    row("Athena", DAY.lockout.time, eventCard("lockout", DAY.lockout, "late")),
-    row("Athena", DAY.report.time, reportCard())];
-  for (const msg of state.msgs) {
-    if (msg.role === "me") parts.push(`<div class="row me"><div><div class="bubble"><p>${esc(msg.text)}</p></div></div></div>`);
-    else parts.push(row("Athena", msg.at || "", msg.pending ? `<div class="bubble"><div class="working"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg>${esc(msg.status || "Looking into it")}</div></div>` : `<div class="bubble">${renderText(msg.text)}</div>`));
-  }
   const log = document.getElementById("log");
-  const keep = log.scrollTop, atEnd = log.scrollHeight - log.scrollTop - log.clientHeight < 40;
+  const items = [...arrived().map((e, i) => ({ at: e.at, seq: i, e })), ...state.msgs.map((m, i) => ({ at: m.at, seq: 100 + i, m }))].sort((a, b) => a.at - b.at || a.seq - b.seq);
+  const parts = [`<div class="day">Monday</div>`];
+  if (!items.length) parts.push(`<div class="empty"><b>It's ${hhmm(state.clock)}. Nothing yet.</b>Press <i>Play the day</i>. Athena's messages arrive on their own when a rule finds something. Type a question any time.</div>`);
+  let last = null;
+  for (const it of items) {
+    if (it.e && last !== null && it.at - last >= 60) { const g = it.at - last; parts.push(`<div class="quiet">Quiet for ${Math.floor(g / 60)} h ${g % 60} min. Nothing needed you.</div>`); }
+    if (it.e) { parts.push(row("Athena", it.e.time, eventHtml(it.e), proTag(it.e.credit))); last = it.at; continue; }
+    const m = it.m; last = Math.max(last ?? 0, it.at);
+    if (m.role === "me") parts.push(`<div class="row me"><div><div class="meta" style="text-align:right">${esc(hhmm(m.at))}</div><div class="bubble"><p>${esc(m.text)}</p></div></div></div>`);
+    else parts.push(row("Athena", hhmm(m.at), m.pending ? `<div class="bubble"><div class="working"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg>${esc(m.status || "Looking into it")}</div></div>` : `<div class="bubble">${renderText(m.text)}</div>`, m.pending ? "" : reTag(m.sources)));
+  }
+  const atEnd = log.scrollHeight - log.scrollTop - log.clientHeight < 40, keep = log.scrollTop;
   log.innerHTML = parts.join("");
   log.scrollTop = scrollToEnd || atEnd ? log.scrollHeight : keep; scrollToEnd = false;
   for (const b of log.querySelectorAll("[data-pick]")) b.addEventListener("click", () => { const [id, pick] = b.dataset.pick.split(":"); state.done[id] = pick; save(); draw(); drawRail(); });
-  for (const b of log.querySelectorAll("[data-act]")) b.addEventListener("click", () => act(b.dataset.act));
+  for (const b of log.querySelectorAll("[data-open]")) b.addEventListener("click", () => { state.open[b.dataset.open] = !state.open[b.dataset.open]; save(); draw(); });
   const asked = new Set(state.msgs.filter(m => m.role === "me").map(m => m.text));
-  document.getElementById("suggest").innerHTML = DAY.suggestions.filter(q => !asked.has(q)).map(q => `<button type="button" data-q="${esc(q)}">${esc(q)}</button>`).join("");
+  const sugg = [...new Set(arrived().slice().reverse().flatMap(e => e.suggest || []))].filter(q => !asked.has(q)).slice(0, 3);
+  document.getElementById("suggest").innerHTML = sugg.map(q => `<button type="button" data-q="${esc(q)}">${esc(q)}</button>`).join("");
   for (const b of document.querySelectorAll("#suggest [data-q]")) b.addEventListener("click", () => send(b.dataset.q));
   document.getElementById("send").disabled = busy;
 }
-function act(what) {
-  if (what === "list") state.done.list = !state.done.list;
-  if (what === "full") state.done.full = true;
-  if (what === "report") state.done.report = true;
-  if (what === "copy") { try { navigator.clipboard?.writeText(DAY.report.text).catch(() => {}); } catch (_) {} }
-  save(); draw(); drawRail();
-}
 function drawRail() {
-  const n = openCount();
+  const n = waiting();
   const others = [["DM One", "DM/AM, Northwind"], ["DM Two", "DM/AM, Bluefield"], ["CSM One", "CSM"]];
   document.getElementById("rail").innerHTML =
-    `<div class="chatrow on"><div class="av ai" aria-hidden="true">${SPARK}</div><div><b>Athena</b><span>${n ? `${n} waiting for you` : "All caught up"}</span></div>${n ? `<div class="badge">${n}</div>` : "<div></div>"}</div>` +
+    `<div class="chatrow on"><div class="av ai" aria-hidden="true">${SPARK}</div><div><b>Athena</b><span>${n ? `${n} waiting for you` : arrived().length ? "All caught up" : "Nothing yet today"}</span></div>${n ? `<div class="badge">${n}</div>` : "<div></div>"}</div>` +
     others.map(([name, r]) => `<div class="chatrow"><div class="av" aria-hidden="true">${esc(name.split(" ").map(w => w[0]).join(""))}</div><div><b>${esc(name)}</b><span>${esc(r)}</span></div><div></div></div>`).join("") +
     `<div class="chatrow"><div class="av" aria-hidden="true">#</div><div><b>Hub ops</b><span>Channel</span></div><div></div></div>`;
 }
 
-// ---------------------------------------------------------------- asking Athena
+// ---------------------------------------------------------------- asking Athena (reactive)
 function instructions() {
   const p = PEOPLE[person];
   return [
     `You are Athena, the assistant of ${p.name} (${p.role}) at Anka, an offshore healthcare revenue-cycle company in India serving US clients. Demo with made-up data.`,
-    `Their clients: ${scopeOf(person).map(k => DATA.clients[k].name).join(", ")}. It is ${DAY.person.now} IST, Monday 05 Oct 2026, near the end of their day.`,
-    "Their day is about people against work (absences, cover, who is trained), blocked work (logins, things waiting on the client, clearinghouse), turnaround, quality findings and client escalations. Use the tools for all of it and connect the facts.",
-    "Reply like a sharp colleague in chat: 1 to 3 short sentences, at most 4 short bullets. No headings, no bold, no preamble. Lead with the answer. Where useful, end with one concrete move and who should do it.",
-    "Use only tool results; never invent numbers, names or dates. If you cannot answer, say \"I don't know\" and what is missing (for example leave approvals, hiring and email are not visible to you). If data is old, say \"Data is not current\". Never give patient details. You only read data and draft; you never send anything to clients.",
+    `Their clients: ${scopeOf(person).map(k => DATA.clients[k].name).join(", ")}. It is ${hhmm(state.clock)} IST, Monday 05 Oct 2026.`,
+    "Their day is about people against work (absences, cover, who is trained), blocked work (logins, things waiting on the client, clearinghouse), turnaround, quality findings and client escalations. Use the tools and connect the facts.",
+    "Reply like a sharp colleague in chat: 1 or 2 short sentences, at most 3 short bullets. No headings, no bold, no preamble. Lead with the answer. Give a number only when it matters. Where useful, end with one concrete move and who should do it.",
+    "Use only tool results; never invent numbers, names or dates. If you cannot answer, say \"I don't know\" and what is missing (leave approvals, hiring and email are not visible to you). If data is old, say \"Data is not current\". Never give patient details. You only read data and draft; you never send anything to clients.",
   ].join("\n");
 }
 async function send(text) {
   text = String(text || "").trim(); if (!text || busy) return;
-  const at = DAY.person.now;
+  pause();
+  const at = state.clock;
   state.msgs.push({ role: "me", text, at }); scrollToEnd = true;
   if (!(sampleFn && liveTools)) {
     const c = DAY.canned[text];
-    state.msgs.push({ role: "athena", at, text: c ? c + "\n\nSources:\n- smartsheet.blockers, as of " + fmt(DATA.now) : "Open this page in Claude to ask Athena anything. Here you can try the suggested questions and the messages above." });
+    state.msgs.push({ role: "athena", at, sources: c ? 1 : 0, text: c || "Open this page in Claude to ask Athena anything. Here you can try the suggested questions." });
     save(); draw(); return;
   }
   const bot = { role: "athena", pending: true, status: "Looking into it", at };
@@ -459,7 +535,7 @@ async function send(text) {
   try {
     const keep = new Set(["get_tasks", "get_task_history", "get_team", "get_metrics", "get_denials", "get_ar_aging", "get_tickets", "get_client_activity", "search_documents", "get_owner", "get_client_profile"]);
     const { text: out } = await sampleFn(input, { tools: [...dayTools(steps, redraw), ...makeTools(person, steps, redraw).filter(t => keep.has(t.name))], modelTier: "default" });
-    Object.assign(bot, { pending: false, text: finish(out, steps) });
+    Object.assign(bot, { pending: false, text: finish(out, steps), sources: steps.filter(s => s.n > 0).length });
     state.turns.push({ role: "user", content: text }, { role: "assistant", content: bot.text });
   } catch (e) {
     Object.assign(bot, { pending: false, text: { rate_limited: "Too many messages at once. Try again in a minute.", not_granted: "Athena needs permission to use Claude for live answers.", refused: "I can't help with that one." }[e?.code] || "Something went wrong. Try again." });
@@ -468,12 +544,15 @@ async function send(text) {
 }
 
 // ---------------------------------------------------------------- start
-let scrollToEnd = false;
-state.msgs = state.msgs.filter(m => !m.pending);
+state.msgs = state.msgs.filter(m => !m.pending && typeof m.at === "number");
 document.getElementById("me").textContent = PEOPLE[person].name;
 document.getElementById("form").addEventListener("submit", ev => { ev.preventDefault(); const q = document.getElementById("q"); const v = q.value; q.value = ""; send(v); });
 document.getElementById("q").addEventListener("keydown", ev => { if (ev.key === "Enter" && !ev.shiftKey) { ev.preventDefault(); document.getElementById("form").requestSubmit(); } });
+document.getElementById("q").addEventListener("focus", pause);
+document.getElementById("play").addEventListener("click", play);
+document.getElementById("next").addEventListener("click", skip);
+document.getElementById("reset").addEventListener("click", () => { pause(); state = { done: {}, msgs: [], turns: [], open: {}, clock: START }; save(); draw(); drawRail(); drawSim(); });
 document.getElementById("headav").innerHTML = SPARK;
-drawRail(); draw(); document.getElementById("log").scrollTop = 0;
+drawRail(); draw(); drawSim();
 (async () => { try { sampleFn = await window.claude?.use?.("sample"); if (sampleFn) liveTools = !!(await sampleFn.limits().catch(() => null))?.tools; } catch (_) { sampleFn = null; } })();
 </script>

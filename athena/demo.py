@@ -903,28 +903,29 @@ def hub_day(cfg: AthenaConfig) -> dict[str, Any]:
         ]
         + ["Can you chase them on today's client calls and give me a date for each?"]
     )
+    n2 = post.absent[0].split(" (")[0]
     rows = [
         {
             "id": "posting",
-            "text": f"Northwind posting has {post.backlog} items waiting; the oldest is {post.oldest_days} days old (target {post.tat_days}).",
-            "why": f"{post.absent[0].split(' (')[0]} is on leave until {back:%a}. Only {', '.join(trained)} is trained to cover, and denials already need {denials.need_fte:g} FTE.",
+            "text": f"Northwind posting is falling behind while {n2} is out.",
+            "detail": f"{post.backlog} items waiting, the oldest {post.oldest_days} days (target {post.tat_days}). {n2} is back {back:%a}. Only {', '.join(trained)} is trained to cover, and they are needed on denials.",
             "buttons": [
                 {
                     "id": "move",
                     "label": f"Move {trained[0]} to posting",
-                    "done": f"Sent to {dm['northwind_ortho']}. Posting is covered; denials will be {left:g} FTE short (about {round(left * denials.per_fte_day)} a day) until {back:%a}.",
+                    "done": f"Sent to {dm['northwind_ortho']}. Denials will slip until {back:%a} (about {round(left * denials.per_fte_day)} a day).",
                 },
                 {
                     "id": "wait",
-                    "label": f"Wait for {post.absent[0].split(' (')[0]}",
-                    "done": f"Noted. About {by_return} posting items will be waiting by {back:%a}. I'll tell you if the oldest item passes 5 days.",
+                    "label": f"Wait for {n2}",
+                    "done": f"Noted. About {by_return} items will be waiting by {back:%a}; I'll tell you if the oldest passes 5 days.",
                 },
             ],
         },
         {
             "id": "waiting",
-            "text": f"{len(old)} things have waited on clients for more than 5 days, ${sum(b['amount_usd'] for b in old):,} held.",
-            "why": f"Oldest: {oldest['summary']} ({oldest['client'].split()[0]}, {oldest['age_days']:.0f} days).",
+            "text": f"{len(old)} things have been stuck with clients for over 5 days.",
+            "detail": f"${sum(b['amount_usd'] for b in old):,} held. Oldest: {oldest['summary']} ({oldest['client'].split()[0]}, {oldest['age_days']:.0f} days).",
             "buttons": [
                 {
                     "id": "chase",
@@ -936,8 +937,8 @@ def hub_day(cfg: AthenaConfig) -> dict[str, Any]:
         },
         {
             "id": "audit",
-            "text": f"{finding['client'].split()[0]} found an error we made: {finding['summary'][0].lower() + finding['summary'][1:]}.",
-            "why": f"The fix was due {finding['due'].astimezone(TZ):%a}. It is still open.",
+            "text": f"An error {finding['client'].split()[0]} found is past its fix date.",
+            "detail": f"{finding['summary']}. The fix was due {finding['due'].astimezone(TZ):%a}.",
             "buttons": [
                 {
                     "id": "date",
@@ -948,13 +949,12 @@ def hub_day(cfg: AthenaConfig) -> dict[str, Any]:
         },
         {
             "id": "tickets",
-            "text": (
-                f"Two clients raised the same problem and have had no reply: “{tickets[0].get('subject')}”."
-                if same
-                else f"{len(tickets)} high-priority client tickets have had no reply."
-            ),
-            "why": "; ".join(
-                f"{t.get('ticket_id')} {cfg.owner_map.clients[t.get('client')].name.split()[0]}, open {(morning - t.get('opened_at')).days or 1} day{'s' if (morning - t.get('opened_at')).days > 1 else ''}"
+            "text": "Two clients have the same unanswered complaint."
+            if same
+            else f"{len(tickets)} urgent client tickets have no reply.",
+            "detail": (f"“{tickets[0].get('subject')}”: " if same else "")
+            + ", ".join(
+                f"{t.get('ticket_id')} ({cfg.owner_map.clients[t.get('client')].name.split()[0]})"
                 for t in tickets
             )
             + (". One fix may close both." if same else "."),
@@ -998,8 +998,6 @@ def hub_day(cfg: AthenaConfig) -> dict[str, Any]:
     # data for the chat's tools and prepared answers (as of 18:50)
     end_blocks = standing.blocked(cfg, sources, scope, end)
     waiting = [b for b in end_blocks if b["kind"] == "waiting_on_client"]
-    locked = next(b for b in end_blocks if b["blocker_id"] == "BL-301")
-    expiring = [b for b in end_blocks if b["expires_in_hours"] is not None]
     others = [
         m.get("member")
         for m in team
@@ -1008,10 +1006,22 @@ def hub_day(cfg: AthenaConfig) -> dict[str, Any]:
             "Payment posting" in (m.get("also_trained") or []) or m.get("role") == "Payment posting"
         )
     ]
+    others_auth = [
+        m.get("member")
+        for m in team
+        if m.get("client") != auth.client
+        and ("Prior auth" in (m.get("also_trained") or []) or m.get("role") == "Prior auth")
+    ]
+    still = [i for i in end_items if i.needs_you]
     canned = {
+        "What is outstanding today?": "\n".join(
+            [f"{len(rows)} things need you today:"]
+            + [f"- {r['text']}" for r in rows]
+            + [f"{len(calm)} other open items are moving without you."]
+        ),
         DAY_SUGGESTIONS[0]: (
-            f"Only {', '.join(trained)} is trained in posting, and they are on denials, which already need {denials.need_fte:g} FTE. "
-            f"Moving them covers posting and leaves denials {left:g} FTE short (about {round(left * denials.per_fte_day)} denials a day). "
+            f"Only {', '.join(trained)} is trained in posting, and they are needed on denials. "
+            f"Moving them leaves denials {left:g} FTE short, about {round(left * denials.per_fte_day)} a day. "
             + (
                 f"Also trained elsewhere: {', '.join(others)}."
                 if others
@@ -1021,59 +1031,105 @@ def hub_day(cfg: AthenaConfig) -> dict[str, Any]:
         DAY_SUGGESTIONS[1]: "\n".join(
             [f"{len(waiting)} things, ${sum(b['amount_usd'] for b in waiting):,} held:"]
             + [
-                f"- {b['client'].split()[0]}: {b['summary']} ({b['age_days']:.0f} days, ${b['amount_usd']:,})"
+                f"- {b['client'].split()[0]}: {b['summary']} ({b['age_days']:.0f} days)"
                 for b in sorted(waiting, key=lambda b: -b["age_days"])
             ]
         ),
+        "Who else could cover prior auth?": (
+            f"Only {cover} is trained in prior auth. "
+            + (
+                f"Elsewhere: {', '.join(others_auth)}."
+                if others_auth
+                else "Nobody at Northwind is."
+            )
+        ),
+        "What slips if nobody does?": (
+            f"{auth.inflow_today} prior auths due today wait until tomorrow. "
+            f"With a {auth.tat_days}-day target, all of them will be late."
+        ),
         DAY_SUGGESTIONS[2]: (
-            f"About {locked['hours_lost']:g} hours: {locked['people_blocked']} people at Northwind were locked out from 10:40. "
+            f"About {lock['hours_lost']:g} hours so far: {lock['people_blocked']} people at Northwind locked out since 10:40. "
             + "; ".join(
                 f"Next: a login at {b['client'].split()[0]} expires in {b['expires_in_hours']:.0f} hours ({b['owner']} has it)"
-                for b in expiring
+                for b in standing.blocked(cfg, sources, scope, esc)
+                if b["expires_in_hours"] is not None
             )
             + "."
         ),
+        "What is still open tonight?": f"{len(still)} items still need you: "
+        + "; ".join(i.label.lower() for i in still)
+        + ".",
     }
     hub = hub_view(cfg)
     return {
-        "person": {"name": people[hl].name, "email": hl, "now": "18:50"},
-        "morning": {"time": "09:00", "count": len(rows), "rows": rows},
-        "standing": [
-            {"label": i.label, "count": i.count, "needs_you": i.needs_you, "detail": i.detail}
-            for i in items
+        "person": {"name": people[hl].name, "email": hl},
+        "start": "08:55",
+        "events": [
+            {
+                "id": "morning",
+                "time": "09:00",
+                "credit": "Rule R3, every work day at 09:00",
+                "title": f"Good morning. {len(rows)} things need you today.",
+                "rows": rows,
+                "calm": len(calm),
+                "standing": [
+                    {
+                        "label": i.label,
+                        "count": i.count,
+                        "needs_you": i.needs_you,
+                        "detail": i.detail,
+                    }
+                    for i in items
+                ],
+                "suggest": ["What is outstanding today?", DAY_SUGGESTIONS[0], DAY_SUGGESTIONS[1]],
+            },
+            {
+                "id": "absence",
+                "time": "10:32",
+                "credit": "Rule R9 Unplanned absence, checked every 15 minutes",
+                "tone": "risk",
+                "text": f"{auth.absent[0].split(' (')[0]} is out today, and nobody is on Bluefield prior auths.",
+                "detail": f"No leave was booked. {auth.inflow_today} prior auths are due today. {cover} is trained; moving them leaves {cover_left[0].lower() + cover_left[1:]}.",
+                "buttons": [
+                    {
+                        "id": "cover",
+                        "label": f"Move {cover} to prior auth",
+                        "done": f"Sent to {dm['bluefield_imaging']}. Eligibility checks will run late.",
+                    },
+                    {
+                        "id": "ask",
+                        "label": f"Let {dm['bluefield_imaging']} decide",
+                        "done": f"Sent to {dm['bluefield_imaging']}.",
+                    },
+                ],
+                "suggest": ["Who else could cover prior auth?", "What slips if nobody does?"],
+            },
+            {
+                "id": "lockout",
+                "time": "12:45",
+                "credit": f"Rule R7 Locked out: to {dm['northwind_ortho']} at 10:45, to you after 2 hours",
+                "tone": "late",
+                "text": "Two Northwind analysts are still locked out.",
+                "detail": f"Since 10:40: {lock['hours_lost']:g} hours lost so far, about {tonight} by tonight. The reset code goes to the client's office manager, who starts at 18:30 IST.",
+                "buttons": [
+                    {
+                        "id": "email",
+                        "draft": email,
+                        "label": f"Draft the email for {csm['northwind_ortho']}",
+                        "done": f"Draft sent to {csm['northwind_ortho']} to check and send. Athena never writes to clients.",
+                    }
+                ],
+                "suggest": [DAY_SUGGESTIONS[2]],
+            },
+            {
+                "id": "report",
+                "time": "18:50",
+                "credit": "Daily hub report, drafted at 18:50 from your standing list",
+                "text": "Your hub report for today is ready to send.",
+                "report": report,
+                "suggest": ["What is still open tonight?"],
+            },
         ],
-        "calm": len(calm),
-        "absence": {
-            "time": "10:32",
-            "text": f"{auth.absent[0].split(' (')[0]} has not logged in and has no leave booked. Bluefield has {auth.inflow_today} prior auths to do today and nobody on them.",
-            "why": f"{cover} is trained in prior auth. Moving them leaves {cover_left[0].lower() + cover_left[1:]}.",
-            "buttons": [
-                {
-                    "id": "cover",
-                    "label": f"Move {cover} to prior auth",
-                    "done": f"Sent to {dm['bluefield_imaging']}. Eligibility checks for tomorrow will run late.",
-                },
-                {
-                    "id": "ask",
-                    "label": f"Let {dm['bluefield_imaging']} decide",
-                    "done": f"Sent to {dm['bluefield_imaging']}.",
-                },
-            ],
-        },
-        "lockout": {
-            "time": "12:45",
-            "text": f"Still locked out after 2 hours: Analyst N1 and Analyst N3 at Northwind. {lock['hours_lost']:g} hours lost so far, about {tonight} by 18:30.",
-            "why": "The reset code goes to the client's office manager, who starts at 18:30 IST.",
-            "buttons": [
-                {
-                    "id": "email",
-                    "draft": email,
-                    "label": f"Draft the email for {csm['northwind_ortho']}",
-                    "done": f"Draft sent to {csm['northwind_ortho']} to check and send. Athena never writes to clients itself.",
-                }
-            ],
-        },
-        "report": {"time": "18:50", "text": report},
         "tools": {
             "standing": [i.model_dump(mode="json") for i in end_items]
             + [{"key": "not_visible", "detail": standing.NOT_VISIBLE}],
@@ -1093,5 +1149,4 @@ def hub_day(cfg: AthenaConfig) -> dict[str, Any]:
             "briefs": hub["briefs"],
         },
         "canned": canned,
-        "suggestions": DAY_SUGGESTIONS,
     }

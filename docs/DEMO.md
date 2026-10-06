@@ -12,18 +12,25 @@ Everything in the demo is synthetic: three made-up clients (Northwind Orthopedic
 
 ## How the demo page works
 
-The page shows one Monday of Hub Leader Key, with Athena as a contact in their work chat (an illustration of Teams, without its branding). It is 18:50. Everything Athena says is counted by code from the hub's standing list (`athena/core/standing.py`): the things that are always open for a hub leader. This is our assumed model of their day; replace it when real answers exist (`docs/DECISIONS.md`).
+The page plays one Monday of Hub Leader Key, with Athena as a contact in their work chat (an illustration of Teams, without its branding). It shows the two ways Athena works:
 
-- **09:00 Morning message:** only the 4 things that need the hub leader today, each with one button. Posting is short because an analyst is on leave and the only trained cover is on denials. Things have waited on clients more than 5 days. The client found an error and the fix is overdue. Two clients have the same unanswered complaint. **Show your standing list** shows the whole always-open list with counts. A red dot means it needs them.
-- **10:32 Unplanned absence (rule R9):** who is out, what work has nobody on it, who is trained to cover and what moving them leaves short.
-- **12:45 Still locked out (rule R7, escalated):** hours lost so far and by tonight. Athena drafts the email for the CSM to send; it never writes to clients.
-- **18:50 Hub report:** built from the standing list, ready to send. It also says what Athena cannot see (leave approvals, hiring, email).
+- **Proactive (tag "Athena started this"):** a rule finds something and Athena messages first. The tag names the rule and how often it checks.
+- **Reactive (tag "You asked"):** the person types a question and Athena answers from its tools.
 
-Then the chat: questions about the hub (cover, what is blocked, what we wait on). Opened in Claude, a real model answers through Athena's tools, only for Hub Leader Key's clients. Opened elsewhere, the three suggested questions have prepared answers.
+Press **Play the day**. The clock runs from 08:55 and stops each time a message arrives, with a notification. **Skip to next** jumps ahead; the timeline dots jump to a time; **Restart** starts the day again. Between messages the chat says how long it was quiet: staying quiet is part of the design. Typing a question pauses the clock.
 
-Suggested flow: read the morning message and open the standing list. Press **Move Analyst N3 to posting**, then the absence and lockout buttons. Open the report. Ask "Who can cover Northwind posting?" and one question of their own. Ask them: "Is this your day? What is missing from the list?"
+What arrives (all counted by code from the standing list, `athena/core/standing.py`; our assumed model of the day, see `docs/DECISIONS.md`):
 
-The same data in the terminal: `athena ask "What is outstanding today?" --as hl.key@fixture.local` (tools `get_standing_list`, `get_capacity`, `get_blocked_work`, `get_quality`).
+- **09:00 Morning message (R3):** only the 4 things that need the hub leader today, one line each. **Details** shows the numbers. **Show your standing list** shows every always-open item with a count; a red dot means it needs them.
+- **10:32 Unplanned absence (R9):** who is out, what has nobody on it, who could cover.
+- **12:45 Still locked out (R7, escalated after 2 hours):** Athena drafts an email for the CSM to send; it never writes to clients.
+- **18:50 Hub report:** drafted from the standing list, ready to send.
+
+After each message the suggested questions change to the natural follow-ups (for example "Who else could cover prior auth?" after the absence). Opened in Claude, a real model answers any question through Athena's tools, only for Hub Leader Key's clients. Opened elsewhere, the suggested questions have prepared answers.
+
+Suggested flow: let the person press Play. At each message ask: "Would you want this now? Earlier, later, or not at all?" Let them ask one follow-up in their own words. At the end ask: "Is this your day? What is missing?"
+
+The same data in the terminal: `athena ask "What is outstanding today?" --as hl.key@fixture.local`.
 
 ## What to say first (1 minute)
 
