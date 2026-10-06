@@ -35,3 +35,10 @@ def test_cli(monkeypatch, tmp_path) -> None:
     result = CliRunner().invoke(app, ["eval", "golden", "--model", "stub"])
     assert result.exit_code == 0, result.output
     assert "24/24 passed" in result.output
+
+
+def test_persona_bank_has_20_per_pilot_persona() -> None:
+    from collections import Counter
+
+    bank = load_golden(ROOT / "tests/golden/persona_questions.yaml")
+    assert Counter(g.persona for g in bank) == {"hub_leader": 20, "dm_am": 20, "csm": 20, "ba": 20}

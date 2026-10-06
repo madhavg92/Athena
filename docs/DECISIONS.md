@@ -14,10 +14,16 @@
 - Claude Code does not set dates, targets or pass marks. Management sets them.
 
 ## Open (need the user)
-- Microsoft 365 Copilot licences: if Anka has them, test Copilot for document search before relying on our own search.
-- SharePoint search auth: delegated (Teams SSO + on-behalf-of) for per-user trimming, or app-only with a strict site allowlist.
-- PHI position and model hosting (G5).
-- Platform owner: the person who reviews new tools and rule files.
+Each item has a PROVISIONAL answer, decided in the build session at the user's request ("make decisions"). Athena is built to work with it; change it when management decides.
+- Microsoft 365 Copilot licences — PROVISIONAL: assume none; Athena does its own SharePoint search. If Anka has licences, test Copilot for document search before relying on Athena's.
+- SharePoint search auth — PROVISIONAL: delegated (Teams SSO + on-behalf-of), so results are trimmed to what each user may see. App-only is not used for search.
+- PHI position and model hosting (G5) — PROVISIONAL: no live data goes to any model until a model host is under a contract that covers the data (`contract_covers_data: yes`). Preferred: an open-weight model hosted in Anka's own Azure tenant. Until then: the stub model and synthetic data only.
+- Platform owner — PROVISIONAL: Madhav reviews new tools and rule files until someone is named.
+
+## Provisional values (G8, G9, G10), synthetic until replaced
+- G8 "late": due time has passed and status is not Complete. "At risk": due within 4 hours and no update for 2 hours. Work days Monday to Friday. Hours: hub leader, DM/AM and BA 10:00–19:00 IST; CSM and CS lead 17:00–02:00 IST. Digest: hub leader 09:00 IST. R3 runs at 08:30 IST. R2 reminder after 2h, escalation after 4h. R6: no reply for 24h, reminder after 4h, escalation to the CS lead after 8h. `max_wrong_rate` 0.2 everywhere (a placeholder; management sets it).
+- G9: `tests/golden/persona_questions.yaml` — 80 draft questions (20 for each pilot persona) written from common RCM management questions on synthetic clients. Stub baseline 69/80; the misses need a real model. Replace with pilot users' real questions and answers.
+- G10: the synthetic owner map stays in `context/owner_map.yaml`. The real one must live outside Git (decision for the user: a private repo or a file in Azure storage, loaded with `ATHENA_HOME`).
 
 ## Made during build
 (Claude Code adds entries here: date, choice, reason, how to reverse.)

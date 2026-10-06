@@ -1,0 +1,557 @@
+# DRAFT persona question bank (G9 stand-in): 20 questions for each pilot persona.
+# Written by Claude Code from common RCM management questions, on SYNTHETIC fixture clients.
+# Replace with real questions and answers from pilot users when G9 opens.
+# expect.tools = data Athena has today; idk = Athena does not have this data and must say "I do not know";
+# refused = out of the person's scope or sources; stale = the source is old in the fixtures.
+# Run: athena eval golden --model <name> --file tests/golden/persona_questions.yaml
+- id: HL01
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: What is the backlog for Northwind Orthopedics today?
+  expect:
+    tools:
+    - get_metrics
+- id: HL02
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: How has the denial rate for Bluefield Imaging moved over the last month?
+  expect:
+    tools:
+    - get_metrics
+- id: HL03
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: Which tasks are late for Bluefield Imaging right now?
+  expect:
+    tools:
+    - get_tasks
+- id: HL04
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: Is Northwind Orthopedics on target for first pass rate?
+  expect:
+    tools:
+    - get_metrics
+- id: HL05
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: What are the AR days for Bluefield Imaging this week?
+  expect:
+    tools:
+    - get_metrics
+- id: HL06
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: How many open tickets does Bluefield Imaging have, and what is its health score?
+  expect:
+    tools:
+    - get_tickets
+- id: HL07
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: Who is the DM/AM for Northwind Orthopedics?
+  expect:
+    tools:
+    - get_owner
+- id: HL08
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: What does the Northwind Orthopedics statement of work say about charge entry turnaround?
+  expect:
+    tools:
+    - search_documents
+- id: HL09
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: Which high-priority tickets are open for Northwind Orthopedics?
+  expect:
+    tools:
+    - get_tickets
+- id: HL10
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: What is the escalation path for Bluefield Imaging?
+  expect:
+    tools:
+    - search_documents
+- id: HL11
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: Show tasks at risk for Northwind Orthopedics today.
+  expect:
+    tools:
+    - get_tasks
+- id: HL12
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: What is the backlog for Cedar Family Clinic?
+  expect:
+    refused: true
+- id: HL13
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: What is the productivity per FTE on Northwind Orthopedics?
+  expect:
+    idk: true
+- id: HL14
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: What is the net collection rate for Bluefield Imaging?
+  expect:
+    idk: true
+- id: HL15
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: How many claims did we submit for Northwind Orthopedics last week?
+  expect:
+    idk: true
+- id: HL16
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: What is the clean claim rate for Bluefield Imaging?
+  expect:
+    idk: true
+- id: HL17
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: Which payers cause the most denials for Northwind Orthopedics?
+  expect:
+    idk: true
+- id: HL18
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: 'Give me a quick view of Bluefield Imaging: tickets, backlog and late tasks.'
+  expect:
+    tools:
+    - get_tickets
+    - get_metrics
+    - get_tasks
+- id: HL19
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: When is the monthly review with Northwind Orthopedics?
+  expect:
+    tools:
+    - get_client_profile
+- id: HL20
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: What is on the watch list for Northwind Orthopedics?
+  expect:
+    tools:
+    - get_client_profile
+- id: DM01
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: Which of my tasks for Bluefield Imaging are late?
+  expect:
+    tools:
+    - get_tasks
+- id: DM02
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: What is due in the next 4 hours for Cedar Family Clinic?
+  expect:
+    tools:
+    - get_tasks
+- id: DM03
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: Who owns the late tasks at Bluefield Imaging?
+  expect:
+    tools:
+    - get_tasks
+- id: DM04
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: What is the backlog for Cedar Family Clinic against target?
+  expect:
+    tools:
+    - get_metrics
+- id: DM05
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: Did Cedar Family Clinic hit the first pass rate target yesterday?
+  expect:
+    tools:
+    - get_metrics
+- id: DM06
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: What is the denial rate trend for Cedar Family Clinic this week?
+  expect:
+    tools:
+    - get_metrics
+- id: DM07
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: Are there tasks for Bluefield Imaging with no update in the last 2 hours?
+  expect:
+    tools:
+    - get_tasks
+- id: DM08
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: Are the eligibility checks for tomorrow done for Bluefield Imaging?
+  expect:
+    tools:
+    - get_tasks
+- id: DM09
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: Brief me on Cedar Family Clinic
+  expect:
+    stale: true
+    tools:
+    - get_tickets
+- id: DM10
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: What open tickets does Cedar Family Clinic have?
+  expect:
+    stale: true
+    tools:
+    - get_tickets
+- id: DM11
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: Who is the CSM for Bluefield Imaging?
+  expect:
+    tools:
+    - get_owner
+- id: DM12
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: What does the Bluefield Imaging contract say about scope?
+  expect:
+    tools:
+    - search_documents
+- id: DM13
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: Show late tasks for Northwind Orthopedics.
+  expect:
+    refused: true
+- id: DM14
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: How many FTEs are working on Bluefield Imaging today?
+  expect:
+    idk: true
+- id: DM15
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: What is the average handle time per claim at Cedar Family Clinic?
+  expect:
+    idk: true
+- id: DM16
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: How much AR is older than 90 days for Bluefield Imaging?
+  expect:
+    idk: true
+- id: DM17
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: Which tasks were completed today for Cedar Family Clinic?
+  expect:
+    tools:
+    - get_tasks
+- id: DM18
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: What are the AR days for Cedar Family Clinic over the last 30 days?
+  expect:
+    tools:
+    - get_metrics
+- id: DM19
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: Is the payment posting batch done for Bluefield Imaging?
+  expect:
+    tools:
+    - get_tasks
+- id: DM20
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: When is the next weekly call with Bluefield Imaging?
+  expect:
+    tools:
+    - get_client_profile
+- id: CS01
+  persona: csm
+  user: csm.one@fixture.local
+  question: Brief me on Northwind Orthopedics
+  expect:
+    tools:
+    - get_tickets
+    - get_metrics
+    - get_tasks
+    - search_documents
+    - get_client_profile
+- id: CS02
+  persona: csm
+  user: csm.one@fixture.local
+  question: What is the health score for Bluefield Imaging?
+  expect:
+    tools:
+    - get_tickets
+- id: CS03
+  persona: csm
+  user: csm.one@fixture.local
+  question: Which tickets for Northwind Orthopedics have no reply yet?
+  expect:
+    tools:
+    - get_tickets
+- id: CS04
+  persona: csm
+  user: csm.one@fixture.local
+  question: Any escalation tickets open for Northwind Orthopedics?
+  expect:
+    tools:
+    - get_tickets
+- id: CS05
+  persona: csm
+  user: csm.one@fixture.local
+  question: What is the denial rate for Northwind Orthopedics this month?
+  expect:
+    tools:
+    - get_metrics
+- id: CS06
+  persona: csm
+  user: csm.one@fixture.local
+  question: How is Bluefield Imaging trending on backlog this week?
+  expect:
+    tools:
+    - get_metrics
+- id: CS07
+  persona: csm
+  user: csm.one@fixture.local
+  question: What services do we provide to Bluefield Imaging?
+  expect:
+    tools:
+    - get_client_profile
+- id: CS08
+  persona: csm
+  user: csm.one@fixture.local
+  question: Who is the hub leader for Bluefield Imaging?
+  expect:
+    tools:
+    - get_owner
+- id: CS09
+  persona: csm
+  user: csm.one@fixture.local
+  question: What are the timely filing rules in the Northwind Orthopedics payer list?
+  expect:
+    tools:
+    - search_documents
+- id: CS10
+  persona: csm
+  user: csm.one@fixture.local
+  question: Any late tasks I should mention on the Northwind Orthopedics call?
+  expect:
+    tools:
+    - get_tasks
+- id: CS11
+  persona: csm
+  user: csm.one@fixture.local
+  question: Brief me on Bluefield Imaging
+  expect:
+    tools:
+    - get_tickets
+    - get_metrics
+    - get_tasks
+    - search_documents
+    - get_client_profile
+- id: CS12
+  persona: csm
+  user: csm.one@fixture.local
+  question: What is the health of Cedar Family Clinic?
+  expect:
+    refused: true
+- id: CS13
+  persona: csm
+  user: csm.one@fixture.local
+  question: What is the NPS for Northwind Orthopedics?
+  expect:
+    idk: true
+- id: CS14
+  persona: csm
+  user: csm.one@fixture.local
+  question: When does the Bluefield Imaging contract renew?
+  expect:
+    idk: true
+- id: CS15
+  persona: csm
+  user: csm.one@fixture.local
+  question: How much did we invoice Northwind Orthopedics last month?
+  expect:
+    idk: true
+- id: CS16
+  persona: csm
+  user: csm.one@fixture.local
+  question: What is the monthly visit volume for Bluefield Imaging?
+  expect:
+    idk: true
+- id: CS17
+  persona: csm
+  user: csm.one@fixture.local
+  question: Which tickets are pending for Bluefield Imaging?
+  expect:
+    tools:
+    - get_tickets
+- id: CS18
+  persona: csm
+  user: csm.one@fixture.local
+  question: What is the first pass rate for Bluefield Imaging?
+  expect:
+    tools:
+    - get_metrics
+- id: CS19
+  persona: csm
+  user: csm.one@fixture.local
+  question: What specialty is Northwind Orthopedics?
+  expect:
+    tools:
+    - get_client_profile
+- id: CS20
+  persona: csm
+  user: csm.one@fixture.local
+  question: What is the escalation SOP for Northwind Orthopedics?
+  expect:
+    tools:
+    - search_documents
+- id: BA01
+  persona: ba
+  user: ba.one@fixture.local
+  question: What was the average backlog for Northwind Orthopedics last week?
+  expect:
+    tools:
+    - get_metrics
+- id: BA02
+  persona: ba
+  user: ba.one@fixture.local
+  question: Give me the first pass rate for Bluefield Imaging over the last 30 days.
+  expect:
+    tools:
+    - get_metrics
+- id: BA03
+  persona: ba
+  user: ba.one@fixture.local
+  question: Compare AR days for Cedar Family Clinic this week with the target.
+  expect:
+    tools:
+    - get_metrics
+- id: BA04
+  persona: ba
+  user: ba.one@fixture.local
+  question: What is the denial rate for Northwind Orthopedics this week?
+  expect:
+    tools:
+    - get_metrics
+- id: BA05
+  persona: ba
+  user: ba.one@fixture.local
+  question: What is the backlog trend for Bluefield Imaging this month?
+  expect:
+    tools:
+    - get_metrics
+- id: BA06
+  persona: ba
+  user: ba.one@fixture.local
+  question: How is first pass rate defined?
+  expect:
+    contains:
+    - first submission
+- id: BA07
+  persona: ba
+  user: ba.one@fixture.local
+  question: Which metrics are off target for Cedar Family Clinic?
+  expect:
+    tools:
+    - get_metrics
+- id: BA08
+  persona: ba
+  user: ba.one@fixture.local
+  question: What is in the Cedar Family Clinic statement of work?
+  expect:
+    tools:
+    - search_documents
+- id: BA09
+  persona: ba
+  user: ba.one@fixture.local
+  question: Who is the DM/AM for Cedar Family Clinic?
+  expect:
+    tools:
+    - get_owner
+- id: BA10
+  persona: ba
+  user: ba.one@fixture.local
+  question: What is the payer list for Bluefield Imaging?
+  expect:
+    tools:
+    - search_documents
+- id: BA11
+  persona: ba
+  user: ba.one@fixture.local
+  question: Which tasks are late for Cedar Family Clinic?
+  expect:
+    refused: true
+- id: BA12
+  persona: ba
+  user: ba.one@fixture.local
+  question: What is the health score for Northwind Orthopedics?
+  expect:
+    refused: true
+- id: BA13
+  persona: ba
+  user: ba.one@fixture.local
+  question: What is the denial rate by payer for Northwind Orthopedics?
+  expect:
+    idk: true
+- id: BA14
+  persona: ba
+  user: ba.one@fixture.local
+  question: What is the cost to collect for Bluefield Imaging?
+  expect:
+    idk: true
+- id: BA15
+  persona: ba
+  user: ba.one@fixture.local
+  question: What were total collections for Cedar Family Clinic last week?
+  expect:
+    idk: true
+- id: BA16
+  persona: ba
+  user: ba.one@fixture.local
+  question: What is the backlog for Cedar Family Clinic?
+  expect:
+    tools:
+    - get_metrics
+- id: BA17
+  persona: ba
+  user: ba.one@fixture.local
+  question: What are the AR days for Northwind Orthopedics?
+  expect:
+    tools:
+    - get_metrics
+- id: BA18
+  persona: ba
+  user: ba.one@fixture.local
+  question: What is the first pass rate for Cedar Family Clinic this week?
+  expect:
+    tools:
+    - get_metrics
+- id: BA19
+  persona: ba
+  user: ba.one@fixture.local
+  question: Which services are in the Bluefield Imaging contract?
+  expect:
+    tools:
+    - search_documents
+- id: BA20
+  persona: ba
+  user: ba.one@fixture.local
+  question: Which week does the latest weekly report for Northwind Orthopedics cover?
+  expect:
+    idk: true
