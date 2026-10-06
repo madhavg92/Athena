@@ -13,6 +13,7 @@ from typing import Any
 from zoneinfo import ZoneInfo
 
 from pydantic import BaseModel, Field
+from sqlalchemy import select
 
 from athena.app import build
 from athena.bot.cards import alert_card, answer_card
@@ -20,7 +21,7 @@ from athena.connectors.base import fixture_anchor
 from athena.connectors.registry import Sources
 from athena.core import scheduler
 from athena.core.config import AthenaConfig
-from athena.core.db import Database
+from athena.core.db import Alert, Database
 from athena.core.gateway import MemoryDeliverer
 
 TZ = ZoneInfo("Asia/Kolkata")
@@ -42,6 +43,10 @@ class Event(BaseModel):
     question: str | None = None
     card: dict[str, Any] | None = None
     note: str | None = None
+    alert_id: int | None = None
+    item_key: str | None = None
+    severity: str | None = None
+    payload: dict[str, Any] | None = None
 
 
 class Demo(BaseModel):
@@ -145,9 +150,28 @@ def run(cfg: AthenaConfig, personas: list[str] | None = None) -> Demo:
             card = (
                 alert_card(0, text, sev) if action.type == "notify" and kind != "digest" else None
             )
+            alert_id = None
+            if action.item_key and not action.item_key.startswith("digest:"):
+                with app.db.session() as s:
+                    row = s.scalars(select(Alert).where(Alert.item_key == action.item_key)).first()
+                    alert_id = row.id if row else None
             demo.events.append(
                 Event(
-                    persona=key, person=person, time=t, kind=kind, title=title, text=text, card=card
+                    persona=key,
+                    person=person,
+                    time=t,
+                    kind=kind,
+                    title=title,
+                    text=text,
+                    card=card,
+                    alert_id=alert_id,
+                    item_key=action.item_key,
+                    severity=(action.payload or {}).get("severity"),
+                    payload={
+                        k: v
+                        for k, v in (action.payload or {}).items()
+                        if not str(k).startswith("_")
+                    },
                 )
             )
         seen["n"] = len(out.sent)
@@ -255,6 +279,8 @@ def save_html(demo: Demo, template: Path, path: Path, cfg: AthenaConfig | None =
         page = page.replace("/*ASK_DATA*/null", js(interactive_data(cfg)))
         page = page.replace("/*SUGGESTIONS*/null", js(SUGGESTIONS))
         page = page.replace("/*CANNED*/null", js(canned_answers(cfg)))
+        page = page.replace("/*INBOX*/null", js(inbox(demo)))
+        page = page.replace("/*OPENS_AT*/null", js(OPENS_AT))
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(page)
     return path
@@ -264,43 +290,36 @@ def save_html(demo: Demo, template: Path, path: Path, cfg: AthenaConfig | None =
 
 SUGGESTIONS: dict[str, list[str]] = {
     "dm_am": [
-        "Which tasks are late for Northwind?",
-        "What is due in the next 4 hours for Northwind Orthopedics?",
-        "What is the backlog for Northwind Orthopedics against target?",
-        "How has the denial rate for Northwind moved this week?",
-        "Who is the CSM for Northwind Orthopedics?",
-        "Brief me on Northwind Orthopedics",
+        "Why is Northwind's backlog growing, and what should I do this week?",
+        "What is driving the rise in Northwind's denial rate? Break it down by payer and reason.",
+        "Which late tasks put the recovery plan we promised Northwind at risk, and who could cover them?",
+        "Analyst N2 is out until Thursday. What slips, and what should I move?",
+        "Prepare me for a call with Northwind tomorrow: what changed in the last two weeks?",
         "Show late tasks for Cedar Family Clinic",
-        "How many FTEs are working on Northwind today?",
     ],
     "hub_leader": [
-        "Which of my clients are off target on backlog?",
-        "What is the first pass rate for Bluefield Imaging?",
-        "How many open tickets does Northwind Orthopedics have?",
-        "What are the AR days for Northwind over the last month?",
-        "Which tasks are late for Bluefield Imaging?",
-        "What is the escalation path for Bluefield Imaging?",
+        "Across my hub, which client needs my attention most this week, and why?",
+        "Compare Northwind and Bluefield on denial rate and AR over 90 days for the last 30 days.",
+        "Which commitments we made to clients are at risk? Give owner and date.",
+        "Are today's escalations caused by staffing or by process? Show the evidence.",
+        "What should I raise with DM One today, in three bullets?",
         "What is the backlog for Cedar Family Clinic?",
-        "What is the net collection rate for Bluefield Imaging?",
     ],
     "csm": [
         "Brief me on Northwind Orthopedics",
-        "Which tickets for Northwind Orthopedics have no reply yet?",
-        "What is the health score for Bluefield Imaging?",
-        "What does the escalation SOP say for Bluefield Imaging?",
-        "When is the weekly call with Northwind Orthopedics?",
-        "What are the timely filing rules in the Northwind payer list?",
-        "What is the health of Cedar Family Clinic?",
+        "Which tickets have had no reply for over a day, and what should I tell each client?",
+        "Give me talking points on Northwind's denial increase, using only the numbers.",
+        "Is Bluefield at risk of an escalation at quarter end?",
+        "What did we promise Northwind, and are we on track?",
         "What is the NPS for Northwind Orthopedics?",
     ],
     "ba": [
-        "What was the average backlog for Northwind Orthopedics last week?",
-        "Compare AR days for Cedar Family Clinic this week with the target.",
-        "Which metrics are off target for Bluefield Imaging?",
-        "How is first pass rate defined?",
-        "What is in the Cedar Family Clinic statement of work?",
+        "Write the commentary for Northwind's weekly report: what moved and why, with numbers.",
+        "Which metrics moved most week over week across all clients?",
+        "Explain the AR over 90 days trend for Cedar Family Clinic, week by week.",
+        "Which payer and reason codes explain Northwind's denials in the last 14 days?",
+        "How is first pass rate defined, and how did each client do last week?",
         "Which tasks are late for Bluefield Imaging?",
-        "What is the cost to collect for Bluefield Imaging?",
     ],
 }
 
@@ -352,6 +371,18 @@ def interactive_data(cfg: AthenaConfig) -> dict[str, Any]:
         "tickets": rows("cs_hub.tickets"),
         "health": rows("cs_hub.health"),
         "documents": rows("sharepoint.documents"),
+        "claims": rows("supaboard.claims"),
+        "denials": [
+            {
+                k: r[k]
+                for k in ("client", "date", "payer", "reason_code", "reason", "count", "_as_of")
+            }
+            for r in rows("supaboard.denials")
+        ],
+        "ar_aging": rows("supaboard.ar_aging"),
+        "task_history": rows("smartsheet.task_history"),
+        "team": rows("smartsheet.team"),
+        "activity": rows("cs_hub.activity"),
     }
 
 
@@ -366,4 +397,70 @@ def canned_answers(cfg: AthenaConfig) -> dict[str, list[dict[str, str]]]:
         for q in questions:
             r = app.asker.ask(q, email, conversation_id=f"canned-{key}-{q}")
             out[key].append({"q": q, "answer": r.answer, "footer": r.footer})
+    return out
+
+
+# When each person opens Athena in the demo (IST), and what is in their inbox at that moment.
+OPENS_AT = {"dm_am": "Mon 13:35", "hub_leader": "Mon 15:35", "csm": "Mon 18:35", "ba": "Mon 08:15"}
+
+
+def inbox(demo: Demo) -> dict[str, list[dict[str, Any]]]:
+    """One item per alert (with its history: sent, reminder, escalated), plus digests and drafts."""
+    out: dict[str, list[dict[str, Any]]] = {k: [] for k in PERSONAS}
+    by_alert: dict[tuple[str, int], dict[str, Any]] = {}
+    for e in demo.events:
+        if e.kind == "answer" or e.time > OPENS_AT[e.persona]:
+            continue
+        if e.alert_id is not None:
+            key = (e.persona, e.alert_id)
+            item = by_alert.get(key)
+            if item is None:
+                p = e.payload or {}
+                item = {
+                    "type": "alert",
+                    "alert_id": e.alert_id,
+                    "rule": (e.item_key or "R?").split(":")[0],
+                    "severity": e.severity,
+                    "client": p.get("client_name"),
+                    "title": p.get("title") or p.get("subject") or p.get("item_key"),
+                    "text": e.text.split(": ", 1)[-1]
+                    if e.kind == "escalation"
+                    else e.text.removeprefix("Reminder: "),
+                    "facts": {
+                        k: p.get(k)
+                        for k in (
+                            "item_key",
+                            "due",
+                            "status",
+                            "owner",
+                            "age",
+                            "ticket_id",
+                            "opened_at",
+                            "last_reply_at",
+                            "subject",
+                        )
+                        if p.get(k) not in (None, "")
+                    },
+                    "history": [],
+                    "received": e.time,
+                }
+                by_alert[key] = item
+                out[e.persona].append(item)
+            item["history"].append({"time": e.time, "kind": e.kind})
+            item["latest"] = e.time
+        else:
+            out[e.persona].append(
+                {
+                    "type": e.kind,
+                    "title": e.title,
+                    "text": e.text,
+                    "received": e.time,
+                    "latest": e.time,
+                }
+            )
+    order = {"late": 0, "never_replied": 1, "no_reply": 2, "at_risk": 3}
+    for items in out.values():
+        items.sort(
+            key=lambda i: (i["type"] != "alert", order.get(i.get("severity") or "", 9), i["latest"])
+        )
     return out

@@ -10,14 +10,17 @@ Everything in the demo is synthetic: three made-up clients (Northwind Orthopedic
 2. Optional, for live questions: a laptop with the repo and `pip install -e ".[dev]"`. Check `athena ask "What is the backlog for Northwind Orthopedics?" --as dm.one@fixture.local` works.
 3. Print or open `docs/DEMO_FEEDBACK.md`. One copy per person.
 
-## Let people ask their own questions
+## How the demo page works
 
-Each tab on the page has an **Ask Athena** box. People type any question as that person (DM One, Hub Leader Key, CSM One, BA One), or tap a suggested one.
+The page is Athena as each person would use it. Pick a person at the top (DM One, Hub Leader Key, CSM One, BA One). Each opens Athena at a different time of the same Monday (13:35, 15:35, 18:35, 08:15 IST).
 
-- **Live answers** (the page opened in Claude): Claude reads the synthetic data through Athena's six tools, as that person. The page's own code enforces what Athena's code enforces: only that person's clients and data sources, a Sources footer made by code, "I do not know" when no tool returned data, and "Data is not current" for old data. Each answer shows a "Checked:" line listing the tools used. The first question asks the viewer to allow the page to use their Claude account (it uses their usage).
-- **Scripted answers** (Claude not available, e.g. a public link): the suggested questions still answer with Athena's scripted stand-in.
+- **Inbox (left):** that person's alerts at that moment, one card per alert with its history (sent, reminder, escalated), plus their digest or report drafts.
+- **Alert view:** the facts, then actions: *I'm on it (2h)* pauses reminders and escalation, *Snooze 4h*, *Not useful* (counts towards the rule's wrong-alert rate), *Undo*. Below, ask Athena about the alert ("Why is this late?", "Who could cover this today?") or *Draft a note to the owner* (a draft only; never sent).
+- **Ask Athena:** the assistant. A summary of what needs the person, "Brief me on my day", and harder suggested questions (causes, comparisons, commitments at risk, call prep). Each answer shows its sources and "How Athena got this": the steps it took.
+- **Live vs scripted:** opened in Claude, a real model answers through Athena's tools as that person (hard questions take 20–60 seconds; the first question asks to use the viewer's Claude account). Elsewhere, alerts and actions still work and simple questions have scripted answers.
+- The page's own code enforces Athena's rules: only that person's clients and data sources, a code-made Sources footer, "I do not know" when no tool returned data, "Data is not current" for old data.
 
-Good live questions to show the guard rails: one for a client outside the person's scope, one for data Athena does not have (NPS, collections, FTEs), and a pre-call brief.
+The synthetic data tells one story, so hard questions have real answers: Northwind's backlog and denials rise because an analyst is on leave until Thursday and Payer B started denying prior authorisations (CO-197); Anka promised Northwind a recovery plan by 10 Oct; Cedar's AR over 90 days is growing.
 
 Write down every question people type. Those are the real G9 questions.
 
