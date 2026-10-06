@@ -1,0 +1,2 @@
+[console_scripts]
+athena = athena.cli:app

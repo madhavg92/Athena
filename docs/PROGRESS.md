@@ -4,7 +4,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 
 ## Release 1
 - [x] M0 Scaffold from ATHENA_BOOTSTRAP.md
-- [ ] M1.1 Package, pyproject, CLI entry point
+- [x] M1.1 Package, pyproject, CLI entry point
 - [ ] M1.2 Config models, loader, `athena rules validate`
 - [ ] M1.3 Database layer and tables
 - [ ] M1.4 Kill switches
@@ -50,3 +50,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 
 ## Log
 - M0: scaffold written from the bootstrap.
+- M1.1: pyproject, athena package, Typer CLI; athena --help works.

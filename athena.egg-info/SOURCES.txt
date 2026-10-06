@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+athena/__init__.py
+athena/cli.py
+athena.egg-info/PKG-INFO
+athena.egg-info/SOURCES.txt
+athena.egg-info/dependency_links.txt
+athena.egg-info/entry_points.txt
+athena.egg-info/requires.txt
+athena.egg-info/top_level.txt

@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: athena
+Version: 0.1.0
+Summary: Athena: the first build of Anka OS
+Requires-Python: >=3.11
+Requires-Dist: pydantic>=2
+Requires-Dist: pyyaml
+Requires-Dist: sqlalchemy>=2
+Requires-Dist: httpx
+Requires-Dist: typer
+Requires-Dist: croniter
+Requires-Dist: tzdata
+Requires-Dist: openai
+Requires-Dist: msal
+Requires-Dist: python-pptx
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
