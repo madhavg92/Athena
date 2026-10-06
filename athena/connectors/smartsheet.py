@@ -1,0 +1,92 @@
+"""Smartsheet connector (tasks). Live: Smartsheet API 2.0, read only (gate G1)."""
+
+from __future__ import annotations
+
+from typing import Any
+
+from athena.connectors.base import Connector, NotConfigured
+from athena.connectors.http import ReadOnlyClient
+
+API = "https://api.smartsheet.com/2.0"
+
+
+class SmartsheetConnector(Connector):
+    NAME = "smartsheet"
+    DATASETS = {
+        "tasks": {
+            "file": "smartsheet/tasks.json",
+            "allowed": [
+                "task_id",
+                "client",
+                "title",
+                "owner",
+                "due",
+                "status",
+                "last_update",
+                "sheet_id",
+                "row_id",
+                "link",
+            ],
+            "free_text": ["title"],
+            "times": ["due", "last_update"],
+            "link": "link",
+        }
+    }
+
+    def _fixture(self, dataset: str):
+        rows, as_of = super()._fixture(dataset)
+        for row in rows:
+            row["link"] = (
+                f"https://app.smartsheet.com/sheets/{row['sheet_id']}?rowId={row['row_id']}"
+            )
+        return rows, as_of
+
+    def _client(self) -> ReadOnlyClient:
+        if self.http is None:
+            (token,) = self._env("SMARTSHEET_TOKEN")
+            self.http = ReadOnlyClient(API, headers={"Authorization": f"Bearer {token}"})
+        return self.http
+
+    def _live(self, dataset: str, client: str | None = None, **_: Any):
+        sheets = self.cfg.smartsheet_map.sheets
+        if not sheets:
+            raise NotConfigured("smartsheet: no sheet IDs in context/smartsheet_map.yaml (G1)")
+        cols = self.cfg.smartsheet_map.columns
+        http = self._client()
+        rows: list[dict] = []
+        for key, sheet_id in sheets.items():
+            if client and key != client:
+                continue
+            sheet = http.get(f"{API}/sheets/{sheet_id}", params={"include": "rowPermalink"}).json()
+            by_id = {c["id"]: c["title"] for c in sheet.get("columns", [])}
+            wanted = {
+                cols.task: "title",
+                cols.owner: "owner",
+                cols.due: "due",
+                cols.status: "status",
+                cols.last_update: "last_update",
+            }
+            missing = [title for title in wanted if title not in by_id.values()]
+            if missing:
+                raise NotConfigured(
+                    f"smartsheet: sheet for {key} has no column(s) {', '.join(missing)} (G1)"
+                )
+            for r in sheet.get("rows", []):
+                row: dict[str, Any] = {
+                    "client": key,
+                    "sheet_id": sheet_id,
+                    "row_id": r["id"],
+                    "task_id": str(r["id"]),
+                }
+                for cell in r.get("cells", []):
+                    title = by_id.get(cell.get("columnId"))
+                    if title in wanted:
+                        value = cell.get("value")
+                        if isinstance(value, dict):  # contact cells
+                            value = value.get("email") or value.get("name")
+                        row[wanted[title]] = value
+                if not row.get("last_update"):
+                    row["last_update"] = r.get("modifiedAt")
+                row["link"] = r.get("permalink")
+                rows.append(row)
+        return rows, self.clock()

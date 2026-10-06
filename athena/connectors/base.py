@@ -75,8 +75,10 @@ class Connector:
         clock: Callable[[], datetime] = utcnow,
         fixtures: Path = FIXTURES,
         run_mode: str | None = None,
+        http: Any = None,
     ) -> None:
         self.cfg = cfg
+        self.http = http  # a ReadOnlyClient; built lazily in live mode
         self.clock = clock
         self.fixtures = fixtures
         self.mode = run_mode or mode()
