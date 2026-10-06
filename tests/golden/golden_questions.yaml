@@ -1,0 +1,135 @@
+# SYNTHETIC golden questions for fixture mode. Real questions come from pilot users (G9).
+# expect: contains, not_contains, tools (must be called), idk, refused, stale.
+
+# --- DM/AM
+- id: G01
+  persona: dm_am
+  user: dm.one@fixture.local
+  question: "What is the backlog for Northwind Orthopedics?"
+  expect: {contains: ["Northwind Orthopedics", "target 300.0", "Sources:", "supaboard.metrics"], tools: [get_metrics], idk: false}
+- id: G02
+  persona: dm_am
+  user: dm.one@fixture.local
+  question: "Which tasks are late for Northwind?"
+  expect: {contains: ["2 late", "T-1001", "T-1006", "smartsheet.tasks"], not_contains: ["Bluefield"], tools: [get_tasks]}
+- id: G03
+  persona: dm_am
+  user: dm.one@fixture.local
+  question: "Show late tasks for Cedar Family Clinic"
+  expect: {contains: ["not in your scope"], not_contains: ["T-10", "Sources:"], refused: true}
+- id: G04
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: "What is the denial rate for Bluefield Imaging this week?"
+  expect: {contains: ["over 7 days", "target 8.0"], tools: [get_metrics]}
+- id: G05
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: "Who owns Cedar Family Clinic?"
+  expect: {contains: ["Hub Leader Small", "DM Two", "CSM Two", "BA One"], tools: [get_owner]}
+- id: G06
+  persona: dm_am
+  user: dm.two@fixture.local
+  question: "Brief me on Bluefield Imaging"
+  expect:
+    contains: ["**Health and open tickets**", "Health score for Bluefield Imaging is 88", "**Open tasks**", "**Recent documents**"]
+    tools: [get_tickets, get_metrics, get_tasks, search_documents, get_client_profile]
+    stale: false
+- id: G24
+  persona: dm_am
+  user: dm.one@fixture.local
+  question: "What is the patient count for Northwind Orthopedics?"
+  expect: {idk: true, not_contains: ["Sources:"]}
+
+# --- Hub leader
+- id: G07
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: "What is the first pass rate for Bluefield Imaging?"
+  expect: {contains: ["first_pass_rate for Bluefield Imaging", "target 95.0"], tools: [get_metrics]}
+- id: G08
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: "How many open tickets does Northwind Orthopedics have?"
+  expect: {contains: ["4 open tickets", "CS-201", "cs_hub.tickets"], tools: [get_tickets]}
+- id: G09
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: "What are the AR days for Northwind over the last month?"
+  expect: {contains: ["over 30 days", "target 40.0"], tools: [get_metrics]}
+- id: G10
+  persona: hub_leader
+  user: hl.key@fixture.local
+  question: "What is the backlog for Cedar Family Clinic?"
+  expect: {contains: ["not in your scope"], refused: true}
+- id: G11
+  persona: hub_leader
+  user: hl.small@fixture.local
+  question: "What is the health score for Cedar Family Clinic?"
+  expect: {contains: ["Data is not current", "cs_hub.health", "64"], not_contains: ["All on target"], stale: true}
+- id: G12
+  persona: hub_leader
+  user: hl.small@fixture.local
+  question: "What is the weather in Delhi today?"
+  expect: {idk: true, not_contains: ["Sources:"]}
+
+# --- CSM
+- id: G13
+  persona: csm
+  user: csm.one@fixture.local
+  question: "Brief me on Northwind Orthopedics"
+  expect:
+    contains: ["Health score for Northwind Orthopedics is 72", "**Metrics**", "**Profile**", "Weekly call: Tuesday"]
+    tools: [get_tickets, get_metrics, get_tasks, search_documents, get_client_profile]
+- id: G14
+  persona: csm
+  user: csm.one@fixture.local
+  question: "What does the escalation SOP say for Bluefield Imaging?"
+  expect: {contains: ["Escalation SOP", "hub leader after 4 hours", "sharepoint.documents"], tools: [search_documents]}
+- id: G15
+  persona: csm
+  user: csm.one@fixture.local
+  question: "Any open tickets for Bluefield Imaging?"
+  expect: {contains: ["CS-207", "CS-211"], not_contains: ["CS-210", "CS-212"], tools: [get_tickets]}
+- id: G16
+  persona: csm
+  user: csm.two@fixture.local
+  question: "Brief me on Cedar Family Clinic"
+  expect: {contains: ["Data is not current", "**Health and open tickets**"], stale: true, tools: [get_tickets]}
+- id: G17
+  persona: csm
+  user: csm.two@fixture.local
+  question: "What is the health of Northwind Orthopedics?"
+  expect: {contains: ["not in your scope"], not_contains: ["72"], refused: true}
+- id: G18
+  persona: csm
+  user: csm.one@fixture.local
+  question: "When is the weekly call with Northwind Orthopedics?"
+  expect: {contains: ["Weekly call: Tuesday", "client_profile"], tools: [get_client_profile]}
+
+# --- BA
+- id: G19
+  persona: ba
+  user: ba.one@fixture.local
+  question: "What is the backlog trend for Cedar Family Clinic this week?"
+  expect: {contains: ["backlog for Cedar Family Clinic", "over 7 days"], tools: [get_metrics]}
+- id: G20
+  persona: ba
+  user: ba.one@fixture.local
+  question: "What is the first pass rate for Northwind Orthopedics?"
+  expect: {contains: ["first_pass_rate for Northwind Orthopedics", "target 95.0"], tools: [get_metrics]}
+- id: G21
+  persona: ba
+  user: ba.one@fixture.local
+  question: "Which tasks are late for Bluefield Imaging?"
+  expect: {contains: ["not available to you"], not_contains: ["T-10"], refused: true}
+- id: G22
+  persona: ba
+  user: ba.one@fixture.local
+  question: "What is the payer list for Northwind Orthopedics?"
+  expect: {contains: ["Payer list", "Timely filing"], tools: [search_documents]}
+- id: G23
+  persona: ba
+  user: ba.one@fixture.local
+  question: "What is our revenue forecast for next year?"
+  expect: {idk: true, not_contains: ["Sources:"]}

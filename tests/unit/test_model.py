@@ -91,7 +91,7 @@ def test_stub_scope_refusal_and_stale() -> None:
         "client_name": "C",
         "records": [{"health_score": 1, "trend": "down"}],
         "warning": "w",
-        "as_of": ["cs_hub.health: 2026-10-02 03:00 UTC"],
+        "stale_as_of": ["cs_hub.health: 2026-10-02 03:00 UTC"],
     }
     r = StubModel(CLIENTS).chat(
         msgs("q", {"role": "tool", "name": "get_tickets", "content": json.dumps(stale)}), TOOLS

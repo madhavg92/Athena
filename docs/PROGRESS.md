@@ -24,7 +24,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M3.2 Model layer (stub, OpenAI-compatible)
 - [x] M3.3 Ask loop (R1)
 - [x] M3.4 Brief template (R4)
-- [ ] M3.5 Golden set and `athena eval golden`
+- [x] M3.5 Golden set and `athena eval golden`
 - [ ] M3.6 `athena ask`
 - [ ] M4.1 Model bake-off harness — real runs: G5
 - [ ] M5.1 Agents SDK check and decision
@@ -70,3 +70,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M3.2: ModelClient interface; StubModel routes by client + keywords and answers from tool results only; OpenAICompatModel; token and cost accounting.
 - M3.3: System prompt, persona, scope and metric meanings; 8-call limit; code-made Sources footer; IDK/stale/scope handling; gateway receipt; question log; last 6 turns.
 - M3.4: client_brief template with R4 sections; stub writes sections in order; persona without R4 falls back to R1.
+- M3.5: 24 synthetic questions over 4 personas (scope, IDK, stale, source refusals); stub passes 24/24; report in reports/.

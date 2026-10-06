@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import time
 from collections.abc import Callable
 from typing import Any, Protocol
@@ -64,7 +65,7 @@ METRIC_WORDS = {
 }
 TOOL_WORDS = [
     ("get_tasks", ("task", "late", "overdue", "at risk", "due")),
-    ("get_tickets", ("ticket", "health", "escalation", "complain", "issue")),
+    ("get_tickets", ("ticket", "health", "complain", "issue")),
     (
         "get_owner",
         (
@@ -152,7 +153,11 @@ class StubModel:
     def _client(self, text: str) -> str | None:
         low = text.lower()
         for name, key in sorted(self.clients.items(), key=lambda kv: -len(kv[0])):
-            if name.lower() in low or key in low or name.split()[0].lower() in low.split():
+            if (
+                name.lower() in low
+                or key in low
+                or name.split()[0].lower() in re.findall(r"[a-z0-9_]+", low)
+            ):
                 return name
         return None
 
@@ -212,10 +217,13 @@ class StubModel:
                 err = data.get("error", "")
                 if "not in your scope" in err:
                     return "I cannot answer this. That client is not in your scope."
+                if err.startswith("refused"):
+                    lines.append(f"{name}: not available to you.")
+                    continue
                 lines.append(f"{name}: not available ({err.split(':')[0]}).")
                 continue
             if data.get("warning"):
-                stale_as_of += data.get("as_of", [])
+                stale_as_of += data.get("stale_as_of", [])
             lines += _summarise(name, data)
         if not any(lines):
             return "I do not know. The tools returned no data for this question."

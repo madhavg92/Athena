@@ -103,3 +103,19 @@ def test_documents_owner_profile(ctx) -> None:
     assert owner.records[0]["dm_am"].startswith("DM Two")
     prof = call(ctx, "get_client_profile", {"client": "bluefield_imaging"})
     assert "imaging" in prof.records[0]["profile"]
+
+
+def test_persona_sources_enforced(cfg, db) -> None:
+    clock = lambda: ANCHOR  # noqa: E731
+    ctx = ToolContext(
+        cfg=cfg,
+        gateway=Gateway(cfg, db, clock=clock),
+        sources=Sources(cfg, clock=clock, run_mode="fixture"),
+        actor="ba.one@fixture.local",
+    )
+    assert (
+        "not available to your persona"
+        in call(ctx, "get_tasks", {"client": "northwind_ortho"}).error
+    )
+    assert call(ctx, "get_metrics", {"client": "northwind_ortho", "metric": "backlog"}).ok
+    assert call(ctx, "get_owner", {"client": "northwind_ortho"}).ok

@@ -14,6 +14,8 @@ app = typer.Typer(help="Athena: Anka OS management assistant.", no_args_is_help=
 rules_app = typer.Typer(help="Rule files.", no_args_is_help=True)
 app.add_typer(rules_app, name="rules")
 connectors_app = typer.Typer(help="Data source connectors.", no_args_is_help=True)
+eval_app = typer.Typer(help="Evaluation harness.", no_args_is_help=True)
+app.add_typer(eval_app, name="eval")
 app.add_typer(connectors_app, name="connectors")
 
 
@@ -133,3 +135,36 @@ def connectors_check(
             typer.echo(
                 f"{label:<22} count={len(rows):<5} newest_as_of={when}  fields={','.join(fields)}"
             )
+
+
+@eval_app.command("golden")
+def eval_golden(
+    model: str = typer.Option(
+        None, "--model", help="Model name from context/models.yaml (default: the default model)."
+    ),
+    path: str = typer.Option(
+        "tests/golden/golden_questions.yaml", "--file", help="Golden questions file."
+    ),
+) -> None:
+    """Run the golden questions and write reports/eval-<model>-<time>.md."""
+
+    from athena.core.golden import run, summary, write_report
+    from athena.core.model import ModelError
+
+    cfg = _config()
+    name = model or cfg.models.default
+    try:
+        outcomes = run(cfg, name, cfg.root / path)
+    except ModelError as exc:
+        typer.echo(f"Model not available: {exc}", err=True)
+        raise typer.Exit(2) from exc
+    report = write_report(name, outcomes, cfg.root / "reports")
+    s = summary(outcomes)
+    for o in outcomes:
+        if not o.passed:
+            typer.echo(f"FAIL {o.golden.id}: {'; '.join(o.failures)}")
+    typer.echo(
+        f"{name}: {s['passed']}/{s['questions']} passed, tool accuracy {s['tool_accuracy']:.0%}. Report: {report}"
+    )
+    if s["passed"] != s["questions"]:
+        raise typer.Exit(1)

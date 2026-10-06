@@ -14,7 +14,7 @@ from athena.tools import (
     get_tickets,
     search_documents,
 )
-from athena.tools.base import Tool, ToolContext, ToolResult
+from athena.tools.base import Tool, ToolContext, ToolResult, stale_sources
 
 log = logging.getLogger(__name__)
 
@@ -22,6 +22,14 @@ TOOLS: dict[str, Tool] = {
     m.TOOL.name: m.TOOL
     for m in (get_tasks, get_metrics, get_tickets, search_documents, get_owner, get_client_profile)
 }
+
+
+TOOL_SOURCES = {
+    "get_tasks": "smartsheet",
+    "get_metrics": "supaboard",
+    "get_tickets": "cs_hub",
+    "search_documents": "sharepoint",
+}  # get_owner and get_client_profile read Git context files: always allowed
 
 
 def schemas(names: list[str] | None = None) -> list[dict[str, Any]]:
@@ -52,6 +60,12 @@ def call(
     missing = [p for p in tool.parameters.get("required", []) if not args.get(p)]
     if missing:
         return ToolResult(name=name, ok=False, error=f"missing arguments: {', '.join(missing)}")
+    persona = ctx.cfg.persona_of(ctx.actor)
+    source = TOOL_SOURCES.get(name)
+    if persona is not None and source and source not in persona.sources:
+        return ToolResult(
+            name=name, ok=False, error=f"refused: source {source} is not available to your persona"
+        )
     if tool.needs_client:
         client = resolve_client(ctx, args.get("client"))
         if client is None:
@@ -72,6 +86,8 @@ def call(
         result = tool.fn(ctx, **args)
     except NotConfigured as exc:
         return ToolResult(name=name, ok=False, error=f"source not available: {exc}")
+    result.stale_sources = stale_sources(ctx, result.sources)
+    result.stale = bool(result.stale_sources)
     if result.client:
         result.meta = {"client_name": ctx.cfg.owner_map.clients[result.client].name, **result.meta}
     if "metric" in args:

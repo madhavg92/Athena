@@ -43,6 +43,7 @@ class ToolResult(BaseModel):
     stale: bool = False
     error: str | None = None
     meta: dict[str, Any] = {}  # labels for the model: client_name, metric
+    stale_sources: list[Source] = []
 
     @property
     def has_data(self) -> bool:
@@ -57,6 +58,9 @@ class ToolResult(BaseModel):
             out["as_of"] = [f"{s.name}: {s.as_of:%Y-%m-%d %H:%M} UTC" for s in self.sources]
             if self.stale:
                 out["warning"] = "Data is not current. Give the as_of time."
+                out["stale_as_of"] = [
+                    f"{s.name}: {s.as_of:%Y-%m-%d %H:%M} UTC" for s in self.stale_sources
+                ]
         return out
 
 
@@ -111,8 +115,12 @@ def _ref(record: Record) -> str | None:
     return record.link
 
 
-def is_stale(ctx: ToolContext, sources: list[Source]) -> bool:
+def stale_sources(ctx: ToolContext, sources: list[Source]) -> list[Source]:
     rule = ctx.cfg.rules.get(ctx.rule_id)
     if rule is None:
-        return False
-    return any(ctx.now - s.as_of > rule.data_max_age for s in sources)
+        return []
+    return [s for s in sources if ctx.now - s.as_of > rule.data_max_age]
+
+
+def is_stale(ctx: ToolContext, sources: list[Source]) -> bool:
+    return bool(stale_sources(ctx, sources))

@@ -215,10 +215,16 @@ class Asker:
         started,
     ) -> AskResult:
         with_data = [r for r in results if r.has_data]
-        scope_refused = any(not r.ok and (r.error or "").startswith("refused") for r in results)
+        refusals = [
+            r.error or "" for r in results if not r.ok and (r.error or "").startswith("refused")
+        ]
+        scope_refused = bool(refusals)
         stale = any(r.stale for r in with_data)
         if scope_refused and not with_data:
-            answer = "I cannot answer this. That client is not in your scope."
+            if any("not in your scope" in e for e in refusals):
+                answer = "I cannot answer this. That client is not in your scope."
+            else:
+                answer = "I cannot answer this. That data source is not available to you."
         elif not with_data and not answer.startswith(IDK):
             checked = (
                 ", ".join(sorted({r.name for r in results}))
@@ -228,7 +234,7 @@ class Asker:
         elif not answer:
             answer = f"{IDK}."
         if stale and STALE_MARK.lower() not in answer.lower():
-            old = [s for r in with_data if r.stale for s in r.sources]
+            old = [s for r in with_data for s in r.stale_sources]
             answer = (
                 f"{STALE_MARK} (as of "
                 + "; ".join(f"{s.name} {s.as_of:%Y-%m-%d %H:%M} UTC" for s in old)
