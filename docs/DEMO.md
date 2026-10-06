@@ -12,15 +12,18 @@ Everything in the demo is synthetic: three made-up clients (Northwind Orthopedic
 
 ## How the demo page works
 
-The page is one chat with Athena, the way it will appear in Teams. Pick a person in the top-right (DM One, Hub Leader Key, CSM One, BA One); each sees their own conversation for the same Monday.
+The page shows Athena as a contact in a work chat (an illustration of Teams, without its branding). Pick who you are with "Viewing as".
 
-- Athena's messages are short: what needs you, and when. Under each: **On it** (holds reminders and escalation for 2 hours), **Why?** (Athena looks into it), **Later** (brings it back in 2 hours).
-- Type anything in plain words: "who can cover this?", "what's driving Northwind's denials?", "draft a note to DM One about the late batch". Replies are one to three sentences, with one small line saying where the facts came from.
-- Opened in Claude, a real model answers through Athena's tools, as that person, and only for their clients and data. Elsewhere, the messages and quick replies show but Athena cannot answer typed questions.
+Athena does the digging and comes to each person with one decision at a time: what is wrong, why (one line), what it checked, and a ready action with **Send**, **Edit** or **Not now**.
 
-The made-up data tells one story, so real questions have answers: Northwind's tasks slip because an analyst is on leave and one payer started denying prior authorisations; Anka promised Northwind a recovery plan by 10 Oct; Cedar's AR over 90 days is growing.
+- **DM One:** two Northwind tasks are late because Analyst N2 is on leave. Athena offers to ask the hub leader to lend an analyst from Bluefield, with the message written. It has also drafted the recovery plan promised to Northwind.
+- **Hub Leader Key:** the DM's request arrives; Athena says it is a staffing problem, not process, and offers **Approve**. The approval then appears in DM One's chat.
+- **CSM One:** a client ticket about denials has had no reply for three days. Athena has the answer and a reply ready to paste (it never sends to clients).
+- **BA One:** the weekly report commentary is written from the computed numbers.
 
-Write down every question people type. Those are the real G9 questions.
+Anyone can also type a question. Opened in Claude, a real model answers through Athena's tools, briefly, and only for that person's clients and data.
+
+Suggested flow: start as DM One, press **Send to Hub Leader Key**, switch to Hub Leader Key, press **Approve**, switch back to DM One to see the reply. Then ask one real question.
 
 ## What to say first (1 minute)
 

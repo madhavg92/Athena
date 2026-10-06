@@ -550,7 +550,7 @@ def activity() -> list[dict]:
             "client": "northwind_ortho",
             "time": d(12),
             "type": "escalation",
-            "summary": "Client escalated slow charge entry (ticket CS-201 opened).",
+            "summary": "Client escalated slow charge entry on the weekly call.",
             "owner": "csm.one@fixture.local",
         },
         {

@@ -7,7 +7,7 @@ they would get. Nothing leaves the process: messages are collected in memory.
 
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
@@ -281,6 +281,7 @@ def save_html(demo: Demo, template: Path, path: Path, cfg: AthenaConfig | None =
         page = page.replace("/*CANNED*/null", js(canned_answers(cfg)))
         page = page.replace("/*INBOX*/null", js(inbox(demo)))
         page = page.replace("/*OPENS_AT*/null", js(OPENS_AT))
+        page = page.replace("/*PROPOSALS*/null", js(proposals(cfg)))
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(page)
     return path
@@ -452,3 +453,194 @@ def inbox(demo: Demo) -> dict[str, list[dict[str, Any]]]:
             key=lambda i: (i["type"] != "alert", order.get(i.get("severity") or "", 9), i["latest"])
         )
     return out
+
+
+# ---------------------------------------------------------------- proposals ("Athena proposes, you approve")
+# Code decides what to propose and computes every number from the data. Wording is a template.
+# Actions are internal messages to managers (frontline analysts are not on Teams) or drafts.
+
+
+def proposals(cfg: AthenaConfig) -> dict[str, list[dict[str, Any]]]:
+    snapshot = fixture_anchor()
+    sources = Sources(cfg, clock=lambda: snapshot, run_mode="fixture")
+
+    def first(name: str) -> str:
+        return name  # synthetic names are role-like ("DM One"); real first names come with G10
+
+    tasks = sources.read("smartsheet.tasks", client="northwind_ortho")
+    late = [t for t in tasks if t.get("status") != "Complete" and t.get("due") < snapshot]
+    risk = [
+        t
+        for t in tasks
+        if t.get("status") != "Complete"
+        and snapshot <= t.get("due") <= snapshot + timedelta(hours=4)
+    ]
+    team = sources.read("smartsheet.team")
+    away = next(m for m in team if m.get("client") == "northwind_ortho" and m.get("on_leave_today"))
+    spare = min(
+        (m for m in team if m.get("client") == "bluefield_imaging"),
+        key=lambda m: m.get("utilisation_pct"),
+    )
+    nw_util = max(m.get("utilisation_pct") for m in team if m.get("client") == "northwind_ortho")
+    since14 = (snapshot - timedelta(days=14)).date().isoformat()
+    den = [
+        r
+        for r in sources.read("supaboard.denials", client="northwind_ortho")
+        if r.get("date") >= since14
+    ]
+    total = sum(r.get("count") for r in den)
+    top = sum(
+        r.get("count")
+        for r in den
+        if r.get("payer", "").startswith("Payer B") and r.get("reason_code") == "CO-197"
+    )
+    share = round(100 * top / total) if total else 0
+    activity = sources.read("cs_hub.activity", client="northwind_ortho")
+    plan = next(a for a in activity if a.get("type") == "commitment")
+    due = plan.get("summary").split("by ")[-1].rstrip(".")
+    due_label = datetime.strptime(f"{due} {snapshot.year}", "%d %b %Y").strftime("%a %d %b")
+    leave_until = datetime.fromisoformat(away.get("leave_until")).strftime("%a %d %b")
+    ticket = next(
+        t
+        for t in sources.read("cs_hub.tickets", client="northwind_ortho")
+        if "denial" in t.get("subject", "").lower()
+    )
+    ba_rows = {
+        r.get("metric"): r
+        for r in sources.read("supaboard.latest_metrics", client="northwind_ortho")
+    }
+    week = [
+        r
+        for r in sources.read("supaboard.metrics", client="northwind_ortho", metric="backlog")
+        if (snapshot - timedelta(days=8)).date().isoformat()
+        <= r.get("date")
+        <= (snapshot - timedelta(days=1)).date().isoformat()
+    ]
+    backlog_avg = round(sum(r.get("actual") for r in week) / len(week)) if week else None
+    names = {e: p.name for e, p in cfg.owner_map.people.items()}
+    dm, hl = names["dm.one@fixture.local"], names["hl.key@fixture.local"]
+
+    cover_msg = (
+        f"Hi {first(hl)}, {away.get('member')} (payment posting, Northwind) is on leave until {leave_until} and "
+        f"{len(late)} Northwind tasks are now late. Can I borrow {spare.get('member')} from Bluefield "
+        f"({spare.get('utilisation_pct')}% utilised) until then? Northwind's team is at {nw_util}%."
+    )
+    return {
+        "dm_am": [
+            {
+                "id": "dm-cover",
+                "time": "13:35",
+                "tone": "late",
+                "headline": f"{len(late)} Northwind tasks are late and {len(risk)} more are close.",
+                "why": f"{away.get('member')} (payment posting) is on leave until {leave_until}; the rest of the team is at {nw_util}%.",
+                "checked": ["Smartsheet tasks", "team sheet", "task history"],
+                "offer": f"Ask {first(hl)} to lend {spare.get('member')} ({spare.get('role').lower()}, Bluefield) until {leave_until}?",
+                "action": {
+                    "kind": "send",
+                    "to": "hub_leader",
+                    "to_name": hl,
+                    "label": f"Send to {first(hl)}",
+                    "text": cover_msg,
+                },
+                "after": f"Sent to {hl}. I'll tell you when they reply.",
+            },
+            {
+                "id": "dm-plan",
+                "time": "13:36",
+                "tone": "info",
+                "headline": f"The recovery plan you promised Northwind is due {due_label}.",
+                "why": f"I drafted it from the data: backlog averaged {backlog_avg} last week against a target of {int(ba_rows['backlog'].get('target'))}; "
+                f"{share}% of denials in the last 14 days are Payer B prior-auth (CO-197).",
+                "checked": ["CS Hub activity", "Supaboard", "denials"],
+                "offer": "Review the draft outline?",
+                "action": {
+                    "kind": "draft",
+                    "label": "Open draft",
+                    "text": "Northwind recovery plan (draft)\n\n1. Cover payment posting while Analyst N2 is out (request sent to hub leader).\n"
+                    f"2. Backlog: from an average of {backlog_avg} back to the target of {int(ba_rows['backlog'].get('target'))}. [Add the weekly steps]\n"
+                    f"3. Denials: {share}% are Payer B prior-auth (CO-197) since Payer B started rejecting the old portal. [Add the fix and owner]\n"
+                    "4. Weekly check-in with the client until back on target. [Confirm day]",
+                },
+                "after": "Draft saved for you. Nothing was sent.",
+            },
+        ],
+        "hub_leader": [
+            {
+                "id": "hl-approve",
+                "time": "15:35",
+                "tone": "late",
+                "needs": "dm-cover",
+                "headline": f"{first(dm)} asks to borrow {spare.get('member')} from Bluefield until {leave_until}.",
+                "why": f"Northwind's escalations today are staffing, not process: {away.get('member')} is on leave and the team is at {nw_util}%. "
+                f"Bluefield's team is at {spare.get('utilisation_pct')}%.",
+                "checked": ["team sheet", "Smartsheet tasks", "Supaboard"],
+                "offer": "Approve and tell both DMs?",
+                "action": {
+                    "kind": "send",
+                    "to": "dm_am",
+                    "to_name": dm,
+                    "label": "Approve",
+                    "text": f"Approved: {spare.get('member')} covers Northwind payment posting until {leave_until}. I've told DM Two.",
+                },
+                "after": f"Approved. {dm} and DM Two have been told.",
+            },
+            {
+                "id": "hl-plan",
+                "time": "15:36",
+                "tone": "info",
+                "headline": "One client commitment is at risk: Northwind's recovery plan.",
+                "why": f"Due {due_label}. {first(dm)} has a draft but the backlog is still above target.",
+                "checked": ["CS Hub activity", "Supaboard"],
+                "offer": f"Nudge {first(dm)} to share the plan by Thursday?",
+                "action": {
+                    "kind": "send",
+                    "to": "dm_am",
+                    "to_name": dm,
+                    "label": f"Nudge {first(dm)}",
+                    "text": "Can you share the Northwind recovery plan with me by Thursday? I'd like to review it before it goes to the client.",
+                },
+                "after": f"Sent to {dm}.",
+            },
+        ],
+        "csm": [
+            {
+                "id": "csm-reply",
+                "time": "18:35",
+                "tone": "risk",
+                "headline": f"Northwind asked about their denial trend ({ticket.get('ticket_id')}) and has had no reply since {ticket.get('last_reply_at').strftime('%a %d %b')}.",
+                "why": f"I have the answer: {share}% of denials in the last 14 days are Payer B rejecting prior authorisations sent through its old portal.",
+                "checked": ["CS Hub tickets", "denials", "client activity"],
+                "offer": "Here's a reply you can paste into CS Hub. Athena never sends to clients.",
+                "action": {
+                    "kind": "draft",
+                    "label": "Copy reply",
+                    "text": "Hi team, thanks for your patience. Most of the recent rise in denials comes from one payer: "
+                    f"about {share}% of denials in the last two weeks are prior-authorisation rejections from Payer B, "
+                    "after it stopped accepting submissions through its old portal. We are addressing this and will include "
+                    "it in the recovery plan we share with you by 10 Oct. [Check before sending]",
+                },
+                "after": "Copied. Paste it into CS Hub when you're ready.",
+            },
+        ],
+        "ba": [
+            {
+                "id": "ba-wbr",
+                "time": "08:15",
+                "tone": "info",
+                "headline": "Northwind's weekly report is drafted, with commentary.",
+                "why": f"Backlog averaged {backlog_avg} against {int(ba_rows['backlog'].get('target'))}; denial rate {ba_rows['denial_rate'].get('actual')}% "
+                f"against {ba_rows['denial_rate'].get('target')}%, mostly Payer B prior-auth. Every number has a query ID in the slide notes.",
+                "checked": ["Supaboard", "denials"],
+                "offer": "Review the commentary?",
+                "action": {
+                    "kind": "draft",
+                    "label": "Open commentary",
+                    "text": f"Backlog averaged {backlog_avg} last week against a target of {int(ba_rows['backlog'].get('target'))} and is still rising.\n"
+                    f"Denial rate was {ba_rows['denial_rate'].get('actual')}% against {ba_rows['denial_rate'].get('target')}%; "
+                    f"{share}% of denials in the last 14 days were Payer B prior-auth rejections (CO-197).\n"
+                    f"First pass rate {ba_rows['first_pass_rate'].get('actual')}% against {ba_rows['first_pass_rate'].get('target')}%.",
+                },
+                "after": "Saved to the draft deck. You send it; Athena never sends to clients.",
+            },
+        ],
+    }

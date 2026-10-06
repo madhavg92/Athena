@@ -9,7 +9,7 @@
  {
   "client": "northwind_ortho",
   "owner": "csm.one@fixture.local",
-  "summary": "Client escalated slow charge entry (ticket CS-201 opened).",
+  "summary": "Client escalated slow charge entry on the weekly call.",
   "time": "2026-09-23T06:00:00Z",
   "type": "escalation"
  },

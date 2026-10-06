@@ -1,72 +1,120 @@
 <title>Athena Demo Day</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
 <style>
-/* Layout: one chat, like a Teams conversation with Athena. Nothing else on screen. */
+/* Layout: a generic work-chat window (left: chats, right: the Athena conversation). Athena's messages are cards that propose one action. */
 :root {
-  --bg: #f2f4f6;
-  --surface: #ffffff;
-  --ink: #18212b;
-  --muted: #687482;
-  --line: #dde2e8;
-  --accent: #245f8c;
+  --page: #e9ebf0;
+  --frame: #ffffff;
+  --rail: #f5f6f8;
+  --ink: #1d2129;
+  --muted: #6b7280;
+  --line: #e3e5ea;
+  --accent: #4b53bc;
   --accent-ink: #ffffff;
-  --late: #b3362e;
-  --risk: #a3650f;
-  --font: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --accent-soft: #eef0fb;
+  --spark-a: #6d5dfc;
+  --spark-b: #22b8cf;
+  --late: #c4314b;
+  --risk: #b86e00;
+  --ok: #237b4b;
+  --quote: #f6f7fb;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --bg: #0e141a; --surface: #18212b; --ink: #e6ebf0; --muted: #96a2af; --line: #2a3542; --accent: #6eaedb; --accent-ink: #0e141a; --late: #ef8379; --risk: #e3ad5f; color-scheme: dark; }
+  :root:not([data-theme="light"]) { --page: #0f1115; --frame: #1b1d22; --rail: #16181c; --ink: #e8eaef; --muted: #9aa1ad; --line: #2b2e35;
+    --accent: #8f95f2; --accent-ink: #14151a; --accent-soft: #262a46; --late: #f2788c; --risk: #f0ad4e; --ok: #6fd39b; --quote: #22252c; color-scheme: dark; }
 }
-:root[data-theme="dark"] { --bg: #0e141a; --surface: #18212b; --ink: #e6ebf0; --muted: #96a2af; --line: #2a3542; --accent: #6eaedb; --accent-ink: #0e141a; --late: #ef8379; --risk: #e3ad5f; color-scheme: dark; }
+:root[data-theme="dark"] { --page: #0f1115; --frame: #1b1d22; --rail: #16181c; --ink: #e8eaef; --muted: #9aa1ad; --line: #2b2e35;
+  --accent: #8f95f2; --accent-ink: #14151a; --accent-soft: #262a46; --late: #f2788c; --risk: #f0ad4e; --ok: #6fd39b; --quote: #22252c; color-scheme: dark; }
 * { box-sizing: border-box; }
-html, body { height: 100%; }
-body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--font); }
+body { background: var(--page); color: var(--ink); font: 14px/1.5 var(--font); }
 button, select, textarea { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.chat { max-width: 680px; height: 100%; margin: 0 auto; padding-inline: 16px; display: flex; flex-direction: column; }
-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 14px 10px; }
-header h1 { font-size: 17px; font-weight: 600; margin: 0; }
-header h1 span { font-weight: 400; color: var(--muted); font-size: 13px; margin-left: 6px; }
-header select { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; max-width: 60%; }
-.log { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-block: 8px 12px; }
-.time { align-self: center; font-size: 12px; color: var(--muted); padding-block: 4px; }
-.msg { max-width: 88%; padding: 9px 13px; border-radius: 14px; overflow-wrap: anywhere; }
-.msg p { margin: 0; }
-.msg p + p, .msg ul + p, .msg p + ul { margin-top: 6px; }
-.msg ul { margin: 0; padding-left: 18px; }
-.athena { align-self: flex-start; background: var(--surface); border: 1px solid var(--line); border-bottom-left-radius: 4px; }
-.me { align-self: flex-end; background: var(--accent); color: var(--accent-ink); border-bottom-right-radius: 4px; }
-.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
-.dot.late { background: var(--late); } .dot.risk { background: var(--risk); }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 16px; padding-block: 18px 28px; display: grid; gap: 12px; }
+.over { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; color: var(--muted); font-size: 13px; }
+.over select { background: var(--frame); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; color: var(--ink); }
+.window { background: var(--frame); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: grid; grid-template-columns: 260px minmax(0, 1fr); height: min(760px, calc(100vh - 110px)); min-height: 520px; box-shadow: 0 10px 30px rgb(0 0 0 / 0.06); }
+.rail { background: var(--rail); border-right: 1px solid var(--line); display: flex; flex-direction: column; min-width: 0; }
+.rail h2 { font-size: 15px; font-weight: 600; margin: 0; padding: 16px 16px 10px; }
+.chatrow { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 9px 14px; margin: 0 6px; border-radius: 8px; color: var(--muted); }
+.chatrow.on { background: var(--frame); color: var(--ink); box-shadow: 0 1px 2px rgb(0 0 0 / 0.06); }
+.chatrow b { display: block; font-weight: 600; color: var(--ink); font-size: 14px; }
+.chatrow span { display: block; font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.badge { min-width: 18px; height: 18px; border-radius: 9px; background: var(--accent); color: var(--accent-ink); font-size: 11px; font-weight: 600; display: grid; place-items: center; padding: 0 5px; }
+.av { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font-weight: 600; font-size: 13px; background: var(--line); color: var(--muted); }
+.av.ai { background: conic-gradient(from 210deg, var(--spark-a), var(--spark-b), var(--spark-a)); color: #fff; }
+.av.ai svg { width: 18px; height: 18px; }
+.main { display: flex; flex-direction: column; min-width: 0; }
+.head { display: flex; align-items: center; gap: 12px; padding: 12px 18px; border-bottom: 1px solid var(--line); }
+.head b { font-size: 15px; }
+.head span { display: block; font-size: 12.5px; color: var(--muted); }
+.log { flex: 1; overflow-y: auto; padding: 18px; display: flex; flex-direction: column; gap: 14px; }
+.day { align-self: center; font-size: 12px; color: var(--muted); }
+.row { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 10px; align-items: start; max-width: 640px; }
+.row .av { width: 32px; height: 32px; font-size: 12px; }
+.row.me { align-self: flex-end; grid-template-columns: minmax(0, 1fr); }
+.meta { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.meta b { color: var(--ink); font-weight: 600; margin-right: 6px; }
+.card { background: var(--frame); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; box-shadow: 0 1px 2px rgb(0 0 0 / 0.04); }
+.card.late { border-left: 3px solid var(--late); } .card.risk { border-left: 3px solid var(--risk); } .card.info { border-left: 3px solid var(--accent); }
+.card h3 { font-size: 15px; font-weight: 600; margin: 0; line-height: 1.4; text-wrap: balance; }
+.card .why { margin: 0; color: var(--muted); }
+.checked { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+.checked svg { width: 13px; height: 13px; color: var(--spark-a); flex: none; }
+.offer { margin: 2px 0 0; font-weight: 500; }
+.quote.clip { max-height: 7.2em; overflow: hidden; cursor: pointer; -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
+.quote { background: var(--quote); border-radius: 8px; padding: 10px 12px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13.5px; }
+textarea.quote { width: 100%; min-height: 110px; border: 1px solid var(--accent); resize: vertical; font: 13.5px/1.5 var(--font); }
+.btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { border-radius: 6px; padding: 6px 14px; border: 1px solid var(--line); background: var(--frame); cursor: pointer; font-weight: 500; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.done { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ok); }
+.done svg { width: 14px; height: 14px; flex: none; }
+.bubble { background: var(--quote); border-radius: 10px; padding: 9px 13px; overflow-wrap: anywhere; }
+.row.me .bubble { background: var(--accent-soft); }
+.bubble p { margin: 0; } .bubble p + p, .bubble ul + p, .bubble p + ul { margin-top: 6px; } .bubble ul { margin: 0; padding-left: 18px; }
 .src { margin-top: 6px; font-size: 12px; color: var(--muted); }
-.typing { color: var(--muted); font-style: italic; }
-.replies { align-self: flex-start; display: flex; flex-wrap: wrap; gap: 6px; margin-top: -2px; }
-.replies button { background: none; border: 1px solid var(--accent); color: var(--accent); border-radius: 16px; padding: 4px 12px; font-size: 14px; cursor: pointer; }
-.replies button:hover { background: var(--accent); color: var(--accent-ink); }
-.replies button:disabled { opacity: 0.4; cursor: default; background: none; color: var(--accent); }
-form { display: flex; gap: 8px; padding-block: 10px 16px; border-top: 1px solid var(--line); }
-textarea { flex: 1; min-width: 0; resize: none; height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 10px 16px; }
-form button { border: 0; border-radius: 22px; padding: 0 18px; background: var(--accent); color: var(--accent-ink); font-weight: 500; cursor: pointer; }
-form button:disabled { opacity: 0.5; cursor: default; }
-.about { font-size: 12.5px; color: var(--muted); padding-top: 8px; display: flex; gap: 8px; align-items: center; }
-.about button { background: none; border: 0; color: var(--accent); cursor: pointer; padding: 0; font-size: 12.5px; }
+.working { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 13px; }
+.spark { width: 14px; height: 14px; color: var(--spark-a); animation: spin 2.4s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spark { animation: none; } }
+.compose { border-top: 1px solid var(--line); padding: 12px 18px 14px; display: grid; gap: 8px; }
+.suggest { display: flex; flex-wrap: wrap; gap: 6px; }
+.suggest button { border: 1px solid var(--line); background: var(--frame); border-radius: 14px; padding: 4px 11px; font-size: 13px; cursor: pointer; color: var(--muted); }
+.suggest button:hover { color: var(--ink); border-color: var(--accent); }
+.box { display: flex; gap: 8px; align-items: flex-end; border: 1px solid var(--line); border-radius: 8px; padding: 6px 6px 6px 12px; background: var(--frame); }
+.box:focus-within { border-color: var(--accent); }
+.box textarea { flex: 1; min-width: 0; border: 0; outline: none; resize: none; height: 24px; max-height: 120px; background: none; padding: 4px 0; }
+.box button { border: 0; background: var(--accent); color: var(--accent-ink); border-radius: 6px; padding: 6px 14px; font-weight: 500; cursor: pointer; }
+.box button:disabled { opacity: 0.5; cursor: default; }
+@media (max-width: 760px) {
+  .window { grid-template-columns: 1fr; height: calc(100vh - 90px); }
+  .rail { display: none; }
+}
 </style>
 
-<div class="chat">
-  <header>
-    <h1>Athena <span>demo · made-up data</span></h1>
-    <label for="who" hidden>You are</label>
-    <select id="who"></select>
-  </header>
-  <div class="log" id="log" aria-live="polite"></div>
-  <div class="about" id="about" hidden></div>
-  <form id="form" autocomplete="off">
-    <label for="q" hidden>Message Athena</label>
-    <textarea id="q" placeholder="Message Athena"></textarea>
-    <button id="send" type="submit">Send</button>
-  </form>
+<div class="wrap">
+  <div class="over">
+    <span>How Athena would look in your work chat. Illustration with made-up clients, people and numbers.</span>
+    <label>Viewing as <select id="who"></select></label>
+  </div>
+  <div class="window">
+    <aside class="rail" aria-label="Chats">
+      <h2>Chat</h2>
+      <div id="rail"></div>
+    </aside>
+    <section class="main">
+      <div class="head"><div class="av ai" aria-hidden="true">SPARK</div><div><b>Athena</b><span>Your assistant · reads Smartsheet, Supaboard, CS Hub and SharePoint</span></div></div>
+      <div class="log" id="log" aria-live="polite"></div>
+      <form class="compose" id="form" autocomplete="off">
+        <div class="suggest" id="suggest"></div>
+        <div class="box"><label for="q" hidden>Message Athena</label><textarea id="q" placeholder="Ask Athena anything"></textarea><button id="send" type="submit">Send</button></div>
+      </form>
+    </section>
+  </div>
 </div>
 
 <script>
@@ -75,6 +123,7 @@ const SUGGEST = /*SUGGESTIONS*/null;
 const CANNED = /*CANNED*/null;
 const INBOX = /*INBOX*/null;
 const OPENS_AT = /*OPENS_AT*/null;
+const PROPOSALS = /*PROPOSALS*/null;
 const DEMO = /*DEMO_DATA*/null;
 
 const PEOPLE = {
@@ -87,9 +136,17 @@ const SRC = { get_tasks: "smartsheet", get_task_history: "smartsheet", get_team:
   get_ar_aging: "supaboard", get_tickets: "cs_hub", get_client_activity: "cs_hub", search_documents: "sharepoint" };
 const NOW = new Date(DATA.now);
 const HOUR = 3600e3;
+const SPARK = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z" opacity=".7"/></svg>';
+const CHECK = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>';
 const state = loadState();
-let person = "dm_am", sampleFn = null, liveTools = false, focus = null, busy = false;
+let person = "dm_am", sampleFn = null, liveTools = false, busy = false, editing = null;
 
+function loadState() { try { return JSON.parse(localStorage.getItem("athena-agent-v4") || "{}"); } catch (_) { return {}; } }
+function saveState() { try { localStorage.setItem("athena-agent-v4", JSON.stringify(state)); } catch (_) {} }
+function mine() { return (state[person] ||= { done: {}, msgs: [], turns: [], inbox: [] }); }
+function of(key) { return (state[key] ||= { done: {}, msgs: [], turns: [], inbox: [] }); }
+function initials(name) { return name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase(); }
+function nowLabel() { return OPENS_AT[person].replace("Mon ", ""); }
 function esc(s) { return String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 function fmt(iso) { return new Date(iso).toLocaleString("en-GB", { timeZone: "Asia/Kolkata", weekday: "short", day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit", hour12: false }); }
 function personaOf(key) { return DATA.personas[DATA.people[PEOPLE[key].email].persona]; }
@@ -237,54 +294,6 @@ function finish(text, steps) {
 }
 
 
-function sevDot(s) { return s === "late" ? "late" : "risk"; }
-function when(s) { return String(s || "").replace(/^04 Oct /, "yesterday ").replace(/^05 Oct /, "today ").replace(/^03 Oct /, "Sat "); }
-function shortDue(a) { return a.facts.due ? `due ${when(a.facts.due)}` : a.facts.last_reply_at ? `no reply since ${when(a.facts.last_reply_at)}` : a.facts.opened_at ? `opened ${when(a.facts.opened_at)}, no reply yet` : ""; }
-function shortText(s) { return String(s).replace(/\s*https?:\/\/\S+/g, "").trim(); }
-function digestLine(l) {
-  const m = l.replace(/^- /, "").match(/^(.+?): (.+?) is ([\d.]+) against target ([\d.]+)/);
-  return m ? `${m[1].split(" ")[0]} ${m[2]} ${Math.round(Number(m[3]) * 10) / 10} (target ${Number(m[4])})` : l.replace(/^- /, "");
-}
-function listItems(alerts) {
-  const shown = alerts.slice(0, 3);
-  return `<ul>${shown.map(a => `<li><span class="dot ${sevDot(a.severity)}"></span>${esc(a.title)}, ${esc(shortDue(a))}</li>`).join("")}</ul>${alerts.length > 3 ? `<p>…and ${alerts.length - 3} more.</p>` : ""}`;
-}
-
-// Athena's proactive messages for this person, in the order they arrived today. Short.
-function proactive(key) {
-  const items = INBOX[key] || [], events = {};
-  for (const i of items) {
-    if (i.type === "alert") for (const h of i.history) (events[`${h.time}|${h.kind}`] ||= []).push(i);
-    else (events[`${i.received}|${i.type}`] ||= []).push(i);
-  }
-  const out = [];
-  for (const k of Object.keys(events).sort()) {
-    const [time, kind] = k.split("|"), group = events[k];
-    const client = [...new Set(group.map(a => (a.client || "").split(" ")[0]).filter(Boolean))].join(" and ");
-    if (kind === "digest") {
-      const lines = shortText(group[0].text).split("\n").filter(l => l.startsWith("- "));
-      out.push({ time, kind, html: `<p>Morning. ${lines.length} number${lines.length === 1 ? " is" : "s are"} off target:</p><ul>${lines.slice(0, 3).map(l => `<li>${esc(digestLine(l))}</li>`).join("")}</ul>${lines.length > 3 ? `<p>…and ${lines.length - 3} more.</p>` : ""}`,
-        replies: ["What should I act on first?"] });
-    } else if (kind === "draft") {
-      out.push({ time, kind, html: `<p>Your weekly report draft for ${esc(shortText(group[0].text).match(/for (.+?) \(/)?.[1] || "a client")} is ready to review.</p>`, replies: ["Draft the commentary"] });
-    } else if (kind === "alert") {
-      const tickets = group[0].rule === "R6";
-      out.push({ time, kind, alerts: group.map(a => a.alert_id), html: `<p>${tickets ? `${group.length} ${client} ticket${group.length > 1 ? "s have" : " has"} had no reply for over a day:` : `${group.length} ${client} task${group.length > 1 ? "s need" : " needs"} you:`}</p>${listItems(group)}`,
-        replies: ["On it", "Why?", "Later"] });
-    } else if (kind === "reminder") {
-      out.push({ time, kind, alerts: group.map(a => a.alert_id), html: `<p>Still open: ${esc(group[0].title)}${group.length > 1 ? ` and ${group.length - 1} more` : ""}.</p>`, replies: ["On it", "Why?", "Later"] });
-    } else if (kind === "escalation") {
-      out.push({ time, kind, alerts: group.map(a => a.alert_id), html: `<p>${group.length} ${client} item${group.length > 1 ? "s are" : " is"} still open after 4 hours, so ${group.length > 1 ? "they've" : "it's"} come to you:</p>${listItems(group)}`,
-        replies: ["On it", "Why?", "Later"] });
-    }
-  }
-  return out;
-}
-
-function log() { return (state[person] ||= { msgs: [], turns: [] }); }
-function loadState() { try { return JSON.parse(localStorage.getItem("athena-chat-v3") || "{}"); } catch (_) { return {}; } }
-function saveState() { try { localStorage.setItem("athena-chat-v3", JSON.stringify(state)); } catch (_) {} }
-
 function renderText(text) {
   const [main, src] = String(text).split(/\n\nSources:\n/);
   const out = []; let list = null;
@@ -303,104 +312,124 @@ function renderText(text) {
   return html;
 }
 
+
+// ---------------------------------------------------------------- view
+function cardHtml(p) {
+  const d = mine().done[p.id];
+  const from = p.needs && of("dm_am").done[p.needs]?.action === "send" ? `<div class="meta">${esc(PEOPLE.dm_am.name)} sent this request at ${esc(of("dm_am").done[p.needs].at)}</div>` : "";
+  if (d) {
+    const label = d.action === "send" ? `Sent to ${esc(p.action.to_name)} · ${esc(d.at)}` : d.action === "draft" ? `${esc(p.after)}` : `Not now · I'll check again later`;
+    return `<div class="card ${p.tone}"><h3>${esc(p.headline)}</h3><div class="done">${CHECK}<span>${d.action === "send" ? label : label}</span></div>${d.text && d.action === "send" ? `<div class="quote">${esc(d.text)}</div>` : ""}</div>`;
+  }
+  const isEdit = editing === p.id;
+  const text = mine().drafts?.[p.id] ?? p.action.text;
+  return `<div class="card ${p.tone}">${from}
+    <h3>${esc(p.headline)}</h3>
+    <p class="why">${esc(p.why)}</p>
+    <div class="checked">${SPARK}<span>Checked ${esc(p.checked.join(", "))}</span></div>
+    <p class="offer">${esc(p.offer)}</p>
+    ${isEdit ? `<label for="ed-${p.id}" hidden>Edit</label><textarea class="quote" id="ed-${p.id}">${esc(text)}</textarea>` : `<div class="quote ${text.length > 260 ? "clip" : ""}" ${text.length > 260 ? 'title="Show all" data-open="1"' : ""}>${esc(text)}</div>`}
+    <div class="btns">
+      <button class="btn primary" type="button" data-go="${p.id}">${esc(isEdit ? (p.action.kind === "send" ? "Send" : "Save") : p.action.label)}</button>
+      ${isEdit ? `<button class="btn" type="button" data-cancel="1">Cancel</button>` : `<button class="btn" type="button" data-edit="${p.id}">Edit</button><button class="btn" type="button" data-skip="${p.id}">Not now</button>`}
+    </div></div>`;
+}
+function row(who, time, inner) {
+  const ai = who === "Athena";
+  return `<div class="row"><div class="av ${ai ? "ai" : ""}" aria-hidden="true">${ai ? SPARK : esc(initials(who))}</div><div><div class="meta"><b>${esc(who)}</b>${esc(time)}</div>${inner}</div></div>`;
+}
 function draw() {
-  const el = document.getElementById("log");
-  const parts = [];
-  let lastTime = null;
-  const pro = proactive(person);
-  const msgs = log().msgs;
-  // proactive messages first (they happened earlier today), then the conversation
-  for (const [n, m] of pro.entries()) {
-    if (m.time !== lastTime) { parts.push(`<div class="time">${esc(m.time)}</div>`); lastTime = m.time; }
-    parts.push(`<div class="msg athena">${m.html}</div>`);
-    const answered = msgs.some(x => x.ref === n);
-    parts.push(`<div class="replies">${m.replies.map(r => `<button type="button" data-ref="${n}" data-r="${esc(r)}" ${answered || busy ? "disabled" : ""}>${esc(r)}</button>`).join("")}</div>`);
+  const m = mine(), parts = [`<div class="day">Today</div>`];
+  for (const msg of m.inbox) parts.push(row(msg.from, msg.at, `<div class="bubble"><p>${esc(msg.text)}</p></div>`));
+  for (const p of PROPOSALS[person] || []) parts.push(row("Athena", p.time, cardHtml(p)));
+  for (const msg of m.msgs) {
+    if (msg.role === "me") parts.push(`<div class="row me"><div><div class="meta" style="text-align:right">${esc(msg.at || "")}</div><div class="bubble"><p>${esc(msg.text)}</p></div></div></div>`);
+    else parts.push(row("Athena", msg.at || "", msg.pending ? `<div class="bubble"><div class="working"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg>${esc(msg.status || "Looking into it")}</div></div>`
+      : `<div class="bubble">${msg.draft ? `<p style="white-space:pre-wrap">${esc(msg.text)}</p><div class="src">Draft · not sent</div>` : renderText(msg.text)}</div>`));
   }
-  if (pro.length) { parts.push(`<div class="time">${esc(OPENS_AT[person])} · now</div>`); }
-  for (const m of msgs) {
-    if (m.role === "me") parts.push(`<div class="msg me"><p>${esc(m.text)}</p></div>`);
-    else parts.push(`<div class="msg athena">${m.pending ? `<p class="typing">${esc(m.status || "Looking into it…")}</p>` : m.draft ? `<p style="white-space:pre-wrap">${esc(m.text)}</p><div class="src">Draft. Not sent.</div>` : renderText(m.text)}</div>`);
-  }
-  if (!msgs.length) parts.push(`<div class="replies">${(SUGGEST[person] || []).map(q => `<button type="button" data-q="${esc(q)}" ${busy ? "disabled" : ""}>${esc(q)}</button>`).join("")}</div>`);
-  el.innerHTML = parts.join("");
-  for (const b of el.querySelectorAll("[data-r]")) b.addEventListener("click", () => quickReply(Number(b.dataset.ref), b.dataset.r));
-  for (const b of el.querySelectorAll("[data-q]")) b.addEventListener("click", () => send(b.dataset.q));
-  el.scrollTop = el.scrollHeight;
+  const log = document.getElementById("log");
+  log.innerHTML = parts.join("");
+  log.scrollTop = log.scrollHeight;
+  for (const b of log.querySelectorAll("[data-go]")) b.addEventListener("click", () => go(b.dataset.go));
+  for (const b of log.querySelectorAll("[data-edit]")) b.addEventListener("click", () => { editing = b.dataset.edit; draw(); document.getElementById("ed-" + editing)?.focus(); });
+  for (const b of log.querySelectorAll("[data-skip]")) b.addEventListener("click", () => { mine().done[b.dataset.skip] = { action: "skip", at: nowLabel() }; saveState(); draw(); drawRail(); });
+  for (const q of log.querySelectorAll("[data-open]")) q.addEventListener("click", () => { q.classList.remove("clip"); q.removeAttribute("data-open"); });
+  for (const b of log.querySelectorAll("[data-cancel]")) b.addEventListener("click", () => { editing = null; draw(); });
+  document.getElementById("suggest").innerHTML = m.msgs.length ? "" : (SUGGEST[person] || []).map(q => `<button type="button" data-q="${esc(q)}">${esc(q)}</button>`).join("");
+  for (const b of document.querySelectorAll("#suggest [data-q]")) b.addEventListener("click", () => send(b.dataset.q));
   document.getElementById("send").disabled = busy;
-  const about = document.getElementById("about");
-  if (focus) { about.hidden = false; about.innerHTML = `About: ${esc(focus.label)} <button type="button" id="clear">clear</button>`; document.getElementById("clear").addEventListener("click", () => { focus = null; draw(); }); }
-  else about.hidden = true;
 }
-
-function say(text, extra = {}) { log().msgs.push({ role: "athena", text, ...extra }); saveState(); draw(); }
-
-function quickReply(ref, reply) {
-  const m = proactive(person)[ref];
-  const alerts = (m.alerts || []).map(id => (INBOX[person] || []).find(a => a.alert_id === id)).filter(Boolean);
-  focus = alerts.length ? { label: alerts.length > 1 ? `${alerts.length} items from ${m.time}` : alerts[0].title, alerts } : { label: m.kind, item: m };
-  if (reply === "On it") {
-    log().msgs.push({ role: "me", text: "On it", ref });
-    say(`Got it. I'll hold reminders and escalation for 2 hours.`);
-  } else if (reply === "Later") {
-    log().msgs.push({ role: "me", text: "Later", ref });
-    say(`OK. I'll bring ${alerts.length > 1 ? "these" : "it"} back at ${addMinutes(OPENS_AT[person], 120).slice(4)}.`);
+function go(id) {
+  const p = (PROPOSALS[person] || []).find(x => x.id === id), m = mine();
+  const ed = document.getElementById("ed-" + id);
+  const text = ed ? ed.value : (m.drafts?.[id] ?? p.action.text);
+  if (editing === id && p.action.kind !== "send") { (m.drafts ||= {})[id] = text; editing = null; saveState(); draw(); return; }
+  editing = null;
+  if (p.action.kind === "send") {
+    m.done[id] = { action: "send", at: nowLabel(), text };
+    of(p.action.to).inbox.push({ from: PEOPLE[person].name, at: nowLabel(), text });
   } else {
-    send(reply === "Why?" ? (alerts.length > 1 ? "Why are these late, briefly?" : "Why is this late?") : reply, ref);
+    m.done[id] = { action: "draft", at: nowLabel() };
+    try { navigator.clipboard?.writeText(text).catch(() => {}); } catch (_) {}
   }
+  saveState(); draw(); drawRail();
 }
-function addMinutes(hhmm, mins) { const [d, t] = hhmm.split(" "); const [h, m] = t.split(":").map(Number); const x = h * 60 + m + mins; return `${d} ${String(Math.floor(x / 60) % 24).padStart(2, "0")}:${String(x % 60).padStart(2, "0")}`; }
 
+function drawRail() {
+  const open = (PROPOSALS[person] || []).filter(p => !mine().done[p.id]).length;
+  const others = Object.entries(PEOPLE).filter(([k]) => k !== person).slice(0, 3);
+  document.getElementById("rail").innerHTML =
+    `<div class="chatrow on"><div class="av ai" aria-hidden="true">${SPARK}</div><div><b>Athena</b><span>${open ? `${open} thing${open > 1 ? "s" : ""} for you` : "All caught up"}</span></div>${open ? `<div class="badge">${open}</div>` : "<div></div>"}</div>` +
+    others.map(([k, p]) => `<div class="chatrow"><div class="av" aria-hidden="true">${esc(initials(p.name))}</div><div><b>${esc(p.name)}</b><span>${esc(p.role.split(",")[0])}</span></div><div></div></div>`).join("") +
+    `<div class="chatrow"><div class="av" aria-hidden="true">#</div><div><b>Northwind ops</b><span>Channel</span></div><div></div></div>`;
+}
+
+// ---------------------------------------------------------------- asking Athena
 function instructions() {
   const p = PEOPLE[person], persona = personaOf(person);
-  const about = focus?.alerts ? "The user is replying about these alerts: " + JSON.stringify(focus.alerts.map(a => ({ id: a.alert_id, item: a.title, client: a.client, severity: a.severity, facts: a.facts })))
-    : focus?.item ? "The user is replying about this message: " + JSON.stringify(focus.item.html.replace(/<[^>]+>/g, " ")) : "";
   return [
-    `You are Athena, a personal assistant in Microsoft Teams for ${p.name} (${p.role}) at Anka, a healthcare revenue-cycle company. Demo with made-up data.`,
+    `You are Athena, a personal assistant in a work chat for ${p.name} (${p.role}) at Anka, a healthcare revenue-cycle company. Demo with made-up data.`,
     `Their clients: ${scopeOf(person).map(k => DATA.clients[k].name).join(", ")}. Their data: ${persona.sources.join(", ")}. It is ${OPENS_AT[person]} IST, Monday 05 Oct 2026.`,
-    "Write like a sharp colleague replying in chat: 1 to 3 short sentences. If you must list, at most 3 short bullets. No headings, no bold, no preamble, no sign-off. Lead with the answer or the cause. Offer more detail only if useful, in a few words.",
-    "Investigate with the tools before answering 'why' questions (several in parallel: task history, team and leave, denials by payer and reason, client activity, AR aging). Use only tool results; never invent numbers, names or dates.",
-    "If you cannot answer, say \"I don't know\" and what is missing, in one sentence. If a tool refuses (not their client or not their data), say so in one sentence.",
-    "If data is old, say \"Data is not current\" and when it is from. Never give patient details. You only read data; you can draft text for the user, never send it.",
-    about,
-  ].filter(Boolean).join("\n");
+    "Reply like a sharp colleague in chat: 1 to 3 short sentences, at most 3 short bullets. No headings, no bold, no preamble. Lead with the answer. Where useful, end with one concrete action you could take for them (a message to a manager, or a draft).",
+    "Investigate 'why' questions with several tools in parallel (task history, team and leave, denials by payer and reason, client activity, AR aging). Use only tool results; never invent numbers, names or dates.",
+    "If you cannot answer, say \"I don't know\" and what is missing. If a tool refuses (not their client or not their data), say so in one sentence. If data is old, say \"Data is not current\". Never give patient details. You only read data and draft; you never send anything to clients.",
+  ].join("\n");
 }
-
-async function send(text, ref) {
+async function send(text) {
   text = String(text || "").trim(); if (!text || busy) return;
-  log().msgs.push({ role: "me", text, ref });
-  const draft = /^draft\b/i.test(text);
+  const m = mine();
+  m.msgs.push({ role: "me", text, at: nowLabel() });
+  const draftAsk = /^draft\b/i.test(text);
   if (!(sampleFn && liveTools)) {
     const c = (CANNED?.[person] || []).find(x => x.q.toLowerCase() === text.toLowerCase());
-    say(c && !/^I do not know\. I (could not|have no)/.test(c.answer) ? c.answer + (c.footer ? "\n\n" + c.footer : "") : "Open this page in Claude to talk to Athena. Here it can only show its messages.");
-    return;
+    m.msgs.push({ role: "athena", at: nowLabel(), text: c && !/^I do not know\. I (could not|have no)/.test(c.answer) ? c.answer + (c.footer ? "\n\n" + c.footer : "") : "Open this page in Claude to ask Athena anything. Here you can try the cards above." });
+    saveState(); draw(); return;
   }
-  const bot = { role: "athena", pending: true, status: "Looking into it…" };
-  log().msgs.push(bot); busy = true; draw();
+  const bot = { role: "athena", pending: true, status: "Looking into it", at: nowLabel() };
+  m.msgs.push(bot); busy = true; draw();
   const steps = [];
-  const redraw = () => { const last = steps.at(-1); if (last) bot.status = `Checking ${last.text.toLowerCase()}…`; draw(); };
-  const turns = log().turns;
-  const input = [{ role: "user", content: instructions() + (draft ? "\nThe user wants a draft. Write it for them to review and send themselves: under 100 words, start with 'To:' and 'Subject:'." : "") }, ...turns.slice(-6), { role: "user", content: text }];
+  const redraw = () => { const last = steps.at(-1); if (last) bot.status = `Checking ${last.text.charAt(0).toLowerCase() + last.text.slice(1)}`; if (m === mine()) draw(); };
+  const input = [{ role: "user", content: instructions() + (draftAsk ? "\nThe user wants a draft for them to review and send themselves: under 100 words, start with 'To:' and 'Subject:'." : "") }, ...m.turns.slice(-6), { role: "user", content: text }];
   try {
     const { text: out } = await sampleFn(input, { tools: makeTools(person, steps, redraw), modelTier: "default" });
-    Object.assign(bot, { pending: false, text: draft ? out.trim() : finish(out, steps), draft });
-    turns.push({ role: "user", content: text }, { role: "assistant", content: bot.text });
+    Object.assign(bot, { pending: false, text: draftAsk ? out.trim() : finish(out, steps), draft: draftAsk });
+    m.turns.push({ role: "user", content: text }, { role: "assistant", content: bot.text });
   } catch (e) {
-    Object.assign(bot, { pending: false, text: { rate_limited: "Too many messages at once. Try again in a minute.", not_granted: "Athena needs permission to use Claude for live answers.",
-      refused: "I can't help with that one." }[e?.code] || "Something went wrong. Try again." });
+    Object.assign(bot, { pending: false, text: { rate_limited: "Too many messages at once. Try again in a minute.", not_granted: "Athena needs permission to use Claude for live answers.", refused: "I can't help with that one." }[e?.code] || "Something went wrong. Try again." });
     if (["not_granted", "sampling_disabled", "tools_unavailable"].includes(e?.code)) liveTools = false;
   } finally { busy = false; saveState(); draw(); }
 }
 
-function drawPicker() {
-  const sel = document.getElementById("who");
-  sel.innerHTML = Object.entries(PEOPLE).map(([k, p]) => `<option value="${k}" ${k === person ? "selected" : ""}>${esc(p.name)} · ${esc(p.role.split(",")[0])}</option>`).join("");
-  sel.onchange = () => { person = sel.value; focus = null; try { localStorage.setItem("athena-chat-person", person); } catch (_) {} draw(); };
-}
-
+// ---------------------------------------------------------------- start
+const sel = document.getElementById("who");
+sel.innerHTML = Object.entries(PEOPLE).map(([k, p]) => `<option value="${k}">${esc(p.name)} · ${esc(p.role.split(",")[0])}</option>`).join("");
+sel.addEventListener("change", () => { person = sel.value; editing = null; try { localStorage.setItem("athena-agent-person", person); } catch (_) {} drawRail(); draw(); });
 document.getElementById("form").addEventListener("submit", ev => { ev.preventDefault(); const q = document.getElementById("q"); const v = q.value; q.value = ""; send(v); });
 document.getElementById("q").addEventListener("keydown", ev => { if (ev.key === "Enter" && !ev.shiftKey) { ev.preventDefault(); document.getElementById("form").requestSubmit(); } });
-try { const p = localStorage.getItem("athena-chat-person"); if (p && PEOPLE[p]) person = p; } catch (_) {}
+try { const p = localStorage.getItem("athena-agent-person"); if (p && PEOPLE[p]) person = p; } catch (_) {}
 if (location.hash && PEOPLE[location.hash.slice(1)]) person = location.hash.slice(1);
-drawPicker(); draw();
+sel.value = person;
+document.querySelector(".head .av").innerHTML = SPARK;
+drawRail(); draw();
 (async () => { try { sampleFn = await window.claude?.use?.("sample"); if (sampleFn) liveTools = !!(await sampleFn.limits().catch(() => null))?.tools; } catch (_) { sampleFn = null; } })();
 </script>

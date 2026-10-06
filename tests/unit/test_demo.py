@@ -51,3 +51,17 @@ def test_interactive_page_build(cfg, tmp_path) -> None:
     for marker in ("/*DEMO_DATA*/", "/*ASK_DATA*/", "/*SUGGESTIONS*/", "/*CANNED*/"):
         assert marker not in page
     assert "</script" not in page.split("const DEMO = ", 1)[1].split("const PEOPLE", 1)[0]
+
+
+def test_proposals_are_computed_from_data(cfg) -> None:
+    props = d.proposals(cfg)
+    assert set(props) == set(d.PERSONAS)
+    cover = props["dm_am"][0]
+    assert cover["action"]["kind"] == "send" and cover["action"]["to"] == "hub_leader"
+    assert "Analyst N2" in cover["why"] and "%" in cover["action"]["text"]
+    csm = props["csm"][0]
+    assert csm["action"]["kind"] == "draft" and "never sends to clients" in csm["offer"]
+    for cards in props.values():  # only internal messages or drafts; never a client recipient
+        for c in cards:
+            assert c["action"]["kind"] in ("send", "draft")
+            assert c["action"].get("to") in (None, *d.PERSONAS)
