@@ -28,12 +28,12 @@
       "Bash(func *)",
       "Bash(pip uninstall *)",
       "Bash(git reset *)",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Bash(git push *)"
     ],
     "deny": [
       "Read(./.env)",
       "Read(./secrets/**)",
-      "Bash(git push *)",
       "Bash(rm -rf *)",
       "Bash(curl *)",
       "Bash(wget *)"

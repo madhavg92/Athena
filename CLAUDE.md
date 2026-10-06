@@ -27,7 +27,7 @@ The full design is in docs/SPEC.md. It is imported here and is the source of tru
 - **Only four action types:** answer, notify, draft, write. `write` stays disabled in releases 1 and 2.
 - **No agent framework** (LangChain, LangGraph, LlamaIndex, CrewAI, AutoGen or similar), **no vector database**, **no memory framework.** Plain Python.
 - **No PHI to the model.** Connectors pass only allowlisted fields. The PHI module scrubs text before the model reads it. The gateway checks outbound text.
-- **Never `git push`, never deploy.** The user does both.
+- **Never deploy.** The user deploys. Push only to the session branch the user named, and only when the user allows it (cloud sessions are lost if not pushed).
 - **Do not set dates, targets or pass marks.** Management sets them. Record measurements only.
 
 ## Commands
