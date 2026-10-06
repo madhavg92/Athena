@@ -314,3 +314,31 @@ def backtest(
         typer.echo(str(exc), err=True)
         raise typer.Exit(2) from exc
     typer.echo(report.text())
+
+
+@app.command()
+def stats(days: int = typer.Option(7, "--days", help="Look back this many days.")) -> None:
+    """Measurements: alerts, messages, wrong marks, time to close, questions, cost per rule and user."""
+    from athena.app import build
+    from athena.core.stats import collect
+
+    data = collect(build(cfg=_config()), days)
+    typer.echo(f"Last {data['days']} days\n\nRules:")
+    for rule_id, r in data["rules"].items():
+        typer.echo(f"  {rule_id}: " + ", ".join(f"{k} {v}" for k, v in r.items() if v is not None))
+    if not data["rules"]:
+        typer.echo("  (no alerts or messages)")
+    typer.echo("\nQuestions: " + ", ".join(f"{k} {v}" for k, v in data["questions"].items()))
+    typer.echo(
+        "Cost by rule (USD): "
+        + (", ".join(f"{k} {v}" for k, v in data["cost_usd_by_rule"].items()) or "-")
+    )
+    typer.echo(
+        "Tokens by rule: "
+        + (", ".join(f"{k} {v}" for k, v in data["tokens_by_rule"].items()) or "-")
+    )
+    typer.echo(
+        "Cost by user (USD): "
+        + (", ".join(f"{k} {v}" for k, v in data["cost_usd_by_user"].items()) or "-")
+    )
+    typer.echo("Not measured yet: " + "; ".join(data["not_measured"]))

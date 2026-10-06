@@ -45,7 +45,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M7.1 Digest
 - [x] M7.2 R3 and delivery routing
 - [ ] M8.1 Report builder (R5) — real template: G7 — builder done with a plain default template; real template waits for G7
-- [ ] M8.2 `athena stats`
+- [x] M8.2 `athena stats`
 - [ ] M9.1 Platform test (rule file only)
 
 ## Log
@@ -89,3 +89,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M7.1: One digest per person per work day at digest time; 'No exceptions today.' when empty; 'Data is not current' when stale (never all-clear); shadow digests to review list.
 - M7.2: R3 runs in fixture mode at 08:30 IST, queues off-target metrics; digest at 09:00 with open R2 alerts in scope; now rules bypass the digest.
 - M8.1: WBR draft per client: numbers + query IDs in code, guarded model comments, PPTX in drafts/, BA notified; plain template until G7.
+- M8.2: Per rule: alerts opened/closed/open, messages by status, drafts, wrong/correct marks and rate, median hours open-to-close; questions answered/IDK/stale/refused, latency; cost and tokens by rule and user.
