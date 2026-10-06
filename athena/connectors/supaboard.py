@@ -28,14 +28,34 @@ class SupaboardConnector(Connector):
             ],
             "dates": ["date"],
             "fixture_age_minutes": 180,
-        }
+        },
+        "latest_metrics": {
+            "file": "supaboard/metrics.json",
+            "allowed": [],
+        },  # latest per client + metric
     }
+
+    def read(self, dataset: str, **filters: Any):
+        if dataset == "latest_metrics":
+            return latest(super().read("metrics", **filters))
+        return super().read(dataset, **filters)
 
     def _fixture(self, dataset: str):
         rows, _ = super()._fixture(dataset)
         for row in rows:
-            row["client_metric"] = f"{row['client']}:{row['metric']}"
+            self._derive(row)
         return rows, None  # fixture rows carry their own as_of
+
+    def _derive(self, row: dict) -> None:
+        """Fields computed in code: client_metric key, and off_target using the metric's direction."""
+        row["client_metric"] = f"{row['client']}:{row['metric']}"
+        metric = self.cfg.metrics.get(row["metric"])
+        better = metric.better if metric else "higher"
+        actual, target = row.get("actual"), row.get("target")
+        if actual is None or target is None:
+            row["off_target"] = None
+        else:
+            row["off_target"] = actual < target if better == "higher" else actual > target
 
     def _live(self, dataset: str, **filters: Any):
         self._env("SUPABOARD_BASE_URL", "SUPABOARD_API_KEY")

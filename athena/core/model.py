@@ -132,6 +132,15 @@ class StubModel:
     # -- routing
 
     def _route(self, messages: list[dict], tools: list[dict]) -> ModelReply:
+        if (
+            messages
+            and messages[0]["role"] == "system"
+            and messages[0]["content"].startswith("You write short alert")
+        ):
+            data = json.loads(messages[-1]["content"])
+            return ModelReply(
+                text=data.get("template_hint", "")
+            )  # the stub writes the plain template
         last_user = max(i for i, m in enumerate(messages) if m["role"] == "user")
         question = messages[last_user]["content"]
         system = messages[0]["content"] if messages and messages[0]["role"] == "system" else ""

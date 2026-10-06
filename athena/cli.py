@@ -223,3 +223,25 @@ def db_upgrade(
 
     cfg = _config()
     command.upgrade(Config(str(cfg.root / "alembic.ini")), "head", sql=sql)
+
+
+@app.command()
+def tick(
+    rule: list[str] = typer.Option(None, "--rule", help="Run these rules now, even if not due."),
+) -> None:
+    """Run due rules once (fixture mode unless ATHENA_MODE=live), release held messages, send due digests."""
+    from athena.app import build
+    from athena.core import scheduler
+
+    out = scheduler.tick(build(cfg=_config()), force=rule or None)
+    for r in out["runs"]:
+        if r["stale"] or not r["ran"]:
+            typer.echo(f"{r['rule_id']}: not run ({r['reason']})")
+        else:
+            msgs = ", ".join(f"{k} {v}" for k, v in r["messages"].items()) or "none"
+            typer.echo(
+                f"{r['rule_id']}: {r['hits']} hits, {r['opened']} opened, {r['closed']} closed; messages: {msgs}"
+            )
+    if not out["runs"]:
+        typer.echo("No rules due.")
+    typer.echo(f"Held messages released: {out['released']}. Digests sent: {out['digests']}.")

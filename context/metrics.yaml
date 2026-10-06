@@ -3,19 +3,23 @@ backlog:
   meaning: "Number of open work items not yet worked at the end of the day."
   source: supaboard.metrics
   field: backlog
+  better: lower
   owner: hl.key@fixture.local
 first_pass_rate:
   meaning: "Share of claims accepted by the payer on first submission, in percent."
   source: supaboard.metrics
   field: first_pass_rate
+  better: higher
   owner: hl.key@fixture.local
 ar_days:
   meaning: "Average number of days that receivables stay open."
   source: supaboard.metrics
   field: ar_days
+  better: lower
   owner: hl.key@fixture.local
 denial_rate:
   meaning: "Share of claims denied by the payer, in percent."
   source: supaboard.metrics
   field: denial_rate
+  better: lower
   owner: hl.key@fixture.local

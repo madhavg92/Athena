@@ -1,13 +1,13 @@
 id: R3
 name: Daily exception digest
 trigger: {cron: "30 8 * * 1-5", tz: Asia/Kolkata}   # confirm work days and time (G8)
-source: supaboard.metrics
+source: supaboard.latest_metrics
 check:
   type: threshold
   key: client_metric
   severities:
-    below_target:
-      - {field: actual, op: lt_field, value: target}
+    off_target:                       # direction per metric from context/metrics.yaml (better: higher|lower)
+      - {field: off_target, op: eq, value: true}
 include_open_alerts: [R2]
 data_max_age: 24h
 owner: owner_map.client.hub_leader

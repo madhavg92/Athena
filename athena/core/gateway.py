@@ -150,7 +150,7 @@ class Gateway:
         if found:
             return f"phi lint: {', '.join(found)}"
         # 7 message limit
-        if a.type == "notify" and a.item_key:
+        if a.type == "notify" and a.delivery == "now" and a.item_key:
             for r in a.recipients:
                 if self.notify_count(a.item_key, r) >= MAX_NOTIFY_PER_PERSON:
                     return f"message limit: {r} already has {MAX_NOTIFY_PER_PERSON} messages for {a.item_key}"
@@ -183,10 +183,8 @@ class Gateway:
         return result
 
     def _route(self, a: Action, recipient: str, now: datetime) -> tuple[str, datetime | None]:
-        # 9 mode (shadow does not deliver; checked after 8 so held/sent never happen in shadow)
-        if a.mode == "shadow":
-            return "shadow", None
         if a.type == "notify" and a.delivery == "digest":
+            # queued even in shadow, so a shadow digest shows what a live one would hold
             with self.db.session() as s:
                 s.add(
                     DigestItem(
@@ -197,7 +195,10 @@ class Gateway:
                         created_at=now,
                     )
                 )
-            return "queued", None
+            return ("shadow" if a.mode == "shadow" else "queued"), None
+        # 9 mode: shadow goes to the review list, not to people
+        if a.mode == "shadow":
+            return "shadow", None
         # 8 work hours
         if a.type == "notify" and a.delivery == "now":
             start = next_work_start(self.cfg, recipient, now)

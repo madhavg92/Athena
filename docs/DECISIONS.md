@@ -43,3 +43,9 @@
 - 2026-10-06 — Local test tool: Microsoft 365 Agents Playground (to confirm against current docs; it replaces the Bot Framework Emulator). Not run in the build environment.
 
 - 2026-10-06 — Postgres: psycopg 3 driver (`postgresql+psycopg://`; `postgres://` URLs are normalised). SQLite keeps `create_all` for local use; Postgres tables are created only by Alembic (`athena db upgrade`). Initial migration 0001 covers all tables; tested on a temporary Postgres 16. Optional deps `.[postgres]`.
+- 2026-10-06 — Metric direction: `better: higher|lower` in `context/metrics.yaml`; the Supaboard connector adds `off_target` from it. R3 now checks `off_target` on the new `supaboard.latest_metrics` dataset (latest value per client + metric), because `actual < target` is wrong for backlog, AR days and denial rate.
+- 2026-10-06 — A rule whose source returns no records is treated like stale data: no new alerts and no closes, so an outage never closes open alerts.
+- 2026-10-06 — Scheduler: a rule that never ran fires only within 15 minutes of a scheduled time; a missed run catches up once. `athena tick --rule R3` runs a rule now.
+- 2026-10-06 — The 2-message limit applies to `delivery: now` only; digest items are one line in one daily message. Digest items are queued in shadow mode too (receipt status `shadow`).
+- 2026-10-06 — `.gitignore` entries `reports/` and `drafts/` anchored to the repo root (they also matched `athena/reports/`).
+

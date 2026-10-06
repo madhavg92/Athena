@@ -36,8 +36,8 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 
 ## Release 2
 - [x] M6.1 Check types
-- [ ] M6.2 Scheduler tick
-- [ ] M6.3 Ladder
+- [x] M6.2 Scheduler tick
+- [x] M6.3 Ladder
 - [ ] M6.4 Message templates
 - [ ] M6.5 Shadow mode and review
 - [ ] M6.6 Backtest
@@ -80,3 +80,5 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M5.5: psycopg 3 + Alembic; migration 0001 for all tables; athena db upgrade [--sql]; tested on SQLite and a temporary Postgres 16.
 - M5.6: RUNBOOK (local, Teams test, Azure resources, app settings, deploy, rollback, kill switch); requirements.txt, host.json, .funcignore, local settings example.
 - M6.1: All SPEC ops, first severity wins, lt_field/gt_field, absence by list or calendar with grace; table-driven tests.
+- M6.2: due by cron + tz (one catch-up), freshness/no-data skip, open/update/close alerts, athena tick [--rule]; R3 uses metric direction on latest metrics.
+- M6.3: ladder steps by age, first + one reminder after renudge_after, max 2 per person per step, escalation to hub leader; fake-clock tests.

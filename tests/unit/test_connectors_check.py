@@ -17,4 +17,4 @@ def test_check_live_without_settings(monkeypatch) -> None:
         monkeypatch.delenv(var, raising=False)
     result = CliRunner().invoke(app, ["connectors", "check", "--live"])
     assert result.exit_code == 0, result.output
-    assert result.output.count("not configured") == 6
+    assert result.output.count("not configured") == 7

@@ -286,6 +286,7 @@ class Metric(Strict):
     source: str
     field: str
     owner: str
+    better: Literal["higher", "lower"] = "higher"
 
 
 class ModelSpec(Strict):

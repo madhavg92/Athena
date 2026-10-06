@@ -5,8 +5,8 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 *.db
-reports/
-drafts/
+/reports/
+/drafts/
 secrets/
 .python_packages/
 local.settings.json
