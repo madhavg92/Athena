@@ -372,8 +372,6 @@ Each tool has a JSON schema for the model. Add a new tool only after a review by
 ```python
 class ModelClient(Protocol):
     def chat(self, messages: list[dict], tools: list[dict] | None) -> ModelReply: ...
-
-
 # ModelReply: text, tool_calls[{name, arguments}], tokens_in, tokens_out, latency_ms
 ```
 Implementations:

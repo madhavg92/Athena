@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i 's/^extend-exclude = \\\\[\".venv\"\\\\]/extend-exclude = [\".venv\", \"*.md\"]/' pyproject.toml)",
+      "Bash(.venv/bin/ruff format *)",
+      "Bash(git add *)",
+      "Bash(git commit -q -m 'M1.2: keep markdown out of ruff format *)"
+    ]
+  }
+}
