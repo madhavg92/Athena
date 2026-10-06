@@ -104,3 +104,16 @@ def test_phi_in_answer_blocked(app) -> None:
     )
     r = Asker(app.cfg, app.db, app.gateway, app.sources, model).ask("owners Northwind", DM)
     assert r.status == "refused" and "safety check" in r.answer and "6789" not in r.answer
+
+
+def test_cross_client_questions_without_a_client_name(app) -> None:
+    money = app.asker.ask("Where is money at risk?", HL)
+    assert money.tools_used == ["get_money_at_risk"] and not money.idk
+    assert money.answer.startswith("$") and "at risk in the next 14 days" in money.answer
+    assert "supaboard.denied_claims" in money.footer
+    margin = app.asker.ask("Which client has the lowest margin per FTE?", HL)
+    assert margin.tools_used == ["get_client_economics"] and "per FTE" in margin.answer
+    assert "Cedar" not in margin.answer  # another hub
+    week = app.asker.ask("What meetings do I have this week?", HL)
+    assert week.tools_used == ["get_meetings"] and "Northwind weekly call" in week.answer
+    assert app.asker.ask("What is the meaning of life?", HL).idk

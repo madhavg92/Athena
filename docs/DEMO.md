@@ -1,6 +1,6 @@
 # Athena demo script
 
-Goal: show a DM/AM, a hub leader and a CSM (and a BA for a minute) what Athena would do on a normal day, then get from them the values and questions Athena needs (gates G8 and G9).
+Goal: show hub leaders (on the page) and a DM/AM, a CSM and a BA (in the terminal) what Athena would do on a normal day, then get from them the values and questions Athena needs (gates G8 and G9).
 
 Everything in the demo is synthetic: three made-up clients (Northwind Orthopedics, Bluefield Imaging, Cedar Family Clinic), made-up people (DM One, Hub Leader Key, ...), made-up numbers. Say so at the start.
 
@@ -12,18 +12,17 @@ Everything in the demo is synthetic: three made-up clients (Northwind Orthopedic
 
 ## How the demo page works
 
-The page shows Athena as a contact in a work chat (an illustration of Teams, without its branding). Pick who you are with "Viewing as".
+The page shows Athena as a hub leader's chief of staff, as a contact in their work chat (an illustration of Teams, without its branding). It is Monday 14:40 for Hub Leader Key. Athena is not another dashboard: it does the digging and comes with three things, each worked out in code from the data.
 
-Athena does the digging and comes to each person with one decision at a time: what is wrong, why (one line), what it checked, and a ready action with **Send**, **Edit** or **Not now**.
+- **09:00 Money at risk:** dollars that will be lost in the next 14 days if nobody acts (denials not appealed before their deadline, old claims before timely filing), what is due within 2 days, and the biggest single move with who has room to do it. **Plan it** writes the plan; **How did you work this out?** shows the method and the assumptions (provisional, in `context/money.yaml`; management sets them).
+- **14:30 Before the ops review:** the 3 decisions that need the hub leader, each with one button. Everything else is on track or already owned.
+- **14:35 Pre-read for tomorrow's Northwind call:** what the client will ask (open tickets), what we can say (with the numbers), and what we owe them.
 
-- **DM One:** two Northwind tasks are late because Analyst N2 is on leave. Athena offers to ask the hub leader to lend an analyst from Bluefield, with the message written. It has also drafted the recovery plan promised to Northwind.
-- **Hub Leader Key:** the DM's request arrives; Athena says it is a staffing problem, not process, and offers **Approve**. The approval then appears in DM One's chat.
-- **CSM One:** a client ticket about denials has had no reply for three days. Athena has the answer and a reply ready to paste (it never sends to clients).
-- **BA One:** the weekly report commentary is written from the computed numbers.
+Then the chat: questions across all their clients (margin, revenue per FTE, what fixing a payer problem is worth). Opened in Claude, a real model answers through Athena's tools, only for Hub Leader Key's clients. Opened elsewhere, the three suggested questions have prepared answers.
 
-Anyone can also type a question. Opened in Claude, a real model answers through Athena's tools, briefly, and only for that person's clients and data.
+Suggested flow: read the money card, press **How did you work this out?**, then **Plan it** and **Send**. Note that decision 1 in the ops card is now done. Then ask "Where are we losing margin?" and one question of their own.
 
-Suggested flow: start as DM One, press **Send to Hub Leader Key**, switch to Hub Leader Key, press **Approve**, switch back to DM One to see the reply. Then ask one real question.
+The same numbers come from the terminal: `athena ask "Where is money at risk?" --as hl.key@fixture.local` (tools `get_money_at_risk`, `get_client_economics`, `get_meetings`).
 
 ## What to say first (1 minute)
 

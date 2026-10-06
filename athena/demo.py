@@ -282,6 +282,7 @@ def save_html(demo: Demo, template: Path, path: Path, cfg: AthenaConfig | None =
         page = page.replace("/*INBOX*/null", js(inbox(demo)))
         page = page.replace("/*OPENS_AT*/null", js(OPENS_AT))
         page = page.replace("/*PROPOSALS*/null", js(proposals(cfg)))
+        page = page.replace("/*HUB*/null", js(hub_view(cfg)))
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(page)
     return path
@@ -643,4 +644,177 @@ def proposals(cfg: AthenaConfig) -> dict[str, list[dict[str, Any]]]:
                 "after": "Saved to the draft deck. You send it; Athena never sends to clients.",
             },
         ],
+    }
+
+
+# ---------------------------------------------------------------- hub leader agent (money, meetings, ask anything)
+
+HUB_SUGGESTIONS = [
+    "Where are we losing margin?",
+    "Which client earns least per FTE, and why?",
+    "If we fix the Payer B denials, what is it worth to us?",
+]
+
+
+def hub_view(cfg: AthenaConfig) -> dict[str, Any]:
+    """Everything Athena shows Hub Leader Key, computed by the real engine at the snapshot time."""
+    from athena.core import meetings, money
+
+    snapshot = fixture_anchor()
+    sources = Sources(cfg, clock=lambda: snapshot, run_mode="fixture")
+    hl = "hl.key@fixture.local"
+    scope = cfg.scope_of(hl)
+    risks = money.at_risk(cfg, sources, scope, snapshot)
+    move = money.biggest_move(cfg, sources, risks, scope)
+    a = money.assumptions(cfg)
+    total = sum(r.amount_usd for r in risks)
+    expected = sum(r.expected_recovery_usd for r in risks)
+    week = meetings.upcoming(sources, hl, snapshot - timedelta(hours=1))
+    ops = meetings.brief(
+        cfg, sources, hl, next(m for m in week if m["type"] == "internal"), snapshot
+    )
+    call = meetings.brief(
+        cfg, sources, hl, next(m for m in week if m.get("client") == "northwind_ortho"), snapshot
+    )
+    econ = money.economics(sources, scope)
+    latest = {r["client"]: r for r in econ if r["month"] == max(e["month"] for e in econ)}
+    first = {r["client"]: r for r in econ if r["month"] == min(e["month"] for e in econ)}
+    names = {k: cfg.owner_map.clients[k].name for k in scope}
+    den14 = [
+        c
+        for c in sources.read("supaboard.denials", client="northwind_ortho")
+        if c.get("date") >= (snapshot - timedelta(days=14)).date().isoformat()
+    ]
+    d_total = sum(c.get("count") for c in den14)
+    d_b197 = sum(
+        c.get("count")
+        for c in den14
+        if c.get("payer", "").startswith("Payer B") and c.get("reason_code") == "CO-197"
+    )
+    share = round(100 * d_b197 / d_total) if d_total else 0
+    urgent = [r for r in risks if r.days_left <= 2]
+    today = {
+        "amount": sum(r.amount_usd for r in urgent),
+        "claims": sum(r.claims for r in urgent),
+        "hours": round(sum(r.hours_to_work for r in urgent), 1),
+        "expected": sum(r.expected_recovery_usd for r in urgent),
+        "clients": sorted({r.client_name.split(" ")[0] for r in urgent}),
+    }
+    rows = [
+        {
+            "amount": r.amount_usd,
+            "client": r.client_name.split(" ")[0],
+            "days_left": r.days_left,
+            "what": (
+                f"{r.claims} {r.payer.split(' (')[0]} denials not appealed ({r.reason_code})"
+                if r.kind == "appeal"
+                else f"{r.claims} {r.payer.split(' (')[0]} claims near timely filing"
+            ),
+        }
+        for r in risks[:4]
+    ]
+    b197 = next(r for r in risks if r.reason_code == "CO-197")
+    plan_msg = (
+        f"From tomorrow until Thu, {move.who} moves to Northwind to appeal the {b197.claims} Payer B prior-auth denials "
+        f"(CO-197, ${b197.amount_usd:,}, first deadline {b197.earliest_deadline:%a %d %b}). "
+        "DM One: please brief them on the new Payer B portal. DM Two: Bluefield eligibility checks pause for 3 days."
+    )
+    nw = latest["northwind_ortho"]
+    margin_rows = sorted(latest.values(), key=lambda r: r["revenue_per_fte_usd"])
+    low = margin_rows[0]
+    canned = {
+        HUB_SUGGESTIONS[0]: (
+            f"Northwind. Revenue fell from ${first['northwind_ortho']['revenue_usd']:,} to ${nw['revenue_usd']:,} a month since July "
+            f"while the team stayed at {nw['fte']:g} FTE, so margin is down to {nw['margin_pct']}%. "
+            f"The cause is collections: {share}% of its denials in the last 14 days are Payer B prior-auth rejections, and ${total:,} "
+            f"is at risk across your clients in the next 14 days."
+        ),
+        HUB_SUGGESTIONS[1]: (
+            f"{names[low['client']]} at ${low['revenue_per_fte_usd']:,} per FTE a month (margin {low['margin_pct']}%), against "
+            + ", ".join(
+                f"{names[r['client']]} at ${r['revenue_per_fte_usd']:,}" for r in margin_rows[1:]
+            )
+            + ". Its fee is a share of collections, and collections are down because of the Payer B denials and the posting backlog while Analyst N2 is out."
+        ),
+        HUB_SUGGESTIONS[2]: (
+            f"About ${b197.expected_recovery_usd:,} in collections in the next two weeks if the {b197.claims} open appeals go in "
+            f"(assuming {a['appeal_success_pct']['CO-197']}% are paid), which is ${b197.fee_at_risk_usd:,} of Anka's fee. "
+            f"It takes about {b197.hours_to_work:g} hours of work. Fixing the portal also stops new denials: these were {share}% of Northwind's denials."
+        ),
+    }
+    return {
+        "person": {"name": cfg.owner_map.people[hl].name, "email": hl, "now": "Mon 14:40"},
+        "money": {
+            "time": "09:00",
+            "today": today,
+            "total": total,
+            "expected": expected,
+            "horizon": a["horizon_days"],
+            "rows": rows,
+            "move": move.text,
+            "move_short": f"Appeal the {b197.claims} Payer B prior-auth denials at Northwind before {b197.earliest_deadline:%d %b}",
+            "move_value": b197.expected_recovery_usd,
+            "move_hours": b197.hours_to_work,
+            "who": move.who,
+            "who_detail": move.who_detail,
+            "how": [
+                f"Denials not yet appealed whose appeal deadline is in the next {a['horizon_days']} days, plus claims over 90 days old whose timely-filing deadline is in that window.",
+                f"Expected recovery assumes {a['appeal_success_pct']['CO-197']}% of prior-auth appeals and {a['work_success_pct']}% of worked AR get paid (provisional; management sets these).",
+                f"Hours assume {a['minutes_per_appeal']} minutes an appeal and {a['minutes_per_ar_claim']} minutes an AR claim.",
+                "Sources: Supaboard claims and denials, the team sheet. Every number has a query ID.",
+            ],
+            "plan": {"to": "DM One and DM Two", "text": plan_msg},
+        },
+        "ops": {
+            "time": "14:30",
+            "title": ops["meeting"],
+            "at": "15:00",
+            "decisions": [
+                {
+                    "text": f"Move {move.who} to the Northwind Payer B appeals until Thu",
+                    "why": f"${b197.expected_recovery_usd:,} expected back; Bluefield has the most room ({move.who_detail.split(', ')[-1]})",
+                    "button": "Approve",
+                    "done": "Approved. I've told DM One and DM Two.",
+                },
+                {
+                    "text": "Cover posting while Analyst N2 is out until Fri",
+                    "why": f"Northwind's team is at {max(m.get('utilisation_pct') for m in sources.read('smartsheet.team', client='northwind_ortho'))}%; posting backlog is growing",
+                    "button": "Ask DM One for a plan",
+                    "done": "Sent to DM One.",
+                },
+                {
+                    "text": "Recovery plan for Northwind, promised for Sat 10 Oct",
+                    "why": "DM One has a draft outline; it needs an owner and a review slot",
+                    "button": "Review Thu 17:00",
+                    "done": "Added: review with DM One, Thu 17:00. I'll prepare the pre-read.",
+                },
+            ],
+        },
+        "call": {
+            "time": "Tue 18:30",
+            "title": call["meeting"],
+            "at": "Tue 19:00",
+            "ask": [f"{t['ticket_id']}: {t['subject']}" for t in call["tickets_waiting_on_us"][:3]],
+            "say": [
+                f"Denials: {share}% of the last 14 days are Payer B prior-auth rejections after its portal change; appeals start tomorrow.",
+                f"Backlog averaged {next(c['last_7_days'] for c in call['changes'] if c['metric'] == 'backlog'):g} last week against a target of {next(c['target'] for c in call['changes'] if c['metric'] == 'backlog'):g}; cover for posting is being arranged.",
+            ],
+            "owe": [c["what"] for c in call["commitments"]],
+        },
+        "canned": canned,
+        "suggestions": HUB_SUGGESTIONS,
+        # records for the page's own read-only tools (the same numbers the Python tools return)
+        "risks": [
+            {
+                **r.model_dump(mode="json", exclude={"client", "client_name"}),
+                "client": r.client_name,
+            }
+            for r in risks
+        ],
+        "economics": [{**r, "client": names[r["client"]]} for r in econ],
+        "meetings": [
+            {"meeting": m["title"], "start": m["start"].isoformat(), "type": m["type"]}
+            for m in week
+        ],
+        "briefs": {"ops": ops, "northwind": call},
     }

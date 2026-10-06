@@ -95,6 +95,12 @@ TOOL_WORDS = [
     ),
     ("get_client_profile", ("profile", "about", "weekly call", "specialty", "watch")),
 ]
+# questions across all of the user's clients (no client name needed)
+SCOPE_WORDS = [
+    ("get_money_at_risk", ("money", "at risk", "dollars", "losing money", "leak")),
+    ("get_client_economics", ("margin", "per fte", "revenue per", "economics", "earns")),
+    ("get_meetings", ("meeting", "my week", "calendar")),
+]
 BRIEF_TOOLS = ["get_tickets", "get_metrics", "get_tasks", "search_documents", "get_client_profile"]
 ROLE_LABELS = {
     "hub_leader": "Hub leader",
@@ -182,9 +188,13 @@ class StubModel:
 
     def _plan(self, question: str, available: set[str]) -> list[tuple[str, dict]]:
         client = self._client(question)
-        if client is None:
-            return []
         low = question.lower()
+        if client is None:
+            return [
+                (tool, {})
+                for tool, words in SCOPE_WORDS
+                if tool in available and any(w in low for w in words)
+            ][:1]
         if low.startswith("brief"):
             calls = []
             for name in BRIEF_TOOLS:
@@ -279,6 +289,27 @@ def _brief(results: list[dict]) -> list[str]:
 def _summarise(name: str, data: dict) -> list[str]:
     rows = data.get("records", [])
     client = data.get("client_name") or data.get("client") or "the client"
+    if name == "get_money_at_risk" and rows:
+        head, risks = rows[0], rows[1:]
+        out = [f"${head['total_at_risk_usd']:,} at risk in the next {head['horizon_days']} days."]
+        out += [
+            f"- ${r['amount_usd']:,} {r['client_name']}: {r['lever']} ({r['days_left']} day{'' if r['days_left'] == 1 else 's'} left)"
+            for r in risks[:3]
+        ]
+        if head.get("biggest_move"):
+            out.append(f"Biggest move: {head['biggest_move']}")
+        return out
+    if name == "get_client_economics" and rows:
+        last = max(r["month"] for r in rows)
+        latest = sorted(
+            (r for r in rows if r["month"] == last), key=lambda r: r["revenue_per_fte_usd"] or 0
+        )
+        return [f"Revenue per FTE and margin, {last}:"] + [
+            f"- {r['client']}: ${r['revenue_per_fte_usd']:,} per FTE, margin {r['margin_pct']}%"
+            for r in latest
+        ]
+    if name == "get_meetings" and rows and "title" in rows[0]:
+        return ["Your meetings this week:"] + [f"- {r['start']}: {r['title']}" for r in rows]
     if not rows:
         return [f"No {name.replace('get_', '').replace('_', ' ')} found for {client}."]
     if name == "get_tasks":

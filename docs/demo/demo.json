@@ -25,9 +25,92 @@
       "text": "Late: Post payments batch (Northwind Orthopedics) is due 04 Oct 13:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5001",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 10,
+   "item_key": "R2:T-1001",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1001",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Northwind Orthopedics",
+    "age": "0m",
+    "client": "northwind_ortho",
+    "due": "04 Oct 13:30",
+    "last_update": "05 Oct 05:30",
+    "owner": "DM One",
+    "row_id": 5001,
+    "sheet_id": 1000000000000001,
+    "status": "In Progress",
+    "task_id": "T-1001",
+    "title": "Post payments batch",
+    "link": "https://app.smartsheet.com/sheets/1000000000000001?rowId=5001"
+   }
   },
   {
    "persona": "dm_am",
@@ -44,7 +127,7 @@
     "body": [
      {
       "type": "TextBlock",
-      "text": "At Risk",
+      "text": "At risk",
       "weight": "Bolder",
       "color": "Warning"
      },
@@ -53,9 +136,92 @@
       "text": "At risk: Work denial queue (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5002",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 11,
+   "item_key": "R2:T-1002",
+   "severity": "at_risk",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1002",
+    "severity": "at_risk",
+    "severity_label": "At risk",
+    "client_name": "Northwind Orthopedics",
+    "age": "0m",
+    "client": "northwind_ortho",
+    "due": "05 Oct 12:30",
+    "last_update": "05 Oct 03:30",
+    "owner": "DM One",
+    "row_id": 5002,
+    "sheet_id": 1000000000000001,
+    "status": "Not Started",
+    "task_id": "T-1002",
+    "title": "Work denial queue",
+    "link": "https://app.smartsheet.com/sheets/1000000000000001?rowId=5002"
+   }
   },
   {
    "persona": "dm_am",
@@ -81,9 +247,92 @@
       "text": "Late: AR follow-up over 90 days (Northwind Orthopedics) is due 04 Oct 12:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5006",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 12,
+   "item_key": "R2:T-1006",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1006",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Northwind Orthopedics",
+    "age": "0m",
+    "client": "northwind_ortho",
+    "due": "04 Oct 12:30",
+    "last_update": "04 Oct 15:30",
+    "owner": "DM One",
+    "row_id": 5006,
+    "sheet_id": 1000000000000001,
+    "status": "In Progress",
+    "task_id": "T-1006",
+    "title": "AR follow-up over 90 days",
+    "link": "https://app.smartsheet.com/sheets/1000000000000001?rowId=5006"
+   }
   },
   {
    "persona": "dm_am",
@@ -100,7 +349,7 @@
     "body": [
      {
       "type": "TextBlock",
-      "text": "At Risk",
+      "text": "At risk",
       "weight": "Bolder",
       "color": "Warning"
      },
@@ -109,9 +358,92 @@
       "text": "At risk: Coding audit sample (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5009",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 13,
+   "item_key": "R2:T-1009",
+   "severity": "at_risk",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1009",
+    "severity": "at_risk",
+    "severity_label": "At risk",
+    "client_name": "Northwind Orthopedics",
+    "age": "0m",
+    "client": "northwind_ortho",
+    "due": "05 Oct 12:30",
+    "last_update": "05 Oct 08:30",
+    "owner": "DM One",
+    "row_id": 5009,
+    "sheet_id": 1000000000000001,
+    "status": "Not Started",
+    "task_id": "T-1009",
+    "title": "Coding audit sample",
+    "link": "https://app.smartsheet.com/sheets/1000000000000001?rowId=5009"
+   }
   },
   {
    "persona": "dm_am",
@@ -153,7 +485,11 @@
      }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": null,
+   "item_key": null,
+   "severity": null,
+   "payload": null
   },
   {
    "persona": "dm_am",
@@ -195,7 +531,11 @@
      }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": null,
+   "item_key": null,
+   "severity": null,
+   "payload": null
   },
   {
    "persona": "dm_am",
@@ -217,7 +557,11 @@
      }
     ]
    },
-   "note": "Out of scope: DM One does not own Cedar."
+   "note": "Out of scope: DM One does not own Cedar.",
+   "alert_id": null,
+   "item_key": null,
+   "severity": null,
+   "payload": null
   },
   {
    "persona": "dm_am",
@@ -243,9 +587,92 @@
       "text": "Reminder: Late: Post payments batch (Northwind Orthopedics) is due 04 Oct 13:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5001",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 10,
+   "item_key": "R2:T-1001",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1001",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Northwind Orthopedics",
+    "age": "2h 1m",
+    "client": "northwind_ortho",
+    "due": "04 Oct 13:30",
+    "last_update": "05 Oct 05:30",
+    "owner": "DM One",
+    "row_id": 5001,
+    "sheet_id": 1000000000000001,
+    "status": "In Progress",
+    "task_id": "T-1001",
+    "title": "Post payments batch",
+    "link": "https://app.smartsheet.com/sheets/1000000000000001?rowId=5001"
+   }
   },
   {
    "persona": "dm_am",
@@ -271,9 +698,92 @@
       "text": "Reminder: Late: Work denial queue (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5002",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 11,
+   "item_key": "R2:T-1002",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1002",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Northwind Orthopedics",
+    "age": "2h 1m",
+    "client": "northwind_ortho",
+    "due": "05 Oct 12:30",
+    "last_update": "05 Oct 03:30",
+    "owner": "DM One",
+    "row_id": 5002,
+    "sheet_id": 1000000000000001,
+    "status": "Not Started",
+    "task_id": "T-1002",
+    "title": "Work denial queue",
+    "link": "https://app.smartsheet.com/sheets/1000000000000001?rowId=5002"
+   }
   },
   {
    "persona": "dm_am",
@@ -299,9 +809,92 @@
       "text": "Reminder: Late: AR follow-up over 90 days (Northwind Orthopedics) is due 04 Oct 12:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5006",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 12,
+   "item_key": "R2:T-1006",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1006",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Northwind Orthopedics",
+    "age": "2h 1m",
+    "client": "northwind_ortho",
+    "due": "04 Oct 12:30",
+    "last_update": "04 Oct 15:30",
+    "owner": "DM One",
+    "row_id": 5006,
+    "sheet_id": 1000000000000001,
+    "status": "In Progress",
+    "task_id": "T-1006",
+    "title": "AR follow-up over 90 days",
+    "link": "https://app.smartsheet.com/sheets/1000000000000001?rowId=5006"
+   }
   },
   {
    "persona": "dm_am",
@@ -327,9 +920,92 @@
       "text": "Reminder: Late: Coding audit sample (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5009",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 13,
+   "item_key": "R2:T-1009",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1009",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Northwind Orthopedics",
+    "age": "2h 1m",
+    "client": "northwind_ortho",
+    "due": "05 Oct 12:30",
+    "last_update": "05 Oct 08:30",
+    "owner": "DM One",
+    "row_id": 5009,
+    "sheet_id": 1000000000000001,
+    "status": "Not Started",
+    "task_id": "T-1009",
+    "title": "Coding audit sample",
+    "link": "https://app.smartsheet.com/sheets/1000000000000001?rowId=5009"
+   }
   },
   {
    "persona": "hub_leader",
@@ -340,7 +1016,13 @@
    "text": "Daily exception digest: Mon 05 Oct\n- Northwind Orthopedics: backlog is 483.9 against target 300.0 on 2026-10-04.\n- Northwind Orthopedics: first pass rate is 94.4 against target 95.0 on 2026-10-04.\n- Northwind Orthopedics: ar days is 42.7 against target 40.0 on 2026-10-04.\n- Northwind Orthopedics: denial rate is 8.9 against target 8.0 on 2026-10-04.\n- Bluefield Imaging: backlog is 354.7 against target 300.0 on 2026-10-04.",
    "question": null,
    "card": null,
-   "note": null
+   "note": null,
+   "alert_id": null,
+   "item_key": "digest:R3:hl.key@fixture.local:2026-10-05",
+   "severity": null,
+   "payload": {
+    "scheduled_digest": true
+   }
   },
   {
    "persona": "hub_leader",
@@ -382,7 +1064,11 @@
      }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": null,
+   "item_key": null,
+   "severity": null,
+   "payload": null
   },
   {
    "persona": "hub_leader",
@@ -424,7 +1110,11 @@
      }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": null,
+   "item_key": null,
+   "severity": null,
+   "payload": null
   },
   {
    "persona": "hub_leader",
@@ -446,7 +1136,11 @@
      }
     ]
    },
-   "note": "Out of scope: Cedar is in another hub."
+   "note": "Out of scope: Cedar is in another hub.",
+   "alert_id": null,
+   "item_key": null,
+   "severity": null,
+   "payload": null
   },
   {
    "persona": "hub_leader",
@@ -472,9 +1166,92 @@
       "text": "Escalation (still open after 4h): Late: Post payments batch (Northwind Orthopedics) is due 04 Oct 13:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5001",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 10,
+   "item_key": "R2:T-1001",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1001",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Northwind Orthopedics",
+    "age": "4h 1m",
+    "client": "northwind_ortho",
+    "due": "04 Oct 13:30",
+    "last_update": "05 Oct 05:30",
+    "owner": "DM One",
+    "row_id": 5001,
+    "sheet_id": 1000000000000001,
+    "status": "In Progress",
+    "task_id": "T-1001",
+    "title": "Post payments batch",
+    "link": "https://app.smartsheet.com/sheets/1000000000000001?rowId=5001"
+   }
   },
   {
    "persona": "hub_leader",
@@ -500,9 +1277,92 @@
       "text": "Escalation (still open after 4h): Late: Work denial queue (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5002",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 11,
+   "item_key": "R2:T-1002",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1002",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Northwind Orthopedics",
+    "age": "4h 1m",
+    "client": "northwind_ortho",
+    "due": "05 Oct 12:30",
+    "last_update": "05 Oct 03:30",
+    "owner": "DM One",
+    "row_id": 5002,
+    "sheet_id": 1000000000000001,
+    "status": "Not Started",
+    "task_id": "T-1002",
+    "title": "Work denial queue",
+    "link": "https://app.smartsheet.com/sheets/1000000000000001?rowId=5002"
+   }
   },
   {
    "persona": "hub_leader",
@@ -528,9 +1388,92 @@
       "text": "Escalation (still open after 4h): Late: AR follow-up over 90 days (Northwind Orthopedics) is due 04 Oct 12:30, status In Progress. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5006",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 12,
+   "item_key": "R2:T-1006",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1006",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Northwind Orthopedics",
+    "age": "4h 1m",
+    "client": "northwind_ortho",
+    "due": "04 Oct 12:30",
+    "last_update": "04 Oct 15:30",
+    "owner": "DM One",
+    "row_id": 5006,
+    "sheet_id": 1000000000000001,
+    "status": "In Progress",
+    "task_id": "T-1006",
+    "title": "AR follow-up over 90 days",
+    "link": "https://app.smartsheet.com/sheets/1000000000000001?rowId=5006"
+   }
   },
   {
    "persona": "hub_leader",
@@ -556,9 +1499,92 @@
       "text": "Escalation (still open after 4h): Late: Coding audit sample (Northwind Orthopedics) is due 05 Oct 12:30, status Not Started. Owner DM One. https://app.smartsheet.com/sheets/1000000000000001?rowId=5009",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 13,
+   "item_key": "R2:T-1009",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1009",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Northwind Orthopedics",
+    "age": "4h 1m",
+    "client": "northwind_ortho",
+    "due": "05 Oct 12:30",
+    "last_update": "05 Oct 08:30",
+    "owner": "DM One",
+    "row_id": 5009,
+    "sheet_id": 1000000000000001,
+    "status": "Not Started",
+    "task_id": "T-1009",
+    "title": "Coding audit sample",
+    "link": "https://app.smartsheet.com/sheets/1000000000000001?rowId=5009"
+   }
   },
   {
    "persona": "hub_leader",
@@ -584,9 +1610,92 @@
       "text": "Escalation (still open after 4h): Late: Post payments batch (Bluefield Imaging) is due 04 Oct 17:30, status In Progress. Owner DM Two. https://app.smartsheet.com/sheets/1000000000000002?rowId=5011",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 14,
+   "item_key": "R2:T-1011",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1011",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Bluefield Imaging",
+    "age": "4h 1m",
+    "client": "bluefield_imaging",
+    "due": "04 Oct 17:30",
+    "last_update": "05 Oct 08:30",
+    "owner": "DM Two",
+    "row_id": 5011,
+    "sheet_id": 1000000000000002,
+    "status": "In Progress",
+    "task_id": "T-1011",
+    "title": "Post payments batch",
+    "link": "https://app.smartsheet.com/sheets/1000000000000002?rowId=5011"
+   }
   },
   {
    "persona": "hub_leader",
@@ -612,9 +1721,92 @@
       "text": "Escalation (still open after 4h): Late: Work denial queue (Bluefield Imaging) is due 05 Oct 14:30, status Not Started. Owner DM Two. https://app.smartsheet.com/sheets/1000000000000002?rowId=5012",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 15,
+   "item_key": "R2:T-1012",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1012",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Bluefield Imaging",
+    "age": "4h 1m",
+    "client": "bluefield_imaging",
+    "due": "05 Oct 14:30",
+    "last_update": "05 Oct 07:30",
+    "owner": "DM Two",
+    "row_id": 5012,
+    "sheet_id": 1000000000000002,
+    "status": "Not Started",
+    "task_id": "T-1012",
+    "title": "Work denial queue",
+    "link": "https://app.smartsheet.com/sheets/1000000000000002?rowId=5012"
+   }
   },
   {
    "persona": "hub_leader",
@@ -640,9 +1832,92 @@
       "text": "Escalation (still open after 4h): Late: AR follow-up over 90 days (Bluefield Imaging) is due 04 Oct 08:30, status In Progress. Owner DM Two. https://app.smartsheet.com/sheets/1000000000000002?rowId=5016",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 16,
+   "item_key": "R2:T-1016",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1016",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Bluefield Imaging",
+    "age": "4h 1m",
+    "client": "bluefield_imaging",
+    "due": "04 Oct 08:30",
+    "last_update": "05 Oct 08:30",
+    "owner": "DM Two",
+    "row_id": 5016,
+    "sheet_id": 1000000000000002,
+    "status": "In Progress",
+    "task_id": "T-1016",
+    "title": "AR follow-up over 90 days",
+    "link": "https://app.smartsheet.com/sheets/1000000000000002?rowId=5016"
+   }
   },
   {
    "persona": "hub_leader",
@@ -668,9 +1943,92 @@
       "text": "Escalation (still open after 4h): Late: Coding audit sample (Bluefield Imaging) is due 05 Oct 12:30, status Not Started. Owner DM Two. https://app.smartsheet.com/sheets/1000000000000002?rowId=5019",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 17,
+   "item_key": "R2:T-1019",
+   "severity": "late",
+   "payload": {
+    "rule": "Late-task alert",
+    "item_key": "T-1019",
+    "severity": "late",
+    "severity_label": "Late",
+    "client_name": "Bluefield Imaging",
+    "age": "4h 1m",
+    "client": "bluefield_imaging",
+    "due": "05 Oct 12:30",
+    "last_update": "05 Oct 07:30",
+    "owner": "DM Two",
+    "row_id": 5019,
+    "sheet_id": 1000000000000002,
+    "status": "Not Started",
+    "task_id": "T-1019",
+    "title": "Coding audit sample",
+    "link": "https://app.smartsheet.com/sheets/1000000000000002?rowId=5019"
+   }
   },
   {
    "persona": "csm",
@@ -752,7 +2110,11 @@
      }
     ]
    },
-   "note": "Pre-call brief (R4)."
+   "note": "Pre-call brief (R4).",
+   "alert_id": null,
+   "item_key": null,
+   "severity": null,
+   "payload": null
   },
   {
    "persona": "csm",
@@ -794,7 +2156,11 @@
      }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": null,
+   "item_key": null,
+   "severity": null,
+   "payload": null
   },
   {
    "persona": "csm",
@@ -816,7 +2182,11 @@
      }
     ]
    },
-   "note": "Athena has no NPS data, so it must say so."
+   "note": "Athena has no NPS data, so it must say so.",
+   "alert_id": null,
+   "item_key": null,
+   "severity": null,
+   "payload": null
   },
   {
    "persona": "csm",
@@ -833,7 +2203,7 @@
     "body": [
      {
       "type": "TextBlock",
-      "text": "Never Replied",
+      "text": "Never replied",
       "weight": "Bolder",
       "color": "Warning"
      },
@@ -842,9 +2212,90 @@
       "text": "Never replied: ticket CS-201 for Northwind Orthopedics was opened 03 Oct 03:30 and has had no reply. Subject: Report shows wrong payer mix.",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 22,
+   "item_key": "R6:CS-201",
+   "severity": "never_replied",
+   "payload": {
+    "rule": "Ticket without reply",
+    "item_key": "CS-201",
+    "severity": "never_replied",
+    "severity_label": "Never replied",
+    "client_name": "Northwind Orthopedics",
+    "age": "0m",
+    "assignee": "csm.one@fixture.local",
+    "client": "northwind_ortho",
+    "last_reply_at": null,
+    "opened_at": "03 Oct 03:30",
+    "priority": "high",
+    "status": "open",
+    "subject": "Report shows wrong payer mix",
+    "ticket_id": "CS-201"
+   }
   },
   {
    "persona": "csm",
@@ -861,7 +2312,7 @@
     "body": [
      {
       "type": "TextBlock",
-      "text": "No Reply",
+      "text": "No reply",
       "weight": "Bolder",
       "color": "Warning"
      },
@@ -870,9 +2321,90 @@
       "text": "No reply: ticket CS-203 for Northwind Orthopedics has had no reply since 02 Oct 15:30. Subject: Question on denial trend.",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 23,
+   "item_key": "R6:CS-203",
+   "severity": "no_reply",
+   "payload": {
+    "rule": "Ticket without reply",
+    "item_key": "CS-203",
+    "severity": "no_reply",
+    "severity_label": "No reply",
+    "client_name": "Northwind Orthopedics",
+    "age": "0m",
+    "assignee": "csm.one@fixture.local",
+    "client": "northwind_ortho",
+    "last_reply_at": "02 Oct 15:30",
+    "opened_at": "02 Oct 13:30",
+    "priority": "medium",
+    "status": "pending",
+    "subject": "Question on denial trend",
+    "ticket_id": "CS-203"
+   }
   },
   {
    "persona": "csm",
@@ -889,7 +2421,7 @@
     "body": [
      {
       "type": "TextBlock",
-      "text": "No Reply",
+      "text": "No reply",
       "weight": "Bolder",
       "color": "Warning"
      },
@@ -898,9 +2430,90 @@
       "text": "No reply: ticket CS-205 for Northwind Orthopedics has had no reply since 02 Oct 01:30. Subject: Access to client portal.",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 24,
+   "item_key": "R6:CS-205",
+   "severity": "no_reply",
+   "payload": {
+    "rule": "Ticket without reply",
+    "item_key": "CS-205",
+    "severity": "no_reply",
+    "severity_label": "No reply",
+    "client_name": "Northwind Orthopedics",
+    "age": "0m",
+    "assignee": "csm.one@fixture.local",
+    "client": "northwind_ortho",
+    "last_reply_at": "02 Oct 01:30",
+    "opened_at": "01 Oct 23:30",
+    "priority": "medium",
+    "status": "open",
+    "subject": "Access to client portal",
+    "ticket_id": "CS-205"
+   }
   },
   {
    "persona": "csm",
@@ -917,7 +2530,7 @@
     "body": [
      {
       "type": "TextBlock",
-      "text": "Never Replied",
+      "text": "Never replied",
       "weight": "Bolder",
       "color": "Warning"
      },
@@ -926,9 +2539,90 @@
       "text": "Never replied: ticket CS-207 for Bluefield Imaging was opened 04 Oct 05:30 and has had no reply. Subject: Report shows wrong payer mix.",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 25,
+   "item_key": "R6:CS-207",
+   "severity": "never_replied",
+   "payload": {
+    "rule": "Ticket without reply",
+    "item_key": "CS-207",
+    "severity": "never_replied",
+    "severity_label": "Never replied",
+    "client_name": "Bluefield Imaging",
+    "age": "0m",
+    "assignee": "csm.one@fixture.local",
+    "client": "bluefield_imaging",
+    "last_reply_at": null,
+    "opened_at": "04 Oct 05:30",
+    "priority": "high",
+    "status": "open",
+    "subject": "Report shows wrong payer mix",
+    "ticket_id": "CS-207"
+   }
   },
   {
    "persona": "csm",
@@ -945,7 +2639,7 @@
     "body": [
      {
       "type": "TextBlock",
-      "text": "No Reply",
+      "text": "No reply",
       "weight": "Bolder",
       "color": "Warning"
      },
@@ -954,9 +2648,90 @@
       "text": "No reply: ticket CS-208 for Bluefield Imaging has had no reply since 04 Oct 00:30. Subject: Request for weekly call reschedule.",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 26,
+   "item_key": "R6:CS-208",
+   "severity": "no_reply",
+   "payload": {
+    "rule": "Ticket without reply",
+    "item_key": "CS-208",
+    "severity": "no_reply",
+    "severity_label": "No reply",
+    "client_name": "Bluefield Imaging",
+    "age": "0m",
+    "assignee": "csm.one@fixture.local",
+    "client": "bluefield_imaging",
+    "last_reply_at": "04 Oct 00:30",
+    "opened_at": "03 Oct 21:30",
+    "priority": "low",
+    "status": "open",
+    "subject": "Request for weekly call reschedule",
+    "ticket_id": "CS-208"
+   }
   },
   {
    "persona": "csm",
@@ -973,7 +2748,7 @@
     "body": [
      {
       "type": "TextBlock",
-      "text": "No Reply",
+      "text": "No reply",
       "weight": "Bolder",
       "color": "Warning"
      },
@@ -982,9 +2757,90 @@
       "text": "No reply: ticket CS-209 for Bluefield Imaging has had no reply since 04 Oct 17:30. Subject: Question on denial trend.",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 27,
+   "item_key": "R6:CS-209",
+   "severity": "no_reply",
+   "payload": {
+    "rule": "Ticket without reply",
+    "item_key": "CS-209",
+    "severity": "no_reply",
+    "severity_label": "No reply",
+    "client_name": "Bluefield Imaging",
+    "age": "0m",
+    "assignee": "csm.one@fixture.local",
+    "client": "bluefield_imaging",
+    "last_reply_at": "04 Oct 17:30",
+    "opened_at": "04 Oct 15:30",
+    "priority": "medium",
+    "status": "pending",
+    "subject": "Question on denial trend",
+    "ticket_id": "CS-209"
+   }
   },
   {
    "persona": "csm",
@@ -1001,7 +2857,7 @@
     "body": [
      {
       "type": "TextBlock",
-      "text": "No Reply",
+      "text": "No reply",
       "weight": "Bolder",
       "color": "Warning"
      },
@@ -1010,9 +2866,90 @@
       "text": "No reply: ticket CS-211 for Bluefield Imaging has had no reply since 02 Oct 18:30. Subject: Access to client portal.",
       "wrap": true
      }
+    ],
+    "actions": [
+     {
+      "type": "Action.Submit",
+      "title": "I'm on it",
+      "data": {
+       "athena": "ack",
+       "alert_id": 0
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Snooze 4h",
+      "data": {
+       "athena": "snooze",
+       "alert_id": 0,
+       "hours": 4
+      }
+     },
+     {
+      "type": "Action.ShowCard",
+      "title": "Ask about this",
+      "card": {
+       "type": "AdaptiveCard",
+       "version": "1.5",
+       "body": [
+        {
+         "type": "Input.Text",
+         "id": "question",
+         "placeholder": "Why is this late? What should I do?",
+         "isMultiline": true
+        }
+       ],
+       "actions": [
+        {
+         "type": "Action.Submit",
+         "title": "Ask",
+         "data": {
+          "athena": "alert_ask",
+          "alert_id": 0
+         }
+        },
+        {
+         "type": "Action.Submit",
+         "title": "Draft a note to the owner",
+         "data": {
+          "athena": "alert_draft",
+          "alert_id": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Action.Submit",
+      "title": "Not useful",
+      "data": {
+       "athena": "review",
+       "alert_id": 0,
+       "verdict": "wrong"
+      }
+     }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": 28,
+   "item_key": "R6:CS-211",
+   "severity": "no_reply",
+   "payload": {
+    "rule": "Ticket without reply",
+    "item_key": "CS-211",
+    "severity": "no_reply",
+    "severity_label": "No reply",
+    "client_name": "Bluefield Imaging",
+    "age": "0m",
+    "assignee": "csm.one@fixture.local",
+    "client": "bluefield_imaging",
+    "last_reply_at": "02 Oct 18:30",
+    "opened_at": "02 Oct 17:30",
+    "priority": "medium",
+    "status": "open",
+    "subject": "Access to client portal",
+    "ticket_id": "CS-211"
+   }
   },
   {
    "persona": "ba",
@@ -1023,7 +2960,13 @@
    "text": "Draft weekly report for Northwind Orthopedics (week of 28 Sep) is ready: drafts/northwind_ortho-wbr-2026-09-28.pptx. Please review and edit it before sending. Athena does not send it to the client.",
    "question": null,
    "card": null,
-   "note": null
+   "note": null,
+   "alert_id": null,
+   "item_key": "R5:northwind_ortho:2026-09-28",
+   "severity": null,
+   "payload": {
+    "path": "drafts/northwind_ortho-wbr-2026-09-28.pptx"
+   }
   },
   {
    "persona": "ba",
@@ -1034,7 +2977,13 @@
    "text": "Draft weekly report for Bluefield Imaging (week of 28 Sep) is ready: drafts/bluefield_imaging-wbr-2026-09-28.pptx. Please review and edit it before sending. Athena does not send it to the client.",
    "question": null,
    "card": null,
-   "note": null
+   "note": null,
+   "alert_id": null,
+   "item_key": "R5:bluefield_imaging:2026-09-28",
+   "severity": null,
+   "payload": {
+    "path": "drafts/bluefield_imaging-wbr-2026-09-28.pptx"
+   }
   },
   {
    "persona": "ba",
@@ -1076,7 +3025,11 @@
      }
     ]
    },
-   "note": null
+   "note": null,
+   "alert_id": null,
+   "item_key": null,
+   "severity": null,
+   "payload": null
   },
   {
    "persona": "ba",
@@ -1098,7 +3051,11 @@
      }
     ]
    },
-   "note": "BA persona has no Smartsheet access."
+   "note": "BA persona has no Smartsheet access.",
+   "alert_id": null,
+   "item_key": null,
+   "severity": null,
+   "payload": null
   }
  ]
 }

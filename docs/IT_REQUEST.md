@@ -19,6 +19,7 @@ We have built Athena, an internal assistant for managers. It reads our work syst
 - Application permission `User.Read.All` (to map Teams users to our owner list).
 - `Sites.Selected`, with read grants only on the SharePoint sites we agree (list to follow). Please confirm those sites hold no patient data.
 - Delegated permissions for Teams single sign-on with on-behalf-of, so document search only returns what each user may already see.
+- Delegated `Calendars.Read` for pilot users only, so Athena can prepare a pre-read before each meeting. It reads the meeting title, time and attendees; not the body or attachments.
 - Admin consent for the above.
 
 **3. Teams bot**
