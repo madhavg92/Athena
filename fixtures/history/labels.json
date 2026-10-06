@@ -64,5 +64,35 @@
   "note": "agreed extension",
   "rule_id": "R2",
   "verdict": "wrong"
+ },
+ {
+  "item_key": "HT-4",
+  "note": "client asked to wait",
+  "rule_id": "*",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "HT-42",
+  "note": "client asked to wait",
+  "rule_id": "*",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "HT-43",
+  "note": "client asked to wait",
+  "rule_id": "*",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "HT-63",
+  "note": "client asked to wait",
+  "rule_id": "*",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "HT-76",
+  "note": "client asked to wait",
+  "rule_id": "*",
+  "verdict": "wrong"
  }
 ]

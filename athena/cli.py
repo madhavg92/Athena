@@ -22,6 +22,9 @@ app.add_typer(connectors_app, name="connectors")
 @app.callback()
 def main() -> None:
     """Athena command line."""
+    from athena.core import logs
+
+    logs.setup()
 
 
 def _config():
@@ -291,3 +294,23 @@ def review(
     typer.echo(
         f"\n{len(rows)} alerts. Mark one: athena review --alert <id> --verdict correct|wrong --as <email>"
     )
+
+
+@app.command()
+def backtest(
+    rule: str = typer.Argument(..., help="Rule ID, e.g. R2."),
+    days: int = typer.Option(30, "--days", help="Days of history to replay."),
+) -> None:
+    """Replay history through a rule: alerts opened, messages per person per day, wrong alerts."""
+    from athena.core.backtest import run
+
+    cfg = _config()
+    if rule not in cfg.rules:
+        typer.echo(f"Unknown rule {rule}.", err=True)
+        raise typer.Exit(2)
+    try:
+        report = run(cfg, rule, days)
+    except ValueError as exc:
+        typer.echo(str(exc), err=True)
+        raise typer.Exit(2) from exc
+    typer.echo(report.text())

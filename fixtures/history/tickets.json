@@ -1,0 +1,1233 @@
+[
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-08-07T10:53:00Z",
+  "opened_at": "2026-08-06T11:53:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-08-06T15:53:00Z",
+   "2026-08-06T21:53:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-1"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-07T12:42:00Z",
+  "opened_at": "2026-08-06T05:42:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-06T06:42:00Z",
+   "2026-08-06T12:42:00Z",
+   "2026-08-06T18:42:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-2"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-08-08T02:23:00Z",
+  "opened_at": "2026-08-07T06:23:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-07T07:23:00Z",
+   "2026-08-07T13:23:00Z",
+   "2026-08-07T19:23:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-3"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-09T09:32:00Z",
+  "opened_at": "2026-08-07T08:32:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-08T17:32:00Z",
+   "2026-08-08T23:32:00Z",
+   "2026-08-09T05:32:00Z"
+  ],
+  "subject": "Missing remits",
+  "ticket_id": "HT-4"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-08-08T23:06:00Z",
+  "opened_at": "2026-08-08T11:06:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-08T14:06:00Z",
+   "2026-08-08T20:06:00Z"
+  ],
+  "subject": "Call reschedule",
+  "ticket_id": "HT-5"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-08-09T21:46:00Z",
+  "opened_at": "2026-08-09T08:46:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-09T19:46:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-6"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-11T12:49:00Z",
+  "opened_at": "2026-08-09T04:49:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-08-10T12:49:00Z",
+   "2026-08-10T18:49:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-7"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-11T06:06:00Z",
+  "opened_at": "2026-08-10T09:06:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-08-10T14:06:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-8"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-08-12T10:15:00Z",
+  "opened_at": "2026-08-11T12:15:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-08-11T16:15:00Z",
+   "2026-08-11T22:15:00Z",
+   "2026-08-12T04:15:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-9"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-08-14T09:27:00Z",
+  "opened_at": "2026-08-12T12:27:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-13T17:27:00Z",
+   "2026-08-13T23:27:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-10"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-13T10:28:00Z",
+  "opened_at": "2026-08-12T09:28:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-12T10:28:00Z",
+   "2026-08-12T16:28:00Z",
+   "2026-08-12T22:28:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-11"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-15T18:36:00Z",
+  "opened_at": "2026-08-13T09:36:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-08-15T01:36:00Z",
+   "2026-08-15T07:36:00Z",
+   "2026-08-15T13:36:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-12"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-08-15T12:53:00Z",
+  "opened_at": "2026-08-14T04:53:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-15T07:53:00Z"
+  ],
+  "subject": "Call reschedule",
+  "ticket_id": "HT-13"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-08-17T05:37:00Z",
+  "opened_at": "2026-08-15T09:37:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-08-15T18:37:00Z",
+   "2026-08-16T00:37:00Z",
+   "2026-08-16T06:37:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-14"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-08-17T11:13:00Z",
+  "opened_at": "2026-08-16T03:13:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-08-16T07:13:00Z",
+   "2026-08-16T13:13:00Z",
+   "2026-08-16T19:13:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-15"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-08-17T10:02:00Z",
+  "opened_at": "2026-08-16T04:02:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-16T16:02:00Z",
+   "2026-08-16T22:02:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-16"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-17T05:32:00Z",
+  "opened_at": "2026-08-16T07:32:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-16T19:32:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-17"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-08-19T13:39:00Z",
+  "opened_at": "2026-08-17T04:39:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-18T12:39:00Z",
+   "2026-08-18T18:39:00Z",
+   "2026-08-19T00:39:00Z"
+  ],
+  "subject": "Call reschedule",
+  "ticket_id": "HT-18"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-18T21:03:00Z",
+  "opened_at": "2026-08-17T06:03:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-17T15:03:00Z",
+   "2026-08-17T21:03:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-19"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-08-18T23:49:00Z",
+  "opened_at": "2026-08-18T10:49:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-18T17:49:00Z"
+  ],
+  "subject": "Call reschedule",
+  "ticket_id": "HT-20"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-08-20T15:33:00Z",
+  "opened_at": "2026-08-19T10:33:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-08-19T16:33:00Z",
+   "2026-08-19T22:33:00Z",
+   "2026-08-20T04:33:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-21"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-20T12:20:00Z",
+  "opened_at": "2026-08-19T10:20:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-19T16:20:00Z",
+   "2026-08-19T22:20:00Z",
+   "2026-08-20T04:20:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-22"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-08-21T10:20:00Z",
+  "opened_at": "2026-08-20T07:20:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-20T15:20:00Z",
+   "2026-08-20T21:20:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-23"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-08-22T18:06:00Z",
+  "opened_at": "2026-08-22T03:06:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-22T07:06:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-24"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-08-23T15:26:00Z",
+  "opened_at": "2026-08-22T12:26:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-22T22:26:00Z",
+   "2026-08-23T04:26:00Z",
+   "2026-08-23T10:26:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-25"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-24T07:15:00Z",
+  "opened_at": "2026-08-23T07:15:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-23T12:15:00Z"
+  ],
+  "subject": "Missing remits",
+  "ticket_id": "HT-26"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-08-25T04:19:00Z",
+  "opened_at": "2026-08-24T04:19:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-24T12:19:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-27"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-08-25T09:37:00Z",
+  "opened_at": "2026-08-24T04:37:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-08-24T09:37:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-28"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-08-26T01:56:00Z",
+  "opened_at": "2026-08-25T08:56:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-25T15:56:00Z",
+   "2026-08-25T21:56:00Z"
+  ],
+  "subject": "Call reschedule",
+  "ticket_id": "HT-29"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-25T22:11:00Z",
+  "opened_at": "2026-08-25T03:11:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-25T14:11:00Z",
+   "2026-08-25T20:11:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-30"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-08-26T22:33:00Z",
+  "opened_at": "2026-08-26T05:33:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-26T17:33:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-31"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-28T00:42:00Z",
+  "opened_at": "2026-08-26T09:42:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-26T19:42:00Z",
+   "2026-08-27T01:42:00Z",
+   "2026-08-27T07:42:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-32"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-08-29T09:31:00Z",
+  "opened_at": "2026-08-27T05:31:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-28T08:31:00Z",
+   "2026-08-28T14:31:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-33"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-29T04:18:00Z",
+  "opened_at": "2026-08-28T05:18:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-28T09:18:00Z",
+   "2026-08-28T15:18:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-34"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-08-30T09:56:00Z",
+  "opened_at": "2026-08-29T11:56:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-29T13:56:00Z",
+   "2026-08-29T19:56:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-35"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-31T12:31:00Z",
+  "opened_at": "2026-08-29T04:31:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-30T18:31:00Z",
+   "2026-08-31T00:31:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-36"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-08-31T08:24:00Z",
+  "opened_at": "2026-08-30T03:24:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-30T06:24:00Z",
+   "2026-08-30T12:24:00Z"
+  ],
+  "subject": "Missing remits",
+  "ticket_id": "HT-37"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-01T00:24:00Z",
+  "opened_at": "2026-08-31T06:24:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-08-31T09:24:00Z",
+   "2026-08-31T15:24:00Z",
+   "2026-08-31T21:24:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-38"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-08-31T21:31:00Z",
+  "opened_at": "2026-08-31T05:31:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-08-31T10:31:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-39"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-03T15:36:00Z",
+  "opened_at": "2026-09-02T06:36:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-02T15:36:00Z",
+   "2026-09-02T21:36:00Z"
+  ],
+  "subject": "Missing remits",
+  "ticket_id": "HT-40"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-03T05:24:00Z",
+  "opened_at": "2026-09-02T05:24:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-02T16:24:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-41"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-09-04T16:21:00Z",
+  "opened_at": "2026-09-02T07:21:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-03T17:21:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-42"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-05T22:08:00Z",
+  "opened_at": "2026-09-03T03:08:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-09-04T12:08:00Z",
+   "2026-09-04T18:08:00Z",
+   "2026-09-05T00:08:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-43"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-05T03:35:00Z",
+  "opened_at": "2026-09-03T09:35:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-03T16:35:00Z",
+   "2026-09-03T22:35:00Z",
+   "2026-09-04T04:35:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-44"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-07T06:30:00Z",
+  "opened_at": "2026-09-04T04:30:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-09-05T19:30:00Z",
+   "2026-09-06T01:30:00Z",
+   "2026-09-06T07:30:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-45"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-04T21:41:00Z",
+  "opened_at": "2026-09-04T08:41:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-04T20:41:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-46"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-06T00:01:00Z",
+  "opened_at": "2026-09-05T07:01:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-05T16:01:00Z",
+   "2026-09-05T22:01:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-47"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-05T13:30:00Z",
+  "opened_at": "2026-09-05T03:30:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-05T08:30:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-48"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-09-06T21:29:00Z",
+  "opened_at": "2026-09-05T04:29:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-05T13:29:00Z",
+   "2026-09-05T19:29:00Z",
+   "2026-09-06T01:29:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-49"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-08T08:37:00Z",
+  "opened_at": "2026-09-07T08:37:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-07T11:37:00Z"
+  ],
+  "subject": "Call reschedule",
+  "ticket_id": "HT-50"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-08T22:27:00Z",
+  "opened_at": "2026-09-07T06:27:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-09-07T11:27:00Z",
+   "2026-09-07T17:27:00Z",
+   "2026-09-07T23:27:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-51"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-09T02:28:00Z",
+  "opened_at": "2026-09-08T05:28:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-08T15:28:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-52"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-09T23:01:00Z",
+  "opened_at": "2026-09-08T05:01:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-09T10:01:00Z",
+   "2026-09-09T16:01:00Z",
+   "2026-09-09T22:01:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-53"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-10T19:40:00Z",
+  "opened_at": "2026-09-09T07:40:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-09-10T14:40:00Z"
+  ],
+  "subject": "Call reschedule",
+  "ticket_id": "HT-54"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-10T13:33:00Z",
+  "opened_at": "2026-09-09T07:33:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-09-09T17:33:00Z"
+  ],
+  "subject": "Call reschedule",
+  "ticket_id": "HT-55"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-09-11T18:07:00Z",
+  "opened_at": "2026-09-09T09:07:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-11T01:07:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-56"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-10T22:23:00Z",
+  "opened_at": "2026-09-10T11:23:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-10T14:23:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-57"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-09-11T10:15:00Z",
+  "opened_at": "2026-09-10T03:15:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-09-10T10:15:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-58"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-13T23:07:00Z",
+  "opened_at": "2026-09-11T04:07:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-12T19:07:00Z",
+   "2026-09-13T01:07:00Z",
+   "2026-09-13T07:07:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-59"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-12T23:17:00Z",
+  "opened_at": "2026-09-11T10:17:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-11T11:17:00Z",
+   "2026-09-11T17:17:00Z",
+   "2026-09-11T23:17:00Z"
+  ],
+  "subject": "Missing remits",
+  "ticket_id": "HT-60"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-14T08:45:00Z",
+  "opened_at": "2026-09-12T12:45:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-12T21:45:00Z",
+   "2026-09-13T03:45:00Z",
+   "2026-09-13T09:45:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-61"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-14T04:11:00Z",
+  "opened_at": "2026-09-13T07:11:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-13T14:11:00Z",
+   "2026-09-13T20:11:00Z",
+   "2026-09-14T02:11:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-62"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-15T10:50:00Z",
+  "opened_at": "2026-09-13T03:50:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-14T18:50:00Z",
+   "2026-09-15T00:50:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-63"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-15T22:49:00Z",
+  "opened_at": "2026-09-14T11:49:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-14T19:49:00Z",
+   "2026-09-15T01:49:00Z",
+   "2026-09-15T07:49:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-64"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-15T11:04:00Z",
+  "opened_at": "2026-09-14T06:04:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-14T18:04:00Z",
+   "2026-09-15T00:04:00Z",
+   "2026-09-15T06:04:00Z"
+  ],
+  "subject": "Missing remits",
+  "ticket_id": "HT-65"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-09-16T01:26:00Z",
+  "opened_at": "2026-09-15T06:26:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-15T08:26:00Z",
+   "2026-09-15T14:26:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-66"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-16T11:47:00Z",
+  "opened_at": "2026-09-16T05:47:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-16T07:47:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-67"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-17T16:27:00Z",
+  "opened_at": "2026-09-16T04:27:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-09-16T11:27:00Z",
+   "2026-09-16T17:27:00Z",
+   "2026-09-16T23:27:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-68"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-18T01:43:00Z",
+  "opened_at": "2026-09-17T08:43:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-09-17T19:43:00Z"
+  ],
+  "subject": "Call reschedule",
+  "ticket_id": "HT-69"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-09-18T11:52:00Z",
+  "opened_at": "2026-09-17T03:52:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-17T08:52:00Z",
+   "2026-09-17T14:52:00Z",
+   "2026-09-17T20:52:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-70"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-20T06:27:00Z",
+  "opened_at": "2026-09-18T06:27:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-19T15:27:00Z"
+  ],
+  "subject": "Missing remits",
+  "ticket_id": "HT-71"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-20T15:03:00Z",
+  "opened_at": "2026-09-19T07:03:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-19T18:03:00Z",
+   "2026-09-20T00:03:00Z"
+  ],
+  "subject": "Missing remits",
+  "ticket_id": "HT-72"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-09-20T21:10:00Z",
+  "opened_at": "2026-09-19T07:10:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-09-19T12:10:00Z",
+   "2026-09-19T18:10:00Z",
+   "2026-09-20T00:10:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-73"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-09-22T12:37:00Z",
+  "opened_at": "2026-09-20T03:37:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-21T05:37:00Z",
+   "2026-09-21T11:37:00Z",
+   "2026-09-21T17:37:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-74"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-09-23T02:45:00Z",
+  "opened_at": "2026-09-21T05:45:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-21T15:45:00Z",
+   "2026-09-21T21:45:00Z",
+   "2026-09-22T03:45:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-75"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-25T10:35:00Z",
+  "opened_at": "2026-09-22T12:35:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-09-24T03:35:00Z",
+   "2026-09-24T09:35:00Z",
+   "2026-09-24T15:35:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-76"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-25T06:59:00Z",
+  "opened_at": "2026-09-24T07:59:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-24T09:59:00Z",
+   "2026-09-24T15:59:00Z",
+   "2026-09-24T21:59:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-77"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-09-27T07:01:00Z",
+  "opened_at": "2026-09-25T12:01:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-25T20:01:00Z",
+   "2026-09-26T02:01:00Z",
+   "2026-09-26T08:01:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-78"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-27T18:24:00Z",
+  "opened_at": "2026-09-26T08:24:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-26T18:24:00Z",
+   "2026-09-27T00:24:00Z",
+   "2026-09-27T06:24:00Z"
+  ],
+  "subject": "Call reschedule",
+  "ticket_id": "HT-79"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-09-27T07:52:00Z",
+  "opened_at": "2026-09-26T11:52:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-09-26T19:52:00Z",
+   "2026-09-27T01:52:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-80"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-09-29T10:18:00Z",
+  "opened_at": "2026-09-27T06:18:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-28T07:18:00Z",
+   "2026-09-28T13:18:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-81"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-09-28T16:04:00Z",
+  "opened_at": "2026-09-27T10:04:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-09-27T16:04:00Z",
+   "2026-09-27T22:04:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-82"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-09-29T00:15:00Z",
+  "opened_at": "2026-09-28T08:15:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-28T17:15:00Z",
+   "2026-09-28T23:15:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-83"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-09-30T00:29:00Z",
+  "opened_at": "2026-09-29T03:29:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-29T07:29:00Z",
+   "2026-09-29T13:29:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-84"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-10-01T08:36:00Z",
+  "opened_at": "2026-09-30T03:36:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-09-30T11:36:00Z"
+  ],
+  "subject": "Missing remits",
+  "ticket_id": "HT-85"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-10-01T07:53:00Z",
+  "opened_at": "2026-09-30T10:53:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-30T17:53:00Z",
+   "2026-09-30T23:53:00Z",
+   "2026-10-01T05:53:00Z"
+  ],
+  "subject": "Portal access",
+  "ticket_id": "HT-86"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-10-01T04:23:00Z",
+  "opened_at": "2026-09-30T08:23:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-09-30T09:23:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-87"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-10-02T21:02:00Z",
+  "opened_at": "2026-10-01T09:02:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-10-02T14:02:00Z",
+   "2026-10-02T20:02:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-88"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-10-02T07:44:00Z",
+  "opened_at": "2026-10-01T12:44:00Z",
+  "priority": "high",
+  "replies": [
+   "2026-10-01T15:44:00Z",
+   "2026-10-01T21:44:00Z",
+   "2026-10-02T03:44:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-89"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-10-01T19:32:00Z",
+  "opened_at": "2026-10-01T03:32:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-10-01T05:32:00Z",
+   "2026-10-01T11:32:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-90"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "closed_at": "2026-10-02T17:09:00Z",
+  "opened_at": "2026-10-02T08:09:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-10-02T13:09:00Z"
+  ],
+  "subject": "Denial trend",
+  "ticket_id": "HT-91"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-10-03T04:34:00Z",
+  "opened_at": "2026-10-02T04:34:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-10-02T05:34:00Z",
+   "2026-10-02T11:34:00Z"
+  ],
+  "subject": "Call reschedule",
+  "ticket_id": "HT-92"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "closed_at": "2026-10-04T04:17:00Z",
+  "opened_at": "2026-10-03T08:17:00Z",
+  "priority": "low",
+  "replies": [
+   "2026-10-03T11:17:00Z"
+  ],
+  "subject": "Slow charge entry",
+  "ticket_id": "HT-93"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "closed_at": "2026-10-06T14:58:00Z",
+  "opened_at": "2026-10-04T04:58:00Z",
+  "priority": "medium",
+  "replies": [
+   "2026-10-05T06:58:00Z",
+   "2026-10-05T12:58:00Z",
+   "2026-10-05T18:58:00Z"
+  ],
+  "subject": "Report question",
+  "ticket_id": "HT-94"
+ }
+]

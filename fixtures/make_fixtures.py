@@ -274,6 +274,57 @@ def history(rng: random.Random) -> tuple[list[dict], list[dict]]:
     return rows, labels
 
 
+def ticket_history(rng: random.Random) -> tuple[list[dict], list[dict]]:
+    """60 days of CS Hub tickets: opened, replies, closed. Labels mark some no-reply alerts as wrong."""
+    rows, labels, n = [], [], 0
+    subjects = [
+        "Report question",
+        "Call reschedule",
+        "Denial trend",
+        "Missing remits",
+        "Portal access",
+        "Slow charge entry",
+    ]
+    for d in range(60, 0, -1):
+        day = ANCHOR - timedelta(days=d)
+        for client in CLIENTS:
+            if rng.random() < 0.5:
+                continue
+            n += 1
+            opened = day.replace(hour=3) + timedelta(minutes=rng.randint(0, 600))
+            slow = rng.random() < 0.2
+            first_reply = opened + timedelta(
+                hours=rng.randint(25, 40) if slow else rng.randint(1, 12)
+            )
+            replies = [first_reply + timedelta(hours=6 * i) for i in range(rng.randint(1, 3))]
+            closed = replies[-1] + timedelta(hours=rng.randint(1, 24))
+            ticket_id = f"HT-{n}"
+            rows.append(
+                {
+                    "ticket_id": ticket_id,
+                    "client": client,
+                    "subject": rng.choice(subjects),
+                    "priority": rng.choice(["low", "medium", "high"]),
+                    "opened_at": iso(opened),
+                    "replies": [iso(r) for r in replies],
+                    "closed_at": iso(closed),
+                    "assignee": "csm.two@fixture.local"
+                    if client == "cedar_family_clinic"
+                    else "csm.one@fixture.local",
+                }
+            )
+            if slow and rng.random() < 0.2:
+                labels.append(
+                    {
+                        "rule_id": "*",
+                        "item_key": ticket_id,
+                        "verdict": "wrong",
+                        "note": "client asked to wait",
+                    }
+                )
+    return rows, labels
+
+
 def main() -> None:
     rng = random.Random(SEED)
     write("meta.json", {"anchor": iso(ANCHOR), "seed": SEED, "synthetic": True})
@@ -286,7 +337,9 @@ def main() -> None:
     write("entra/users.json", users())
     hist, labels = history(rng)
     write("history/tasks.json", hist)
-    write("history/labels.json", labels)
+    tickets_hist, ticket_labels = ticket_history(rng)
+    write("history/labels.json", labels + ticket_labels)
+    write("history/tickets.json", tickets_hist)
 
 
 if __name__ == "__main__":

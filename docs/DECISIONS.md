@@ -49,3 +49,5 @@
 - 2026-10-06 — The 2-message limit applies to `delivery: now` only; digest items are one line in one daily message. Digest items are queued in shadow mode too (receipt status `shadow`).
 - 2026-10-06 — `.gitignore` entries `reports/` and `drafts/` anchored to the repo root (they also matched `athena/reports/`).
 
+- 2026-10-06 — Backtest replays `fixtures/history/` (tasks and CS Hub tickets) through the real rule loop with live delivery to memory and a 15-minute clock. A source without history is refused with a clear message. Labels with `rule_id: "*"` apply to any rule on that source.
+- 2026-10-06 — Logging: JSON lines to stderr from the CLI (`ATHENA_LOG_LEVEL`, default WARNING).

@@ -40,7 +40,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M6.3 Ladder
 - [x] M6.4 Message templates
 - [x] M6.5 Shadow mode and review
-- [ ] M6.6 Backtest
+- [x] M6.6 Backtest
 - [ ] M6.7 Automatic phase demotion
 - [ ] M7.1 Digest
 - [ ] M7.2 R3 and delivery routing
@@ -84,3 +84,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M6.3: ladder steps by age, first + one reminder after renudge_after, max 2 per person per step, escalation to hub leader; fake-clock tests.
 - M6.4: Templates in context/templates/messages.yaml; model writes from the payload only; plain template when the model fails or the text is empty, too long or off-item.
 - M6.5: Shadow alerts go to the review list only; athena review lists and marks (owners of the client only); Teams Correct/Wrong buttons write review_marks.
+- M6.6: athena backtest R2 --days 30: alerts by severity, messages per person per day (avg/max), labelled-wrong rate; ticket history added; JSON logging.
