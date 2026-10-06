@@ -1,0 +1,1442 @@
+[
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-06",
+  "denied": 11,
+  "paid": 147,
+  "query_id": "sb.claims.daily",
+  "submitted": 163
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-07",
+  "denied": 13,
+  "paid": 162,
+  "query_id": "sb.claims.daily",
+  "submitted": 175
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-08",
+  "denied": 13,
+  "paid": 154,
+  "query_id": "sb.claims.daily",
+  "submitted": 172
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-09",
+  "denied": 13,
+  "paid": 151,
+  "query_id": "sb.claims.daily",
+  "submitted": 168
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-10",
+  "denied": 12,
+  "paid": 151,
+  "query_id": "sb.claims.daily",
+  "submitted": 168
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-11",
+  "denied": 13,
+  "paid": 145,
+  "query_id": "sb.claims.daily",
+  "submitted": 161
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-12",
+  "denied": 13,
+  "paid": 160,
+  "query_id": "sb.claims.daily",
+  "submitted": 175
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-13",
+  "denied": 12,
+  "paid": 131,
+  "query_id": "sb.claims.daily",
+  "submitted": 148
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-14",
+  "denied": 13,
+  "paid": 150,
+  "query_id": "sb.claims.daily",
+  "submitted": 166
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-15",
+  "denied": 13,
+  "paid": 143,
+  "query_id": "sb.claims.daily",
+  "submitted": 159
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-16",
+  "denied": 11,
+  "paid": 145,
+  "query_id": "sb.claims.daily",
+  "submitted": 156
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-17",
+  "denied": 11,
+  "paid": 154,
+  "query_id": "sb.claims.daily",
+  "submitted": 168
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-18",
+  "denied": 13,
+  "paid": 146,
+  "query_id": "sb.claims.daily",
+  "submitted": 163
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-19",
+  "denied": 13,
+  "paid": 147,
+  "query_id": "sb.claims.daily",
+  "submitted": 161
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-20",
+  "denied": 11,
+  "paid": 142,
+  "query_id": "sb.claims.daily",
+  "submitted": 158
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-21",
+  "denied": 13,
+  "paid": 161,
+  "query_id": "sb.claims.daily",
+  "submitted": 175
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-22",
+  "denied": 12,
+  "paid": 132,
+  "query_id": "sb.claims.daily",
+  "submitted": 149
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-23",
+  "denied": 14,
+  "paid": 147,
+  "query_id": "sb.claims.daily",
+  "submitted": 165
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-24",
+  "denied": 14,
+  "paid": 151,
+  "query_id": "sb.claims.daily",
+  "submitted": 169
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-25",
+  "denied": 11,
+  "paid": 134,
+  "query_id": "sb.claims.daily",
+  "submitted": 146
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-26",
+  "denied": 12,
+  "paid": 150,
+  "query_id": "sb.claims.daily",
+  "submitted": 163
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-27",
+  "denied": 10,
+  "paid": 134,
+  "query_id": "sb.claims.daily",
+  "submitted": 149
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-28",
+  "denied": 12,
+  "paid": 143,
+  "query_id": "sb.claims.daily",
+  "submitted": 157
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-29",
+  "denied": 12,
+  "paid": 151,
+  "query_id": "sb.claims.daily",
+  "submitted": 165
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-30",
+  "denied": 13,
+  "paid": 141,
+  "query_id": "sb.claims.daily",
+  "submitted": 154
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-08-31",
+  "denied": 13,
+  "paid": 157,
+  "query_id": "sb.claims.daily",
+  "submitted": 170
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-01",
+  "denied": 13,
+  "paid": 144,
+  "query_id": "sb.claims.daily",
+  "submitted": 161
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-02",
+  "denied": 11,
+  "paid": 156,
+  "query_id": "sb.claims.daily",
+  "submitted": 172
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-03",
+  "denied": 14,
+  "paid": 154,
+  "query_id": "sb.claims.daily",
+  "submitted": 171
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-04",
+  "denied": 11,
+  "paid": 134,
+  "query_id": "sb.claims.daily",
+  "submitted": 145
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-05",
+  "denied": 11,
+  "paid": 133,
+  "query_id": "sb.claims.daily",
+  "submitted": 145
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-06",
+  "denied": 10,
+  "paid": 135,
+  "query_id": "sb.claims.daily",
+  "submitted": 146
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-07",
+  "denied": 13,
+  "paid": 149,
+  "query_id": "sb.claims.daily",
+  "submitted": 167
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-08",
+  "denied": 12,
+  "paid": 150,
+  "query_id": "sb.claims.daily",
+  "submitted": 162
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-09",
+  "denied": 13,
+  "paid": 148,
+  "query_id": "sb.claims.daily",
+  "submitted": 162
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-10",
+  "denied": 15,
+  "paid": 157,
+  "query_id": "sb.claims.daily",
+  "submitted": 172
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-11",
+  "denied": 15,
+  "paid": 157,
+  "query_id": "sb.claims.daily",
+  "submitted": 172
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-12",
+  "denied": 12,
+  "paid": 137,
+  "query_id": "sb.claims.daily",
+  "submitted": 154
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-13",
+  "denied": 13,
+  "paid": 148,
+  "query_id": "sb.claims.daily",
+  "submitted": 163
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-14",
+  "denied": 12,
+  "paid": 146,
+  "query_id": "sb.claims.daily",
+  "submitted": 161
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-15",
+  "denied": 14,
+  "paid": 150,
+  "query_id": "sb.claims.daily",
+  "submitted": 168
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-16",
+  "denied": 13,
+  "paid": 136,
+  "query_id": "sb.claims.daily",
+  "submitted": 149
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-17",
+  "denied": 14,
+  "paid": 141,
+  "query_id": "sb.claims.daily",
+  "submitted": 159
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-18",
+  "denied": 14,
+  "paid": 149,
+  "query_id": "sb.claims.daily",
+  "submitted": 163
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-19",
+  "denied": 13,
+  "paid": 130,
+  "query_id": "sb.claims.daily",
+  "submitted": 148
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-20",
+  "denied": 14,
+  "paid": 153,
+  "query_id": "sb.claims.daily",
+  "submitted": 167
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-21",
+  "denied": 14,
+  "paid": 157,
+  "query_id": "sb.claims.daily",
+  "submitted": 172
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-22",
+  "denied": 13,
+  "paid": 148,
+  "query_id": "sb.claims.daily",
+  "submitted": 162
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-23",
+  "denied": 13,
+  "paid": 143,
+  "query_id": "sb.claims.daily",
+  "submitted": 159
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-24",
+  "denied": 12,
+  "paid": 136,
+  "query_id": "sb.claims.daily",
+  "submitted": 148
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-25",
+  "denied": 13,
+  "paid": 145,
+  "query_id": "sb.claims.daily",
+  "submitted": 163
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-26",
+  "denied": 13,
+  "paid": 144,
+  "query_id": "sb.claims.daily",
+  "submitted": 159
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-27",
+  "denied": 12,
+  "paid": 142,
+  "query_id": "sb.claims.daily",
+  "submitted": 156
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-28",
+  "denied": 15,
+  "paid": 154,
+  "query_id": "sb.claims.daily",
+  "submitted": 174
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-29",
+  "denied": 13,
+  "paid": 155,
+  "query_id": "sb.claims.daily",
+  "submitted": 169
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-09-30",
+  "denied": 14,
+  "paid": 141,
+  "query_id": "sb.claims.daily",
+  "submitted": 159
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-10-01",
+  "denied": 12,
+  "paid": 142,
+  "query_id": "sb.claims.daily",
+  "submitted": 157
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-10-02",
+  "denied": 15,
+  "paid": 151,
+  "query_id": "sb.claims.daily",
+  "submitted": 167
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-10-03",
+  "denied": 13,
+  "paid": 136,
+  "query_id": "sb.claims.daily",
+  "submitted": 154
+ },
+ {
+  "client": "bluefield_imaging",
+  "date": "2026-10-04",
+  "denied": 13,
+  "paid": 152,
+  "query_id": "sb.claims.daily",
+  "submitted": 167
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-06",
+  "denied": 6,
+  "paid": 71,
+  "query_id": "sb.claims.daily",
+  "submitted": 79
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-07",
+  "denied": 5,
+  "paid": 63,
+  "query_id": "sb.claims.daily",
+  "submitted": 73
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-08",
+  "denied": 5,
+  "paid": 64,
+  "query_id": "sb.claims.daily",
+  "submitted": 70
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-09",
+  "denied": 5,
+  "paid": 62,
+  "query_id": "sb.claims.daily",
+  "submitted": 67
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-10",
+  "denied": 6,
+  "paid": 62,
+  "query_id": "sb.claims.daily",
+  "submitted": 68
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-11",
+  "denied": 6,
+  "paid": 72,
+  "query_id": "sb.claims.daily",
+  "submitted": 80
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-12",
+  "denied": 7,
+  "paid": 74,
+  "query_id": "sb.claims.daily",
+  "submitted": 85
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-13",
+  "denied": 6,
+  "paid": 69,
+  "query_id": "sb.claims.daily",
+  "submitted": 76
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-14",
+  "denied": 6,
+  "paid": 74,
+  "query_id": "sb.claims.daily",
+  "submitted": 82
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-15",
+  "denied": 5,
+  "paid": 48,
+  "query_id": "sb.claims.daily",
+  "submitted": 57
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-16",
+  "denied": 4,
+  "paid": 50,
+  "query_id": "sb.claims.daily",
+  "submitted": 59
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-17",
+  "denied": 4,
+  "paid": 52,
+  "query_id": "sb.claims.daily",
+  "submitted": 59
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-18",
+  "denied": 6,
+  "paid": 65,
+  "query_id": "sb.claims.daily",
+  "submitted": 71
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-19",
+  "denied": 6,
+  "paid": 56,
+  "query_id": "sb.claims.daily",
+  "submitted": 66
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-20",
+  "denied": 5,
+  "paid": 65,
+  "query_id": "sb.claims.daily",
+  "submitted": 73
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-21",
+  "denied": 5,
+  "paid": 61,
+  "query_id": "sb.claims.daily",
+  "submitted": 70
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-22",
+  "denied": 5,
+  "paid": 61,
+  "query_id": "sb.claims.daily",
+  "submitted": 68
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-23",
+  "denied": 6,
+  "paid": 61,
+  "query_id": "sb.claims.daily",
+  "submitted": 72
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-24",
+  "denied": 5,
+  "paid": 51,
+  "query_id": "sb.claims.daily",
+  "submitted": 60
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-25",
+  "denied": 6,
+  "paid": 73,
+  "query_id": "sb.claims.daily",
+  "submitted": 79
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-26",
+  "denied": 6,
+  "paid": 63,
+  "query_id": "sb.claims.daily",
+  "submitted": 74
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-27",
+  "denied": 5,
+  "paid": 61,
+  "query_id": "sb.claims.daily",
+  "submitted": 66
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-28",
+  "denied": 5,
+  "paid": 51,
+  "query_id": "sb.claims.daily",
+  "submitted": 61
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-29",
+  "denied": 7,
+  "paid": 73,
+  "query_id": "sb.claims.daily",
+  "submitted": 80
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-30",
+  "denied": 7,
+  "paid": 70,
+  "query_id": "sb.claims.daily",
+  "submitted": 80
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-08-31",
+  "denied": 4,
+  "paid": 50,
+  "query_id": "sb.claims.daily",
+  "submitted": 56
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-01",
+  "denied": 4,
+  "paid": 47,
+  "query_id": "sb.claims.daily",
+  "submitted": 56
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-02",
+  "denied": 6,
+  "paid": 73,
+  "query_id": "sb.claims.daily",
+  "submitted": 80
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-03",
+  "denied": 7,
+  "paid": 73,
+  "query_id": "sb.claims.daily",
+  "submitted": 82
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-04",
+  "denied": 5,
+  "paid": 49,
+  "query_id": "sb.claims.daily",
+  "submitted": 59
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-05",
+  "denied": 7,
+  "paid": 70,
+  "query_id": "sb.claims.daily",
+  "submitted": 80
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-06",
+  "denied": 6,
+  "paid": 59,
+  "query_id": "sb.claims.daily",
+  "submitted": 70
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-07",
+  "denied": 5,
+  "paid": 48,
+  "query_id": "sb.claims.daily",
+  "submitted": 56
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-08",
+  "denied": 5,
+  "paid": 55,
+  "query_id": "sb.claims.daily",
+  "submitted": 62
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-09",
+  "denied": 4,
+  "paid": 50,
+  "query_id": "sb.claims.daily",
+  "submitted": 57
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-10",
+  "denied": 5,
+  "paid": 59,
+  "query_id": "sb.claims.daily",
+  "submitted": 65
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-11",
+  "denied": 7,
+  "paid": 73,
+  "query_id": "sb.claims.daily",
+  "submitted": 84
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-12",
+  "denied": 7,
+  "paid": 66,
+  "query_id": "sb.claims.daily",
+  "submitted": 73
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-13",
+  "denied": 5,
+  "paid": 50,
+  "query_id": "sb.claims.daily",
+  "submitted": 60
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-14",
+  "denied": 6,
+  "paid": 75,
+  "query_id": "sb.claims.daily",
+  "submitted": 81
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-15",
+  "denied": 6,
+  "paid": 60,
+  "query_id": "sb.claims.daily",
+  "submitted": 70
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-16",
+  "denied": 5,
+  "paid": 49,
+  "query_id": "sb.claims.daily",
+  "submitted": 56
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-17",
+  "denied": 6,
+  "paid": 61,
+  "query_id": "sb.claims.daily",
+  "submitted": 72
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-18",
+  "denied": 6,
+  "paid": 53,
+  "query_id": "sb.claims.daily",
+  "submitted": 62
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-19",
+  "denied": 6,
+  "paid": 51,
+  "query_id": "sb.claims.daily",
+  "submitted": 62
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-20",
+  "denied": 6,
+  "paid": 64,
+  "query_id": "sb.claims.daily",
+  "submitted": 75
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-21",
+  "denied": 6,
+  "paid": 63,
+  "query_id": "sb.claims.daily",
+  "submitted": 71
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-22",
+  "denied": 7,
+  "paid": 68,
+  "query_id": "sb.claims.daily",
+  "submitted": 80
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-23",
+  "denied": 6,
+  "paid": 51,
+  "query_id": "sb.claims.daily",
+  "submitted": 60
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-24",
+  "denied": 7,
+  "paid": 71,
+  "query_id": "sb.claims.daily",
+  "submitted": 78
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-25",
+  "denied": 6,
+  "paid": 63,
+  "query_id": "sb.claims.daily",
+  "submitted": 72
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-26",
+  "denied": 6,
+  "paid": 59,
+  "query_id": "sb.claims.daily",
+  "submitted": 70
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-27",
+  "denied": 6,
+  "paid": 66,
+  "query_id": "sb.claims.daily",
+  "submitted": 74
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-28",
+  "denied": 8,
+  "paid": 71,
+  "query_id": "sb.claims.daily",
+  "submitted": 84
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-29",
+  "denied": 6,
+  "paid": 50,
+  "query_id": "sb.claims.daily",
+  "submitted": 60
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-09-30",
+  "denied": 6,
+  "paid": 63,
+  "query_id": "sb.claims.daily",
+  "submitted": 72
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-10-01",
+  "denied": 5,
+  "paid": 56,
+  "query_id": "sb.claims.daily",
+  "submitted": 66
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-10-02",
+  "denied": 7,
+  "paid": 74,
+  "query_id": "sb.claims.daily",
+  "submitted": 83
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-10-03",
+  "denied": 5,
+  "paid": 57,
+  "query_id": "sb.claims.daily",
+  "submitted": 63
+ },
+ {
+  "client": "cedar_family_clinic",
+  "date": "2026-10-04",
+  "denied": 6,
+  "paid": 63,
+  "query_id": "sb.claims.daily",
+  "submitted": 72
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-06",
+  "denied": 17,
+  "paid": 215,
+  "query_id": "sb.claims.daily",
+  "submitted": 233
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-07",
+  "denied": 15,
+  "paid": 192,
+  "query_id": "sb.claims.daily",
+  "submitted": 207
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-08",
+  "denied": 15,
+  "paid": 192,
+  "query_id": "sb.claims.daily",
+  "submitted": 209
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-09",
+  "denied": 20,
+  "paid": 199,
+  "query_id": "sb.claims.daily",
+  "submitted": 224
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-10",
+  "denied": 14,
+  "paid": 193,
+  "query_id": "sb.claims.daily",
+  "submitted": 207
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-11",
+  "denied": 16,
+  "paid": 207,
+  "query_id": "sb.claims.daily",
+  "submitted": 227
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-12",
+  "denied": 16,
+  "paid": 199,
+  "query_id": "sb.claims.daily",
+  "submitted": 215
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-13",
+  "denied": 17,
+  "paid": 213,
+  "query_id": "sb.claims.daily",
+  "submitted": 231
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-14",
+  "denied": 16,
+  "paid": 210,
+  "query_id": "sb.claims.daily",
+  "submitted": 230
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-15",
+  "denied": 15,
+  "paid": 185,
+  "query_id": "sb.claims.daily",
+  "submitted": 205
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-16",
+  "denied": 18,
+  "paid": 208,
+  "query_id": "sb.claims.daily",
+  "submitted": 227
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-17",
+  "denied": 17,
+  "paid": 216,
+  "query_id": "sb.claims.daily",
+  "submitted": 234
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-18",
+  "denied": 18,
+  "paid": 211,
+  "query_id": "sb.claims.daily",
+  "submitted": 230
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-19",
+  "denied": 16,
+  "paid": 187,
+  "query_id": "sb.claims.daily",
+  "submitted": 205
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-20",
+  "denied": 18,
+  "paid": 210,
+  "query_id": "sb.claims.daily",
+  "submitted": 228
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-21",
+  "denied": 18,
+  "paid": 191,
+  "query_id": "sb.claims.daily",
+  "submitted": 213
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-22",
+  "denied": 16,
+  "paid": 193,
+  "query_id": "sb.claims.daily",
+  "submitted": 213
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-23",
+  "denied": 16,
+  "paid": 195,
+  "query_id": "sb.claims.daily",
+  "submitted": 213
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-24",
+  "denied": 18,
+  "paid": 187,
+  "query_id": "sb.claims.daily",
+  "submitted": 205
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-25",
+  "denied": 19,
+  "paid": 205,
+  "query_id": "sb.claims.daily",
+  "submitted": 224
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-26",
+  "denied": 18,
+  "paid": 216,
+  "query_id": "sb.claims.daily",
+  "submitted": 234
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-27",
+  "denied": 18,
+  "paid": 190,
+  "query_id": "sb.claims.daily",
+  "submitted": 211
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-28",
+  "denied": 16,
+  "paid": 196,
+  "query_id": "sb.claims.daily",
+  "submitted": 214
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-29",
+  "denied": 16,
+  "paid": 192,
+  "query_id": "sb.claims.daily",
+  "submitted": 211
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-30",
+  "denied": 15,
+  "paid": 191,
+  "query_id": "sb.claims.daily",
+  "submitted": 210
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-08-31",
+  "denied": 16,
+  "paid": 185,
+  "query_id": "sb.claims.daily",
+  "submitted": 206
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-01",
+  "denied": 18,
+  "paid": 197,
+  "query_id": "sb.claims.daily",
+  "submitted": 216
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-02",
+  "denied": 18,
+  "paid": 205,
+  "query_id": "sb.claims.daily",
+  "submitted": 228
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-03",
+  "denied": 17,
+  "paid": 189,
+  "query_id": "sb.claims.daily",
+  "submitted": 207
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-04",
+  "denied": 17,
+  "paid": 208,
+  "query_id": "sb.claims.daily",
+  "submitted": 226
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-05",
+  "denied": 16,
+  "paid": 197,
+  "query_id": "sb.claims.daily",
+  "submitted": 215
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-06",
+  "denied": 18,
+  "paid": 192,
+  "query_id": "sb.claims.daily",
+  "submitted": 212
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-07",
+  "denied": 17,
+  "paid": 193,
+  "query_id": "sb.claims.daily",
+  "submitted": 211
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-08",
+  "denied": 19,
+  "paid": 198,
+  "query_id": "sb.claims.daily",
+  "submitted": 222
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-09",
+  "denied": 19,
+  "paid": 204,
+  "query_id": "sb.claims.daily",
+  "submitted": 228
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-10",
+  "denied": 16,
+  "paid": 185,
+  "query_id": "sb.claims.daily",
+  "submitted": 205
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-11",
+  "denied": 14,
+  "paid": 207,
+  "query_id": "sb.claims.daily",
+  "submitted": 222
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-12",
+  "denied": 21,
+  "paid": 209,
+  "query_id": "sb.claims.daily",
+  "submitted": 233
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-13",
+  "denied": 20,
+  "paid": 211,
+  "query_id": "sb.claims.daily",
+  "submitted": 234
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-14",
+  "denied": 18,
+  "paid": 201,
+  "query_id": "sb.claims.daily",
+  "submitted": 222
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-15",
+  "denied": 18,
+  "paid": 200,
+  "query_id": "sb.claims.daily",
+  "submitted": 220
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-16",
+  "denied": 18,
+  "paid": 186,
+  "query_id": "sb.claims.daily",
+  "submitted": 209
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-17",
+  "denied": 20,
+  "paid": 188,
+  "query_id": "sb.claims.daily",
+  "submitted": 212
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-18",
+  "denied": 18,
+  "paid": 209,
+  "query_id": "sb.claims.daily",
+  "submitted": 227
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-19",
+  "denied": 21,
+  "paid": 209,
+  "query_id": "sb.claims.daily",
+  "submitted": 234
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-20",
+  "denied": 17,
+  "paid": 200,
+  "query_id": "sb.claims.daily",
+  "submitted": 217
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-21",
+  "denied": 21,
+  "paid": 208,
+  "query_id": "sb.claims.daily",
+  "submitted": 233
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-22",
+  "denied": 20,
+  "paid": 190,
+  "query_id": "sb.claims.daily",
+  "submitted": 212
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-23",
+  "denied": 18,
+  "paid": 201,
+  "query_id": "sb.claims.daily",
+  "submitted": 222
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-24",
+  "denied": 17,
+  "paid": 206,
+  "query_id": "sb.claims.daily",
+  "submitted": 226
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-25",
+  "denied": 21,
+  "paid": 196,
+  "query_id": "sb.claims.daily",
+  "submitted": 219
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-26",
+  "denied": 18,
+  "paid": 195,
+  "query_id": "sb.claims.daily",
+  "submitted": 213
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-27",
+  "denied": 21,
+  "paid": 202,
+  "query_id": "sb.claims.daily",
+  "submitted": 223
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-28",
+  "denied": 19,
+  "paid": 204,
+  "query_id": "sb.claims.daily",
+  "submitted": 224
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-29",
+  "denied": 19,
+  "paid": 210,
+  "query_id": "sb.claims.daily",
+  "submitted": 232
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-09-30",
+  "denied": 22,
+  "paid": 207,
+  "query_id": "sb.claims.daily",
+  "submitted": 229
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-10-01",
+  "denied": 20,
+  "paid": 206,
+  "query_id": "sb.claims.daily",
+  "submitted": 230
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-10-02",
+  "denied": 20,
+  "paid": 212,
+  "query_id": "sb.claims.daily",
+  "submitted": 235
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-10-03",
+  "denied": 20,
+  "paid": 208,
+  "query_id": "sb.claims.daily",
+  "submitted": 230
+ },
+ {
+  "client": "northwind_ortho",
+  "date": "2026-10-04",
+  "denied": 19,
+  "paid": 191,
+  "query_id": "sb.claims.daily",
+  "submitted": 210
+ }
+]

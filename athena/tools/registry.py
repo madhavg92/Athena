@@ -1,4 +1,4 @@
-"""The six read-only tools. Every call goes through the gateway scope check first."""
+"""The read-only tools. Every call goes through the gateway scope check first."""
 
 from __future__ import annotations
 
@@ -7,10 +7,16 @@ from typing import Any
 
 from athena.connectors.base import NotConfigured
 from athena.tools import (
+    get_ar_aging,
+    get_client_activity,
     get_client_profile,
+    get_denials,
     get_metrics,
+    get_my_alerts,
     get_owner,
+    get_task_history,
     get_tasks,
+    get_team,
     get_tickets,
     search_documents,
 )
@@ -20,7 +26,20 @@ log = logging.getLogger(__name__)
 
 TOOLS: dict[str, Tool] = {
     m.TOOL.name: m.TOOL
-    for m in (get_tasks, get_metrics, get_tickets, search_documents, get_owner, get_client_profile)
+    for m in (
+        get_tasks,
+        get_metrics,
+        get_tickets,
+        search_documents,
+        get_owner,
+        get_client_profile,
+        get_denials,
+        get_ar_aging,
+        get_task_history,
+        get_team,
+        get_client_activity,
+        get_my_alerts,
+    )
 }
 
 
@@ -29,6 +48,11 @@ TOOL_SOURCES = {
     "get_metrics": "supaboard",
     "get_tickets": "cs_hub",
     "search_documents": "sharepoint",
+    "get_denials": "supaboard",
+    "get_ar_aging": "supaboard",
+    "get_task_history": "smartsheet",
+    "get_team": "smartsheet",
+    "get_client_activity": "cs_hub",
 }  # get_owner and get_client_profile read Git context files: always allowed
 
 

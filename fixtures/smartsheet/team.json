@@ -1,0 +1,92 @@
+[
+ {
+  "client": "northwind_ortho",
+  "fte": 1.0,
+  "leave_until": null,
+  "member": "Analyst N1",
+  "on_leave_today": false,
+  "open_items": 140,
+  "role": "AR follow-up",
+  "utilisation_pct": 118
+ },
+ {
+  "client": "northwind_ortho",
+  "fte": 1.0,
+  "leave_until": "2026-10-09",
+  "member": "Analyst N2",
+  "on_leave_today": true,
+  "open_items": 0,
+  "role": "Payment posting",
+  "utilisation_pct": 0
+ },
+ {
+  "client": "northwind_ortho",
+  "fte": 1.0,
+  "leave_until": null,
+  "member": "Analyst N3",
+  "on_leave_today": false,
+  "open_items": 140,
+  "role": "Denials",
+  "utilisation_pct": 118
+ },
+ {
+  "client": "northwind_ortho",
+  "fte": 0.5,
+  "leave_until": null,
+  "member": "Analyst N4",
+  "on_leave_today": false,
+  "open_items": 140,
+  "role": "Charge entry",
+  "utilisation_pct": 118
+ },
+ {
+  "client": "bluefield_imaging",
+  "fte": 1.0,
+  "leave_until": null,
+  "member": "Analyst B1",
+  "on_leave_today": false,
+  "open_items": 95,
+  "role": "Eligibility",
+  "utilisation_pct": 92
+ },
+ {
+  "client": "bluefield_imaging",
+  "fte": 1.0,
+  "leave_until": null,
+  "member": "Analyst B2",
+  "on_leave_today": false,
+  "open_items": 95,
+  "role": "Prior auth",
+  "utilisation_pct": 92
+ },
+ {
+  "client": "bluefield_imaging",
+  "fte": 1.0,
+  "leave_until": null,
+  "member": "Analyst B3",
+  "on_leave_today": false,
+  "open_items": 95,
+  "role": "Charge entry",
+  "utilisation_pct": 92
+ },
+ {
+  "client": "cedar_family_clinic",
+  "fte": 1.0,
+  "leave_until": null,
+  "member": "Analyst C1",
+  "on_leave_today": false,
+  "open_items": 120,
+  "role": "Full cycle",
+  "utilisation_pct": 104
+ },
+ {
+  "client": "cedar_family_clinic",
+  "fte": 0.5,
+  "leave_until": null,
+  "member": "Analyst C2",
+  "on_leave_today": false,
+  "open_items": 120,
+  "role": "AR follow-up",
+  "utilisation_pct": 104
+ }
+]

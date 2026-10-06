@@ -31,6 +31,33 @@ class SupaboardConnector(Connector):
             "dates": ["date"],
             "fixture_age_minutes": 180,
         },
+        "claims": {
+            "file": "supaboard/claims.json",
+            "allowed": ["client", "date", "submitted", "denied", "paid", "query_id"],
+            "dates": ["date"],
+            "fixture_age_minutes": 180,
+        },
+        "denials": {
+            "file": "supaboard/denials.json",
+            "allowed": ["client", "date", "payer", "reason_code", "reason", "count"],
+            "dates": ["date"],
+            "fixture_age_minutes": 180,
+        },
+        "ar_aging": {
+            "file": "supaboard/ar_aging.json",
+            "allowed": [
+                "client",
+                "week_start",
+                "0_30",
+                "31_60",
+                "61_90",
+                "over_90",
+                "total",
+                "query_id",
+            ],
+            "dates": ["week_start"],
+            "fixture_age_minutes": 180,
+        },
         "latest_metrics": {
             "file": "supaboard/metrics.json",
             "allowed": [],
@@ -43,7 +70,9 @@ class SupaboardConnector(Connector):
         return super().read(dataset, **filters)
 
     def _fixture(self, dataset: str):
-        rows, _ = super()._fixture(dataset)
+        rows, as_of = super()._fixture(dataset)
+        if dataset != "metrics":
+            return rows, as_of
         for row in rows:
             self._derive(row)
         return rows, None  # fixture rows carry their own as_of

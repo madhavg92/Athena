@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import re
 from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
 from functools import lru_cache
@@ -119,6 +120,9 @@ class Connector:
             for f in time_fields & row.keys():
                 if row[f]:
                     row[f] = parse_time(row[f]) + shift
+            for f in set(spec.get("maybe_times", ())) & row.keys():
+                if isinstance(row[f], str) and re.match(r"^\d{4}-\d{2}-\d{2}T", row[f]):
+                    row[f] = (parse_time(row[f]) + shift).isoformat()
             for f in date_fields & row.keys():
                 if row[f]:
                     row[f] = (

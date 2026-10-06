@@ -30,11 +30,33 @@ class SmartsheetConnector(Connector):
             "free_text": ["title"],
             "times": ["due", "last_update"],
             "link": "link",
-        }
+        },
+        "task_history": {  # row history of the task sheets (live: Smartsheet cell history, G1)
+            "file": "smartsheet/task_history.json",
+            "allowed": ["task_id", "client", "time", "change", "old", "new", "by"],
+            "times": ["time"],
+            "maybe_times": ["old", "new"],
+        },
+        "team": {  # the resource sheet: who works on each client (live: G1)
+            "file": "smartsheet/team.json",
+            "allowed": [
+                "client",
+                "member",
+                "role",
+                "fte",
+                "on_leave_today",
+                "leave_until",
+                "open_items",
+                "utilisation_pct",
+            ],
+            "dates": ["leave_until"],
+        },
     }
 
     def _fixture(self, dataset: str):
         rows, as_of = super()._fixture(dataset)
+        if dataset != "tasks":
+            return rows, as_of
         for row in rows:
             row["link"] = (
                 f"https://app.smartsheet.com/sheets/{row['sheet_id']}?rowId={row['row_id']}"
@@ -48,6 +70,10 @@ class SmartsheetConnector(Connector):
         return self.http
 
     def _live(self, dataset: str, client: str | None = None, **_: Any):
+        if dataset != "tasks":
+            raise NotConfigured(
+                f"smartsheet.{dataset}: live reader not built yet; needs the sheet layout (G1)"
+            )
         sheets = self.cfg.smartsheet_map.sheets
         if not sheets:
             raise NotConfigured("smartsheet: no sheet IDs in context/smartsheet_map.yaml (G1)")

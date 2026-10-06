@@ -21,7 +21,7 @@ def ctx(cfg, db):
     )
 
 
-def test_six_tools_with_schemas() -> None:
+def test_tools_with_schemas() -> None:
     assert set(TOOLS) == {
         "get_tasks",
         "get_metrics",
@@ -29,10 +29,17 @@ def test_six_tools_with_schemas() -> None:
         "search_documents",
         "get_owner",
         "get_client_profile",
+        "get_denials",
+        "get_ar_aging",
+        "get_task_history",
+        "get_team",
+        "get_client_activity",
+        "get_my_alerts",
     }
     for s in schemas():
         assert s["type"] == "function" and s["function"]["parameters"]["type"] == "object"
-        assert "client" in s["function"]["parameters"]["required"]
+        if s["function"]["name"] != "get_my_alerts":
+            assert "client" in s["function"]["parameters"]["required"]
 
 
 def test_get_tasks_by_name(ctx) -> None:
@@ -119,3 +126,51 @@ def test_persona_sources_enforced(cfg, db) -> None:
     )
     assert call(ctx, "get_metrics", {"client": "northwind_ortho", "metric": "backlog"}).ok
     assert call(ctx, "get_owner", {"client": "northwind_ortho"}).ok
+
+
+def test_denials_tell_the_story(ctx) -> None:
+    r = call(
+        ctx,
+        "get_denials",
+        {
+            "client": "Northwind Orthopedics",
+            "period": "last_14_days",
+            "group_by": "payer_and_reason",
+        },
+    )
+    assert r.ok and r.records[0]["denials"] > 0 and r.records[0]["denial_rate_pct"] > 0
+    assert r.records[1]["group"].startswith("Payer B") and "CO-197" in r.records[1]["group"]
+    assert (
+        "group_by"
+        in call(ctx, "get_denials", {"client": "northwind_ortho", "group_by": "colour"}).error
+    )
+
+
+def test_ar_team_history_activity(ctx) -> None:
+    ar = call(ctx, "get_ar_aging", {"client": "northwind_ortho", "weeks": 8})
+    assert len(ar.records) == 8 and ar.records[-1]["over_90_pct"] > ar.records[0]["over_90_pct"]
+    team = call(ctx, "get_team", {"client": "northwind_ortho"})
+    assert any(m["on_leave_today"] for m in team.records)
+    hist = call(ctx, "get_task_history", {"client": "northwind_ortho", "task_id": "T-1001"})
+    assert {h["change"] for h in hist.records} >= {"created", "due date moved", "assignee"}
+    act = call(ctx, "get_client_activity", {"client": "northwind_ortho"})
+    assert any("recovery plan" in a["summary"] for a in act.records)
+    assert act.records[0]["owner"] in {"CSM One", "DM One"}
+
+
+def test_my_alerts(ctx) -> None:
+    from athena.core import scheduler
+
+    assert call(ctx, "get_my_alerts", {}).records == []
+    app_like = type("A", (), {})()
+    app_like.cfg, app_like.db, app_like.gateway, app_like.sources = (
+        ctx.cfg,
+        ctx.gateway.db,
+        ctx.gateway,
+        ctx.sources,
+    )
+    app_like.clock, app_like.model = ctx.gateway.clock, None
+    scheduler.run_rule(app_like, ctx.cfg.rules["R2"])
+    mine = call(ctx, "get_my_alerts", {}).records
+    assert mine and {m["client"] for m in mine} <= {"Northwind Orthopedics", "Bluefield Imaging"}
+    assert mine[0]["severity"] == "late"

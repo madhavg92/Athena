@@ -31,6 +31,12 @@ class CSHubConnector(Connector):
             "times": ["opened_at", "last_reply_at"],
             "fixture_age_minutes": 10,
         },
+        "activity": {  # meetings, escalations, commitments and notes (no email or chat content)
+            "file": "cshub/activity.json",
+            "allowed": ["client", "time", "type", "summary", "owner"],
+            "free_text": ["summary"],
+            "times": ["time"],
+        },
         "health": {
             "file": "cshub/health.json",
             "allowed": ["client", "health_score", "trend"],

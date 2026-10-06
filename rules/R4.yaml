@@ -2,7 +2,8 @@ id: R4
 name: Pre-call client brief
 trigger: {question: brief}        # questions that start with "brief" or "brief me"
 action: answer
-tools: [get_tickets, get_metrics, get_tasks, search_documents, get_client_profile, get_owner]
+tools: [get_tickets, get_metrics, get_tasks, search_documents, get_client_profile, get_owner,
+        get_denials, get_ar_aging, get_task_history, get_team, get_client_activity]
 max_tool_calls: 8
 data_max_age: 24h
 template: client_brief

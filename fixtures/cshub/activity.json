@@ -1,0 +1,65 @@
+[
+ {
+  "client": "northwind_ortho",
+  "owner": "csm.one@fixture.local",
+  "summary": "Monthly review. Client raised the rising backlog.",
+  "time": "2026-09-14T06:00:00Z",
+  "type": "meeting"
+ },
+ {
+  "client": "northwind_ortho",
+  "owner": "csm.one@fixture.local",
+  "summary": "Client escalated slow charge entry (ticket CS-201 opened).",
+  "time": "2026-09-23T06:00:00Z",
+  "type": "escalation"
+ },
+ {
+  "client": "northwind_ortho",
+  "owner": "dm.one@fixture.local",
+  "summary": "Anka promised a backlog recovery plan by 10 Oct.",
+  "time": "2026-09-29T06:00:00Z",
+  "type": "commitment"
+ },
+ {
+  "client": "northwind_ortho",
+  "owner": "dm.one@fixture.local",
+  "summary": "Analyst N2 (payment posting) on leave until 09 Oct; no cover arranged yet.",
+  "time": "2026-10-02T06:00:00Z",
+  "type": "note"
+ },
+ {
+  "client": "northwind_ortho",
+  "owner": "dm.one@fixture.local",
+  "summary": "Payer B started rejecting prior auths submitted through the old portal.",
+  "time": "2026-10-03T06:00:00Z",
+  "type": "note"
+ },
+ {
+  "client": "bluefield_imaging",
+  "owner": "csm.one@fixture.local",
+  "summary": "Weekly call. Client happy; asked about quarter-end prior-auth volume.",
+  "time": "2026-09-21T06:00:00Z",
+  "type": "meeting"
+ },
+ {
+  "client": "bluefield_imaging",
+  "owner": "dm.two@fixture.local",
+  "summary": "Anka to add one prior-auth analyst for quarter end from 13 Oct.",
+  "time": "2026-10-01T06:00:00Z",
+  "type": "commitment"
+ },
+ {
+  "client": "cedar_family_clinic",
+  "owner": "csm.two@fixture.local",
+  "summary": "Monthly review. Health score falling; client unhappy with AR over 90 days.",
+  "time": "2026-09-17T06:00:00Z",
+  "type": "meeting"
+ },
+ {
+  "client": "cedar_family_clinic",
+  "owner": "csm.two@fixture.local",
+  "summary": "Client asked for an AR clean-up plan.",
+  "time": "2026-09-26T06:00:00Z",
+  "type": "escalation"
+ }
+]

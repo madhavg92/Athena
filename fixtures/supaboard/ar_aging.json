@@ -1,0 +1,242 @@
+[
+ {
+  "0_30": 581334,
+  "31_60": 266445,
+  "61_90": 218000,
+  "client": "northwind_ortho",
+  "over_90": 145333,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 1211112,
+  "week_start": "2026-08-10"
+ },
+ {
+  "0_30": 586942,
+  "31_60": 269015,
+  "61_90": 209404,
+  "client": "northwind_ortho",
+  "over_90": 157435,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 1222796,
+  "week_start": "2026-08-17"
+ },
+ {
+  "0_30": 563864,
+  "31_60": 258438,
+  "61_90": 190891,
+  "client": "northwind_ortho",
+  "over_90": 161524,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 1174716,
+  "week_start": "2026-08-24"
+ },
+ {
+  "0_30": 579648,
+  "31_60": 265672,
+  "61_90": 185669,
+  "client": "northwind_ortho",
+  "over_90": 176612,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 1207601,
+  "week_start": "2026-08-31"
+ },
+ {
+  "0_30": 573717,
+  "31_60": 262954,
+  "61_90": 173310,
+  "client": "northwind_ortho",
+  "over_90": 185263,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 1195244,
+  "week_start": "2026-09-07"
+ },
+ {
+  "0_30": 577939,
+  "31_60": 264889,
+  "61_90": 164050,
+  "client": "northwind_ortho",
+  "over_90": 197162,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 1204040,
+  "week_start": "2026-09-14"
+ },
+ {
+  "0_30": 575026,
+  "31_60": 263553,
+  "61_90": 152741,
+  "client": "northwind_ortho",
+  "over_90": 206650,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 1197970,
+  "week_start": "2026-09-21"
+ },
+ {
+  "0_30": 583647,
+  "31_60": 267505,
+  "61_90": 144392,
+  "client": "northwind_ortho",
+  "over_90": 220388,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 1215932,
+  "week_start": "2026-09-28"
+ },
+ {
+  "0_30": 428032,
+  "31_60": 196181,
+  "61_90": 178347,
+  "client": "bluefield_imaging",
+  "over_90": 89173,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 891733,
+  "week_start": "2026-08-10"
+ },
+ {
+  "0_30": 426015,
+  "31_60": 195257,
+  "61_90": 177506,
+  "client": "bluefield_imaging",
+  "over_90": 88753,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 887532,
+  "week_start": "2026-08-17"
+ },
+ {
+  "0_30": 428078,
+  "31_60": 196202,
+  "61_90": 178366,
+  "client": "bluefield_imaging",
+  "over_90": 89183,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 891829,
+  "week_start": "2026-08-24"
+ },
+ {
+  "0_30": 443971,
+  "31_60": 203487,
+  "61_90": 184988,
+  "client": "bluefield_imaging",
+  "over_90": 92494,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 924940,
+  "week_start": "2026-08-31"
+ },
+ {
+  "0_30": 443898,
+  "31_60": 203453,
+  "61_90": 184958,
+  "client": "bluefield_imaging",
+  "over_90": 92479,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 924788,
+  "week_start": "2026-09-07"
+ },
+ {
+  "0_30": 436464,
+  "31_60": 200046,
+  "61_90": 181860,
+  "client": "bluefield_imaging",
+  "over_90": 90930,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 909300,
+  "week_start": "2026-09-14"
+ },
+ {
+  "0_30": 431545,
+  "31_60": 197792,
+  "61_90": 179811,
+  "client": "bluefield_imaging",
+  "over_90": 89905,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 899053,
+  "week_start": "2026-09-21"
+ },
+ {
+  "0_30": 427503,
+  "31_60": 195939,
+  "61_90": 178126,
+  "client": "bluefield_imaging",
+  "over_90": 89063,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 890631,
+  "week_start": "2026-09-28"
+ },
+ {
+  "0_30": 146612,
+  "31_60": 67197,
+  "61_90": 45816,
+  "client": "cedar_family_clinic",
+  "over_90": 45816,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 305441,
+  "week_start": "2026-08-10"
+ },
+ {
+  "0_30": 142987,
+  "31_60": 65536,
+  "61_90": 40960,
+  "client": "cedar_family_clinic",
+  "over_90": 48407,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 297889,
+  "week_start": "2026-08-17"
+ },
+ {
+  "0_30": 140852,
+  "31_60": 64557,
+  "61_90": 36680,
+  "client": "cedar_family_clinic",
+  "over_90": 51352,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 293441,
+  "week_start": "2026-08-24"
+ },
+ {
+  "0_30": 145982,
+  "31_60": 66908,
+  "61_90": 34214,
+  "client": "cedar_family_clinic",
+  "over_90": 57024,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 304129,
+  "week_start": "2026-08-31"
+ },
+ {
+  "0_30": 146885,
+  "31_60": 67322,
+  "61_90": 30601,
+  "client": "cedar_family_clinic",
+  "over_90": 61202,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 306011,
+  "week_start": "2026-09-07"
+ },
+ {
+  "0_30": 145122,
+  "31_60": 66514,
+  "61_90": 26455,
+  "client": "cedar_family_clinic",
+  "over_90": 64247,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 302338,
+  "week_start": "2026-09-14"
+ },
+ {
+  "0_30": 148187,
+  "31_60": 67919,
+  "61_90": 23154,
+  "client": "cedar_family_clinic",
+  "over_90": 69463,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 308723,
+  "week_start": "2026-09-21"
+ },
+ {
+  "0_30": 141196,
+  "31_60": 64715,
+  "61_90": 18385,
+  "client": "cedar_family_clinic",
+  "over_90": 69863,
+  "query_id": "sb.ar_aging.weekly",
+  "total": 294159,
+  "week_start": "2026-09-28"
+ }
+]

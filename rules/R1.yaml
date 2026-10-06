@@ -2,7 +2,8 @@ id: R1
 name: Ask Anka
 trigger: {question: any}
 action: answer
-tools: [get_tasks, get_metrics, get_tickets, search_documents, get_owner, get_client_profile]
+tools: [get_tasks, get_metrics, get_tickets, search_documents, get_owner, get_client_profile,
+        get_denials, get_ar_aging, get_task_history, get_team, get_client_activity, get_my_alerts]
 max_tool_calls: 8
 data_max_age: 24h
 template: ask_default
