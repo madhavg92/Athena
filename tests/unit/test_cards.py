@@ -32,4 +32,5 @@ def test_bot_reply_has_card(app) -> None:
 def test_alert_card_review_buttons() -> None:
     card = alert_card(7, "Task T-1 is late.", "late", shadow=True)
     assert [a["data"]["verdict"] for a in card["actions"]] == ["correct", "wrong"]
-    assert "actions" not in alert_card(7, "x", "late")
+    live = [a["title"] for a in alert_card(7, "x", "late")["actions"]]
+    assert live == ["I'm on it", "Snooze 4h", "Ask about this", "Not useful"]

@@ -63,17 +63,17 @@ def answer_card(result: AskResult, tz: str = "Asia/Kolkata") -> dict[str, Any]:
 
 
 def alert_card(alert_id: int, text: str, severity: str, shadow: bool = False) -> dict[str, Any]:
-    """An alert. In shadow review, Correct and Wrong buttons write review marks."""
+    """An alert. Live alerts have actions (I'm on it, Snooze, Not useful, Ask about this).
+    In shadow review, Correct and Wrong buttons write review marks."""
     body = [
         {
             "type": "TextBlock",
-            "text": severity.replace("_", " ").title(),
+            "text": severity.replace("_", " ").capitalize(),
             "weight": "Bolder",
             "color": "Attention" if severity == "late" else "Warning",
         },
         {"type": "TextBlock", "text": text, "wrap": True},
     ]
-    actions = None
     if shadow:
         actions = [
             {
@@ -87,4 +87,50 @@ def alert_card(alert_id: int, text: str, severity: str, shadow: bool = False) ->
                 "data": {"athena": "review", "alert_id": alert_id, "verdict": "wrong"},
             },
         ]
+        return _card(body, actions)
+    actions = [
+        {
+            "type": "Action.Submit",
+            "title": "I'm on it",
+            "data": {"athena": "ack", "alert_id": alert_id},
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Snooze 4h",
+            "data": {"athena": "snooze", "alert_id": alert_id, "hours": 4},
+        },
+        {
+            "type": "Action.ShowCard",
+            "title": "Ask about this",
+            "card": {
+                "type": "AdaptiveCard",
+                "version": "1.5",
+                "body": [
+                    {
+                        "type": "Input.Text",
+                        "id": "question",
+                        "placeholder": "Why is this late? What should I do?",
+                        "isMultiline": True,
+                    }
+                ],
+                "actions": [
+                    {
+                        "type": "Action.Submit",
+                        "title": "Ask",
+                        "data": {"athena": "alert_ask", "alert_id": alert_id},
+                    },
+                    {
+                        "type": "Action.Submit",
+                        "title": "Draft a note to the owner",
+                        "data": {"athena": "alert_draft", "alert_id": alert_id},
+                    },
+                ],
+            },
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Not useful",
+            "data": {"athena": "review", "alert_id": alert_id, "verdict": "wrong"},
+        },
+    ]
     return _card(body, actions)

@@ -375,3 +375,36 @@ def demo(
             result, cfg.root / "docs" / "demo" / "template.html", Path(html_out), cfg
         )
         typer.echo(f"Page: {page}")
+
+
+@app.command()
+def alert(
+    action: str = typer.Argument(..., help="ack, snooze, wrong, ask or draft"),
+    alert_id: int = typer.Argument(..., help="Alert ID (see athena review --all)."),
+    question: str = typer.Argument(None, help="For ask: your question."),
+    as_: str = typer.Option(..., "--as", help="Your email (an owner of the client)."),
+    hours: float = typer.Option(None, "--hours", help="For ack and snooze."),
+) -> None:
+    """Act on an alert: acknowledge, snooze, mark not useful, ask about it, or draft a note."""
+    from athena.app import build
+    from athena.core import alert_actions as aa
+
+    app_ = build(cfg=_config())
+    if action == "ack":
+        r = aa.acknowledge(app_, alert_id, as_, hours or aa.ACK_HOURS)
+    elif action == "snooze":
+        r = aa.snooze(app_, alert_id, as_, hours or aa.SNOOZE_HOURS)
+    elif action == "wrong":
+        r = aa.not_useful(app_, alert_id, as_)
+    elif action == "ask":
+        r = aa.ask_about(
+            app_, alert_id, as_, question or "Why is this happening, and what should I do?"
+        )
+    elif action == "draft":
+        r = aa.draft_note(app_, alert_id, as_)
+    else:
+        typer.echo("Action must be ack, snooze, wrong, ask or draft.", err=True)
+        raise typer.Exit(2)
+    typer.echo(r.answer.text if (r.answer and action == "ask") else r.message)
+    if not r.ok:
+        raise typer.Exit(1)

@@ -185,7 +185,10 @@ def run_rule(app: App, rule: Rule) -> RuleRun:
                 )
                 result.opened += 1
             else:
-                alert.severity, alert.payload = hit.severity, _jsonable(hit.fields)
+                kept = {
+                    k: v for k, v in (alert.payload or {}).items() if k.startswith("_")
+                }  # ack, snooze
+                alert.severity, alert.payload = hit.severity, {**_jsonable(hit.fields), **kept}
         for key, alert in open_alerts.items():
             if key not in keys:
                 alert.state, alert.closed_at = "closed", now

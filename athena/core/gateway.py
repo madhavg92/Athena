@@ -207,6 +207,49 @@ class Gateway:
         self.deliverer.send(recipient, a.text, a)
         return "sent", None
 
+    def record(
+        self,
+        kind: str,
+        actor: str,
+        rule_id: str,
+        clients: list[str],
+        item_key: str | None,
+        text: str,
+    ) -> GatewayResult:
+        """An action on Athena's own records (acknowledge, snooze): no delivery, no source-system write.
+        Checks the kill switch and that the actor owns the clients, then writes a receipt."""
+        now = self.clock()
+        reason = blocked_by(self.db, rule_id, [actor]) or self.owner_problem(actor, clients)
+        with self.db.session() as s:
+            row = Receipt(
+                time=now,
+                actor=actor,
+                recipient=actor,
+                rule_id=rule_id,
+                action_type=kind,
+                delivery=None,
+                mode="live",
+                sources=[],
+                output=text,
+                status="refused" if reason else "done",
+                reason=reason,
+                item_key=item_key,
+            )
+            s.add(row)
+            s.flush()
+            rid = row.id
+        if reason:
+            return GatewayResult(status="refused", reason=reason, receipt_ids=[rid])
+        return GatewayResult(status="ok", per_recipient={actor: "done"}, receipt_ids=[rid])
+
+    def owner_problem(self, person: str, clients: list[str]) -> str | None:
+        """Any owner-map role on the client counts (hub leader, DM/AM, CSM, BA, CS lead)."""
+        for c in clients:
+            client = self.cfg.owner_map.clients.get(c)
+            if client is None or person.lower() not in {e.lower() for e in client.roles.values()}:
+                return f"scope: {person} is not an owner of {c}"
+        return None
+
     def release_held(self) -> int:
         """Deliver held messages whose time has come. Returns the number sent."""
         now = self.clock()

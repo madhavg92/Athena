@@ -66,21 +66,47 @@ class TeamsBot:
         return Reply(text=result.text, result=result, card=card)
 
     def handle_card_action(self, data: dict, aad_object_id: str | None, upn: str | None) -> Reply:
-        """Correct / Wrong buttons on shadow alert cards."""
-        from athena.core import review
+        """Buttons on alert cards: review (Correct / Wrong / Not useful), ack, snooze, ask, draft."""
+        from athena.core import alert_actions, review
 
         email = resolve_email(self.app, aad_object_id, upn)
         if email is None:
             return Reply(text=NOT_SET_UP)
-        if data.get("athena") != "review":
-            return Reply(text="Unknown action.")
+        kind = data.get("athena")
         try:
             alert_id = int(data.get("alert_id"))
         except (TypeError, ValueError):
             return Reply(text="Unknown alert.")
-        error = review.mark(self.app, alert_id, email, data.get("verdict", ""), data.get("note"))
-        return Reply(
-            text=f"Not recorded: {error}"
-            if error
-            else f"Thanks. Alert {alert_id} marked {data.get('verdict')}."
-        )
+        if kind == "review":
+            error = review.mark(
+                self.app, alert_id, email, data.get("verdict", ""), data.get("note")
+            )
+            return Reply(
+                text=f"Not recorded: {error}"
+                if error
+                else f"Thanks. Alert {alert_id} marked {data.get('verdict')}."
+            )
+        if kind == "ack":
+            return Reply(text=alert_actions.acknowledge(self.app, alert_id, email).message)
+        if kind == "snooze":
+            return Reply(
+                text=alert_actions.snooze(
+                    self.app, alert_id, email, float(data.get("hours") or 4)
+                ).message
+            )
+        if kind in ("alert_ask", "alert_draft"):
+            if kind == "alert_draft":
+                r = alert_actions.draft_note(self.app, alert_id, email)
+            else:
+                question = (
+                    str(data.get("question") or "").strip()
+                    or "Why is this happening, and what should I do?"
+                )
+                r = alert_actions.ask_about(self.app, alert_id, email, question)
+            card = (
+                answer_card(r.answer, self.app.cfg.work_hours_of(email)[1])
+                if r.answer and kind == "alert_ask"
+                else None
+            )
+            return Reply(text=r.message, result=r.answer, card=card)
+        return Reply(text="Unknown action.")

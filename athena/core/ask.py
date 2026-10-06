@@ -108,7 +108,9 @@ class Asker:
         user: str,
         conversation_id: str | None = None,
         user_assertion: str | None = None,
+        context: str | None = None,
     ) -> AskResult:
+        """`context`: extra facts the question is about (e.g. an alert), added to the system prompt."""
         started = time.monotonic()
         user = user.lower()
         rule_id = pick_rule(question)
@@ -138,7 +140,13 @@ class Asker:
             rule_id=rule_id,
             user_assertion=user_assertion,
         )
-        messages = [{"role": "system", "content": self._system(user, rule_id, question)}]
+        system = self._system(user, rule_id, question)
+        if context:
+            system += (
+                "\n\nThe user is asking about this item. Investigate it with the tools before answering:\n"
+                + context
+            )
+        messages = [{"role": "system", "content": system}]
         messages += self._history(conversation_id)
         messages.append({"role": "user", "content": question})
         tools = registry.schemas(rule.tools)

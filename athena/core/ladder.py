@@ -16,6 +16,16 @@ from athena.core.db import Alert, as_utc
 MAX_PER_STEP = 2
 
 
+def paused_until(alert: Alert, now: datetime) -> datetime | None:
+    """An acknowledged or snoozed alert sends nothing (no reminder, no escalation) until this time."""
+    payload = alert.payload or {}
+    times = [
+        datetime.fromisoformat(v) for k in ("_ack_until", "_snoozed_until") if (v := payload.get(k))
+    ]
+    until = max(times, default=None)
+    return until if until and until > now else None
+
+
 def current_step(rule: Rule, alert: Alert, now: datetime) -> int:
     age = now - as_utc(alert.opened_at)
     step = 0
@@ -38,6 +48,8 @@ def due_sends(
 ) -> tuple[int, list[tuple[str, str]]]:
     """Return (step, [(person, kind)]) where kind is 'first' or 'reminder'. Digest rules send each run."""
     step = current_step(rule, alert, now)
+    if paused_until(alert, now):
+        return step, []
     out: list[tuple[str, str]] = []
     counts: dict[str, Any] = alert.sends_count or {}
     last: dict[str, Any] = alert.last_sent_at or {}
