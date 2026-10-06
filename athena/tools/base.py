@@ -42,13 +42,14 @@ class ToolResult(BaseModel):
     sources: list[Source] = []
     stale: bool = False
     error: str | None = None
+    meta: dict[str, Any] = {}  # labels for the model: client_name, metric
 
     @property
     def has_data(self) -> bool:
         return self.ok and bool(self.records)
 
     def for_model(self) -> dict[str, Any]:
-        out: dict[str, Any] = {"ok": self.ok}
+        out: dict[str, Any] = {"ok": self.ok, **self.meta}
         if self.error:
             out["error"] = self.error
         else:

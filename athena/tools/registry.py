@@ -69,6 +69,11 @@ def call(
             )
         args["client"] = client
     try:
-        return tool.fn(ctx, **args)
+        result = tool.fn(ctx, **args)
     except NotConfigured as exc:
         return ToolResult(name=name, ok=False, error=f"source not available: {exc}")
+    if result.client:
+        result.meta = {"client_name": ctx.cfg.owner_map.clients[result.client].name, **result.meta}
+    if "metric" in args:
+        result.meta = {**result.meta, "metric": args["metric"]}
+    return result

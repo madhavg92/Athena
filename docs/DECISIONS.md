@@ -30,3 +30,7 @@
 - 2026-10-06 — Receipt status `queued` added for notify+digest items placed in the digest queue (SPEC lists shadow|sent|held|read|acted|closed|refused). Held messages are released by `Gateway.release_held()` each tick.
 - 2026-10-06 — Gateway message limit counts notify receipts with status sent, held, shadow, read or acted for one item_key and one person, so shadow runs show the same volume as live.
 - 2026-10-06 — PHI: regex cannot find every name (known limit). Names are only caught after patient/pt/member/subscriber/beneficiary. The real control is G5.
+- 2026-10-06 — Live `as_of` = fetch time for live queries (not the sheet's `modifiedAt`), because the query returns current data; a quiet sheet is not stale. Fixture `as_of` is set per dataset (some on purpose stale).
+- 2026-10-06 — Fixture times are stored against a fixed anchor (`fixtures/meta.json`) and shifted to the clock at read time, so `athena ask` works today and tests stay deterministic.
+- 2026-10-06 — MSAL token calls (Entra token endpoint) and model calls (OpenAI SDK to the model endpoint) do not go through `connectors/http.py`. Both are non-connector HTTP: token endpoints are allowed by the rules; model calls send only scrubbed prompts. Reverse: wrap both SDKs with an httpx transport from http.py.
+- 2026-10-06 — Tool calls are authorised by the gateway (kill switch + scope) but do not write receipts; the question log records the tools used and the answer gets one receipt.
