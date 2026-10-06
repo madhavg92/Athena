@@ -141,7 +141,7 @@ class Connector:
 
     # ---- cleaning ----
 
-    def _clean(self, dataset: str, row: dict[str, Any], default_as_of: datetime) -> Record:
+    def _clean(self, dataset: str, row: dict[str, Any], default_as_of: datetime | None) -> Record:
         spec = self.DATASETS[dataset]
         allowed = set(spec["allowed"])
         dropped = set(row) - allowed - {"as_of"}
@@ -159,7 +159,7 @@ class Connector:
         for f in spec.get("times", ()):
             if f in data and data[f] is not None and not isinstance(data[f], datetime):
                 data[f] = parse_time(data[f])
-        as_of = parse_time(row.get("as_of")) or default_as_of
+        as_of = parse_time(row.get("as_of")) or default_as_of or self.clock()
         link_field = spec.get("link")
         link = data.get(link_field) if link_field else None
         return Record(

@@ -15,7 +15,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M2.2 Synthetic fixture generator
 - [x] M2.3 Connector base
 - [ ] M2.4 Smartsheet connector (fixture) — live: G1 — fixture done; live waits for G1
-- [ ] M2.5 Supaboard connector (fixture) — live: G2
+- [ ] M2.5 Supaboard connector (fixture) — live: G2 — fixture done; live waits for G2
 - [ ] M2.6 CS Hub connector (fixture) — live: G3
 - [ ] M2.7 SharePoint search connector (fixture) — live: G4
 - [ ] M2.8 Entra connector (fixture) — live: G4
@@ -61,3 +61,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M2.2: Seed 42, fixed anchor; tasks (late/at-risk/done + one PHI-like row), 60 days metrics, tickets, stale health for one client, docs, users, 60-day history + labels.
 - M2.3: ATHENA_MODE switch, per-dataset ALLOWED fields, scrub on free text, source + as_of on every record, fixture times shifted to the clock.
 - M2.4: Fixture tasks done; live API 2.0 reader tested with a mock; live test waits for G1.
+- M2.5: Fixture metrics with targets and query IDs; live interface documented; waits for G2.
