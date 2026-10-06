@@ -9,7 +9,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M1.3 Database layer and tables
 - [x] M1.4 Kill switches
 - [x] M1.5 PHI scrub and lint
-- [ ] M1.6 Gateway and receipts
+- [x] M1.6 Gateway and receipts
 - [ ] M1.7 `athena whoami`
 - [ ] M2.1 Read-only HTTP client
 - [ ] M2.2 Synthetic fixture generator
@@ -55,3 +55,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M1.3: All SPEC 9 tables plus rule_state (phase override, staleness); DATABASE_URL, default sqlite:///athena.db.
 - M1.4: Global/rule/user switches in DB; athena kill lists, sets and clears them.
 - M1.5: scrub() masks SSN, DOB, IDs, phones, external emails, names after patient/pt/member; lint() returns labels; table-driven tests.
+- M1.6: Nine checks in SPEC order, receipts for every outcome incl. refusals, held messages released in work hours, digest queue.
