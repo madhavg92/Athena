@@ -14,7 +14,10 @@ USERS_URL = "https://graph.microsoft.com/v1.0/users"
 class EntraConnector(Connector):
     NAME = "entra"
     DATASETS = {
-        "users": {"file": "entra/users.json", "allowed": ["email", "name", "job_title", "manager"]}
+        "users": {
+            "file": "entra/users.json",
+            "allowed": ["id", "email", "name", "job_title", "manager"],
+        }
     }
 
     def __init__(
@@ -31,7 +34,7 @@ class EntraConnector(Connector):
         token = self.token_provider()
         http = self.http or ReadOnlyClient()
         params: dict[str, Any] | None = {
-            "$select": "mail,displayName,jobTitle",
+            "$select": "id,mail,displayName,jobTitle",
             "$expand": "manager($select=mail)",
             "$top": "999",
         }
@@ -43,6 +46,7 @@ class EntraConnector(Connector):
                     continue
                 rows.append(
                     {
+                        "id": u.get("id"),
                         "email": u["mail"].lower(),
                         "name": u.get("displayName"),
                         "job_title": u.get("jobTitle"),

@@ -1,42 +1,49 @@
 [
  {
   "email": "hl.key@fixture.local",
+  "id": "00000000-0000-4000-8000-000000000001",
   "job_title": "Hub Leader",
   "manager": null,
   "name": "Hub Leader Key"
  },
  {
   "email": "hl.small@fixture.local",
+  "id": "00000000-0000-4000-8000-000000000002",
   "job_title": "Hub Leader",
   "manager": null,
   "name": "Hub Leader Small"
  },
  {
   "email": "dm.one@fixture.local",
+  "id": "00000000-0000-4000-8000-000000000003",
   "job_title": "Delivery Manager",
   "manager": "hl.key@fixture.local",
   "name": "DM One"
  },
  {
   "email": "dm.two@fixture.local",
+  "id": "00000000-0000-4000-8000-000000000004",
   "job_title": "Delivery Manager",
   "manager": "hl.key@fixture.local",
   "name": "DM Two"
  },
  {
   "email": "csm.one@fixture.local",
+  "id": "00000000-0000-4000-8000-000000000005",
   "job_title": "Client Success Manager",
   "manager": null,
   "name": "CSM One"
  },
  {
   "email": "csm.two@fixture.local",
+  "id": "00000000-0000-4000-8000-000000000006",
   "job_title": "Client Success Manager",
   "manager": null,
   "name": "CSM Two"
  },
  {
   "email": "ba.one@fixture.local",
+  "id": "00000000-0000-4000-8000-000000000007",
   "job_title": "Business Analyst",
   "manager": null,
   "name": "BA One"

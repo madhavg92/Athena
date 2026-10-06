@@ -29,7 +29,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [ ] M4.1 Model bake-off harness — real runs: G5 — harness done; real model runs wait for G5 (user runs them)
 - [x] M5.1 Agents SDK check and decision
 - [ ] M5.2 Azure Functions entry point — G6, GD — code and tests done; real Teams/Azure run waits for G6 and GD
-- [ ] M5.3 Teams user mapping
+- [x] M5.3 Teams user mapping
 - [ ] M5.4 Adaptive Cards
 - [ ] M5.5 Postgres and Alembic
 - [ ] M5.6 RUNBOOK
@@ -75,3 +75,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M4.1: eval golden for any model + JSON per run; eval summary compares latest per model; live runs refused unless contract_covers_data: yes.
 - M5.1: Agents SDK for Python 1.8.0 checked from package source (docs site blocked); hosting plan, identity mapping and versions recorded in DECISIONS; optional deps .[teams].
 - M5.2: function_app.py: timer -> scheduler.tick(), POST /api/messages -> JWT check -> Agents SDK -> bot -> ask loop; real run waits for G6/GD.
+- M5.3: Teams user -> owner map by UPN or Entra object ID (fixture users have IDs); unknown -> 'You are not set up for Athena yet.'

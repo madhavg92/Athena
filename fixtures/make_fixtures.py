@@ -215,7 +215,16 @@ def users() -> list[dict]:
         ("csm.two@fixture.local", "CSM Two", "Client Success Manager", None),
         ("ba.one@fixture.local", "BA One", "Business Analyst", None),
     ]
-    return [{"email": e, "name": n, "job_title": j, "manager": m} for e, n, j, m in rows]
+    return [
+        {
+            "id": f"00000000-0000-4000-8000-{i:012d}",
+            "email": e,
+            "name": n,
+            "job_title": j,
+            "manager": m,
+        }
+        for i, (e, n, j, m) in enumerate(rows, start=1)
+    ]
 
 
 def history(rng: random.Random) -> tuple[list[dict], list[dict]]:
