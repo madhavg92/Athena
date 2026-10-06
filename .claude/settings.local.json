@@ -11,7 +11,8 @@
       "Bash(python3 -)",
       "Bash(git commit -q -m 'Two-way alerts: acknowledge, snooze, not useful, ask about it, draft a note *)",
       "Bash(git commit -q -m 'Demo: personal-assistant interface with inbox, two-way alerts and harder questions *)",
-      "Bash(git commit -q -m 'Demo: chat-only redesign *)"
+      "Bash(git commit -q -m 'Demo: chat-only redesign *)",
+      "Bash(git commit *)"
     ]
   }
 }
