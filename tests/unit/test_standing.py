@@ -27,8 +27,7 @@ def test_capacity_finds_gaps_and_trained_cover(cfg) -> None:
 
 def test_blocked_work_counts_hours_and_expiry(cfg) -> None:
     rows = {
-        b["blocker_id"]: b
-        for b in standing.blocked(cfg, _sources(cfg), cfg.scope_of(HL), ANCHOR)
+        b["blocker_id"]: b for b in standing.blocked(cfg, _sources(cfg), cfg.scope_of(HL), ANCHOR)
     }
     assert "BL-309" not in rows and "BL-310" not in rows  # closed; other hub
     assert rows["BL-301"]["people_blocked"] == 2 and 0 < rows["BL-301"]["hours_lost"] < 4

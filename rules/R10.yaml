@@ -1,0 +1,28 @@
+id: R10
+name: Audit finding overdue
+trigger: {cron: "45 9 * * 1-5", tz: Asia/Kolkata}
+source: smartsheet.quality
+check:
+  type: threshold
+  key: finding_id
+  severities:
+    client_found_overdue:  # an error the client found, not fixed by its due date
+      - {field: status, op: eq, value: open}
+      - {field: found_by, op: eq, value: client}
+      - {field: due, op: before, value: now}
+    overdue:
+      - {field: status, op: eq, value: open}
+      - {field: due, op: before, value: now}
+data_max_age: 24h
+owner: owner_map.client.dm_am
+ladder:
+  - {after: 0h, to: dm_am}
+  - {after: 1d, to: hub_leader}
+renudge_after: 1d
+close_when: {cleared: true}
+message: {writer: model, template: audit_overdue}
+action: notify
+delivery: now              # runs once a day; something to chase today
+phase: 1
+mode: shadow
+max_wrong_rate: 0.2

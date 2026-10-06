@@ -1,6 +1,6 @@
 persona: hub_leader
 scope: clients where hub_leader = me
-rules: [R1, R2, R3]
+rules: [R1, R2, R3, R7, R8, R9, R10]
 sources: [smartsheet, supaboard, cs_hub, sharepoint, economics]
 sharepoint_sites: client_context
 work_hours: "10:00-19:00"      # confirm (G8)

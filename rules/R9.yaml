@@ -1,0 +1,22 @@
+id: R9
+name: Unplanned absence
+trigger: {cron: "*/15 10-12 * * 1-5", tz: Asia/Kolkata}   # start of the hub's day
+source: smartsheet.attendance
+check:
+  type: threshold
+  key: member
+  severities:
+    unplanned_absence:
+      - {field: status, op: eq, value: unplanned absence}
+data_max_age: 1h
+owner: owner_map.client.hub_leader
+ladder:
+  - {after: 0h, to: hub_leader}
+renudge_after: 4h
+close_when: {cleared: true}
+message: {writer: model, template: unplanned_absence}
+action: notify
+delivery: now              # the day's cover is decided now
+phase: 1
+mode: shadow
+max_wrong_rate: 0.2

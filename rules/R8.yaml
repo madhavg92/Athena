@@ -1,0 +1,25 @@
+id: R8
+name: Waiting on the client too long
+trigger: {cron: "15 10 * * 1-5", tz: Asia/Kolkata}
+source: smartsheet.blockers
+check:
+  type: threshold
+  key: blocker_id
+  severities:
+    waiting_too_long:
+      - {field: kind, op: eq, value: waiting_on_client}
+      - {field: status, op: eq, value: open}
+      - {field: opened_at, op: older_than, value: 5d}   # provisional; management sets it
+data_max_age: 24h
+owner: owner_map.client.dm_am
+ladder:
+  - {after: 0h, to: dm_am}
+  - {after: 2d, to: hub_leader}
+renudge_after: 1d
+close_when: {cleared: true}
+message: {writer: model, template: waiting_on_client}
+action: notify
+delivery: now              # runs once a day; something to chase today
+phase: 1
+mode: shadow
+max_wrong_rate: 0.2

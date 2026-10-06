@@ -1,0 +1,29 @@
+id: R7
+name: Locked out or login expiring
+trigger: {cron: "*/15 * * * *", tz: Asia/Kolkata}
+source: smartsheet.blockers
+check:
+  type: threshold
+  key: blocker_id
+  severities:              # checked in this order; first match wins
+    locked_out:            # people cannot work now
+      - {field: kind, op: eq, value: access}
+      - {field: status, op: eq, value: open}
+      - {field: people_blocked, op: gt, value: 0}
+    expiring:              # a login expires soon; renew it before people are locked out
+      - {field: kind, op: eq, value: access}
+      - {field: status, op: eq, value: open}
+      - {field: expires_at, op: within, value: 48h}
+data_max_age: 1h
+owner: owner_map.client.dm_am
+ladder:
+  - {after: 0h, to: dm_am}
+  - {after: 2h, to: hub_leader}
+renudge_after: 1h
+close_when: {cleared: true}
+message: {writer: model, template: access_blocked}
+action: notify
+delivery: now              # people who cannot work is a today problem
+phase: 1
+mode: shadow
+max_wrong_rate: 0.2        # placeholder; management sets the real value

@@ -106,7 +106,7 @@ def test_stale_source_makes_no_alerts(live_cfg, db, clock) -> None:
 def test_tick_runs_due_rules_and_shadow(cfg, db, clock) -> None:
     app = make(cfg, db, clock)
     out = scheduler.tick(app)
-    assert [r["rule_id"] for r in out["runs"]] == ["R2", "R6"]
+    assert [r["rule_id"] for r in out["runs"]] == ["R2", "R6", "R7", "R9"]
     statuses = {r.status for r in receipts(app, rule_id="R2")}
     assert statuses == {"shadow"}  # R2 ships in shadow mode
     assert scheduler.tick(app)["runs"] == []  # not due again in the same window

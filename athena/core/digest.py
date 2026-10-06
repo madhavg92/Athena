@@ -93,6 +93,10 @@ def build_text(
         lines.append(
             f"{STALE_MARK}: {rule.source} was last checked {when}. Exceptions could not be checked."
         )
+    needs: list[str] = []
+    if rule.include_standing:
+        needs = standing_lines(app, email, now)
+        lines += needs
     lines += [f"- {i.text}" for i in items]
     if extra:
         lines.append("Open alerts:")
@@ -104,13 +108,28 @@ def build_text(
                 or a.item_key.split(":", 1)[-1]
             )
             lines.append(f"- {a.rule_id} {a.severity.replace('_', ' ')}: {title} ({name})")
-    if not items and not extra and not stale:
+    if not items and not extra and not stale and not any(n.startswith("- ") for n in needs):
         lines.append(rule.empty_message or "No exceptions today.")
     clients = sorted(
         {a.client for a in extra}
         | {c for c in scope if any(app.cfg.owner_map.clients[c].name in i.text for i in items)}
     )
     return "\n".join(lines), clients, [i.id for i in items], stale, last_run
+
+
+def standing_lines(app: App, email: str, now: datetime) -> list[str]:
+    """The standing-list items that need this person today (code decides; see core/standing.py)."""
+    from athena.connectors.base import NotConfigured
+    from athena.core import standing
+
+    try:
+        items = standing.standing_list(app.cfg, app.sources, email, now)
+    except NotConfigured as exc:
+        return [f"Standing list not available: {exc}"]
+    needs = [i for i in items if i.needs_you]
+    if not needs:
+        return ["Nothing on your standing list needs you today."]
+    return ["Needs you today:"] + [f"- {i.label}: {i.detail}" for i in needs]
 
 
 def send_due_digests(app: App) -> int:

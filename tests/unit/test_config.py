@@ -11,7 +11,7 @@ from athena.core.durations import parse_duration
 
 def test_seed_files_load() -> None:
     cfg = load_config()
-    assert set(cfg.rules) == {"R1", "R2", "R3", "R4", "R5", "R6"}
+    assert set(cfg.rules) == {f"R{i}" for i in range(1, 11)}
     assert set(cfg.personas) == {"hub_leader", "dm_am", "csm", "ba", "cs_lead"}
     assert cfg.rules["R2"].data_max_age == timedelta(minutes=30)
     assert cfg.rules["R2"].ladder[1].after == timedelta(hours=4)
@@ -77,7 +77,7 @@ def test_broken_file_names_file_field_reason(
 def test_rules_validate_cli() -> None:
     result = CliRunner().invoke(app, ["rules", "validate"])
     assert result.exit_code == 0, result.output
-    assert "6 rules" in result.output
+    assert "10 rules" in result.output
 
 
 def test_rules_validate_cli_fails(config_copy: Path, monkeypatch: pytest.MonkeyPatch) -> None:

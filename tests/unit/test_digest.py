@@ -35,8 +35,18 @@ def receipts(app, key_prefix):
 def test_empty_digest(cfg, db) -> None:
     app, clock = make(cfg, db, R3_TIME + timedelta(minutes=30))
     scheduler._set_state(app, "R3", stale=False, last_run_at=R3_TIME)
-    text, _, _, stale, _ = digest.build_text(app, HL, app.cfg.rules["R3"], clock.now)
+    rule = app.cfg.rules["R3"].model_copy(update={"include_standing": False})
+    text, _, _, stale, _ = digest.build_text(app, HL, rule, clock.now)
     assert not stale and text.endswith("No exceptions today.")
+
+
+def test_digest_starts_with_standing_items_that_need_you(cfg, db) -> None:
+    app, clock = make(cfg, db, R3_TIME + timedelta(minutes=30))
+    scheduler._set_state(app, "R3", stale=False, last_run_at=R3_TIME)
+    text, _, _, _, _ = digest.build_text(app, HL, app.cfg.rules["R3"], clock.now)
+    lines = text.splitlines()
+    assert lines[1] == "Needs you today:" and lines[2].startswith("- Not working today:")
+    assert "No exceptions today" not in text and "Promises made" not in text  # only what needs you
 
 
 def test_stale_digest_never_all_clear(cfg, db) -> None:

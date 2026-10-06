@@ -9,6 +9,7 @@ check:
     off_target:                       # direction per metric from context/metrics.yaml (better: higher|lower)
       - {field: off_target, op: eq, value: true}
 include_open_alerts: [R2]
+include_standing: true       # hub leaders: the always-open items that need them today, first
 data_max_age: 24h
 owner: owner_map.client.hub_leader
 ladder:

@@ -143,6 +143,7 @@ class Rule(Strict):
     sections: list[str] = []
     # digest rules
     include_open_alerts: list[str] = []
+    include_standing: bool = False  # start the digest with the standing list items that need you
     empty_message: str | None = None
     # draft rules
     clients: list[str] = []
