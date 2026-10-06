@@ -148,14 +148,14 @@ def eval_golden(
 ) -> None:
     """Run the golden questions and write reports/eval-<model>-<time>.md."""
 
-    from athena.core.golden import run, summary, write_report
+    from athena.core.golden import ContractError, run, summary, write_report
     from athena.core.model import ModelError
 
     cfg = _config()
     name = model or cfg.models.default
     try:
         outcomes = run(cfg, name, cfg.root / path)
-    except ModelError as exc:
+    except (ModelError, ContractError) as exc:
         typer.echo(f"Model not available: {exc}", err=True)
         raise typer.Exit(2) from exc
     report = write_report(name, outcomes, cfg.root / "reports")
@@ -195,3 +195,15 @@ def ask(
         f"{result.tokens_in}+{result.tokens_out} tokens | {result.latency_ms} ms]",
         err=True,
     )
+
+
+@eval_app.command("summary")
+def eval_summary() -> None:
+    """Compare the latest golden eval of each model (from reports/)."""
+    from athena.core.golden import compare
+
+    cfg = _config()
+    table = compare(cfg.root / "reports")
+    (cfg.root / "reports").mkdir(exist_ok=True)
+    (cfg.root / "reports" / "eval-summary.md").write_text("# Model bake-off\n\n" + table)
+    typer.echo(table)

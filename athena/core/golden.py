@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -60,7 +61,21 @@ def check(g: Golden, r: AskResult) -> list[str]:
     return fails
 
 
+class ContractError(Exception):
+    """A model without a data contract was asked to read live data (G5)."""
+
+
 def run(cfg: AthenaConfig, model_name: str, path: Path, model: Any = None) -> list[Outcome]:
+    spec = cfg.models.models.get(model_name)
+    if (
+        mode() == "live"
+        and spec is not None
+        and spec.kind != "stub"
+        and spec.contract_covers_data != "yes"
+    ):
+        raise ContractError(
+            f"model {model_name}: contract_covers_data is {spec.contract_covers_data!r}; live runs need 'yes' (G5)"
+        )
     clock = (lambda: fixture_anchor()) if mode() == "fixture" else (lambda: datetime.now(UTC))
     app = build(cfg=cfg, db=Database("sqlite://"), clock=clock, model=model or model_name)
     outcomes = []
@@ -119,4 +134,31 @@ def write_report(
             f"| {o.golden.id} | {o.golden.persona} | {'pass' if o.passed else 'FAIL'} | {', '.join(o.result.tools_used)} | {notes} |"
         )
     path.write_text("\n".join(lines) + "\n")
+    data = {
+        "model": model_name,
+        "time": now.isoformat(),
+        "mode": mode(),
+        **s,
+        "failed": [o.golden.id for o in outcomes if not o.passed],
+    }
+    path.with_suffix(".json").write_text(json.dumps(data, indent=1) + "\n")
     return path
+
+
+def compare(reports: Path) -> str:
+    """Markdown table comparing the latest eval of each model."""
+    latest: dict[str, dict] = {}
+    for f in sorted(reports.glob("eval-*.json")):
+        data = json.loads(f.read_text())
+        if data["model"] not in latest or data["time"] > latest[data["model"]]["time"]:
+            latest[data["model"]] = data
+    lines = [
+        "| Model | Mode | Run (UTC) | Pass rate | Tool accuracy | Avg latency | Tokens in/out | Cost |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
+    for name, d in sorted(latest.items(), key=lambda kv: (-kv[1]["pass_rate"], kv[0])):
+        lines.append(
+            f"| {name} | {d['mode']} | {d['time'][:16]} | {d['passed']}/{d['questions']} ({d['pass_rate']:.0%}) | "
+            f"{d['tool_accuracy']:.0%} | {d['avg_latency_ms']} ms | {d['tokens_in']}/{d['tokens_out']} | ${d['cost_usd']:.4f} |"
+        )
+    return "\n".join(lines) + "\n"
