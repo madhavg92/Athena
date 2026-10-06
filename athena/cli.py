@@ -168,3 +168,30 @@ def eval_golden(
     )
     if s["passed"] != s["questions"]:
         raise typer.Exit(1)
+
+
+@app.command()
+def ask(
+    question: str = typer.Argument(..., help="The question."),
+    as_: str = typer.Option(..., "--as", help="Email of the person who asks."),
+    model: str = typer.Option(None, "--model", help="Model name from context/models.yaml."),
+    conversation: str = typer.Option(
+        None, "--conversation", help="Conversation ID (default: the email)."
+    ),
+) -> None:
+    """Ask Athena a question as a person (R1, or R4 for 'brief me on ...')."""
+    from athena.app import build
+    from athena.core.model import ModelError
+
+    cfg = _config()
+    try:
+        result = build(cfg=cfg, model=model).asker.ask(question, as_, conversation_id=conversation)
+    except ModelError as exc:
+        typer.echo(f"Model not available: {exc}", err=True)
+        raise typer.Exit(2) from exc
+    typer.echo(result.text)
+    typer.echo(
+        f"\n[{result.rule_id} | tools: {', '.join(result.tools_used) or '-'} | "
+        f"{result.tokens_in}+{result.tokens_out} tokens | {result.latency_ms} ms]",
+        err=True,
+    )
