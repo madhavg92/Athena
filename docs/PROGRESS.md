@@ -32,7 +32,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M5.3 Teams user mapping
 - [x] M5.4 Adaptive Cards
 - [x] M5.5 Postgres and Alembic
-- [ ] M5.6 RUNBOOK
+- [x] M5.6 RUNBOOK
 
 ## Release 2
 - [ ] M6.1 Check types
@@ -78,3 +78,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M5.3: Teams user -> owner map by UPN or Entra object ID (fixture users have IDs); unknown -> 'You are not set up for Athena yet.'
 - M5.4: Answer card (text, stale warning, Sources with links + as_of); alert card with Correct/Wrong review buttons for shadow mode.
 - M5.5: psycopg 3 + Alembic; migration 0001 for all tables; athena db upgrade [--sql]; tested on SQLite and a temporary Postgres 16.
+- M5.6: RUNBOOK (local, Teams test, Azure resources, app settings, deploy, rollback, kill switch); requirements.txt, host.json, .funcignore, local settings example.

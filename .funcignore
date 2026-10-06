@@ -1,0 +1,14 @@
+.git*
+.venv
+.env
+.claude
+.pytest_cache
+.ruff_cache
+__pycache__
+tests
+reports
+drafts
+docs
+*.db
+local.settings.json
+ATHENA_BOOTSTRAP.md

@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "ATHENA_MODE": "fixture",
+    "DATABASE_URL": "sqlite:///athena.db",
+    "DEFAULT_TZ": "Asia/Kolkata",
+    "CONNECTIONS__SERVICE_CONNECTION__SETTINGS__CLIENTID": "",
+    "CONNECTIONS__SERVICE_CONNECTION__SETTINGS__CLIENTSECRET": "",
+    "CONNECTIONS__SERVICE_CONNECTION__SETTINGS__TENANTID": ""
+  }
+}
