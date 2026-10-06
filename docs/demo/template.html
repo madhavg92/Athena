@@ -46,11 +46,11 @@ button, select, textarea { font: inherit; color: inherit; }
 .av { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font-weight: 600; font-size: 13px; background: var(--line); color: var(--muted); }
 .av.ai { background: conic-gradient(from 210deg, var(--spark-a), var(--spark-b), var(--spark-a)); color: #fff; }
 .av.ai svg { width: 18px; height: 18px; }
-.main { display: flex; flex-direction: column; min-width: 0; }
+.main { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
 .head { display: flex; align-items: center; gap: 12px; padding: 12px 18px; border-bottom: 1px solid var(--line); }
 .head b { font-size: 15px; }
 .head span { display: block; font-size: 12.5px; color: var(--muted); }
-.log { flex: 1; overflow-y: auto; padding: 18px; display: flex; flex-direction: column; gap: 14px; }
+.log { flex: 1; min-height: 0; overflow-y: auto; padding: 18px; display: flex; flex-direction: column; gap: 14px; }
 .day { align-self: center; font-size: 12px; color: var(--muted); }
 .row { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 10px; align-items: start; max-width: 640px; }
 .row .av { width: 32px; height: 32px; font-size: 12px; }
@@ -95,6 +95,14 @@ textarea.quote { width: 100%; min-height: 110px; border: 1px solid var(--accent)
   .rail { display: none; }
 }
 
+.rows { display: grid; }
+.more { border: 0; background: none; padding: 4px 0 0; color: var(--accent); cursor: pointer; font-weight: 500; text-align: left; }
+.slist { display: grid; gap: 2px; font-size: 13.5px; }
+.srow { display: grid; grid-template-columns: 14px minmax(0, 1fr) auto; gap: 8px; align-items: baseline; padding: 3px 0; }
+.srow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--line); }
+.srow .dot.on { background: var(--late); }
+.srow b { font-weight: 600; font-variant-numeric: tabular-nums; }
+.srow span { color: var(--muted); }
 .hero { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .hero .big { font-size: 34px; font-weight: 600; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
 .hero .sub2 { color: var(--muted); }
@@ -124,38 +132,38 @@ textarea.quote { width: 100%; min-height: 110px; border: 1px solid var(--accent)
 
 <div class="wrap">
   <div class="over">
-    <span>Illustration: Athena as a hub leader's agent in their work chat. Made-up clients, people and numbers.</span>
+    <span>Illustration: a hub leader's Monday with Athena in their work chat. Made-up clients, people and numbers.</span>
     <span>Viewing as <b id="me"></b></span>
   </div>
   <div class="window">
     <aside class="rail" aria-label="Chats"><h2>Chat</h2><div id="rail"></div></aside>
     <section class="main">
-      <div class="head"><div class="av ai" aria-hidden="true" id="headav"></div><div><b>Athena</b><span>Your chief of staff · watches money, meetings and promises across your clients</span></div></div>
+      <div class="head"><div class="av ai" aria-hidden="true" id="headav"></div><div><b>Athena</b><span>Watches your hub's people, blocked work, quality and clients</span></div></div>
       <div class="log" id="log" aria-live="polite"></div>
       <form class="compose" id="form" autocomplete="off">
         <div class="suggest" id="suggest"></div>
-        <div class="box"><label for="q" hidden>Message Athena</label><textarea id="q" placeholder="Ask anything across your clients"></textarea><button id="send" type="submit">Send</button></div>
+        <div class="box"><label for="q" hidden>Message Athena</label><textarea id="q" placeholder="Ask about your hub"></textarea><button id="send" type="submit">Send</button></div>
       </form>
     </section>
   </div>
 </div>
 
 <script>
-const HUB = /*HUB*/null;
+const HUB = /*HUB*/null, DAY = /*DAY*/null;
 const DATA = /*ASK_DATA*/null;
 const DEMO = /*DEMO_DATA*/null, SUGGEST = /*SUGGESTIONS*/null, CANNED = /*CANNED*/null, INBOX = /*INBOX*/null, OPENS_AT = /*OPENS_AT*/null, PROPOSALS = /*PROPOSALS*/null;
 const SPARK = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z" opacity=".7"/></svg>';
 const CHECK = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>';
 const usd = n => "$" + Math.round(n).toLocaleString("en-US");
 const usdK = n => "$" + (n >= 1000 ? (Math.round(n / 100) / 10) + "K" : n);
-const PEOPLE = { hub_leader: { name: HUB.person.name, email: HUB.person.email, role: "Hub leader, Northwind and Bluefield" } };
+const PEOPLE = { hub_leader: { name: DAY.person.name, email: DAY.person.email, role: "Hub leader, Northwind and Bluefield" } };
 const SRC = { get_tasks: "smartsheet", get_task_history: "smartsheet", get_team: "smartsheet", get_metrics: "supaboard", get_denials: "supaboard",
   get_ar_aging: "supaboard", get_tickets: "cs_hub", get_client_activity: "cs_hub", search_documents: "sharepoint" };
 const NOW = new Date(DATA.now), HOUR = 3600e3;
 const person = "hub_leader";
 let state = load(), sampleFn = null, liveTools = false, busy = false;
-function load() { try { return JSON.parse(localStorage.getItem("athena-hub-v5") || "{}"); } catch (_) { return {}; } }
-function save() { try { localStorage.setItem("athena-hub-v5", JSON.stringify(state)); } catch (_) {} }
+function load() { try { return JSON.parse(localStorage.getItem("athena-day-v1") || "{}"); } catch (_) { return {}; } }
+function save() { try { localStorage.setItem("athena-day-v1", JSON.stringify(state)); } catch (_) {} }
 state.done ||= {}; state.msgs ||= []; state.turns ||= [];
 function esc(s) { return String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 function fmt(iso) { return new Date(iso).toLocaleString("en-GB", { timeZone: "Asia/Kolkata", weekday: "short", day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit", hour12: false }); }
@@ -323,22 +331,35 @@ function renderText(text) {
 }
 
 // ---------------------------------------------------------------- hub tools (same numbers as Athena's Python tools, computed at build time)
-function hubTools(steps, redraw) {
+function dayTools(steps, redraw) {
   const T = (name, description, properties, required, fn) => ({ name, description, inputSchema: { type: "object", properties, required }, execute: fn });
   const note = (name, text, records, source) => { steps.push({ name, text, n: records.length, sources: [{ name: source, as_of: DATA.now }], stale: [] }); redraw(); };
+  const one = (rows, input) => { const c = input && input.client ? resolveClient(input.client) : null; if (input && input.client && !c) throw new Error(`unknown client "${input.client}"`);
+    if (c && !scopeOf(person).includes(c)) { steps.push({ name: "scope", text: `${DATA.clients[c].name}: not in your scope`, refused: "scope" }); redraw(); throw new Error("refused: not in this person's scope"); }
+    return c ? rows.filter(r => r.client === DATA.clients[c].name || r.client_name === DATA.clients[c].name) : rows; };
+  const opt = { client: { type: "string", description: "Optional: one client." } };
+  const D = DAY.tools;
   return [
-    T("get_money_at_risk", "Dollars at risk across this person's clients in the next 14 days: denials not yet appealed before their appeal deadline, and claims over 90 days old before timely filing. Each row: client, payer, reason, claims, amount, days left, expected recovery, Anka's fee at risk, hours of work.", {}, [], () => {
-      note("get_money_at_risk", "Money at risk across your clients", HUB.risks, "supaboard.denied_claims");
-      return { horizon_days: HUB.money.horizon, total_usd: HUB.money.total, expected_recovery_usd: HUB.money.expected, records: HUB.risks,
-        biggest_move: HUB.money.move, assumptions: HUB.money.how };
+    T("get_standing_list", "The hub leader's always-open list across all their clients, counted now: who is not working today, short-staffed work, people on notice or in training, logins and access, things waiting on the client, clearinghouse problems, work over turnaround, claims near deadlines, audit findings, escalations, promises to clients. Each item says whether it needs the hub leader today.", {}, [], () => {
+      note("get_standing_list", "Your standing list", D.standing, "smartsheet.blockers"); return { records: D.standing };
     }),
-    T("get_client_economics", "Anka's monthly fee revenue, cost, FTE, revenue per FTE and margin for each of this person's clients (last 3 months).", {}, [], () => {
-      note("get_client_economics", "Revenue, cost and FTE by client", HUB.economics, "supaboard.economics");
-      return { records: HUB.economics };
+    T("get_capacity", "Today's people against today's work by client and work type: inflow, backlog, oldest item vs turnaround target, FTE needed and present, gap (positive = short), who is absent, who is trained to cover and what that leaves short.", opt, [], input => {
+      const rows = one(D.capacity, input); note("get_capacity", "People against work today", rows, "supaboard.workload"); return { records: rows };
     }),
-    T("get_meetings", "This person's meetings this week and a prepared brief for the hub ops review and the Northwind weekly call: metric changes, tickets waiting on us, commitments, staffing gaps, money at risk.", {}, [], () => {
-      note("get_meetings", "Your meetings this week", HUB.meetings, "graph.calendar");
-      return { records: HUB.meetings, briefs: HUB.briefs };
+    T("get_blocked_work", "Open blocked work: logins and access (locked out, expiring, new-joiner IDs), things waiting on the client (items and dollars held, age), clearinghouse and payer problems; hours lost and owner.", { ...opt, kind: { type: "string", enum: ["access", "waiting_on_client", "clearinghouse", "payer_portal"] } }, [], input => {
+      const rows = one(D.blocked, input).filter(r => !input.kind || r.kind === input.kind); note("get_blocked_work", "Blocked work", rows, "smartsheet.blockers"); return { records: rows };
+    }),
+    T("get_quality", "Open audit findings: internal and client-found errors, severity, due date, overdue.", opt, [], input => {
+      const rows = one(D.quality, input); note("get_quality", "Audit findings", rows, "smartsheet.quality"); return { records: rows };
+    }),
+    T("get_money_at_risk", "Dollars at risk in the next 14 days: unappealed denials before the appeal deadline and over-90 AR before timely filing, with expected recovery and hours of work.", {}, [], () => {
+      note("get_money_at_risk", "Money at risk", D.risks, "supaboard.denied_claims"); return { records: D.risks };
+    }),
+    T("get_client_economics", "Anka's monthly fee revenue, cost, FTE, revenue per FTE and margin by client (last 3 months).", {}, [], () => {
+      note("get_client_economics", "Revenue, cost and FTE", D.economics, "supaboard.economics"); return { records: D.economics };
+    }),
+    T("get_meetings", "This week's meetings and prepared briefs for the hub ops review and the Northwind weekly call.", {}, [], () => {
+      note("get_meetings", "Your meetings this week", D.meetings, "graph.calendar"); return { records: D.meetings, briefs: D.briefs };
     }),
   ];
 }
@@ -349,71 +370,64 @@ function row(who, time, inner) {
   return `<div class="row"><div class="av ${ai ? "ai" : ""}" aria-hidden="true">${ai ? SPARK : esc(who.split(" ").map(w => w[0]).join("").slice(0, 2))}</div><div><div class="meta"><b>${esc(who)}</b>${esc(time)}</div>${inner}</div></div>`;
 }
 function doneLine(text) { return `<div class="done">${CHECK}<span>${esc(text)}</span></div>`; }
-
-function moneyCard() {
-  const m = HUB.money, max = Math.max(...m.rows.map(r => r.amount)), t = m.today;
-  return `<div class="card risk">
-    <h3>Money at risk in the next ${m.horizon} days</h3>
-    <div class="hero"><span class="big">${usd(m.total)}</span><span class="sub2">about ${usdK(m.expected)} of it is recoverable if worked</span></div>
-    <div class="today"><b>Within 2 days:</b> ${usd(t.amount)} on ${t.claims} claims at ${esc(t.clients.join(" and "))}. ${t.hours} hours of work.</div>
-    <div class="risks">${m.rows.map(r => `<div class="rrow"><span class="amt">${usdK(r.amount)}</span><div><div>${esc(r.client)} · ${esc(r.what)}</div><div class="bar"><i style="width:${Math.round(100 * r.amount / max)}%"></i></div></div><span class="left ${r.days_left <= 2 ? "hot" : ""}">${r.days_left <= 0 ? "today" : r.days_left === 1 ? "tomorrow" : r.days_left + " days"}</span></div>`).join("")}</div>
-    <div class="move"><b>Biggest move: ${esc(m.move_short)}</b><span>About ${usdK(m.move_value)} back for ${m.move_hours} hours. ${esc(m.who)} has room (${esc(m.who_detail)}).</span></div>
-    ${state.done.how ? `<ul class="how">${m.how.map(h => `<li>${esc(h)}</li>`).join("")}</ul>` : ""}
-    ${state.done.plan ? doneLine(state.done.plan === "sent" ? `Plan sent to ${m.plan.to}` : "Plan drafted below") : `<div class="btns"><button class="btn primary" type="button" data-act="plan">Plan it</button>${state.done.how ? "" : `<button class="btn" type="button" data-act="how">How did you work this out?</button>`}</div>`}
+function buttons(id, bs) {
+  const d = state.done[id];
+  if (d) { const b = bs.find(x => x.id === d); return doneLine(b.done) + (b.draft ? `<div class="quote">${esc(b.draft)}</div>` : ""); }
+  return `<div class="btns">${bs.map((b, i) => `<button class="btn ${i ? "" : "primary"}" type="button" data-pick="${id}:${b.id}">${esc(b.label)}</button>`).join("")}</div>`;
+}
+function morningCard() {
+  const m = DAY.morning;
+  return `<div class="card info"><h3>Good morning. ${m.count} things on your list need you today.</h3>
+    <div class="rows">${m.rows.map((r, i) => `<div class="decision"><span class="n">${i + 1}</span><div><p>${esc(r.text)}</p><p class="w">${esc(r.why)}</p>${buttons(r.id, r.buttons)}</div></div>`).join("")}</div>
+    <div class="checked">${SPARK}<span>${DAY.calm} other open items are moving without you.</span></div>
+    <button class="more" type="button" data-act="list">${state.done.list ? "Hide your standing list" : "Show your standing list"}</button>
+    ${state.done.list ? `<div class="slist">${DAY.standing.map(s => `<div class="srow" title="${esc(s.detail)}"><i class="dot ${s.needs_you ? "on" : ""}"></i><span>${esc(s.label)}</span><b>${s.count}</b></div>`).join("")}</div>` : ""}
   </div>`;
 }
-function planCard() {
-  const p = HUB.money.plan, sent = state.done.plan === "sent";
-  return `<div class="card info"><h3>Here's the plan. Send it to ${esc(p.to)}?</h3><div class="quote">${esc(p.text)}</div>
-    ${sent ? doneLine("Sent. I'll tell you when the appeals start going out.") : `<div class="btns"><button class="btn primary" type="button" data-act="send-plan">Send to ${esc(p.to)}</button><button class="btn" type="button" data-act="ask-plan">Change something</button></div>`}</div>`;
+function eventCard(id, e, tone, title) {
+  return `<div class="card ${tone}"><h3>${esc(e.text)}</h3><p class="why">${esc(e.why)}</p>${buttons(id, e.buttons)}</div>`;
 }
-function opsCard() {
-  const o = HUB.ops;
-  return `<div class="card info"><h3>${esc(o.title)} at ${esc(o.at)}: ${o.decisions.length} decisions for you</h3>
-    <div class="checked">${SPARK}<span>Everything else is on track or already owned. These need you.</span></div>
-    ${o.decisions.map((d, i) => `<div class="decision"><span class="n">${i + 1}</span><div><p>${esc(d.text)}</p><p class="w">${esc(d.why)}</p>
-      ${state.done["d" + i] ? doneLine(d.done) : `<div class="btns"><button class="btn primary" type="button" data-dec="${i}">${esc(d.button)}</button></div>`}</div></div>`).join("")}
-  </div>`;
+function reportCard() {
+  const r = DAY.report, sent = state.done.report;
+  return `<div class="card info"><h3>Your hub report for today is ready.</h3><p class="why">Built from your standing list. Edit anything before it goes.</p>
+    <div class="quote ${state.done.full ? "" : "clip"}" ${state.done.full ? "" : 'data-act="full" title="Show all"'}>${esc(r.text)}</div>
+    ${sent ? doneLine("Sent to the COO.") : `<div class="btns"><button class="btn primary" type="button" data-act="report">Send to the COO</button><button class="btn" type="button" data-act="copy">Copy</button></div>`}</div>`;
 }
-function callCard() {
-  const c = HUB.call, list = xs => `<ul>${xs.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
-  return `<div class="card info"><h3>Pre-read: ${esc(c.title)}, tomorrow 19:00</h3>
-    <div class="prep"><div><h4>They will ask about</h4>${list(c.ask)}</div><div><h4>What we can say</h4>${list(c.say)}</div><div><h4>What we owe them</h4>${list(c.owe)}</div></div>
-  </div>`;
-}
-function openCount() { return HUB.ops.decisions.filter((_, i) => !state.done["d" + i]).length; }
+function openCount() { return DAY.morning.rows.filter(r => !state.done[r.id]).length + ["absence", "lockout"].filter(k => !state.done[k]).length + (state.done.report ? 0 : 1); }
 
 function draw() {
-  const parts = [`<div class="day">Today</div>`, row("Athena", HUB.money.time, moneyCard())];
-  parts.push(row("Athena", HUB.ops.time, opsCard()), row("Athena", "14:35", callCard()));
-  if (state.done.plan) parts.push(row("Athena", state.done.planAt || "", planCard()));
+  const parts = [`<div class="day">Monday</div>`, row("Athena", DAY.morning.time, morningCard()),
+    row("Athena", DAY.absence.time, eventCard("absence", DAY.absence, "risk")),
+    row("Athena", DAY.lockout.time, eventCard("lockout", DAY.lockout, "late")),
+    row("Athena", DAY.report.time, reportCard())];
   for (const msg of state.msgs) {
     if (msg.role === "me") parts.push(`<div class="row me"><div><div class="bubble"><p>${esc(msg.text)}</p></div></div></div>`);
     else parts.push(row("Athena", msg.at || "", msg.pending ? `<div class="bubble"><div class="working"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg>${esc(msg.status || "Looking into it")}</div></div>` : `<div class="bubble">${renderText(msg.text)}</div>`));
   }
   const log = document.getElementById("log");
+  const keep = log.scrollTop, atEnd = log.scrollHeight - log.scrollTop - log.clientHeight < 40;
   log.innerHTML = parts.join("");
-  log.scrollTop = log.scrollHeight;
+  log.scrollTop = scrollToEnd || atEnd ? log.scrollHeight : keep; scrollToEnd = false;
+  for (const b of log.querySelectorAll("[data-pick]")) b.addEventListener("click", () => { const [id, pick] = b.dataset.pick.split(":"); state.done[id] = pick; save(); draw(); drawRail(); });
   for (const b of log.querySelectorAll("[data-act]")) b.addEventListener("click", () => act(b.dataset.act));
-  for (const b of log.querySelectorAll("[data-dec]")) b.addEventListener("click", () => { state.done["d" + b.dataset.dec] = true; if (b.dataset.dec === "0") state.done.plan = "sent"; save(); draw(); drawRail(); });
   const asked = new Set(state.msgs.filter(m => m.role === "me").map(m => m.text));
-  document.getElementById("suggest").innerHTML = HUB.suggestions.filter(q => !asked.has(q)).map(q => `<button type="button" data-q="${esc(q)}">${esc(q)}</button>`).join("");
+  document.getElementById("suggest").innerHTML = DAY.suggestions.filter(q => !asked.has(q)).map(q => `<button type="button" data-q="${esc(q)}">${esc(q)}</button>`).join("");
   for (const b of document.querySelectorAll("#suggest [data-q]")) b.addEventListener("click", () => send(b.dataset.q));
   document.getElementById("send").disabled = busy;
 }
 function act(what) {
-  if (what === "how") state.done.how = true;
-  if (what === "plan") { state.done.plan = "drafted"; state.done.planAt = HUB.person.now.replace("Mon ", ""); }
-  if (what === "send-plan") { state.done.plan = "sent"; state.done.d0 = true; }
-  if (what === "ask-plan") { document.getElementById("q").value = "Change the plan: "; document.getElementById("q").focus(); return; }
+  if (what === "list") state.done.list = !state.done.list;
+  if (what === "full") state.done.full = true;
+  if (what === "report") state.done.report = true;
+  if (what === "copy") { try { navigator.clipboard?.writeText(DAY.report.text).catch(() => {}); } catch (_) {} }
   save(); draw(); drawRail();
 }
 function drawRail() {
   const n = openCount();
-  const others = [["DM One", "Northwind"], ["DM Two", "Bluefield"]];
+  const others = [["DM One", "DM/AM, Northwind"], ["DM Two", "DM/AM, Bluefield"], ["CSM One", "CSM"]];
   document.getElementById("rail").innerHTML =
-    `<div class="chatrow on"><div class="av ai" aria-hidden="true">${SPARK}</div><div><b>Athena</b><span>${n ? `${n} decision${n > 1 ? "s" : ""} waiting` : "All caught up"}</span></div>${n ? `<div class="badge">${n}</div>` : "<div></div>"}</div>` +
-    others.map(([name, c]) => `<div class="chatrow"><div class="av" aria-hidden="true">${esc(name.split(" ").map(w => w[0]).join(""))}</div><div><b>${esc(name)}</b><span>DM/AM, ${esc(c)}</span></div><div></div></div>`).join("") +
+    `<div class="chatrow on"><div class="av ai" aria-hidden="true">${SPARK}</div><div><b>Athena</b><span>${n ? `${n} waiting for you` : "All caught up"}</span></div>${n ? `<div class="badge">${n}</div>` : "<div></div>"}</div>` +
+    others.map(([name, r]) => `<div class="chatrow"><div class="av" aria-hidden="true">${esc(name.split(" ").map(w => w[0]).join(""))}</div><div><b>${esc(name)}</b><span>${esc(r)}</span></div><div></div></div>`).join("") +
     `<div class="chatrow"><div class="av" aria-hidden="true">#</div><div><b>Hub ops</b><span>Channel</span></div><div></div></div>`;
 }
 
@@ -421,20 +435,20 @@ function drawRail() {
 function instructions() {
   const p = PEOPLE[person];
   return [
-    `You are Athena, the chief of staff for ${p.name} (${p.role}) at Anka, a healthcare revenue-cycle company paid a share of what its clients collect. Demo with made-up data.`,
-    `Their clients: ${scopeOf(person).map(k => DATA.clients[k].name).join(", ")}. It is ${HUB.person.now} IST, Monday 05 Oct 2026.`,
-    "Think like an owner: money, margin, people and promises. Answer cross-client questions by calling several tools (money at risk, client economics, denials, AR aging, team and leave, client activity, meetings) and connecting the facts.",
-    "Reply like a sharp colleague in chat: 1 to 3 short sentences, at most 3 short bullets, numbers in dollars where you can. No headings, no bold, no preamble. Lead with the answer. Where useful, end with one concrete move and who should do it.",
-    "Use only tool results; never invent numbers, names or dates. If you cannot answer, say \"I don't know\" and what is missing. If data is old, say \"Data is not current\". Never give patient details. You only read data and draft; you never send anything to clients.",
+    `You are Athena, the assistant of ${p.name} (${p.role}) at Anka, an offshore healthcare revenue-cycle company in India serving US clients. Demo with made-up data.`,
+    `Their clients: ${scopeOf(person).map(k => DATA.clients[k].name).join(", ")}. It is ${DAY.person.now} IST, Monday 05 Oct 2026, near the end of their day.`,
+    "Their day is about people against work (absences, cover, who is trained), blocked work (logins, things waiting on the client, clearinghouse), turnaround, quality findings and client escalations. Use the tools for all of it and connect the facts.",
+    "Reply like a sharp colleague in chat: 1 to 3 short sentences, at most 4 short bullets. No headings, no bold, no preamble. Lead with the answer. Where useful, end with one concrete move and who should do it.",
+    "Use only tool results; never invent numbers, names or dates. If you cannot answer, say \"I don't know\" and what is missing (for example leave approvals, hiring and email are not visible to you). If data is old, say \"Data is not current\". Never give patient details. You only read data and draft; you never send anything to clients.",
   ].join("\n");
 }
 async function send(text) {
   text = String(text || "").trim(); if (!text || busy) return;
-  const at = HUB.person.now.replace("Mon ", "");
-  state.msgs.push({ role: "me", text, at });
+  const at = DAY.person.now;
+  state.msgs.push({ role: "me", text, at }); scrollToEnd = true;
   if (!(sampleFn && liveTools)) {
-    const c = HUB.canned[text];
-    state.msgs.push({ role: "athena", at, text: c ? c + "\n\nSources:\n- supaboard.economics, as of " + fmt(DATA.now) : "Open this page in Claude to ask Athena anything. Here you can try the suggested questions and the cards above." });
+    const c = DAY.canned[text];
+    state.msgs.push({ role: "athena", at, text: c ? c + "\n\nSources:\n- smartsheet.blockers, as of " + fmt(DATA.now) : "Open this page in Claude to ask Athena anything. Here you can try the suggested questions and the messages above." });
     save(); draw(); return;
   }
   const bot = { role: "athena", pending: true, status: "Looking into it", at };
@@ -443,21 +457,23 @@ async function send(text) {
   const redraw = () => { const last = steps.at(-1); if (last) bot.status = `Checking ${last.text.charAt(0).toLowerCase() + last.text.slice(1)}`; draw(); };
   const input = [{ role: "user", content: instructions() }, ...state.turns.slice(-6), { role: "user", content: text }];
   try {
-    const { text: out } = await sampleFn(input, { tools: [...hubTools(steps, redraw), ...makeTools(person, steps, redraw).filter(t => t.name !== "get_my_alerts")], modelTier: "default" });
+    const keep = new Set(["get_tasks", "get_task_history", "get_team", "get_metrics", "get_denials", "get_ar_aging", "get_tickets", "get_client_activity", "search_documents", "get_owner", "get_client_profile"]);
+    const { text: out } = await sampleFn(input, { tools: [...dayTools(steps, redraw), ...makeTools(person, steps, redraw).filter(t => keep.has(t.name))], modelTier: "default" });
     Object.assign(bot, { pending: false, text: finish(out, steps) });
     state.turns.push({ role: "user", content: text }, { role: "assistant", content: bot.text });
   } catch (e) {
     Object.assign(bot, { pending: false, text: { rate_limited: "Too many messages at once. Try again in a minute.", not_granted: "Athena needs permission to use Claude for live answers.", refused: "I can't help with that one." }[e?.code] || "Something went wrong. Try again." });
     if (["not_granted", "sampling_disabled", "tools_unavailable"].includes(e?.code)) liveTools = false;
-  } finally { busy = false; save(); draw(); }
+  } finally { busy = false; scrollToEnd = true; save(); draw(); }
 }
 
 // ---------------------------------------------------------------- start
+let scrollToEnd = false;
 state.msgs = state.msgs.filter(m => !m.pending);
 document.getElementById("me").textContent = PEOPLE[person].name;
 document.getElementById("form").addEventListener("submit", ev => { ev.preventDefault(); const q = document.getElementById("q"); const v = q.value; q.value = ""; send(v); });
 document.getElementById("q").addEventListener("keydown", ev => { if (ev.key === "Enter" && !ev.shiftKey) { ev.preventDefault(); document.getElementById("form").requestSubmit(); } });
 document.getElementById("headav").innerHTML = SPARK;
-drawRail(); draw();
+drawRail(); draw(); document.getElementById("log").scrollTop = 0;
 (async () => { try { sampleFn = await window.claude?.use?.("sample"); if (sampleFn) liveTools = !!(await sampleFn.limits().catch(() => null))?.tools; } catch (_) { sampleFn = null; } })();
 </script>

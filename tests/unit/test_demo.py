@@ -48,7 +48,14 @@ def test_interactive_page_build(cfg, tmp_path) -> None:
     page = d.save_html(
         d.run(cfg, ["csm"]), cfg.root / "docs/demo/template.html", tmp_path / "p.html", cfg
     ).read_text()
-    for marker in ("/*DEMO_DATA*/", "/*ASK_DATA*/", "/*SUGGESTIONS*/", "/*CANNED*/", "/*HUB*/"):
+    for marker in (
+        "/*DEMO_DATA*/",
+        "/*ASK_DATA*/",
+        "/*SUGGESTIONS*/",
+        "/*CANNED*/",
+        "/*HUB*/",
+        "/*DAY*/",
+    ):
         assert marker not in page
     assert "</script" not in page.split("const DEMO = ", 1)[1].split("const PEOPLE", 1)[0]
 
@@ -83,3 +90,28 @@ def test_hub_view_is_computed_from_data(cfg) -> None:
     assert hub["call"]["ask"] and hub["call"]["owe"]
     texts = [m["plan"]["text"], *hub["canned"].values(), *hub["call"]["say"]]
     assert all(not phi.lint(t, ["fixture.local"]) for t in texts)
+
+
+def test_hub_day_is_computed_from_the_standing_list(cfg) -> None:
+    from athena.core import phi
+
+    day = d.hub_day(cfg)
+    rows = {r["id"]: r for r in day["morning"]["rows"]}
+    assert list(rows) == ["posting", "waiting", "audit", "tickets"] and day["morning"]["count"] == 4
+    assert "322 items waiting" in rows["posting"]["text"] and "Analyst N3" in rows["posting"]["why"]
+    assert "$22,630 held" in rows["waiting"]["text"]  # the 3 items older than 5 days
+    assert sum(s["needs_you"] for s in day["standing"]) >= 4 and day["calm"] > 0
+    assert "Analyst B2" in day["absence"]["text"] and "Analyst B1" in day["absence"]["why"]
+    email = day["lockout"]["buttons"][0]["draft"]
+    assert (
+        email.startswith("To: Northwind office manager")
+        and "never writes to clients" in (day["lockout"]["buttons"][0]["done"])
+    )
+    assert day["report"]["text"].startswith("Hub report, Mon 05 Oct 18:50")
+    assert set(day["canned"]) == set(day["suggestions"]) == set(d.DAY_SUGGESTIONS)
+    texts = [r["text"] + r["why"] for r in day["morning"]["rows"]] + [
+        email,
+        *day["canned"].values(),
+    ]
+    assert all(not phi.lint(t, ["fixture.local"]) for t in texts)
+    assert "Cedar" not in " ".join(texts)  # another hub

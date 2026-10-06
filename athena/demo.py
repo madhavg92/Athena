@@ -283,6 +283,7 @@ def save_html(demo: Demo, template: Path, path: Path, cfg: AthenaConfig | None =
         page = page.replace("/*OPENS_AT*/null", js(OPENS_AT))
         page = page.replace("/*PROPOSALS*/null", js(proposals(cfg)))
         page = page.replace("/*HUB*/null", js(hub_view(cfg)))
+        page = page.replace("/*DAY*/null", js(hub_day(cfg)))
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(page)
     return path
@@ -817,4 +818,280 @@ def hub_view(cfg: AthenaConfig) -> dict[str, Any]:
             for m in week
         ],
         "briefs": {"ops": ops, "northwind": call},
+    }
+
+
+# ---------------------------------------------------------------- the hub leader's day (standing list)
+
+DAY_SUGGESTIONS = [
+    "Who can cover Northwind posting?",
+    "What are we waiting on from clients?",
+    "How many hours did logins cost us today?",
+]
+
+
+def _ist(hhmm: str) -> datetime:
+    anchor = fixture_anchor().astimezone(TZ)
+    h, m = (int(x) for x in hhmm.split(":"))
+    return anchor.replace(hour=h, minute=m, second=0, microsecond=0).astimezone(ZoneInfo("UTC"))
+
+
+def _first(name: str) -> str:
+    return name.split()[0]
+
+
+def hub_day(cfg: AthenaConfig) -> dict[str, Any]:
+    """Hub Leader Key's Monday, message by message. Every number comes from core/standing.py on
+    the synthetic fixtures; the words are templates. Decisions only message Anka managers or make
+    drafts; nothing goes to clients."""
+    from athena.core import standing
+
+    snapshot = fixture_anchor()
+    sources = Sources(cfg, clock=lambda: snapshot, run_mode="fixture")
+    hl = "hl.key@fixture.local"
+    scope = cfg.scope_of(hl)
+    people = cfg.owner_map.people
+    dm = {k: people[cfg.owner_map.clients[k].dm_am].name for k in scope}
+    csm = {k: people[cfg.owner_map.clients[k].csm].name for k in scope}
+
+    # 09:00 -- the morning message: what on the standing list needs the hub leader today
+    morning = _ist("09:00")
+    gaps = {(g.client, g.work_type): g for g in standing.capacity(cfg, sources, scope, morning)}
+    post = gaps[("northwind_ortho", "Payment posting")]
+    denials = gaps[("northwind_ortho", "Denials")]
+    team = [m for m in sources.read("smartsheet.team") if m.get("client") in scope]
+    trained = [
+        m.get("member")
+        for m in team
+        if "Payment posting" in (m.get("also_trained") or []) and m.get("client") == post.client
+    ]
+    back = standing._day(
+        next(m.get("leave_until") for m in team if m.get("member") == post.absent[0].split(" (")[0])
+    )
+    days_out = sum(
+        1
+        for d in range(1, 7)
+        if (morning + timedelta(days=d)).date() < back
+        and (morning + timedelta(days=d)).weekday() < 5
+    )
+    by_return = post.backlog + post.inflow_today * (days_out + 1)
+    left = round(denials.need_fte, 2)
+    blocks = standing.blocked(cfg, sources, scope, morning)
+    old = [
+        b
+        for b in blocks
+        if b["kind"] == "waiting_on_client"
+        and b["age_days"] > standing.thresholds(cfg)["waiting_on_client_days"]
+    ]
+    oldest = max(old, key=lambda b: b["age_days"])
+    finding = next(f for f in standing.findings(cfg, sources, scope, morning) if f["overdue"])
+    tickets = [
+        t
+        for t in sources.read("cs_hub.tickets")
+        if t.get("client") in scope
+        and t.get("status") != "closed"
+        and t.get("priority") == "high"
+        and not t.get("last_reply_at")
+    ]
+    same = len({t.get("subject") for t in tickets}) == 1 and len(tickets) > 1
+    items = standing.standing_list(cfg, sources, hl, morning)
+    chase = "\n".join(
+        [f"{dm['northwind_ortho']}, these have waited on the client for more than 5 days:"]
+        + [
+            f"- {b['client']}: {b['summary']} ({b['age_days']:.0f} days, {b['items_held']} items, ${b['amount_usd']:,})"
+            for b in sorted(old, key=lambda b: -b["age_days"])
+        ]
+        + ["Can you chase them on today's client calls and give me a date for each?"]
+    )
+    rows = [
+        {
+            "id": "posting",
+            "text": f"Northwind posting has {post.backlog} items waiting; the oldest is {post.oldest_days} days old (target {post.tat_days}).",
+            "why": f"{post.absent[0].split(' (')[0]} is on leave until {back:%a}. Only {', '.join(trained)} is trained to cover, and denials already need {denials.need_fte:g} FTE.",
+            "buttons": [
+                {
+                    "id": "move",
+                    "label": f"Move {trained[0]} to posting",
+                    "done": f"Sent to {dm['northwind_ortho']}. Posting is covered; denials will be {left:g} FTE short (about {round(left * denials.per_fte_day)} a day) until {back:%a}.",
+                },
+                {
+                    "id": "wait",
+                    "label": f"Wait for {post.absent[0].split(' (')[0]}",
+                    "done": f"Noted. About {by_return} posting items will be waiting by {back:%a}. I'll tell you if the oldest item passes 5 days.",
+                },
+            ],
+        },
+        {
+            "id": "waiting",
+            "text": f"{len(old)} things have waited on clients for more than 5 days, ${sum(b['amount_usd'] for b in old):,} held.",
+            "why": f"Oldest: {oldest['summary']} ({oldest['client'].split()[0]}, {oldest['age_days']:.0f} days).",
+            "buttons": [
+                {
+                    "id": "chase",
+                    "label": f"Ask {dm['northwind_ortho']} and {dm['bluefield_imaging']} to chase",
+                    "done": f"Sent to {dm['northwind_ortho']} and {dm['bluefield_imaging']}.",
+                    "draft": chase,
+                }
+            ],
+        },
+        {
+            "id": "audit",
+            "text": f"{finding['client'].split()[0]} found an error we made: {finding['summary'][0].lower() + finding['summary'][1:]}.",
+            "why": f"The fix was due {finding['due'].astimezone(TZ):%a}. It is still open.",
+            "buttons": [
+                {
+                    "id": "date",
+                    "label": f"Ask {dm['northwind_ortho']} for a date",
+                    "done": f"Sent to {dm['northwind_ortho']}.",
+                }
+            ],
+        },
+        {
+            "id": "tickets",
+            "text": (
+                f"Two clients raised the same problem and have had no reply: “{tickets[0].get('subject')}”."
+                if same
+                else f"{len(tickets)} high-priority client tickets have had no reply."
+            ),
+            "why": "; ".join(
+                f"{t.get('ticket_id')} {cfg.owner_map.clients[t.get('client')].name.split()[0]}, open {(morning - t.get('opened_at')).days or 1} day{'s' if (morning - t.get('opened_at')).days > 1 else ''}"
+                for t in tickets
+            )
+            + (". One fix may close both." if same else "."),
+            "buttons": [
+                {
+                    "id": "reply",
+                    "label": f"Ask {csm['northwind_ortho']} to reply today",
+                    "done": f"Sent to {csm['northwind_ortho']}.",
+                }
+            ],
+        },
+    ]
+    calm = [i for i in items if not i.needs_you]
+
+    # 10:32 -- R9: an unplanned absence
+    absence = _ist("10:32")
+    auth = standing.capacity(cfg, sources, scope, absence)
+    auth = next(g for g in auth if g.work_type == "Prior auth")
+    cover = auth.covers[0].split(" (")[0]
+    cover_left = auth.covers[0].split("leaves ")[1].rstrip(")")
+
+    # 12:45 -- R7 escalated: still locked out after 2 hours
+    esc = _ist("12:45")
+    lock = next(
+        b for b in standing.blocked(cfg, sources, scope, esc) if b["blocker_id"] == "BL-301"
+    )
+    tonight = round(lock["people_blocked"] * (_ist("18:30") - _ist("10:40")).total_seconds() / 3600)
+    email = (
+        "To: Northwind office manager\n"
+        "Subject: MFA reset needed for 2 Anka users\n\n"
+        f"Hello, two of our team ({', '.join(['Analyst N1', 'Analyst N3'])}) were locked out of the practice system at 10:40 IST. "
+        "The reset code comes to you. Could you approve it first thing when you start? Until then they cannot work on your accounts.\n"
+        f"Thank you, {csm['northwind_ortho']}"
+    )
+
+    # 18:50 -- the hub report, built from the standing list
+    end = _ist("18:50")
+    end_items = standing.standing_list(cfg, sources, hl, end)
+    report = standing.report_text(cfg, end_items, hl, end)
+
+    # data for the chat's tools and prepared answers (as of 18:50)
+    end_blocks = standing.blocked(cfg, sources, scope, end)
+    waiting = [b for b in end_blocks if b["kind"] == "waiting_on_client"]
+    locked = next(b for b in end_blocks if b["blocker_id"] == "BL-301")
+    expiring = [b for b in end_blocks if b["expires_in_hours"] is not None]
+    others = [
+        m.get("member")
+        for m in team
+        if m.get("client") != post.client
+        and (
+            "Payment posting" in (m.get("also_trained") or []) or m.get("role") == "Payment posting"
+        )
+    ]
+    canned = {
+        DAY_SUGGESTIONS[0]: (
+            f"Only {', '.join(trained)} is trained in posting, and they are on denials, which already need {denials.need_fte:g} FTE. "
+            f"Moving them covers posting and leaves denials {left:g} FTE short (about {round(left * denials.per_fte_day)} denials a day). "
+            + (
+                f"Also trained elsewhere: {', '.join(others)}."
+                if others
+                else "Nobody at Bluefield is trained in posting."
+            )
+        ),
+        DAY_SUGGESTIONS[1]: "\n".join(
+            [f"{len(waiting)} things, ${sum(b['amount_usd'] for b in waiting):,} held:"]
+            + [
+                f"- {b['client'].split()[0]}: {b['summary']} ({b['age_days']:.0f} days, ${b['amount_usd']:,})"
+                for b in sorted(waiting, key=lambda b: -b["age_days"])
+            ]
+        ),
+        DAY_SUGGESTIONS[2]: (
+            f"About {locked['hours_lost']:g} hours: {locked['people_blocked']} people at Northwind were locked out from 10:40. "
+            + "; ".join(
+                f"Next: a login at {b['client'].split()[0]} expires in {b['expires_in_hours']:.0f} hours ({b['owner']} has it)"
+                for b in expiring
+            )
+            + "."
+        ),
+    }
+    hub = hub_view(cfg)
+    return {
+        "person": {"name": people[hl].name, "email": hl, "now": "18:50"},
+        "morning": {"time": "09:00", "count": len(rows), "rows": rows},
+        "standing": [
+            {"label": i.label, "count": i.count, "needs_you": i.needs_you, "detail": i.detail}
+            for i in items
+        ],
+        "calm": len(calm),
+        "absence": {
+            "time": "10:32",
+            "text": f"{auth.absent[0].split(' (')[0]} has not logged in and has no leave booked. Bluefield has {auth.inflow_today} prior auths to do today and nobody on them.",
+            "why": f"{cover} is trained in prior auth. Moving them leaves {cover_left[0].lower() + cover_left[1:]}.",
+            "buttons": [
+                {
+                    "id": "cover",
+                    "label": f"Move {cover} to prior auth",
+                    "done": f"Sent to {dm['bluefield_imaging']}. Eligibility checks for tomorrow will run late.",
+                },
+                {
+                    "id": "ask",
+                    "label": f"Let {dm['bluefield_imaging']} decide",
+                    "done": f"Sent to {dm['bluefield_imaging']}.",
+                },
+            ],
+        },
+        "lockout": {
+            "time": "12:45",
+            "text": f"Still locked out after 2 hours: Analyst N1 and Analyst N3 at Northwind. {lock['hours_lost']:g} hours lost so far, about {tonight} by 18:30.",
+            "why": "The reset code goes to the client's office manager, who starts at 18:30 IST.",
+            "buttons": [
+                {
+                    "id": "email",
+                    "draft": email,
+                    "label": f"Draft the email for {csm['northwind_ortho']}",
+                    "done": f"Draft sent to {csm['northwind_ortho']} to check and send. Athena never writes to clients itself.",
+                }
+            ],
+        },
+        "report": {"time": "18:50", "text": report},
+        "tools": {
+            "standing": [i.model_dump(mode="json") for i in end_items]
+            + [{"key": "not_visible", "detail": standing.NOT_VISIBLE}],
+            "capacity": [
+                g.model_dump(mode="json") for g in standing.capacity(cfg, sources, scope, end)
+            ],
+            "blocked": [
+                {**b, "due": b["due"].isoformat() if b["due"] else None} for b in end_blocks
+            ],
+            "quality": [
+                {**f, "due": f["due"].isoformat() if f["due"] else None}
+                for f in standing.findings(cfg, sources, scope, end)
+            ],
+            "risks": hub["risks"],
+            "economics": hub["economics"],
+            "meetings": hub["meetings"],
+            "briefs": hub["briefs"],
+        },
+        "canned": canned,
+        "suggestions": DAY_SUGGESTIONS,
     }

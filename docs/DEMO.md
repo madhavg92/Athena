@@ -12,17 +12,18 @@ Everything in the demo is synthetic: three made-up clients (Northwind Orthopedic
 
 ## How the demo page works
 
-The page shows Athena as a hub leader's chief of staff, as a contact in their work chat (an illustration of Teams, without its branding). It is Monday 14:40 for Hub Leader Key. Athena is not another dashboard: it does the digging and comes with three things, each worked out in code from the data.
+The page shows one Monday of Hub Leader Key, with Athena as a contact in their work chat (an illustration of Teams, without its branding). It is 18:50. Everything Athena says is counted by code from the hub's standing list (`athena/core/standing.py`): the things that are always open for a hub leader. This is our assumed model of their day; replace it when real answers exist (`docs/DECISIONS.md`).
 
-- **09:00 Money at risk:** dollars that will be lost in the next 14 days if nobody acts (denials not appealed before their deadline, old claims before timely filing), what is due within 2 days, and the biggest single move with who has room to do it. **Plan it** writes the plan; **How did you work this out?** shows the method and the assumptions (provisional, in `context/money.yaml`; management sets them).
-- **14:30 Before the ops review:** the 3 decisions that need the hub leader, each with one button. Everything else is on track or already owned.
-- **14:35 Pre-read for tomorrow's Northwind call:** what the client will ask (open tickets), what we can say (with the numbers), and what we owe them.
+- **09:00 Morning message:** only the 4 things that need the hub leader today, each with one button. Posting is short because an analyst is on leave and the only trained cover is on denials. Things have waited on clients more than 5 days. The client found an error and the fix is overdue. Two clients have the same unanswered complaint. **Show your standing list** shows the whole always-open list with counts. A red dot means it needs them.
+- **10:32 Unplanned absence (rule R9):** who is out, what work has nobody on it, who is trained to cover and what moving them leaves short.
+- **12:45 Still locked out (rule R7, escalated):** hours lost so far and by tonight. Athena drafts the email for the CSM to send; it never writes to clients.
+- **18:50 Hub report:** built from the standing list, ready to send. It also says what Athena cannot see (leave approvals, hiring, email).
 
-Then the chat: questions across all their clients (margin, revenue per FTE, what fixing a payer problem is worth). Opened in Claude, a real model answers through Athena's tools, only for Hub Leader Key's clients. Opened elsewhere, the three suggested questions have prepared answers.
+Then the chat: questions about the hub (cover, what is blocked, what we wait on). Opened in Claude, a real model answers through Athena's tools, only for Hub Leader Key's clients. Opened elsewhere, the three suggested questions have prepared answers.
 
-Suggested flow: read the money card, press **How did you work this out?**, then **Plan it** and **Send**. Note that decision 1 in the ops card is now done. Then ask "Where are we losing margin?" and one question of their own.
+Suggested flow: read the morning message and open the standing list. Press **Move Analyst N3 to posting**, then the absence and lockout buttons. Open the report. Ask "Who can cover Northwind posting?" and one question of their own. Ask them: "Is this your day? What is missing from the list?"
 
-The same numbers come from the terminal: `athena ask "Where is money at risk?" --as hl.key@fixture.local` (tools `get_money_at_risk`, `get_client_economics`, `get_meetings`).
+The same data in the terminal: `athena ask "What is outstanding today?" --as hl.key@fixture.local` (tools `get_standing_list`, `get_capacity`, `get_blocked_work`, `get_quality`).
 
 ## What to say first (1 minute)
 

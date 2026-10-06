@@ -23,6 +23,7 @@ class Gap(BaseModel):
     backlog: int
     oldest_days: int
     tat_days: int
+    per_fte_day: int
     need_fte: float
     present_fte: float
     gap_fte: float  # positive = short, negative = room
@@ -113,6 +114,7 @@ def capacity(cfg: AthenaConfig, sources: Any, clients: list[str], now: datetime)
                 backlog=w.get("backlog"),
                 oldest_days=w.get("oldest_days"),
                 tat_days=w.get("tat_days"),
+                per_fte_day=w.get("per_fte_day"),
                 need_fte=b["need"],
                 present_fte=b["have"],
                 gap_fte=gap,

@@ -2,10 +2,10 @@
  {
   "client": "northwind_ortho",
   "closed_at": null,
-  "due": "2026-10-04T05:30:00Z",
+  "due": "2026-10-02T05:30:00Z",
   "finding_id": "QF-41",
   "found_by": "client",
-  "opened_at": "2026-10-02T05:30:00Z",
+  "opened_at": "2026-09-30T05:30:00Z",
   "owner": "dm.one@fixture.local",
   "severity": "high",
   "status": "open",
