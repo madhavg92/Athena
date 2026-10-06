@@ -1,0 +1,105 @@
+import pytest
+
+from athena.connectors.base import fixture_anchor
+from athena.connectors.registry import Sources
+from athena.core.gateway import Gateway
+from athena.core.killswitch import set_switch
+from athena.tools.base import ToolContext
+from athena.tools.registry import TOOLS, call, schemas
+
+ANCHOR = fixture_anchor()
+
+
+@pytest.fixture
+def ctx(cfg, db):
+    clock = lambda: ANCHOR  # noqa: E731
+    return ToolContext(
+        cfg=cfg,
+        gateway=Gateway(cfg, db, clock=clock),
+        sources=Sources(cfg, clock=clock, run_mode="fixture"),
+        actor="hl.key@fixture.local",
+    )
+
+
+def test_six_tools_with_schemas() -> None:
+    assert set(TOOLS) == {
+        "get_tasks",
+        "get_metrics",
+        "get_tickets",
+        "search_documents",
+        "get_owner",
+        "get_client_profile",
+    }
+    for s in schemas():
+        assert s["type"] == "function" and s["function"]["parameters"]["type"] == "object"
+        assert "client" in s["function"]["parameters"]["required"]
+
+
+def test_get_tasks_by_name(ctx) -> None:
+    r = call(ctx, "get_tasks", {"client": "Northwind Orthopedics"})
+    assert r.ok and r.client == "northwind_ortho"
+    assert all(row["status"] != "Complete" for row in r.records)
+    assert any(row["late"] for row in r.records)
+    assert r.sources[0].name == "smartsheet.tasks" and not r.stale
+
+
+def test_scope_refused(ctx) -> None:
+    r = call(ctx, "get_tasks", {"client": "Cedar Family Clinic"})
+    assert not r.ok and "not in your scope" in r.error
+
+
+def test_kill_switch_refuses_tool(ctx, db) -> None:
+    set_switch(db, "user", "hl.key@fixture.local", True, "ops")
+    assert "kill switch" in call(ctx, "get_owner", {"client": "northwind_ortho"}).error
+
+
+def test_unknown_client_tool_and_args(ctx) -> None:
+    assert "unknown client" in call(ctx, "get_tasks", {"client": "Acme"}).error
+    assert "unknown tool" in call(ctx, "drop_tables", {}).error
+    assert (
+        "unknown arguments" in call(ctx, "get_owner", {"client": "northwind_ortho", "x": 1}).error
+    )
+    assert "missing" in call(ctx, "get_metrics", {"client": "northwind_ortho"}).error
+    assert (
+        "unknown tool"
+        in call(ctx, "get_tasks", {"client": "northwind_ortho"}, allowed=["get_owner"]).error
+    )
+
+
+def test_metrics(ctx) -> None:
+    r = call(ctx, "get_metrics", {"client": "northwind_ortho", "metric": "backlog"})
+    assert len(r.records) == 1 and r.records[0]["target"] == 300.0 and "meaning" in r.records[0]
+    week = call(
+        ctx,
+        "get_metrics",
+        {"client": "northwind_ortho", "metric": "backlog", "period": "last_7_days"},
+    )
+    assert len(week.records) == 7
+    assert (
+        "unknown metric"
+        in call(ctx, "get_metrics", {"client": "northwind_ortho", "metric": "joy"}).error
+    )
+
+
+def test_tickets_health_and_stale(cfg, db) -> None:
+    clock = lambda: ANCHOR  # noqa: E731
+    ctx = ToolContext(
+        cfg=cfg,
+        gateway=Gateway(cfg, db, clock=clock),
+        sources=Sources(cfg, clock=clock, run_mode="fixture"),
+        actor="hl.small@fixture.local",
+    )
+    r = call(ctx, "get_tickets", {"client": "cedar_family_clinic"})
+    assert r.ok and r.records[0]["health_score"] == 64
+    assert r.stale and "warning" in r.for_model()
+
+
+def test_documents_owner_profile(ctx) -> None:
+    docs = call(
+        ctx, "search_documents", {"client": "bluefield_imaging", "words": "statement of work scope"}
+    )
+    assert docs.records and docs.records[0]["url"].startswith("https://example.sharepoint.com")
+    owner = call(ctx, "get_owner", {"client": "bluefield_imaging"})
+    assert owner.records[0]["dm_am"].startswith("DM Two")
+    prof = call(ctx, "get_client_profile", {"client": "bluefield_imaging"})
+    assert "imaging" in prof.records[0]["profile"]
