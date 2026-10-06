@@ -27,7 +27,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M3.5 Golden set and `athena eval golden`
 - [x] M3.6 `athena ask`
 - [ ] M4.1 Model bake-off harness — real runs: G5 — harness done; real model runs wait for G5 (user runs them)
-- [ ] M5.1 Agents SDK check and decision
+- [x] M5.1 Agents SDK check and decision
 - [ ] M5.2 Azure Functions entry point — G6, GD
 - [ ] M5.3 Teams user mapping
 - [ ] M5.4 Adaptive Cards
@@ -73,3 +73,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M3.5: 24 synthetic questions over 4 personas (scope, IDK, stale, source refusals); stub passes 24/24; report in reports/.
 - M3.6: athena ask '<q>' --as <email> [--model] [--conversation]; prints answer + sources; run info on stderr.
 - M4.1: eval golden for any model + JSON per run; eval summary compares latest per model; live runs refused unless contract_covers_data: yes.
+- M5.1: Agents SDK for Python 1.8.0 checked from package source (docs site blocked); hosting plan, identity mapping and versions recorded in DECISIONS; optional deps .[teams].

@@ -22,6 +22,14 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest", "ruff"]
+teams = [
+  "azure-functions>=2.3",
+  "microsoft-agents-hosting-core==1.8.0",
+  "microsoft-agents-hosting-aiohttp==1.8.0",
+  "microsoft-agents-authentication-msal==1.8.0",
+  "microsoft-agents-activity==1.8.0",
+]
+postgres = ["psycopg[binary]>=3.1", "alembic>=1.13"]
 
 [project.scripts]
 athena = "athena.cli:app"
