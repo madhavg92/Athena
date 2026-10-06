@@ -76,3 +76,26 @@ def kill(
     for scope, key in targets:
         set_switch(db, scope, key, on=not off, set_by=_operator())
         typer.echo(f"{'OFF' if off else 'ON '} {scope} {key}")
+
+
+@app.command()
+def whoami(as_: str = typer.Option(..., "--as", help="Email of the person.")) -> None:
+    """Show the name, persona and clients in scope for a person."""
+    cfg = _config()
+    person = cfg.person(as_)
+    if person is None:
+        typer.echo("You are not set up for Athena yet.")
+        raise typer.Exit(1)
+    persona = cfg.personas[person.persona]
+    hours, tz = cfg.work_hours_of(as_)
+    clients = cfg.scope_of(as_)
+    typer.echo(f"Name:     {person.name}")
+    typer.echo(f"Email:    {as_.lower()}")
+    typer.echo(f"Persona:  {persona.persona}")
+    typer.echo(f"Rules:    {', '.join(persona.rules)}")
+    typer.echo(
+        f"Hours:    {hours.start:%H:%M}-{hours.end:%H:%M} {tz}; digest at {persona.digest_time}"
+    )
+    typer.echo(
+        "Clients:  " + (", ".join(cfg.owner_map.clients[c].name for c in clients) or "(none)")
+    )
