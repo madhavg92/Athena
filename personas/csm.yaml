@@ -1,0 +1,9 @@
+persona: csm
+scope: clients where csm = me
+rules: [R1, R4]
+sources: [smartsheet, supaboard, cs_hub, sharepoint]
+sharepoint_sites: client_context
+work_hours: "17:00-02:00"      # US-facing hours; confirm (G8)
+digest_time: "17:00"
+tz: Asia/Kolkata
+must_not: [client_send, data_change]

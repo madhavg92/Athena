@@ -1,0 +1,6 @@
+# Plain definitions of Anka terms that the model may need. Synthetic starter entries.
+hub: A group of clients that one hub leader manages.
+DM/AM: Delivery manager / account manager. Owns the daily delivery for a set of clients.
+CSM: Client success manager. Owns the client relationship.
+BA: Business analyst. Builds client reports.
+WBR: Weekly business review report for a client.

@@ -1,0 +1,15 @@
+id: R5
+name: Weekly client report draft
+trigger: {cron: "0 8 * * 1", tz: Asia/Kolkata}
+source: supaboard.metrics
+clients: [northwind_ortho, bluefield_imaging]
+builder:
+  type: wbr
+  template: context/templates/wbr.pptx     # real template from the BA team (G7)
+  period: last_week
+data_max_age: 24h
+notify: owner_map.client.ba
+action: draft
+delivery: now
+phase: 1
+mode: live

@@ -1,0 +1,32 @@
+# SYNTHETIC fixture owner map. The real map (G10) replaces it in live mode only, from a file
+# outside Git or a private branch decided by the user. Never commit real names here.
+people:
+  hl.key@fixture.local:   {name: Hub Leader Key,   persona: hub_leader}
+  hl.small@fixture.local: {name: Hub Leader Small, persona: hub_leader}
+  dm.one@fixture.local:   {name: DM One,  persona: dm_am}
+  dm.two@fixture.local:   {name: DM Two,  persona: dm_am}
+  csm.one@fixture.local:  {name: CSM One, persona: csm}
+  csm.two@fixture.local:  {name: CSM Two, persona: csm}
+  ba.one@fixture.local:   {name: BA One,  persona: ba}
+clients:
+  northwind_ortho:
+    name: Northwind Orthopedics
+    hub: key_clients
+    hub_leader: hl.key@fixture.local
+    dm_am: dm.one@fixture.local
+    csm: csm.one@fixture.local
+    ba: ba.one@fixture.local
+  bluefield_imaging:
+    name: Bluefield Imaging
+    hub: key_clients
+    hub_leader: hl.key@fixture.local
+    dm_am: dm.two@fixture.local
+    csm: csm.one@fixture.local
+    ba: ba.one@fixture.local
+  cedar_family_clinic:
+    name: Cedar Family Clinic
+    hub: small_clients
+    hub_leader: hl.small@fixture.local
+    dm_am: dm.two@fixture.local
+    csm: csm.two@fixture.local
+    ba: ba.one@fixture.local

@@ -1,0 +1,4 @@
+sharepoint_sites:
+  client_context:
+    - "https://example.sharepoint.com/sites/client-context"   # real sites come from G4
+internal_email_domains: [fixture.local]                       # real domains come from .env in live mode

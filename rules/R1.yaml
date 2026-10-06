@@ -1,0 +1,10 @@
+id: R1
+name: Ask Anka
+trigger: {question: any}
+action: answer
+tools: [get_tasks, get_metrics, get_tickets, search_documents, get_owner, get_client_profile]
+max_tool_calls: 8
+data_max_age: 24h
+template: ask_default
+phase: 1
+mode: live

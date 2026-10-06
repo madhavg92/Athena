@@ -1,0 +1,28 @@
+id: R2
+name: Late-task alert
+trigger: {cron: "*/15 * * * *", tz: Asia/Kolkata}
+source: smartsheet.tasks
+check:
+  type: threshold
+  key: task_id
+  severities:            # checked in this order; first match wins. Values from the hub leader (G8).
+    late:
+      - {field: due, op: before, value: now}
+      - {field: status, op: ne, value: Complete}
+    at_risk:
+      - {field: due, op: within, value: 4h}
+      - {field: last_update, op: older_than, value: 2h}
+      - {field: status, op: ne, value: Complete}
+data_max_age: 30m
+owner: owner_map.client.dm_am
+ladder:
+  - {after: 0h, to: dm_am}
+  - {after: 4h, to: hub_leader}
+renudge_after: 2h
+close_when: {cleared: true}
+message: {writer: model, template: late_task_alert}
+action: notify
+delivery: now
+phase: 1
+mode: shadow
+max_wrong_rate: 0.2     # placeholder for demotion logic; management sets the real value

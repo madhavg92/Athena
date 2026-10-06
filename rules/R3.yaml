@@ -1,0 +1,22 @@
+id: R3
+name: Daily exception digest
+trigger: {cron: "30 8 * * 1-5", tz: Asia/Kolkata}   # confirm work days and time (G8)
+source: supaboard.metrics
+check:
+  type: threshold
+  key: client_metric
+  severities:
+    below_target:
+      - {field: actual, op: lt_field, value: target}
+include_open_alerts: [R2]
+data_max_age: 24h
+owner: owner_map.client.hub_leader
+ladder:
+  - {after: 0h, to: hub_leader}
+message: {writer: model, template: exception_digest}
+empty_message: "No exceptions today."
+action: notify
+delivery: digest
+phase: 1
+mode: shadow
+max_wrong_rate: 0.2

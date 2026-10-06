@@ -1,0 +1,11 @@
+id: R4
+name: Pre-call client brief
+trigger: {question: brief}        # questions that start with "brief" or "brief me"
+action: answer
+tools: [get_tickets, get_metrics, get_tasks, search_documents, get_client_profile, get_owner]
+max_tool_calls: 8
+data_max_age: 24h
+template: client_brief
+sections: [health, open_tickets, metrics, open_tasks, recent_documents]
+phase: 1
+mode: live
