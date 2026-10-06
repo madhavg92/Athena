@@ -1,0 +1,11 @@
+# PROVISIONAL assumptions for the money-at-risk view. Synthetic. Management replaces them (Athena does not set targets).
+horizon_days: 14              # "at risk this week" looks this far ahead
+appeal_success_pct:           # share of appealed denials expected to be paid, by reason code
+  CO-16: 80
+  CO-197: 70
+  CO-29: 10
+  CO-50: 35
+  CO-22: 60
+work_success_pct: 75          # share of over-90 AR expected to be collected if worked before timely filing
+minutes_per_appeal: 20
+minutes_per_ar_claim: 15

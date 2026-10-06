@@ -605,6 +605,137 @@ def activity() -> list[dict]:
     ]
 
 
+# ---------------------------------------------------------------- money, economics, calendar (hub-leader agent)
+APPEAL_WINDOW_DAYS = {PAYERS[0]: 60, PAYERS[1]: 30, PAYERS[2]: 90, PAYERS[3]: 45}
+TF_LIMIT_DAYS = {PAYERS[0]: 180, PAYERS[1]: 120, PAYERS[2]: 90, PAYERS[3]: 180}
+AVG_CLAIM_USD = {"northwind_ortho": 640, "bluefield_imaging": 410, "cedar_family_clinic": 185}
+
+
+def denied_claims(denial_rows: list[dict], rng: random.Random) -> list[dict]:
+    """Claim-level denials from the last 30 days, with amount, appeal deadline and work status."""
+    since = (ANCHOR - timedelta(days=30)).date().isoformat()
+    out, n = [], 0
+    for r in denial_rows:
+        if r["date"] < since:
+            continue
+        for _ in range(r["count"]):
+            n += 1
+            denied_on = datetime.fromisoformat(r["date"] + "T05:00:00+00:00")
+            deadline = denied_on + timedelta(days=APPEAL_WINDOW_DAYS[r["payer"]])
+            age = (ANCHOR - denied_on).days
+            # the denials analyst is overloaded, so Northwind's Payer B prior-auth denials are mostly untouched
+            backlog = r["client"] == "northwind_ortho" and r["reason_code"] == "CO-197"
+            worked = rng.random() < (0.15 if backlog else min(0.9, 0.25 + age * 0.04))
+            out.append(
+                {
+                    "claim_id": f"{r['client'][:2].upper()}-D{n:05d}",
+                    "client": r["client"],
+                    "payer": r["payer"],
+                    "reason_code": r["reason_code"],
+                    "reason": r["reason"],
+                    "denied_on": r["date"],
+                    "amount_usd": round(AVG_CLAIM_USD[r["client"]] * rng.uniform(0.6, 1.5)),
+                    "appeal_deadline": deadline.date().isoformat(),
+                    "status": "appealed" if worked else "not worked",
+                }
+            )
+    return out
+
+
+def ar_over_90_claims(aging: list[dict], rng: random.Random) -> list[dict]:
+    """Claims in the over-90-day AR bucket (latest week), with their timely-filing deadline."""
+    latest = {}
+    for r in aging:
+        if r["client"] not in latest or r["week_start"] > latest[r["client"]]["week_start"]:
+            latest[r["client"]] = r
+    out, n = [], 0
+    for client, r in latest.items():
+        left = r["over_90"]
+        while left > 0:
+            n += 1
+            amount = min(left, round(AVG_CLAIM_USD[client] * rng.uniform(0.8, 2.5)))
+            left -= amount
+            payer = rng.choices(PAYERS, weights=[4, 2, 2, 2])[0]
+            dos = ANCHOR - timedelta(
+                days=rng.randint(91, TF_LIMIT_DAYS[payer] - 1 if TF_LIMIT_DAYS[payer] > 92 else 92)
+            )
+            tf = dos + timedelta(days=TF_LIMIT_DAYS[payer])
+            out.append(
+                {
+                    "claim_id": f"{client[:2].upper()}-A{n:05d}",
+                    "client": client,
+                    "payer": payer,
+                    "date_of_service": dos.date().isoformat(),
+                    "amount_usd": amount,
+                    "timely_filing_deadline": tf.date().isoformat(),
+                    "last_touch": (ANCHOR - timedelta(days=rng.randint(3, 40))).date().isoformat(),
+                }
+            )
+    return out
+
+
+def client_economics() -> list[dict]:
+    """Monthly revenue (Anka's fee), FTE and cost per client. Fee is a share of collections."""
+    base = {
+        "northwind_ortho": {"fee_pct": 5.0, "revenue": [14600, 14100, 13200], "fte": 3.5},
+        "bluefield_imaging": {"fee_pct": 4.5, "revenue": [13300, 13600, 13900], "fte": 3.0},
+        "cedar_family_clinic": {"fee_pct": 6.0, "revenue": [4600, 4400, 4100], "fte": 1.5},
+    }
+    cost_per_fte = 1400
+    rows = []
+    for client, b in base.items():
+        for i, month in enumerate(["2026-07", "2026-08", "2026-09"]):
+            rows.append(
+                {
+                    "client": client,
+                    "month": month,
+                    "revenue_usd": b["revenue"][i],
+                    "fte": b["fte"],
+                    "cost_usd": round(b["fte"] * cost_per_fte),
+                    "fee_pct_of_collections": b["fee_pct"],
+                    "query_id": "sb.economics.monthly",
+                }
+            )
+    return rows
+
+
+def calendar() -> list[dict]:
+    """Meetings for the week (titles and times only; no content)."""
+
+    def ist(d: int, h: int, m: int = 0) -> str:
+        return iso(datetime(2026, 10, d, h, m, tzinfo=UTC) - timedelta(hours=5, minutes=30))
+
+    return [
+        {
+            "owner": "hl.key@fixture.local",
+            "start": ist(5, 15),
+            "end": ist(5, 16),
+            "title": "Weekly hub ops review",
+            "type": "internal",
+            "client": None,
+            "attendees": ["hl.key@fixture.local", "dm.one@fixture.local", "dm.two@fixture.local"],
+        },
+        {
+            "owner": "hl.key@fixture.local",
+            "start": ist(6, 19),
+            "end": ist(6, 19, 45),
+            "title": "Northwind weekly call",
+            "type": "client",
+            "client": "northwind_ortho",
+            "attendees": ["hl.key@fixture.local", "csm.one@fixture.local", "dm.one@fixture.local"],
+        },
+        {
+            "owner": "hl.key@fixture.local",
+            "start": ist(8, 18, 30),
+            "end": ist(8, 19, 30),
+            "title": "Bluefield quarterly review",
+            "type": "client",
+            "client": "bluefield_imaging",
+            "attendees": ["hl.key@fixture.local", "csm.one@fixture.local", "dm.two@fixture.local"],
+        },
+    ]
+
+
 def main() -> None:
     rng = random.Random(SEED)
     write("meta.json", {"anchor": iso(ANCHOR), "seed": SEED, "synthetic": True})
@@ -630,6 +761,14 @@ def main() -> None:
     write("smartsheet/task_history.json", task_history(task_rows, rich))
     write("smartsheet/team.json", team())
     write("cshub/activity.json", activity())
+    money = random.Random(SEED + 200)  # separate stream again: earlier files stay unchanged
+    write("supaboard/denied_claims.json", denied_claims(denial_rows, money))
+    write(
+        "supaboard/ar_over_90.json",
+        ar_over_90_claims(json.loads((OUT / "supaboard/ar_aging.json").read_text()), money),
+    )
+    write("supaboard/economics.json", client_economics())
+    write("graph/calendar.json", calendar())
 
 
 if __name__ == "__main__":

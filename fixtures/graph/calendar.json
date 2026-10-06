@@ -1,0 +1,41 @@
+[
+ {
+  "attendees": [
+   "hl.key@fixture.local",
+   "dm.one@fixture.local",
+   "dm.two@fixture.local"
+  ],
+  "client": null,
+  "end": "2026-10-05T10:30:00Z",
+  "owner": "hl.key@fixture.local",
+  "start": "2026-10-05T09:30:00Z",
+  "title": "Weekly hub ops review",
+  "type": "internal"
+ },
+ {
+  "attendees": [
+   "hl.key@fixture.local",
+   "csm.one@fixture.local",
+   "dm.one@fixture.local"
+  ],
+  "client": "northwind_ortho",
+  "end": "2026-10-06T14:15:00Z",
+  "owner": "hl.key@fixture.local",
+  "start": "2026-10-06T13:30:00Z",
+  "title": "Northwind weekly call",
+  "type": "client"
+ },
+ {
+  "attendees": [
+   "hl.key@fixture.local",
+   "csm.one@fixture.local",
+   "dm.two@fixture.local"
+  ],
+  "client": "bluefield_imaging",
+  "end": "2026-10-08T14:00:00Z",
+  "owner": "hl.key@fixture.local",
+  "start": "2026-10-08T13:00:00Z",
+  "title": "Bluefield quarterly review",
+  "type": "client"
+ }
+]

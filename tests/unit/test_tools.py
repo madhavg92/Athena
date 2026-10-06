@@ -35,10 +35,18 @@ def test_tools_with_schemas() -> None:
         "get_team",
         "get_client_activity",
         "get_my_alerts",
+        "get_money_at_risk",
+        "get_client_economics",
+        "get_meetings",
     }
     for s in schemas():
         assert s["type"] == "function" and s["function"]["parameters"]["type"] == "object"
-        if s["function"]["name"] != "get_my_alerts":
+        if s["function"]["name"] not in (
+            "get_my_alerts",
+            "get_money_at_risk",
+            "get_client_economics",
+            "get_meetings",
+        ):
             assert "client" in s["function"]["parameters"]["required"]
 
 

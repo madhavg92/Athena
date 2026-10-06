@@ -9,9 +9,12 @@ from athena.connectors.base import NotConfigured
 from athena.tools import (
     get_ar_aging,
     get_client_activity,
+    get_client_economics,
     get_client_profile,
     get_denials,
+    get_meetings,
     get_metrics,
+    get_money_at_risk,
     get_my_alerts,
     get_owner,
     get_task_history,
@@ -39,6 +42,9 @@ TOOLS: dict[str, Tool] = {
         get_team,
         get_client_activity,
         get_my_alerts,
+        get_money_at_risk,
+        get_client_economics,
+        get_meetings,
     )
 }
 
@@ -53,6 +59,8 @@ TOOL_SOURCES = {
     "get_task_history": "smartsheet",
     "get_team": "smartsheet",
     "get_client_activity": "cs_hub",
+    "get_money_at_risk": "supaboard",
+    "get_client_economics": "economics",
 }  # get_owner and get_client_profile read Git context files: always allowed
 
 
@@ -65,7 +73,17 @@ def resolve_client(ctx: ToolContext, value: str | None) -> str | None:
         return None
     if value in ctx.cfg.owner_map.clients:
         return value
-    return ctx.cfg.client_by_name(value)
+    found = ctx.cfg.client_by_name(value)
+    if found:
+        return found
+    # a short name ("Northwind"): accept it only when it matches exactly one client
+    low = value.lower().strip()
+    hits = [
+        k
+        for k, c in ctx.cfg.owner_map.clients.items()
+        if low and (c.name.lower().startswith(low) or k.startswith(low))
+    ]
+    return hits[0] if len(hits) == 1 else None
 
 
 def call(

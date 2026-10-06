@@ -1,0 +1,83 @@
+[
+ {
+  "client": "northwind_ortho",
+  "cost_usd": 4900,
+  "fee_pct_of_collections": 5.0,
+  "fte": 3.5,
+  "month": "2026-07",
+  "query_id": "sb.economics.monthly",
+  "revenue_usd": 14600
+ },
+ {
+  "client": "northwind_ortho",
+  "cost_usd": 4900,
+  "fee_pct_of_collections": 5.0,
+  "fte": 3.5,
+  "month": "2026-08",
+  "query_id": "sb.economics.monthly",
+  "revenue_usd": 14100
+ },
+ {
+  "client": "northwind_ortho",
+  "cost_usd": 4900,
+  "fee_pct_of_collections": 5.0,
+  "fte": 3.5,
+  "month": "2026-09",
+  "query_id": "sb.economics.monthly",
+  "revenue_usd": 13200
+ },
+ {
+  "client": "bluefield_imaging",
+  "cost_usd": 4200,
+  "fee_pct_of_collections": 4.5,
+  "fte": 3.0,
+  "month": "2026-07",
+  "query_id": "sb.economics.monthly",
+  "revenue_usd": 13300
+ },
+ {
+  "client": "bluefield_imaging",
+  "cost_usd": 4200,
+  "fee_pct_of_collections": 4.5,
+  "fte": 3.0,
+  "month": "2026-08",
+  "query_id": "sb.economics.monthly",
+  "revenue_usd": 13600
+ },
+ {
+  "client": "bluefield_imaging",
+  "cost_usd": 4200,
+  "fee_pct_of_collections": 4.5,
+  "fte": 3.0,
+  "month": "2026-09",
+  "query_id": "sb.economics.monthly",
+  "revenue_usd": 13900
+ },
+ {
+  "client": "cedar_family_clinic",
+  "cost_usd": 2100,
+  "fee_pct_of_collections": 6.0,
+  "fte": 1.5,
+  "month": "2026-07",
+  "query_id": "sb.economics.monthly",
+  "revenue_usd": 4600
+ },
+ {
+  "client": "cedar_family_clinic",
+  "cost_usd": 2100,
+  "fee_pct_of_collections": 6.0,
+  "fte": 1.5,
+  "month": "2026-08",
+  "query_id": "sb.economics.monthly",
+  "revenue_usd": 4400
+ },
+ {
+  "client": "cedar_family_clinic",
+  "cost_usd": 2100,
+  "fee_pct_of_collections": 6.0,
+  "fte": 1.5,
+  "month": "2026-09",
+  "query_id": "sb.economics.monthly",
+  "revenue_usd": 4100
+ }
+]

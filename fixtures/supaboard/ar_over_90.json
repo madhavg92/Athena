@@ -1,0 +1,5258 @@
+[
+ {
+  "amount_usd": 1493,
+  "claim_id": "NO-A00001",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-11",
+  "last_touch": "2026-09-02",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-07"
+ },
+ {
+  "amount_usd": 1041,
+  "claim_id": "NO-A00002",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-04",
+  "last_touch": "2026-09-11",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-31"
+ },
+ {
+  "amount_usd": 1112,
+  "claim_id": "NO-A00003",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-31",
+  "last_touch": "2026-09-01",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-27"
+ },
+ {
+  "amount_usd": 975,
+  "claim_id": "NO-A00004",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-14",
+  "last_touch": "2026-08-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-11"
+ },
+ {
+  "amount_usd": 927,
+  "claim_id": "NO-A00005",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-01",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 1540,
+  "claim_id": "NO-A00006",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-10",
+  "last_touch": "2026-09-08",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-08"
+ },
+ {
+  "amount_usd": 533,
+  "claim_id": "NO-A00007",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-21",
+  "last_touch": "2026-09-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-18"
+ },
+ {
+  "amount_usd": 1524,
+  "claim_id": "NO-A00008",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-04",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 859,
+  "claim_id": "NO-A00009",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-09-16",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-06"
+ },
+ {
+  "amount_usd": 1039,
+  "claim_id": "NO-A00010",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-15",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 1055,
+  "claim_id": "NO-A00011",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-10",
+  "last_touch": "2026-09-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-06"
+ },
+ {
+  "amount_usd": 1229,
+  "claim_id": "NO-A00012",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-06",
+  "last_touch": "2026-09-03",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-03"
+ },
+ {
+  "amount_usd": 1243,
+  "claim_id": "NO-A00013",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-29",
+  "last_touch": "2026-09-12",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-26"
+ },
+ {
+  "amount_usd": 1057,
+  "claim_id": "NO-A00014",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-21",
+  "last_touch": "2026-09-18",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-18"
+ },
+ {
+  "amount_usd": 547,
+  "claim_id": "NO-A00015",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-18",
+  "last_touch": "2026-08-26",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-14"
+ },
+ {
+  "amount_usd": 1531,
+  "claim_id": "NO-A00016",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-25",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 1580,
+  "claim_id": "NO-A00017",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-20",
+  "last_touch": "2026-09-10",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-17"
+ },
+ {
+  "amount_usd": 724,
+  "claim_id": "NO-A00018",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-11",
+  "last_touch": "2026-09-27",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-08"
+ },
+ {
+  "amount_usd": 1030,
+  "claim_id": "NO-A00019",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-24",
+  "last_touch": "2026-09-04",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-20"
+ },
+ {
+  "amount_usd": 520,
+  "claim_id": "NO-A00020",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-27",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 1165,
+  "claim_id": "NO-A00021",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-10",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 1409,
+  "claim_id": "NO-A00022",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-22",
+  "last_touch": "2026-09-14",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-19"
+ },
+ {
+  "amount_usd": 959,
+  "claim_id": "NO-A00023",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-16",
+  "last_touch": "2026-09-07",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-14"
+ },
+ {
+  "amount_usd": 1479,
+  "claim_id": "NO-A00024",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-26",
+  "last_touch": "2026-10-01",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-24"
+ },
+ {
+  "amount_usd": 880,
+  "claim_id": "NO-A00025",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-25",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 1451,
+  "claim_id": "NO-A00026",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-26",
+  "last_touch": "2026-09-25",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-23"
+ },
+ {
+  "amount_usd": 826,
+  "claim_id": "NO-A00027",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-17",
+  "last_touch": "2026-09-08",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-14"
+ },
+ {
+  "amount_usd": 692,
+  "claim_id": "NO-A00028",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-19",
+  "last_touch": "2026-09-17",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-16"
+ },
+ {
+  "amount_usd": 1184,
+  "claim_id": "NO-A00029",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-26",
+  "last_touch": "2026-08-30",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-22"
+ },
+ {
+  "amount_usd": 600,
+  "claim_id": "NO-A00030",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-08-27",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2027-01-02"
+ },
+ {
+  "amount_usd": 1111,
+  "claim_id": "NO-A00031",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-16",
+  "last_touch": "2026-09-04",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-13"
+ },
+ {
+  "amount_usd": 682,
+  "claim_id": "NO-A00032",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-16",
+  "last_touch": "2026-08-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-13"
+ },
+ {
+  "amount_usd": 1511,
+  "claim_id": "NO-A00033",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-25",
+  "last_touch": "2026-10-02",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-22"
+ },
+ {
+  "amount_usd": 1339,
+  "claim_id": "NO-A00034",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-25",
+  "last_touch": "2026-09-19",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-21"
+ },
+ {
+  "amount_usd": 961,
+  "claim_id": "NO-A00035",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-14",
+  "last_touch": "2026-09-21",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-12"
+ },
+ {
+  "amount_usd": 1299,
+  "claim_id": "NO-A00036",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-20",
+  "last_touch": "2026-08-29",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-18"
+ },
+ {
+  "amount_usd": 1386,
+  "claim_id": "NO-A00037",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-07",
+  "last_touch": "2026-09-19",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 1429,
+  "claim_id": "NO-A00038",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-09-27",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-05"
+ },
+ {
+  "amount_usd": 1158,
+  "claim_id": "NO-A00039",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-04",
+  "last_touch": "2026-09-24",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-01"
+ },
+ {
+  "amount_usd": 873,
+  "claim_id": "NO-A00040",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-30",
+  "last_touch": "2026-10-02",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-28"
+ },
+ {
+  "amount_usd": 1301,
+  "claim_id": "NO-A00041",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-01",
+  "last_touch": "2026-09-23",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-28"
+ },
+ {
+  "amount_usd": 579,
+  "claim_id": "NO-A00042",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-05",
+  "last_touch": "2026-09-29",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-02"
+ },
+ {
+  "amount_usd": 896,
+  "claim_id": "NO-A00043",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-04",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 1123,
+  "claim_id": "NO-A00044",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-10",
+  "last_touch": "2026-09-12",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-07"
+ },
+ {
+  "amount_usd": 628,
+  "claim_id": "NO-A00045",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-16",
+  "last_touch": "2026-08-28",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-13"
+ },
+ {
+  "amount_usd": 1353,
+  "claim_id": "NO-A00046",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-20",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 598,
+  "claim_id": "NO-A00047",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-14",
+  "last_touch": "2026-08-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-10"
+ },
+ {
+  "amount_usd": 1246,
+  "claim_id": "NO-A00048",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-24",
+  "last_touch": "2026-09-10",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-22"
+ },
+ {
+  "amount_usd": 1350,
+  "claim_id": "NO-A00049",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-01",
+  "last_touch": "2026-09-08",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-28"
+ },
+ {
+  "amount_usd": 1094,
+  "claim_id": "NO-A00050",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-23",
+  "last_touch": "2026-09-17",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-21"
+ },
+ {
+  "amount_usd": 1356,
+  "claim_id": "NO-A00051",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-20",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 915,
+  "claim_id": "NO-A00052",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-19",
+  "last_touch": "2026-10-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-15"
+ },
+ {
+  "amount_usd": 936,
+  "claim_id": "NO-A00053",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-15",
+  "last_touch": "2026-09-06",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-12"
+ },
+ {
+  "amount_usd": 1492,
+  "claim_id": "NO-A00054",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-21",
+  "last_touch": "2026-09-25",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-17"
+ },
+ {
+  "amount_usd": 811,
+  "claim_id": "NO-A00055",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-23",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 1526,
+  "claim_id": "NO-A00056",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-18",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 1477,
+  "claim_id": "NO-A00057",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-18",
+  "last_touch": "2026-09-03",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-16"
+ },
+ {
+  "amount_usd": 1332,
+  "claim_id": "NO-A00058",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-13",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 1001,
+  "claim_id": "NO-A00059",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-01",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 651,
+  "claim_id": "NO-A00060",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-08-26",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 1121,
+  "claim_id": "NO-A00061",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-03",
+  "last_touch": "2026-09-03",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-30"
+ },
+ {
+  "amount_usd": 1511,
+  "claim_id": "NO-A00062",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-28",
+  "last_touch": "2026-09-02",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-24"
+ },
+ {
+  "amount_usd": 564,
+  "claim_id": "NO-A00063",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-29",
+  "last_touch": "2026-10-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-25"
+ },
+ {
+  "amount_usd": 858,
+  "claim_id": "NO-A00064",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-25",
+  "last_touch": "2026-10-01",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-22"
+ },
+ {
+  "amount_usd": 988,
+  "claim_id": "NO-A00065",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-27",
+  "last_touch": "2026-09-25",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-23"
+ },
+ {
+  "amount_usd": 1329,
+  "claim_id": "NO-A00066",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-13",
+  "last_touch": "2026-09-08",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-09"
+ },
+ {
+  "amount_usd": 1120,
+  "claim_id": "NO-A00067",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-12",
+  "last_touch": "2026-09-24",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-09"
+ },
+ {
+  "amount_usd": 1311,
+  "claim_id": "NO-A00068",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-17",
+  "last_touch": "2026-09-25",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-14"
+ },
+ {
+  "amount_usd": 1173,
+  "claim_id": "NO-A00069",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-09",
+  "last_touch": "2026-08-27",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-05"
+ },
+ {
+  "amount_usd": 1453,
+  "claim_id": "NO-A00070",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-02",
+  "last_touch": "2026-09-22",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-30"
+ },
+ {
+  "amount_usd": 1124,
+  "claim_id": "NO-A00071",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-29",
+  "last_touch": "2026-09-01",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-25"
+ },
+ {
+  "amount_usd": 540,
+  "claim_id": "NO-A00072",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-10",
+  "last_touch": "2026-09-01",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-08"
+ },
+ {
+  "amount_usd": 1076,
+  "claim_id": "NO-A00073",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-21",
+  "last_touch": "2026-09-30",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-17"
+ },
+ {
+  "amount_usd": 858,
+  "claim_id": "NO-A00074",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-28",
+  "last_touch": "2026-09-21",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-25"
+ },
+ {
+  "amount_usd": 910,
+  "claim_id": "NO-A00075",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-12",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 1134,
+  "claim_id": "NO-A00076",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-24",
+  "last_touch": "2026-09-27",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-22"
+ },
+ {
+  "amount_usd": 1302,
+  "claim_id": "NO-A00077",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-25",
+  "last_touch": "2026-09-23",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-22"
+ },
+ {
+  "amount_usd": 1148,
+  "claim_id": "NO-A00078",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-21",
+  "last_touch": "2026-08-26",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-17"
+ },
+ {
+  "amount_usd": 1531,
+  "claim_id": "NO-A00079",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-15",
+  "last_touch": "2026-09-22",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-13"
+ },
+ {
+  "amount_usd": 958,
+  "claim_id": "NO-A00080",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-26",
+  "last_touch": "2026-09-19",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-23"
+ },
+ {
+  "amount_usd": 1480,
+  "claim_id": "NO-A00081",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-23",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 1181,
+  "claim_id": "NO-A00082",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-19",
+  "last_touch": "2026-09-30",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-17"
+ },
+ {
+  "amount_usd": 583,
+  "claim_id": "NO-A00083",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-27",
+  "last_touch": "2026-09-23",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-23"
+ },
+ {
+  "amount_usd": 928,
+  "claim_id": "NO-A00084",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-15",
+  "last_touch": "2026-09-01",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-13"
+ },
+ {
+  "amount_usd": 635,
+  "claim_id": "NO-A00085",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-12",
+  "last_touch": "2026-08-30",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-10"
+ },
+ {
+  "amount_usd": 1312,
+  "claim_id": "NO-A00086",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-06",
+  "last_touch": "2026-09-09",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-03"
+ },
+ {
+  "amount_usd": 692,
+  "claim_id": "NO-A00087",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-30",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 871,
+  "claim_id": "NO-A00088",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-14",
+  "last_touch": "2026-09-19",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-12"
+ },
+ {
+  "amount_usd": 1301,
+  "claim_id": "NO-A00089",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-27",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 1153,
+  "claim_id": "NO-A00090",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-01",
+  "last_touch": "2026-08-31",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-29"
+ },
+ {
+  "amount_usd": 1170,
+  "claim_id": "NO-A00091",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-11",
+  "last_touch": "2026-09-03",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-09"
+ },
+ {
+  "amount_usd": 1396,
+  "claim_id": "NO-A00092",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-24",
+  "last_touch": "2026-10-02",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-21"
+ },
+ {
+  "amount_usd": 855,
+  "claim_id": "NO-A00093",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-16",
+  "last_touch": "2026-09-07",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-14"
+ },
+ {
+  "amount_usd": 1473,
+  "claim_id": "NO-A00094",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-30",
+  "last_touch": "2026-09-25",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-27"
+ },
+ {
+  "amount_usd": 1573,
+  "claim_id": "NO-A00095",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-01",
+  "last_touch": "2026-08-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-28"
+ },
+ {
+  "amount_usd": 1383,
+  "claim_id": "NO-A00096",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-09-21",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-27"
+ },
+ {
+  "amount_usd": 1067,
+  "claim_id": "NO-A00097",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-14",
+  "last_touch": "2026-09-21",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-10"
+ },
+ {
+  "amount_usd": 1580,
+  "claim_id": "NO-A00098",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-21",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 719,
+  "claim_id": "NO-A00099",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-20",
+  "last_touch": "2026-09-08",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-16"
+ },
+ {
+  "amount_usd": 793,
+  "claim_id": "NO-A00100",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-11",
+  "last_touch": "2026-09-09",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-08"
+ },
+ {
+  "amount_usd": 805,
+  "claim_id": "NO-A00101",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-18",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 542,
+  "claim_id": "NO-A00102",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-19",
+  "last_touch": "2026-09-30",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-16"
+ },
+ {
+  "amount_usd": 563,
+  "claim_id": "NO-A00103",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-09",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 1340,
+  "claim_id": "NO-A00104",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-06",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 591,
+  "claim_id": "NO-A00105",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-03",
+  "last_touch": "2026-09-03",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-30"
+ },
+ {
+  "amount_usd": 861,
+  "claim_id": "NO-A00106",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-10-02",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 889,
+  "claim_id": "NO-A00107",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-30",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 893,
+  "claim_id": "NO-A00108",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-14",
+  "last_touch": "2026-09-29",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-11"
+ },
+ {
+  "amount_usd": 669,
+  "claim_id": "NO-A00109",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-16",
+  "last_touch": "2026-08-31",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-13"
+ },
+ {
+  "amount_usd": 1572,
+  "claim_id": "NO-A00110",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-27",
+  "last_touch": "2026-08-27",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-24"
+ },
+ {
+  "amount_usd": 1353,
+  "claim_id": "NO-A00111",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-23",
+  "last_touch": "2026-10-02",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-20"
+ },
+ {
+  "amount_usd": 513,
+  "claim_id": "NO-A00112",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-22",
+  "last_touch": "2026-09-09",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-19"
+ },
+ {
+  "amount_usd": 773,
+  "claim_id": "NO-A00113",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-27",
+  "last_touch": "2026-09-27",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-24"
+ },
+ {
+  "amount_usd": 867,
+  "claim_id": "NO-A00114",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-30",
+  "last_touch": "2026-09-11",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-27"
+ },
+ {
+  "amount_usd": 786,
+  "claim_id": "NO-A00115",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-01",
+  "last_touch": "2026-09-21",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-28"
+ },
+ {
+  "amount_usd": 1405,
+  "claim_id": "NO-A00116",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-16",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 841,
+  "claim_id": "NO-A00117",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-07",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 1580,
+  "claim_id": "NO-A00118",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-11",
+  "last_touch": "2026-10-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-07"
+ },
+ {
+  "amount_usd": 1291,
+  "claim_id": "NO-A00119",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-26",
+  "last_touch": "2026-09-24",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-23"
+ },
+ {
+  "amount_usd": 1128,
+  "claim_id": "NO-A00120",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-26",
+  "last_touch": "2026-09-21",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-23"
+ },
+ {
+  "amount_usd": 1189,
+  "claim_id": "NO-A00121",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-15",
+  "last_touch": "2026-09-24",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-13"
+ },
+ {
+  "amount_usd": 1166,
+  "claim_id": "NO-A00122",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-09",
+  "last_touch": "2026-09-14",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-06"
+ },
+ {
+  "amount_usd": 1411,
+  "claim_id": "NO-A00123",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-23",
+  "last_touch": "2026-09-01",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-20"
+ },
+ {
+  "amount_usd": 633,
+  "claim_id": "NO-A00124",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-10",
+  "last_touch": "2026-09-14",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-07"
+ },
+ {
+  "amount_usd": 1181,
+  "claim_id": "NO-A00125",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-07",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 695,
+  "claim_id": "NO-A00126",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-10",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 546,
+  "claim_id": "NO-A00127",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-04",
+  "last_touch": "2026-09-05",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-01"
+ },
+ {
+  "amount_usd": 1010,
+  "claim_id": "NO-A00128",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-13",
+  "last_touch": "2026-09-25",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-10"
+ },
+ {
+  "amount_usd": 922,
+  "claim_id": "NO-A00129",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-25",
+  "last_touch": "2026-09-29",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-22"
+ },
+ {
+  "amount_usd": 860,
+  "claim_id": "NO-A00130",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-03",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 1435,
+  "claim_id": "NO-A00131",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-13",
+  "last_touch": "2026-09-13",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-11"
+ },
+ {
+  "amount_usd": 1030,
+  "claim_id": "NO-A00132",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-08-30",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 1112,
+  "claim_id": "NO-A00133",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-10",
+  "last_touch": "2026-09-17",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-06"
+ },
+ {
+  "amount_usd": 730,
+  "claim_id": "NO-A00134",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-07",
+  "last_touch": "2026-09-11",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 1424,
+  "claim_id": "NO-A00135",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-03",
+  "last_touch": "2026-09-09",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-30"
+ },
+ {
+  "amount_usd": 847,
+  "claim_id": "NO-A00136",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-10",
+  "last_touch": "2026-09-16",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-07"
+ },
+ {
+  "amount_usd": 647,
+  "claim_id": "NO-A00137",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-09-30",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-27"
+ },
+ {
+  "amount_usd": 1586,
+  "claim_id": "NO-A00138",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-07",
+  "last_touch": "2026-09-19",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 708,
+  "claim_id": "NO-A00139",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-22",
+  "last_touch": "2026-09-11",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-19"
+ },
+ {
+  "amount_usd": 1518,
+  "claim_id": "NO-A00140",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-06",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 1141,
+  "claim_id": "NO-A00141",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-27",
+  "last_touch": "2026-09-13",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-24"
+ },
+ {
+  "amount_usd": 658,
+  "claim_id": "NO-A00142",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-13",
+  "last_touch": "2026-09-21",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-09"
+ },
+ {
+  "amount_usd": 1286,
+  "claim_id": "NO-A00143",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-10",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 1143,
+  "claim_id": "NO-A00144",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-02",
+  "last_touch": "2026-09-06",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-29"
+ },
+ {
+  "amount_usd": 516,
+  "claim_id": "NO-A00145",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-24",
+  "last_touch": "2026-09-10",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-20"
+ },
+ {
+  "amount_usd": 1139,
+  "claim_id": "NO-A00146",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-02",
+  "last_touch": "2026-09-10",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-29"
+ },
+ {
+  "amount_usd": 989,
+  "claim_id": "NO-A00147",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-22",
+  "last_touch": "2026-08-27",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-20"
+ },
+ {
+  "amount_usd": 743,
+  "claim_id": "NO-A00148",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-17",
+  "last_touch": "2026-09-28",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-13"
+ },
+ {
+  "amount_usd": 556,
+  "claim_id": "NO-A00149",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-26",
+  "last_touch": "2026-09-26",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-23"
+ },
+ {
+  "amount_usd": 1591,
+  "claim_id": "NO-A00150",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-10",
+  "last_touch": "2026-09-11",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-08"
+ },
+ {
+  "amount_usd": 666,
+  "claim_id": "NO-A00151",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-04",
+  "last_touch": "2026-09-14",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-01"
+ },
+ {
+  "amount_usd": 599,
+  "claim_id": "NO-A00152",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-12",
+  "last_touch": "2026-09-26",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-09"
+ },
+ {
+  "amount_usd": 787,
+  "claim_id": "NO-A00153",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-10",
+  "last_touch": "2026-09-17",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-07"
+ },
+ {
+  "amount_usd": 1324,
+  "claim_id": "NO-A00154",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-01",
+  "last_touch": "2026-09-12",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-28"
+ },
+ {
+  "amount_usd": 1507,
+  "claim_id": "NO-A00155",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-11",
+  "last_touch": "2026-09-11",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-07"
+ },
+ {
+  "amount_usd": 892,
+  "claim_id": "NO-A00156",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-25",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 1112,
+  "claim_id": "NO-A00157",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-06",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 1458,
+  "claim_id": "NO-A00158",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-11",
+  "last_touch": "2026-09-21",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-08"
+ },
+ {
+  "amount_usd": 1204,
+  "claim_id": "NO-A00159",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-16",
+  "last_touch": "2026-08-27",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-14"
+ },
+ {
+  "amount_usd": 1256,
+  "claim_id": "NO-A00160",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-18",
+  "last_touch": "2026-09-21",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-15"
+ },
+ {
+  "amount_usd": 1449,
+  "claim_id": "NO-A00161",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-01",
+  "last_touch": "2026-09-03",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-28"
+ },
+ {
+  "amount_usd": 1365,
+  "claim_id": "NO-A00162",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-09",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 1046,
+  "claim_id": "NO-A00163",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-16",
+  "last_touch": "2026-09-09",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-12"
+ },
+ {
+  "amount_usd": 1266,
+  "claim_id": "NO-A00164",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-11",
+  "last_touch": "2026-09-22",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-08"
+ },
+ {
+  "amount_usd": 1034,
+  "claim_id": "NO-A00165",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-16",
+  "last_touch": "2026-09-07",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-13"
+ },
+ {
+  "amount_usd": 1147,
+  "claim_id": "NO-A00166",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-28",
+  "last_touch": "2026-09-08",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-25"
+ },
+ {
+  "amount_usd": 1070,
+  "claim_id": "NO-A00167",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-09-08",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-06"
+ },
+ {
+  "amount_usd": 1006,
+  "claim_id": "NO-A00168",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-25",
+  "last_touch": "2026-09-30",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-22"
+ },
+ {
+  "amount_usd": 750,
+  "claim_id": "NO-A00169",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-20",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 657,
+  "claim_id": "NO-A00170",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-03",
+  "last_touch": "2026-09-17",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-30"
+ },
+ {
+  "amount_usd": 643,
+  "claim_id": "NO-A00171",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-12",
+  "last_touch": "2026-09-10",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-09"
+ },
+ {
+  "amount_usd": 849,
+  "claim_id": "NO-A00172",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-02",
+  "last_touch": "2026-09-20",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-29"
+ },
+ {
+  "amount_usd": 1452,
+  "claim_id": "NO-A00173",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-10",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 1059,
+  "claim_id": "NO-A00174",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-08-26",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-27"
+ },
+ {
+  "amount_usd": 1215,
+  "claim_id": "NO-A00175",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-23",
+  "last_touch": "2026-09-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-19"
+ },
+ {
+  "amount_usd": 996,
+  "claim_id": "NO-A00176",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-02",
+  "last_touch": "2026-09-15",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-30"
+ },
+ {
+  "amount_usd": 554,
+  "claim_id": "NO-A00177",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-20",
+  "last_touch": "2026-09-30",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-16"
+ },
+ {
+  "amount_usd": 883,
+  "claim_id": "NO-A00178",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-30",
+  "last_touch": "2026-09-18",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-26"
+ },
+ {
+  "amount_usd": 1255,
+  "claim_id": "NO-A00179",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-09-18",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-05"
+ },
+ {
+  "amount_usd": 1440,
+  "claim_id": "NO-A00180",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-22",
+  "last_touch": "2026-09-28",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-20"
+ },
+ {
+  "amount_usd": 1484,
+  "claim_id": "NO-A00181",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-10-02",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 996,
+  "claim_id": "NO-A00182",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-19",
+  "last_touch": "2026-09-25",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-15"
+ },
+ {
+  "amount_usd": 1386,
+  "claim_id": "NO-A00183",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-01",
+  "last_touch": "2026-09-27",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-28"
+ },
+ {
+  "amount_usd": 1156,
+  "claim_id": "NO-A00184",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-10",
+  "last_touch": "2026-09-02",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-07"
+ },
+ {
+  "amount_usd": 1379,
+  "claim_id": "NO-A00185",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-29",
+  "last_touch": "2026-09-14",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-25"
+ },
+ {
+  "amount_usd": 1136,
+  "claim_id": "NO-A00186",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-05",
+  "last_touch": "2026-09-20",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-01"
+ },
+ {
+  "amount_usd": 572,
+  "claim_id": "NO-A00187",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-19",
+  "last_touch": "2026-09-16",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-16"
+ },
+ {
+  "amount_usd": 1039,
+  "claim_id": "NO-A00188",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-15",
+  "last_touch": "2026-09-04",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-12"
+ },
+ {
+  "amount_usd": 1274,
+  "claim_id": "NO-A00189",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-16",
+  "last_touch": "2026-09-10",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-13"
+ },
+ {
+  "amount_usd": 647,
+  "claim_id": "NO-A00190",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-07",
+  "last_touch": "2026-09-30",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 1431,
+  "claim_id": "NO-A00191",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-01",
+  "last_touch": "2026-09-09",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-28"
+ },
+ {
+  "amount_usd": 1007,
+  "claim_id": "NO-A00192",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-10",
+  "last_touch": "2026-09-24",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-08"
+ },
+ {
+  "amount_usd": 1209,
+  "claim_id": "NO-A00193",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-13",
+  "last_touch": "2026-08-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-10"
+ },
+ {
+  "amount_usd": 1244,
+  "claim_id": "NO-A00194",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-26",
+  "last_touch": "2026-09-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-22"
+ },
+ {
+  "amount_usd": 1209,
+  "claim_id": "NO-A00195",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-10",
+  "last_touch": "2026-10-02",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-06"
+ },
+ {
+  "amount_usd": 1454,
+  "claim_id": "NO-A00196",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-15",
+  "last_touch": "2026-09-27",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-12"
+ },
+ {
+  "amount_usd": 1352,
+  "claim_id": "NO-A00197",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-09-14",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-26"
+ },
+ {
+  "amount_usd": 1600,
+  "claim_id": "NO-A00198",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-15",
+  "last_touch": "2026-10-02",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-11"
+ },
+ {
+  "amount_usd": 603,
+  "claim_id": "NO-A00199",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-12",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 1495,
+  "claim_id": "NO-A00200",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-24",
+  "last_touch": "2026-08-29",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-21"
+ },
+ {
+  "amount_usd": 1571,
+  "claim_id": "NO-A00201",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-04-19",
+  "last_touch": "2026-09-15",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-16"
+ },
+ {
+  "amount_usd": 753,
+  "claim_id": "NO-A00202",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-20",
+  "last_touch": "2026-09-07",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-16"
+ },
+ {
+  "amount_usd": 838,
+  "claim_id": "NO-A00203",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-09-06",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-06"
+ },
+ {
+  "amount_usd": 1599,
+  "claim_id": "NO-A00204",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-06-05",
+  "last_touch": "2026-09-13",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-02"
+ },
+ {
+  "amount_usd": 567,
+  "claim_id": "NO-A00205",
+  "client": "northwind_ortho",
+  "date_of_service": "2026-05-10",
+  "last_touch": "2026-09-17",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-06"
+ },
+ {
+  "amount_usd": 863,
+  "claim_id": "BL-A00206",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-17",
+  "last_touch": "2026-10-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-13"
+ },
+ {
+  "amount_usd": 527,
+  "claim_id": "BL-A00207",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-21",
+  "last_touch": "2026-09-06",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-19"
+ },
+ {
+  "amount_usd": 768,
+  "claim_id": "BL-A00208",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-15",
+  "last_touch": "2026-09-10",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-12"
+ },
+ {
+  "amount_usd": 956,
+  "claim_id": "BL-A00209",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-22",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 700,
+  "claim_id": "BL-A00210",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-12",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 988,
+  "claim_id": "BL-A00211",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-10",
+  "last_touch": "2026-09-02",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-07"
+ },
+ {
+  "amount_usd": 792,
+  "claim_id": "BL-A00212",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-06",
+  "last_touch": "2026-09-09",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-02"
+ },
+ {
+  "amount_usd": 496,
+  "claim_id": "BL-A00213",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-21",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 897,
+  "claim_id": "BL-A00214",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-22",
+  "last_touch": "2026-09-20",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-19"
+ },
+ {
+  "amount_usd": 556,
+  "claim_id": "BL-A00215",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-10",
+  "last_touch": "2026-09-08",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-06"
+ },
+ {
+  "amount_usd": 772,
+  "claim_id": "BL-A00216",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-25",
+  "last_touch": "2026-09-03",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-21"
+ },
+ {
+  "amount_usd": 565,
+  "claim_id": "BL-A00217",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-12",
+  "last_touch": "2026-08-27",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-08"
+ },
+ {
+  "amount_usd": 805,
+  "claim_id": "BL-A00218",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-16",
+  "last_touch": "2026-09-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-13"
+ },
+ {
+  "amount_usd": 365,
+  "claim_id": "BL-A00219",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-10",
+  "last_touch": "2026-09-20",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-07"
+ },
+ {
+  "amount_usd": 425,
+  "claim_id": "BL-A00220",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-11",
+  "last_touch": "2026-08-31",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-09"
+ },
+ {
+  "amount_usd": 925,
+  "claim_id": "BL-A00221",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-27",
+  "last_touch": "2026-09-04",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-24"
+ },
+ {
+  "amount_usd": 432,
+  "claim_id": "BL-A00222",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-04",
+  "last_touch": "2026-09-12",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-01"
+ },
+ {
+  "amount_usd": 906,
+  "claim_id": "BL-A00223",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-28",
+  "last_touch": "2026-09-28",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-24"
+ },
+ {
+  "amount_usd": 1024,
+  "claim_id": "BL-A00224",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-18",
+  "last_touch": "2026-09-06",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-15"
+ },
+ {
+  "amount_usd": 408,
+  "claim_id": "BL-A00225",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-15",
+  "last_touch": "2026-09-16",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-12"
+ },
+ {
+  "amount_usd": 367,
+  "claim_id": "BL-A00226",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-18",
+  "last_touch": "2026-09-01",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-15"
+ },
+ {
+  "amount_usd": 526,
+  "claim_id": "BL-A00227",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-27",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 412,
+  "claim_id": "BL-A00228",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-09-15",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-26"
+ },
+ {
+  "amount_usd": 783,
+  "claim_id": "BL-A00229",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-04",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 373,
+  "claim_id": "BL-A00230",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-08-30",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-27"
+ },
+ {
+  "amount_usd": 913,
+  "claim_id": "BL-A00231",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-28",
+  "last_touch": "2026-09-05",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-25"
+ },
+ {
+  "amount_usd": 756,
+  "claim_id": "BL-A00232",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-08",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-02"
+ },
+ {
+  "amount_usd": 729,
+  "claim_id": "BL-A00233",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-20",
+  "last_touch": "2026-09-08",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-18"
+ },
+ {
+  "amount_usd": 356,
+  "claim_id": "BL-A00234",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-02",
+  "last_touch": "2026-09-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-29"
+ },
+ {
+  "amount_usd": 488,
+  "claim_id": "BL-A00235",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-11",
+  "last_touch": "2026-09-08",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-08"
+ },
+ {
+  "amount_usd": 441,
+  "claim_id": "BL-A00236",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-02",
+  "last_touch": "2026-09-13",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-30"
+ },
+ {
+  "amount_usd": 361,
+  "claim_id": "BL-A00237",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-12",
+  "last_touch": "2026-08-27",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-09"
+ },
+ {
+  "amount_usd": 874,
+  "claim_id": "BL-A00238",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-30",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 500,
+  "claim_id": "BL-A00239",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-08",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 622,
+  "claim_id": "BL-A00240",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-10",
+  "last_touch": "2026-08-30",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-06"
+ },
+ {
+  "amount_usd": 895,
+  "claim_id": "BL-A00241",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-23",
+  "last_touch": "2026-09-05",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-20"
+ },
+ {
+  "amount_usd": 363,
+  "claim_id": "BL-A00242",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-06",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 665,
+  "claim_id": "BL-A00243",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-11",
+  "last_touch": "2026-08-30",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-08"
+ },
+ {
+  "amount_usd": 393,
+  "claim_id": "BL-A00244",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-24",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 564,
+  "claim_id": "BL-A00245",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-18",
+  "last_touch": "2026-08-31",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-15"
+ },
+ {
+  "amount_usd": 998,
+  "claim_id": "BL-A00246",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-14",
+  "last_touch": "2026-09-15",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-10"
+ },
+ {
+  "amount_usd": 1019,
+  "claim_id": "BL-A00247",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-19",
+  "last_touch": "2026-08-29",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-15"
+ },
+ {
+  "amount_usd": 769,
+  "claim_id": "BL-A00248",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-29",
+  "last_touch": "2026-09-06",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-25"
+ },
+ {
+  "amount_usd": 342,
+  "claim_id": "BL-A00249",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-14",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 707,
+  "claim_id": "BL-A00250",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-23",
+  "last_touch": "2026-09-05",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-20"
+ },
+ {
+  "amount_usd": 423,
+  "claim_id": "BL-A00251",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-15",
+  "last_touch": "2026-09-10",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-11"
+ },
+ {
+  "amount_usd": 329,
+  "claim_id": "BL-A00252",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-08",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 541,
+  "claim_id": "BL-A00253",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-10-02",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 407,
+  "claim_id": "BL-A00254",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-07",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 357,
+  "claim_id": "BL-A00255",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-11",
+  "last_touch": "2026-09-11",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-09"
+ },
+ {
+  "amount_usd": 375,
+  "claim_id": "BL-A00256",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-13",
+  "last_touch": "2026-09-11",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-11"
+ },
+ {
+  "amount_usd": 811,
+  "claim_id": "BL-A00257",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-15",
+  "last_touch": "2026-10-02",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-12"
+ },
+ {
+  "amount_usd": 344,
+  "claim_id": "BL-A00258",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-14",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 667,
+  "claim_id": "BL-A00259",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-27",
+  "last_touch": "2026-09-30",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-25"
+ },
+ {
+  "amount_usd": 635,
+  "claim_id": "BL-A00260",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-15",
+  "last_touch": "2026-09-19",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-13"
+ },
+ {
+  "amount_usd": 863,
+  "claim_id": "BL-A00261",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-10",
+  "last_touch": "2026-09-30",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-06"
+ },
+ {
+  "amount_usd": 771,
+  "claim_id": "BL-A00262",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-23",
+  "last_touch": "2026-08-30",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-20"
+ },
+ {
+  "amount_usd": 516,
+  "claim_id": "BL-A00263",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-17",
+  "last_touch": "2026-09-30",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-13"
+ },
+ {
+  "amount_usd": 648,
+  "claim_id": "BL-A00264",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-24",
+  "last_touch": "2026-08-29",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-21"
+ },
+ {
+  "amount_usd": 533,
+  "claim_id": "BL-A00265",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-12",
+  "last_touch": "2026-09-23",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-09"
+ },
+ {
+  "amount_usd": 628,
+  "claim_id": "BL-A00266",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-09-29",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-05"
+ },
+ {
+  "amount_usd": 804,
+  "claim_id": "BL-A00267",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-18",
+  "last_touch": "2026-09-03",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-15"
+ },
+ {
+  "amount_usd": 493,
+  "claim_id": "BL-A00268",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-06",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 673,
+  "claim_id": "BL-A00269",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-10-02",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 899,
+  "claim_id": "BL-A00270",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-11",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 443,
+  "claim_id": "BL-A00271",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-16",
+  "last_touch": "2026-09-26",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-13"
+ },
+ {
+  "amount_usd": 595,
+  "claim_id": "BL-A00272",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-15",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2027-01-02"
+ },
+ {
+  "amount_usd": 1007,
+  "claim_id": "BL-A00273",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-06",
+  "last_touch": "2026-09-08",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-02"
+ },
+ {
+  "amount_usd": 359,
+  "claim_id": "BL-A00274",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-08-29",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 985,
+  "claim_id": "BL-A00275",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-12",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 904,
+  "claim_id": "BL-A00276",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-09-16",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-05"
+ },
+ {
+  "amount_usd": 364,
+  "claim_id": "BL-A00277",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-09",
+  "last_touch": "2026-09-14",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-06"
+ },
+ {
+  "amount_usd": 406,
+  "claim_id": "BL-A00278",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-10",
+  "last_touch": "2026-09-24",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-07"
+ },
+ {
+  "amount_usd": 513,
+  "claim_id": "BL-A00279",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-01",
+  "last_touch": "2026-09-05",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-28"
+ },
+ {
+  "amount_usd": 858,
+  "claim_id": "BL-A00280",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-03",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 673,
+  "claim_id": "BL-A00281",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-09-10",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-26"
+ },
+ {
+  "amount_usd": 898,
+  "claim_id": "BL-A00282",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-10",
+  "last_touch": "2026-09-19",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-08"
+ },
+ {
+  "amount_usd": 412,
+  "claim_id": "BL-A00283",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-25",
+  "last_touch": "2026-09-20",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-21"
+ },
+ {
+  "amount_usd": 488,
+  "claim_id": "BL-A00284",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-05",
+  "last_touch": "2026-09-07",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-01"
+ },
+ {
+  "amount_usd": 416,
+  "claim_id": "BL-A00285",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-28",
+  "last_touch": "2026-09-15",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-25"
+ },
+ {
+  "amount_usd": 929,
+  "claim_id": "BL-A00286",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-27",
+  "last_touch": "2026-09-23",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-24"
+ },
+ {
+  "amount_usd": 961,
+  "claim_id": "BL-A00287",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-16",
+  "last_touch": "2026-09-15",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-12"
+ },
+ {
+  "amount_usd": 334,
+  "claim_id": "BL-A00288",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-08",
+  "last_touch": "2026-09-27",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-04"
+ },
+ {
+  "amount_usd": 497,
+  "claim_id": "BL-A00289",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-03",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 818,
+  "claim_id": "BL-A00290",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-22",
+  "last_touch": "2026-10-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-18"
+ },
+ {
+  "amount_usd": 770,
+  "claim_id": "BL-A00291",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-08-28",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 672,
+  "claim_id": "BL-A00292",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-25",
+  "last_touch": "2026-10-02",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-22"
+ },
+ {
+  "amount_usd": 476,
+  "claim_id": "BL-A00293",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-19",
+  "last_touch": "2026-09-03",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-17"
+ },
+ {
+  "amount_usd": 436,
+  "claim_id": "BL-A00294",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-18",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 465,
+  "claim_id": "BL-A00295",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-29",
+  "last_touch": "2026-09-13",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-26"
+ },
+ {
+  "amount_usd": 651,
+  "claim_id": "BL-A00296",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-22",
+  "last_touch": "2026-08-29",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-19"
+ },
+ {
+  "amount_usd": 631,
+  "claim_id": "BL-A00297",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-06",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 586,
+  "claim_id": "BL-A00298",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-12",
+  "last_touch": "2026-09-12",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-10"
+ },
+ {
+  "amount_usd": 983,
+  "claim_id": "BL-A00299",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-15",
+  "last_touch": "2026-09-24",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-12"
+ },
+ {
+  "amount_usd": 976,
+  "claim_id": "BL-A00300",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-23",
+  "last_touch": "2026-08-31",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-21"
+ },
+ {
+  "amount_usd": 340,
+  "claim_id": "BL-A00301",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-16",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 422,
+  "claim_id": "BL-A00302",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-01",
+  "last_touch": "2026-09-19",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-29"
+ },
+ {
+  "amount_usd": 397,
+  "claim_id": "BL-A00303",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-01",
+  "last_touch": "2026-09-14",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-29"
+ },
+ {
+  "amount_usd": 717,
+  "claim_id": "BL-A00304",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-14",
+  "last_touch": "2026-09-21",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-12"
+ },
+ {
+  "amount_usd": 987,
+  "claim_id": "BL-A00305",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-09",
+  "last_touch": "2026-09-21",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-07"
+ },
+ {
+  "amount_usd": 833,
+  "claim_id": "BL-A00306",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-17",
+  "last_touch": "2026-09-18",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-15"
+ },
+ {
+  "amount_usd": 1007,
+  "claim_id": "BL-A00307",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-23",
+  "last_touch": "2026-09-19",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-19"
+ },
+ {
+  "amount_usd": 673,
+  "claim_id": "BL-A00308",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-23",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 526,
+  "claim_id": "BL-A00309",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-18",
+  "last_touch": "2026-09-24",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-15"
+ },
+ {
+  "amount_usd": 411,
+  "claim_id": "BL-A00310",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-10-01",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 794,
+  "claim_id": "BL-A00311",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-17",
+  "last_touch": "2026-08-27",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-14"
+ },
+ {
+  "amount_usd": 772,
+  "claim_id": "BL-A00312",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-19",
+  "last_touch": "2026-10-02",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-17"
+ },
+ {
+  "amount_usd": 968,
+  "claim_id": "BL-A00313",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-30",
+  "last_touch": "2026-08-30",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-27"
+ },
+ {
+  "amount_usd": 596,
+  "claim_id": "BL-A00314",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-25",
+  "last_touch": "2026-08-28",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-22"
+ },
+ {
+  "amount_usd": 575,
+  "claim_id": "BL-A00315",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-03",
+  "last_touch": "2026-09-15",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-31"
+ },
+ {
+  "amount_usd": 387,
+  "claim_id": "BL-A00316",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-11",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 962,
+  "claim_id": "BL-A00317",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-01",
+  "last_touch": "2026-09-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-28"
+ },
+ {
+  "amount_usd": 949,
+  "claim_id": "BL-A00318",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-02",
+  "last_touch": "2026-10-02",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-29"
+ },
+ {
+  "amount_usd": 497,
+  "claim_id": "BL-A00319",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-09",
+  "last_touch": "2026-09-10",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-05"
+ },
+ {
+  "amount_usd": 865,
+  "claim_id": "BL-A00320",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-31",
+  "last_touch": "2026-09-13",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-27"
+ },
+ {
+  "amount_usd": 949,
+  "claim_id": "BL-A00321",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-31",
+  "last_touch": "2026-09-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-27"
+ },
+ {
+  "amount_usd": 394,
+  "claim_id": "BL-A00322",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-18",
+  "last_touch": "2026-09-04",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-15"
+ },
+ {
+  "amount_usd": 332,
+  "claim_id": "BL-A00323",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-03",
+  "last_touch": "2026-09-06",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-30"
+ },
+ {
+  "amount_usd": 979,
+  "claim_id": "BL-A00324",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-30",
+  "last_touch": "2026-10-02",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-28"
+ },
+ {
+  "amount_usd": 750,
+  "claim_id": "BL-A00325",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-23",
+  "last_touch": "2026-09-17",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-20"
+ },
+ {
+  "amount_usd": 531,
+  "claim_id": "BL-A00326",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-16",
+  "last_touch": "2026-08-29",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-13"
+ },
+ {
+  "amount_usd": 363,
+  "claim_id": "BL-A00327",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-10",
+  "last_touch": "2026-08-31",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-08"
+ },
+ {
+  "amount_usd": 768,
+  "claim_id": "BL-A00328",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-13",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 727,
+  "claim_id": "BL-A00329",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-18",
+  "last_touch": "2026-08-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-14"
+ },
+ {
+  "amount_usd": 460,
+  "claim_id": "BL-A00330",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-12",
+  "last_touch": "2026-09-15",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-10"
+ },
+ {
+  "amount_usd": 504,
+  "claim_id": "BL-A00331",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-29",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 593,
+  "claim_id": "BL-A00332",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-13",
+  "last_touch": "2026-09-20",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-11"
+ },
+ {
+  "amount_usd": 835,
+  "claim_id": "BL-A00333",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-02",
+  "last_touch": "2026-09-23",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-29"
+ },
+ {
+  "amount_usd": 635,
+  "claim_id": "BL-A00334",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-04",
+  "last_touch": "2026-09-30",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-31"
+ },
+ {
+  "amount_usd": 985,
+  "claim_id": "BL-A00335",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-02",
+  "last_touch": "2026-09-01",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-29"
+ },
+ {
+  "amount_usd": 690,
+  "claim_id": "BL-A00336",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-27",
+  "last_touch": "2026-09-14",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-24"
+ },
+ {
+  "amount_usd": 618,
+  "claim_id": "BL-A00337",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-30",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 594,
+  "claim_id": "BL-A00338",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-05-22",
+  "last_touch": "2026-08-29",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-18"
+ },
+ {
+  "amount_usd": 637,
+  "claim_id": "BL-A00339",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-04-14",
+  "last_touch": "2026-09-12",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-11"
+ },
+ {
+  "amount_usd": 512,
+  "claim_id": "BL-A00340",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-30",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 848,
+  "claim_id": "BL-A00341",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-16",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 366,
+  "claim_id": "BL-A00342",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-26",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 433,
+  "claim_id": "BL-A00343",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-06-06",
+  "last_touch": "2026-09-29",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-03"
+ },
+ {
+  "amount_usd": 273,
+  "claim_id": "BL-A00344",
+  "client": "bluefield_imaging",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-08-28",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 351,
+  "claim_id": "CE-A00345",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-30",
+  "last_touch": "2026-09-09",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-27"
+ },
+ {
+  "amount_usd": 309,
+  "claim_id": "CE-A00346",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-04",
+  "last_touch": "2026-08-30",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-01"
+ },
+ {
+  "amount_usd": 388,
+  "claim_id": "CE-A00347",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-10",
+  "last_touch": "2026-09-02",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-07"
+ },
+ {
+  "amount_usd": 299,
+  "claim_id": "CE-A00348",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-13",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 240,
+  "claim_id": "CE-A00349",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-18",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 265,
+  "claim_id": "CE-A00350",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-09",
+  "last_touch": "2026-10-02",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-06"
+ },
+ {
+  "amount_usd": 251,
+  "claim_id": "CE-A00351",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-09-20",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-27"
+ },
+ {
+  "amount_usd": 190,
+  "claim_id": "CE-A00352",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-28",
+  "last_touch": "2026-09-08",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-24"
+ },
+ {
+  "amount_usd": 166,
+  "claim_id": "CE-A00353",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-08-30",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 168,
+  "claim_id": "CE-A00354",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-20",
+  "last_touch": "2026-09-18",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-16"
+ },
+ {
+  "amount_usd": 389,
+  "claim_id": "CE-A00355",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-23",
+  "last_touch": "2026-09-20",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-19"
+ },
+ {
+  "amount_usd": 196,
+  "claim_id": "CE-A00356",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-01",
+  "last_touch": "2026-09-29",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-28"
+ },
+ {
+  "amount_usd": 433,
+  "claim_id": "CE-A00357",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-29",
+  "last_touch": "2026-09-09",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-25"
+ },
+ {
+  "amount_usd": 454,
+  "claim_id": "CE-A00358",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-23",
+  "last_touch": "2026-09-03",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-20"
+ },
+ {
+  "amount_usd": 343,
+  "claim_id": "CE-A00359",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-10",
+  "last_touch": "2026-09-08",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-07"
+ },
+ {
+  "amount_usd": 458,
+  "claim_id": "CE-A00360",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-08-29",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 319,
+  "claim_id": "CE-A00361",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-02",
+  "last_touch": "2026-09-07",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-29"
+ },
+ {
+  "amount_usd": 325,
+  "claim_id": "CE-A00362",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-22",
+  "last_touch": "2026-09-13",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-19"
+ },
+ {
+  "amount_usd": 291,
+  "claim_id": "CE-A00363",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-17",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 263,
+  "claim_id": "CE-A00364",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-01",
+  "last_touch": "2026-08-27",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-29"
+ },
+ {
+  "amount_usd": 248,
+  "claim_id": "CE-A00365",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-17",
+  "last_touch": "2026-08-26",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-14"
+ },
+ {
+  "amount_usd": 357,
+  "claim_id": "CE-A00366",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-10-01",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 229,
+  "claim_id": "CE-A00367",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-06",
+  "last_touch": "2026-09-09",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-02"
+ },
+ {
+  "amount_usd": 165,
+  "claim_id": "CE-A00368",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-21",
+  "last_touch": "2026-09-10",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-18"
+ },
+ {
+  "amount_usd": 175,
+  "claim_id": "CE-A00369",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-03",
+  "last_touch": "2026-09-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-30"
+ },
+ {
+  "amount_usd": 433,
+  "claim_id": "CE-A00370",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-12",
+  "last_touch": "2026-09-19",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-09"
+ },
+ {
+  "amount_usd": 288,
+  "claim_id": "CE-A00371",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-20",
+  "last_touch": "2026-09-19",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-17"
+ },
+ {
+  "amount_usd": 253,
+  "claim_id": "CE-A00372",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-24",
+  "last_touch": "2026-09-18",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-22"
+ },
+ {
+  "amount_usd": 416,
+  "claim_id": "CE-A00373",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-25",
+  "last_touch": "2026-09-24",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-23"
+ },
+ {
+  "amount_usd": 168,
+  "claim_id": "CE-A00374",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-18",
+  "last_touch": "2026-08-31",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-14"
+ },
+ {
+  "amount_usd": 294,
+  "claim_id": "CE-A00375",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-09-07",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-06"
+ },
+ {
+  "amount_usd": 194,
+  "claim_id": "CE-A00376",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-10",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 334,
+  "claim_id": "CE-A00377",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-10",
+  "last_touch": "2026-09-07",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-07"
+ },
+ {
+  "amount_usd": 239,
+  "claim_id": "CE-A00378",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-21",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 269,
+  "claim_id": "CE-A00379",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-28",
+  "last_touch": "2026-09-21",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-24"
+ },
+ {
+  "amount_usd": 176,
+  "claim_id": "CE-A00380",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-28",
+  "last_touch": "2026-09-21",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-25"
+ },
+ {
+  "amount_usd": 365,
+  "claim_id": "CE-A00381",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-19",
+  "last_touch": "2026-09-09",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-16"
+ },
+ {
+  "amount_usd": 339,
+  "claim_id": "CE-A00382",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-09-05",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-26"
+ },
+ {
+  "amount_usd": 270,
+  "claim_id": "CE-A00383",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-10-02",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-06"
+ },
+ {
+  "amount_usd": 170,
+  "claim_id": "CE-A00384",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-22",
+  "last_touch": "2026-09-11",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-19"
+ },
+ {
+  "amount_usd": 362,
+  "claim_id": "CE-A00385",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-01",
+  "last_touch": "2026-09-18",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-28"
+ },
+ {
+  "amount_usd": 191,
+  "claim_id": "CE-A00386",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-09",
+  "last_touch": "2026-09-20",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-07"
+ },
+ {
+  "amount_usd": 349,
+  "claim_id": "CE-A00387",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-11",
+  "last_touch": "2026-09-11",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-08"
+ },
+ {
+  "amount_usd": 261,
+  "claim_id": "CE-A00388",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-10-01",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 192,
+  "claim_id": "CE-A00389",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-23",
+  "last_touch": "2026-09-14",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-20"
+ },
+ {
+  "amount_usd": 439,
+  "claim_id": "CE-A00390",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-28",
+  "last_touch": "2026-09-24",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-26"
+ },
+ {
+  "amount_usd": 319,
+  "claim_id": "CE-A00391",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-04",
+  "last_touch": "2026-09-25",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-01"
+ },
+ {
+  "amount_usd": 451,
+  "claim_id": "CE-A00392",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-19",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-02"
+ },
+ {
+  "amount_usd": 236,
+  "claim_id": "CE-A00393",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-03",
+  "last_touch": "2026-09-09",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-30"
+ },
+ {
+  "amount_usd": 336,
+  "claim_id": "CE-A00394",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-18",
+  "last_touch": "2026-09-24",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-16"
+ },
+ {
+  "amount_usd": 294,
+  "claim_id": "CE-A00395",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-29",
+  "last_touch": "2026-09-27",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-26"
+ },
+ {
+  "amount_usd": 257,
+  "claim_id": "CE-A00396",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-22",
+  "last_touch": "2026-09-04",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-18"
+ },
+ {
+  "amount_usd": 343,
+  "claim_id": "CE-A00397",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-03",
+  "last_touch": "2026-09-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-30"
+ },
+ {
+  "amount_usd": 180,
+  "claim_id": "CE-A00398",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-09-20",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-06"
+ },
+ {
+  "amount_usd": 177,
+  "claim_id": "CE-A00399",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-12",
+  "last_touch": "2026-09-03",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-10"
+ },
+ {
+  "amount_usd": 432,
+  "claim_id": "CE-A00400",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-16",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2027-01-02"
+ },
+ {
+  "amount_usd": 257,
+  "claim_id": "CE-A00401",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-14",
+  "last_touch": "2026-09-05",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-11"
+ },
+ {
+  "amount_usd": 436,
+  "claim_id": "CE-A00402",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-14",
+  "last_touch": "2026-08-28",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-10"
+ },
+ {
+  "amount_usd": 204,
+  "claim_id": "CE-A00403",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-21",
+  "last_touch": "2026-09-20",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-18"
+ },
+ {
+  "amount_usd": 168,
+  "claim_id": "CE-A00404",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-09-10",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-26"
+ },
+ {
+  "amount_usd": 252,
+  "claim_id": "CE-A00405",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-07",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 378,
+  "claim_id": "CE-A00406",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-09-30",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-05"
+ },
+ {
+  "amount_usd": 436,
+  "claim_id": "CE-A00407",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-03",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 294,
+  "claim_id": "CE-A00408",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-27",
+  "last_touch": "2026-10-01",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-24"
+ },
+ {
+  "amount_usd": 331,
+  "claim_id": "CE-A00409",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-26",
+  "last_touch": "2026-09-05",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-24"
+ },
+ {
+  "amount_usd": 221,
+  "claim_id": "CE-A00410",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-06",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 277,
+  "claim_id": "CE-A00411",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-28",
+  "last_touch": "2026-09-14",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-26"
+ },
+ {
+  "amount_usd": 437,
+  "claim_id": "CE-A00412",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-23",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 423,
+  "claim_id": "CE-A00413",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-25",
+  "last_touch": "2026-09-30",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-23"
+ },
+ {
+  "amount_usd": 371,
+  "claim_id": "CE-A00414",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-22",
+  "last_touch": "2026-09-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-19"
+ },
+ {
+  "amount_usd": 461,
+  "claim_id": "CE-A00415",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-22",
+  "last_touch": "2026-09-27",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-18"
+ },
+ {
+  "amount_usd": 285,
+  "claim_id": "CE-A00416",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-19",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 429,
+  "claim_id": "CE-A00417",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-07",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 176,
+  "claim_id": "CE-A00418",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-21",
+  "last_touch": "2026-09-11",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-19"
+ },
+ {
+  "amount_usd": 170,
+  "claim_id": "CE-A00419",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-06",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 414,
+  "claim_id": "CE-A00420",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-14",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 277,
+  "claim_id": "CE-A00421",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-01",
+  "last_touch": "2026-09-20",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-29"
+ },
+ {
+  "amount_usd": 171,
+  "claim_id": "CE-A00422",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-24",
+  "last_touch": "2026-09-26",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-22"
+ },
+ {
+  "amount_usd": 167,
+  "claim_id": "CE-A00423",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-26",
+  "last_touch": "2026-08-30",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-24"
+ },
+ {
+  "amount_usd": 422,
+  "claim_id": "CE-A00424",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-23",
+  "last_touch": "2026-09-18",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-20"
+ },
+ {
+  "amount_usd": 205,
+  "claim_id": "CE-A00425",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-09-23",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-05"
+ },
+ {
+  "amount_usd": 452,
+  "claim_id": "CE-A00426",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-30",
+  "last_touch": "2026-09-26",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-27"
+ },
+ {
+  "amount_usd": 324,
+  "claim_id": "CE-A00427",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-10",
+  "last_touch": "2026-08-29",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-07"
+ },
+ {
+  "amount_usd": 310,
+  "claim_id": "CE-A00428",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-15",
+  "last_touch": "2026-08-26",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-13"
+ },
+ {
+  "amount_usd": 266,
+  "claim_id": "CE-A00429",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-09",
+  "last_touch": "2026-09-24",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-06"
+ },
+ {
+  "amount_usd": 230,
+  "claim_id": "CE-A00430",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-14",
+  "last_touch": "2026-09-27",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-11"
+ },
+ {
+  "amount_usd": 194,
+  "claim_id": "CE-A00431",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-03",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 182,
+  "claim_id": "CE-A00432",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-20",
+  "last_touch": "2026-09-10",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-17"
+ },
+ {
+  "amount_usd": 439,
+  "claim_id": "CE-A00433",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-21",
+  "last_touch": "2026-09-22",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-17"
+ },
+ {
+  "amount_usd": 163,
+  "claim_id": "CE-A00434",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-23",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 171,
+  "claim_id": "CE-A00435",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-11",
+  "last_touch": "2026-09-23",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-07"
+ },
+ {
+  "amount_usd": 214,
+  "claim_id": "CE-A00436",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-02",
+  "last_touch": "2026-09-26",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-30"
+ },
+ {
+  "amount_usd": 350,
+  "claim_id": "CE-A00437",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-23",
+  "last_touch": "2026-09-09",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-20"
+ },
+ {
+  "amount_usd": 225,
+  "claim_id": "CE-A00438",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-23",
+  "last_touch": "2026-09-24",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-20"
+ },
+ {
+  "amount_usd": 265,
+  "claim_id": "CE-A00439",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-02",
+  "last_touch": "2026-09-16",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-29"
+ },
+ {
+  "amount_usd": 279,
+  "claim_id": "CE-A00440",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-24",
+  "last_touch": "2026-10-01",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-20"
+ },
+ {
+  "amount_usd": 295,
+  "claim_id": "CE-A00441",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-26",
+  "last_touch": "2026-09-13",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-22"
+ },
+ {
+  "amount_usd": 366,
+  "claim_id": "CE-A00442",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-30",
+  "last_touch": "2026-09-19",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-26"
+ },
+ {
+  "amount_usd": 176,
+  "claim_id": "CE-A00443",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-24",
+  "last_touch": "2026-09-25",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-20"
+ },
+ {
+  "amount_usd": 317,
+  "claim_id": "CE-A00444",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-03",
+  "last_touch": "2026-09-23",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-30"
+ },
+ {
+  "amount_usd": 221,
+  "claim_id": "CE-A00445",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-21",
+  "last_touch": "2026-09-08",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-18"
+ },
+ {
+  "amount_usd": 169,
+  "claim_id": "CE-A00446",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-24",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 283,
+  "claim_id": "CE-A00447",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-04",
+  "last_touch": "2026-09-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-31"
+ },
+ {
+  "amount_usd": 205,
+  "claim_id": "CE-A00448",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-03",
+  "last_touch": "2026-10-01",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-31"
+ },
+ {
+  "amount_usd": 237,
+  "claim_id": "CE-A00449",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-10",
+  "last_touch": "2026-09-27",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-08"
+ },
+ {
+  "amount_usd": 151,
+  "claim_id": "CE-A00450",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-20",
+  "last_touch": "2026-09-12",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-18"
+ },
+ {
+  "amount_usd": 279,
+  "claim_id": "CE-A00451",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-27",
+  "last_touch": "2026-09-26",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-25"
+ },
+ {
+  "amount_usd": 204,
+  "claim_id": "CE-A00452",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-02",
+  "last_touch": "2026-08-28",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-29"
+ },
+ {
+  "amount_usd": 214,
+  "claim_id": "CE-A00453",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-21",
+  "last_touch": "2026-10-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-18"
+ },
+ {
+  "amount_usd": 323,
+  "claim_id": "CE-A00454",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-01",
+  "last_touch": "2026-09-09",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-28"
+ },
+ {
+  "amount_usd": 288,
+  "claim_id": "CE-A00455",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-17",
+  "last_touch": "2026-09-05",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-14"
+ },
+ {
+  "amount_usd": 301,
+  "claim_id": "CE-A00456",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-28",
+  "last_touch": "2026-09-07",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-25"
+ },
+ {
+  "amount_usd": 323,
+  "claim_id": "CE-A00457",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-24",
+  "last_touch": "2026-09-16",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-22"
+ },
+ {
+  "amount_usd": 248,
+  "claim_id": "CE-A00458",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-07",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 214,
+  "claim_id": "CE-A00459",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-06",
+  "last_touch": "2026-09-14",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-02"
+ },
+ {
+  "amount_usd": 354,
+  "claim_id": "CE-A00460",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-29",
+  "last_touch": "2026-08-26",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-25"
+ },
+ {
+  "amount_usd": 385,
+  "claim_id": "CE-A00461",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-28",
+  "last_touch": "2026-09-14",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-25"
+ },
+ {
+  "amount_usd": 416,
+  "claim_id": "CE-A00462",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-26",
+  "last_touch": "2026-09-09",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-23"
+ },
+ {
+  "amount_usd": 240,
+  "claim_id": "CE-A00463",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-11",
+  "last_touch": "2026-09-28",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-09"
+ },
+ {
+  "amount_usd": 267,
+  "claim_id": "CE-A00464",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-13",
+  "last_touch": "2026-09-19",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-11"
+ },
+ {
+  "amount_usd": 375,
+  "claim_id": "CE-A00465",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-09",
+  "last_touch": "2026-09-11",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-06"
+ },
+ {
+  "amount_usd": 392,
+  "claim_id": "CE-A00466",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-06",
+  "last_touch": "2026-09-02",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-03"
+ },
+ {
+  "amount_usd": 427,
+  "claim_id": "CE-A00467",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-16",
+  "last_touch": "2026-09-07",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-14"
+ },
+ {
+  "amount_usd": 288,
+  "claim_id": "CE-A00468",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-11",
+  "last_touch": "2026-09-06",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-08"
+ },
+ {
+  "amount_usd": 218,
+  "claim_id": "CE-A00469",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-15",
+  "last_touch": "2026-10-02",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-12"
+ },
+ {
+  "amount_usd": 345,
+  "claim_id": "CE-A00470",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-09-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-05"
+ },
+ {
+  "amount_usd": 434,
+  "claim_id": "CE-A00471",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-13",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 208,
+  "claim_id": "CE-A00472",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-15",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 431,
+  "claim_id": "CE-A00473",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-24",
+  "last_touch": "2026-08-27",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-20"
+ },
+ {
+  "amount_usd": 287,
+  "claim_id": "CE-A00474",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-17",
+  "last_touch": "2026-09-23",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-14"
+ },
+ {
+  "amount_usd": 255,
+  "claim_id": "CE-A00475",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-22",
+  "last_touch": "2026-08-27",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-20"
+ },
+ {
+  "amount_usd": 149,
+  "claim_id": "CE-A00476",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-13",
+  "last_touch": "2026-08-30",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-10"
+ },
+ {
+  "amount_usd": 391,
+  "claim_id": "CE-A00477",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-25",
+  "last_touch": "2026-09-17",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-22"
+ },
+ {
+  "amount_usd": 198,
+  "claim_id": "CE-A00478",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-11",
+  "last_touch": "2026-09-08",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-07"
+ },
+ {
+  "amount_usd": 458,
+  "claim_id": "CE-A00479",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-18",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 312,
+  "claim_id": "CE-A00480",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-10",
+  "last_touch": "2026-08-29",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-07"
+ },
+ {
+  "amount_usd": 204,
+  "claim_id": "CE-A00481",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-09-13",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-26"
+ },
+ {
+  "amount_usd": 248,
+  "claim_id": "CE-A00482",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-14",
+  "last_touch": "2026-09-08",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-12"
+ },
+ {
+  "amount_usd": 435,
+  "claim_id": "CE-A00483",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-19",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 328,
+  "claim_id": "CE-A00484",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-09",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 214,
+  "claim_id": "CE-A00485",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-25",
+  "last_touch": "2026-09-06",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-22"
+ },
+ {
+  "amount_usd": 235,
+  "claim_id": "CE-A00486",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-09-12",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-27"
+ },
+ {
+  "amount_usd": 176,
+  "claim_id": "CE-A00487",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-04",
+  "last_touch": "2026-09-15",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-01"
+ },
+ {
+  "amount_usd": 432,
+  "claim_id": "CE-A00488",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-09",
+  "last_touch": "2026-09-24",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-07"
+ },
+ {
+  "amount_usd": 242,
+  "claim_id": "CE-A00489",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-25",
+  "last_touch": "2026-09-15",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-21"
+ },
+ {
+  "amount_usd": 442,
+  "claim_id": "CE-A00490",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-26",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 340,
+  "claim_id": "CE-A00491",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-09-22",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-27"
+ },
+ {
+  "amount_usd": 166,
+  "claim_id": "CE-A00492",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-18",
+  "last_touch": "2026-09-20",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-14"
+ },
+ {
+  "amount_usd": 351,
+  "claim_id": "CE-A00493",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-17",
+  "last_touch": "2026-09-11",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-14"
+ },
+ {
+  "amount_usd": 361,
+  "claim_id": "CE-A00494",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-31",
+  "last_touch": "2026-09-05",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-27"
+ },
+ {
+  "amount_usd": 297,
+  "claim_id": "CE-A00495",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-09-29",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-26"
+ },
+ {
+  "amount_usd": 354,
+  "claim_id": "CE-A00496",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-15",
+  "last_touch": "2026-09-19",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-11"
+ },
+ {
+  "amount_usd": 433,
+  "claim_id": "CE-A00497",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-17",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 240,
+  "claim_id": "CE-A00498",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-08-28",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 341,
+  "claim_id": "CE-A00499",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-05",
+  "last_touch": "2026-09-14",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-01"
+ },
+ {
+  "amount_usd": 157,
+  "claim_id": "CE-A00500",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-27",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 163,
+  "claim_id": "CE-A00501",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-28",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 189,
+  "claim_id": "CE-A00502",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-02",
+  "last_touch": "2026-09-12",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-29"
+ },
+ {
+  "amount_usd": 249,
+  "claim_id": "CE-A00503",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-23",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 161,
+  "claim_id": "CE-A00504",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-22",
+  "last_touch": "2026-09-07",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-19"
+ },
+ {
+  "amount_usd": 331,
+  "claim_id": "CE-A00505",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-20",
+  "last_touch": "2026-09-08",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-16"
+ },
+ {
+  "amount_usd": 229,
+  "claim_id": "CE-A00506",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-03",
+  "last_touch": "2026-09-11",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-30"
+ },
+ {
+  "amount_usd": 396,
+  "claim_id": "CE-A00507",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-26",
+  "last_touch": "2026-09-12",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-24"
+ },
+ {
+  "amount_usd": 247,
+  "claim_id": "CE-A00508",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-22",
+  "last_touch": "2026-09-21",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-18"
+ },
+ {
+  "amount_usd": 425,
+  "claim_id": "CE-A00509",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-27",
+  "last_touch": "2026-09-09",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-25"
+ },
+ {
+  "amount_usd": 156,
+  "claim_id": "CE-A00510",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-28",
+  "last_touch": "2026-09-06",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-25"
+ },
+ {
+  "amount_usd": 180,
+  "claim_id": "CE-A00511",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-25",
+  "last_touch": "2026-09-08",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-23"
+ },
+ {
+  "amount_usd": 404,
+  "claim_id": "CE-A00512",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-16",
+  "last_touch": "2026-08-31",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-13"
+ },
+ {
+  "amount_usd": 230,
+  "claim_id": "CE-A00513",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-27",
+  "last_touch": "2026-09-22",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-25"
+ },
+ {
+  "amount_usd": 320,
+  "claim_id": "CE-A00514",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-21",
+  "last_touch": "2026-09-12",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-18"
+ },
+ {
+  "amount_usd": 261,
+  "claim_id": "CE-A00515",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-20",
+  "last_touch": "2026-09-08",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-18"
+ },
+ {
+  "amount_usd": 275,
+  "claim_id": "CE-A00516",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-20",
+  "last_touch": "2026-09-24",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-17"
+ },
+ {
+  "amount_usd": 385,
+  "claim_id": "CE-A00517",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-19",
+  "last_touch": "2026-08-26",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-17"
+ },
+ {
+  "amount_usd": 348,
+  "claim_id": "CE-A00518",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-14",
+  "last_touch": "2026-09-29",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-11"
+ },
+ {
+  "amount_usd": 183,
+  "claim_id": "CE-A00519",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-13",
+  "last_touch": "2026-09-14",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-10"
+ },
+ {
+  "amount_usd": 329,
+  "claim_id": "CE-A00520",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-09-26",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-06"
+ },
+ {
+  "amount_usd": 347,
+  "claim_id": "CE-A00521",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-30",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 241,
+  "claim_id": "CE-A00522",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-01",
+  "last_touch": "2026-09-21",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-29"
+ },
+ {
+  "amount_usd": 190,
+  "claim_id": "CE-A00523",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-19",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 288,
+  "claim_id": "CE-A00524",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-10-01",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 273,
+  "claim_id": "CE-A00525",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-05",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 183,
+  "claim_id": "CE-A00526",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-23",
+  "last_touch": "2026-09-03",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-20"
+ },
+ {
+  "amount_usd": 314,
+  "claim_id": "CE-A00527",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-05",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-03"
+ },
+ {
+  "amount_usd": 176,
+  "claim_id": "CE-A00528",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-18",
+  "last_touch": "2026-09-07",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-16"
+ },
+ {
+  "amount_usd": 342,
+  "claim_id": "CE-A00529",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-17",
+  "last_touch": "2026-09-05",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-13"
+ },
+ {
+  "amount_usd": 279,
+  "claim_id": "CE-A00530",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-23",
+  "last_touch": "2026-09-20",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-19"
+ },
+ {
+  "amount_usd": 210,
+  "claim_id": "CE-A00531",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-10-01",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 164,
+  "claim_id": "CE-A00532",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-07",
+  "last_touch": "2026-09-02",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-04"
+ },
+ {
+  "amount_usd": 239,
+  "claim_id": "CE-A00533",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-12",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 366,
+  "claim_id": "CE-A00534",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-29",
+  "last_touch": "2026-09-07",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-27"
+ },
+ {
+  "amount_usd": 360,
+  "claim_id": "CE-A00535",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-12",
+  "last_touch": "2026-09-06",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-10"
+ },
+ {
+  "amount_usd": 305,
+  "claim_id": "CE-A00536",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-08-28",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-02"
+ },
+ {
+  "amount_usd": 238,
+  "claim_id": "CE-A00537",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-25",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 261,
+  "claim_id": "CE-A00538",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-28",
+  "last_touch": "2026-09-26",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-25"
+ },
+ {
+  "amount_usd": 238,
+  "claim_id": "CE-A00539",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-06",
+  "last_touch": "2026-09-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-03"
+ },
+ {
+  "amount_usd": 252,
+  "claim_id": "CE-A00540",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-22",
+  "last_touch": "2026-09-18",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-20"
+ },
+ {
+  "amount_usd": 332,
+  "claim_id": "CE-A00541",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-26",
+  "last_touch": "2026-08-31",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-24"
+ },
+ {
+  "amount_usd": 407,
+  "claim_id": "CE-A00542",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-03",
+  "last_touch": "2026-09-02",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-30"
+ },
+ {
+  "amount_usd": 415,
+  "claim_id": "CE-A00543",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-06",
+  "last_touch": "2026-09-04",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-03"
+ },
+ {
+  "amount_usd": 223,
+  "claim_id": "CE-A00544",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-11",
+  "last_touch": "2026-09-11",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-07"
+ },
+ {
+  "amount_usd": 236,
+  "claim_id": "CE-A00545",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-21",
+  "last_touch": "2026-08-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-18"
+ },
+ {
+  "amount_usd": 334,
+  "claim_id": "CE-A00546",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-21",
+  "last_touch": "2026-09-19",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-18"
+ },
+ {
+  "amount_usd": 319,
+  "claim_id": "CE-A00547",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-11",
+  "last_touch": "2026-09-13",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-09"
+ },
+ {
+  "amount_usd": 311,
+  "claim_id": "CE-A00548",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-23",
+  "last_touch": "2026-09-24",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-20"
+ },
+ {
+  "amount_usd": 444,
+  "claim_id": "CE-A00549",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-14",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 234,
+  "claim_id": "CE-A00550",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-06",
+  "last_touch": "2026-09-14",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-02"
+ },
+ {
+  "amount_usd": 303,
+  "claim_id": "CE-A00551",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-30",
+  "last_touch": "2026-09-09",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-28"
+ },
+ {
+  "amount_usd": 357,
+  "claim_id": "CE-A00552",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-25",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-11-02"
+ },
+ {
+  "amount_usd": 163,
+  "claim_id": "CE-A00553",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-02",
+  "last_touch": "2026-09-07",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-29"
+ },
+ {
+  "amount_usd": 179,
+  "claim_id": "CE-A00554",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-11",
+  "last_touch": "2026-09-07",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-08"
+ },
+ {
+  "amount_usd": 349,
+  "claim_id": "CE-A00555",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-06",
+  "last_touch": "2026-09-09",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-11-02"
+ },
+ {
+  "amount_usd": 376,
+  "claim_id": "CE-A00556",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-20",
+  "last_touch": "2026-08-27",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-17"
+ },
+ {
+  "amount_usd": 261,
+  "claim_id": "CE-A00557",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-21",
+  "last_touch": "2026-09-07",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-19"
+ },
+ {
+  "amount_usd": 236,
+  "claim_id": "CE-A00558",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-17",
+  "last_touch": "2026-09-01",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-14"
+ },
+ {
+  "amount_usd": 321,
+  "claim_id": "CE-A00559",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-25",
+  "last_touch": "2026-08-31",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-23"
+ },
+ {
+  "amount_usd": 299,
+  "claim_id": "CE-A00560",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-13",
+  "last_touch": "2026-09-09",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-11"
+ },
+ {
+  "amount_usd": 415,
+  "claim_id": "CE-A00561",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-16",
+  "last_touch": "2026-09-27",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-13"
+ },
+ {
+  "amount_usd": 166,
+  "claim_id": "CE-A00562",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-01",
+  "last_touch": "2026-09-02",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-28"
+ },
+ {
+  "amount_usd": 384,
+  "claim_id": "CE-A00563",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-13",
+  "last_touch": "2026-09-04",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-10"
+ },
+ {
+  "amount_usd": 167,
+  "claim_id": "CE-A00564",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-08-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-05"
+ },
+ {
+  "amount_usd": 295,
+  "claim_id": "CE-A00565",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-08",
+  "last_touch": "2026-08-30",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-05"
+ },
+ {
+  "amount_usd": 154,
+  "claim_id": "CE-A00566",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-12",
+  "last_touch": "2026-08-31",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-10"
+ },
+ {
+  "amount_usd": 175,
+  "claim_id": "CE-A00567",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-22",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 285,
+  "claim_id": "CE-A00568",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-11",
+  "last_touch": "2026-09-28",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-08"
+ },
+ {
+  "amount_usd": 390,
+  "claim_id": "CE-A00569",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-09",
+  "last_touch": "2026-08-29",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-07"
+ },
+ {
+  "amount_usd": 212,
+  "claim_id": "CE-A00570",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-14",
+  "last_touch": "2026-08-27",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-12"
+ },
+ {
+  "amount_usd": 337,
+  "claim_id": "CE-A00571",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-08",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 409,
+  "claim_id": "CE-A00572",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-09-13",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ },
+ {
+  "amount_usd": 165,
+  "claim_id": "CE-A00573",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-04-19",
+  "last_touch": "2026-10-01",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-10-16"
+ },
+ {
+  "amount_usd": 391,
+  "claim_id": "CE-A00574",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-03",
+  "last_touch": "2026-09-24",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-30"
+ },
+ {
+  "amount_usd": 270,
+  "claim_id": "CE-A00575",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-08",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 459,
+  "claim_id": "CE-A00576",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-25",
+  "last_touch": "2026-09-23",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-23"
+ },
+ {
+  "amount_usd": 435,
+  "claim_id": "CE-A00577",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-18",
+  "last_touch": "2026-09-19",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-14"
+ },
+ {
+  "amount_usd": 415,
+  "claim_id": "CE-A00578",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-12",
+  "last_touch": "2026-09-12",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-11-08"
+ },
+ {
+  "amount_usd": 346,
+  "claim_id": "CE-A00579",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-15",
+  "last_touch": "2026-09-29",
+  "payer": "Payer B (Medicare Advantage)",
+  "timely_filing_deadline": "2026-10-13"
+ },
+ {
+  "amount_usd": 362,
+  "claim_id": "CE-A00580",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-05",
+  "last_touch": "2026-09-04",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-03"
+ },
+ {
+  "amount_usd": 167,
+  "claim_id": "CE-A00581",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-05-03",
+  "last_touch": "2026-08-26",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-10-30"
+ },
+ {
+  "amount_usd": 444,
+  "claim_id": "CE-A00582",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-04",
+  "last_touch": "2026-10-02",
+  "payer": "Payer D (commercial)",
+  "timely_filing_deadline": "2026-12-31"
+ },
+ {
+  "amount_usd": 303,
+  "claim_id": "CE-A00583",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-06-25",
+  "last_touch": "2026-09-16",
+  "payer": "Payer A (commercial)",
+  "timely_filing_deadline": "2026-12-22"
+ },
+ {
+  "amount_usd": 226,
+  "claim_id": "CE-A00584",
+  "client": "cedar_family_clinic",
+  "date_of_service": "2026-07-06",
+  "last_touch": "2026-10-02",
+  "payer": "Payer C (Medicaid)",
+  "timely_filing_deadline": "2026-10-04"
+ }
+]
