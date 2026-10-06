@@ -78,6 +78,15 @@ class BotHost:
         async def on_message(context: TurnContext, state: TurnState) -> None:
             act = context.activity
             sender = act.from_property
+            if isinstance(act.value, dict) and act.value.get("athena"):
+                reply = await asyncio.to_thread(
+                    self.bot.handle_card_action,
+                    act.value,
+                    getattr(sender, "aad_object_id", None),
+                    None,
+                )
+                await context.send_activity(reply_activity(reply))
+                return
             reply = await asyncio.to_thread(
                 self.bot.handle_message,
                 act.text or "",

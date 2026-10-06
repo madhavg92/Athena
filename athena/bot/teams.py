@@ -64,3 +64,23 @@ class TeamsBot:
         )
         card = answer_card(result, self.app.cfg.work_hours_of(email)[1])
         return Reply(text=result.text, result=result, card=card)
+
+    def handle_card_action(self, data: dict, aad_object_id: str | None, upn: str | None) -> Reply:
+        """Correct / Wrong buttons on shadow alert cards."""
+        from athena.core import review
+
+        email = resolve_email(self.app, aad_object_id, upn)
+        if email is None:
+            return Reply(text=NOT_SET_UP)
+        if data.get("athena") != "review":
+            return Reply(text="Unknown action.")
+        try:
+            alert_id = int(data.get("alert_id"))
+        except (TypeError, ValueError):
+            return Reply(text="Unknown alert.")
+        error = review.mark(self.app, alert_id, email, data.get("verdict", ""), data.get("note"))
+        return Reply(
+            text=f"Not recorded: {error}"
+            if error
+            else f"Thanks. Alert {alert_id} marked {data.get('verdict')}."
+        )

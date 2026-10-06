@@ -245,3 +245,49 @@ def tick(
     if not out["runs"]:
         typer.echo("No rules due.")
     typer.echo(f"Held messages released: {out['released']}. Digests sent: {out['digests']}.")
+
+
+@app.command()
+def review(
+    alert: int = typer.Option(None, "--alert", help="Alert ID to mark."),
+    verdict: str = typer.Option(None, "--verdict", help="correct or wrong."),
+    note: str = typer.Option(None, "--note", help="Optional note."),
+    as_: str = typer.Option(None, "--as", help="Reviewer email (an owner of the client)."),
+    rule: str = typer.Option(None, "--rule", help="Only this rule."),
+    all_: bool = typer.Option(False, "--all", help="Include alerts already marked."),
+) -> None:
+    """List shadow alerts, or mark one correct or wrong."""
+    from sqlalchemy import select
+
+    from athena.app import build
+    from athena.core import review as rv
+    from athena.core.db import Receipt
+
+    app_ = build(cfg=_config())
+    if alert is not None:
+        if not (verdict and as_):
+            typer.echo("Give --verdict correct|wrong and --as <email>.", err=True)
+            raise typer.Exit(2)
+        error = rv.mark(app_, alert, as_, verdict, note)
+        if error:
+            typer.echo(f"Not recorded: {error}", err=True)
+            raise typer.Exit(1)
+        typer.echo(f"Alert {alert} marked {verdict}.")
+        return
+    rows = rv.pending(app_, rule, include_marked=all_)
+    if not rows:
+        typer.echo("No shadow alerts to review.")
+        return
+    with app_.db.session() as s:
+        for a in rows:
+            text = s.scalars(
+                select(Receipt.output).where(
+                    Receipt.item_key == a.item_key, Receipt.status == "shadow"
+                )
+            ).first()
+            typer.echo(
+                f"#{a.id:<5} {a.rule_id} {a.severity:<10} {a.client:<20} {a.state:<6} {text}"
+            )
+    typer.echo(
+        f"\n{len(rows)} alerts. Mark one: athena review --alert <id> --verdict correct|wrong --as <email>"
+    )
