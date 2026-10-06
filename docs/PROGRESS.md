@@ -44,7 +44,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M6.7 Automatic phase demotion
 - [x] M7.1 Digest
 - [x] M7.2 R3 and delivery routing
-- [ ] M8.1 Report builder (R5) — real template: G7
+- [ ] M8.1 Report builder (R5) — real template: G7 — builder done with a plain default template; real template waits for G7
 - [ ] M8.2 `athena stats`
 - [ ] M9.1 Platform test (rule file only)
 
@@ -88,3 +88,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M6.7: Wrong marks / reviewed marks over 7 days > max_wrong_rate -> one phase lower, recorded in rule_state (reason, time), at most once per 7 days; migration 0002.
 - M7.1: One digest per person per work day at digest time; 'No exceptions today.' when empty; 'Data is not current' when stale (never all-clear); shadow digests to review list.
 - M7.2: R3 runs in fixture mode at 08:30 IST, queues off-target metrics; digest at 09:00 with open R2 alerts in scope; now rules bypass the digest.
+- M8.1: WBR draft per client: numbers + query IDs in code, guarded model comments, PPTX in drafts/, BA notified; plain template until G7.

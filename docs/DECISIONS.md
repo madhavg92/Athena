@@ -52,3 +52,5 @@
 - 2026-10-06 — Backtest replays `fixtures/history/` (tasks and CS Hub tickets) through the real rule loop with live delivery to memory and a 15-minute clock. A source without history is refused with a clear message. Labels with `rule_id: "*"` apply to any rule on that source.
 - 2026-10-06 — Logging: JSON lines to stderr from the CLI (`ATHENA_LOG_LEVEL`, default WARNING).
 - 2026-10-06 — Digests: one message per person per work day (Mon-Fri, provisional G8) at the persona digest time, sent even before work hours (SPEC: "before the shift"); items from digest rules plus open alerts of `include_open_alerts` rules in the person's scope.
+- 2026-10-06 — R5 report: numbers computed in code (weekly average, target, prior week, change, status by metric direction), each with a query ID and its query in the slide notes. The model writes comments only; any comment with a number not in the computed set is replaced by plain template comments. Plain default template `context/templates/wbr.pptx` until G7. The BA gets a notice; nothing goes to the client.
+- 2026-10-06 — Fixture dates (not times) shift by the calendar-day difference between the clock and the anchor.

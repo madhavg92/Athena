@@ -106,6 +106,7 @@ class Connector:
         spec = self.DATASETS[dataset]
         rows = _fixture_file(str(self.fixtures / spec["file"]))
         shift = self.clock() - fixture_anchor(self.fixtures)
+        day_shift = (self.clock().date() - fixture_anchor(self.fixtures).date()).days
         time_fields = set(spec.get("times", ())) | {"as_of"}
         date_fields = set(spec.get("dates", ()))
         out = []
@@ -117,7 +118,7 @@ class Connector:
             for f in date_fields & row.keys():
                 if row[f]:
                     row[f] = (
-                        (datetime.fromisoformat(row[f]) + timedelta(days=shift.days))
+                        (datetime.fromisoformat(row[f]) + timedelta(days=day_shift))
                         .date()
                         .isoformat()
                     )
