@@ -12,15 +12,13 @@ Everything in the demo is synthetic: three made-up clients (Northwind Orthopedic
 
 ## How the demo page works
 
-The page is Athena as each person would use it. Pick a person at the top (DM One, Hub Leader Key, CSM One, BA One). Each opens Athena at a different time of the same Monday (13:35, 15:35, 18:35, 08:15 IST).
+The page is one chat with Athena, the way it will appear in Teams. Pick a person in the top-right (DM One, Hub Leader Key, CSM One, BA One); each sees their own conversation for the same Monday.
 
-- **Inbox (left):** that person's alerts at that moment, one card per alert with its history (sent, reminder, escalated), plus their digest or report drafts.
-- **Alert view:** the facts, then actions: *I'm on it (2h)* pauses reminders and escalation, *Snooze 4h*, *Not useful* (counts towards the rule's wrong-alert rate), *Undo*. Below, ask Athena about the alert ("Why is this late?", "Who could cover this today?") or *Draft a note to the owner* (a draft only; never sent).
-- **Ask Athena:** the assistant. A summary of what needs the person, "Brief me on my day", and harder suggested questions (causes, comparisons, commitments at risk, call prep). Each answer shows its sources and "How Athena got this": the steps it took.
-- **Live vs scripted:** opened in Claude, a real model answers through Athena's tools as that person (hard questions take 20–60 seconds; the first question asks to use the viewer's Claude account). Elsewhere, alerts and actions still work and simple questions have scripted answers.
-- The page's own code enforces Athena's rules: only that person's clients and data sources, a code-made Sources footer, "I do not know" when no tool returned data, "Data is not current" for old data.
+- Athena's messages are short: what needs you, and when. Under each: **On it** (holds reminders and escalation for 2 hours), **Why?** (Athena looks into it), **Later** (brings it back in 2 hours).
+- Type anything in plain words: "who can cover this?", "what's driving Northwind's denials?", "draft a note to DM One about the late batch". Replies are one to three sentences, with one small line saying where the facts came from.
+- Opened in Claude, a real model answers through Athena's tools, as that person, and only for their clients and data. Elsewhere, the messages and quick replies show but Athena cannot answer typed questions.
 
-The synthetic data tells one story, so hard questions have real answers: Northwind's backlog and denials rise because an analyst is on leave until Thursday and Payer B started denying prior authorisations (CO-197); Anka promised Northwind a recovery plan by 10 Oct; Cedar's AR over 90 days is growing.
+The made-up data tells one story, so real questions have answers: Northwind's tasks slip because an analyst is on leave and one payer started denying prior authorisations; Anka promised Northwind a recovery plan by 10 Oct; Cedar's AR over 90 days is growing.
 
 Write down every question people type. Those are the real G9 questions.
 

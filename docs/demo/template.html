@@ -1,204 +1,97 @@
 <title>Athena Demo Day</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: an operations inbox. Person switcher on top; their inbox on the left; the selected alert or the assistant on the right. */
+/* Layout: one chat, like a Teams conversation with Athena. Nothing else on screen. */
 :root {
-  --bg: #eef1f4;
+  --bg: #f2f4f6;
   --surface: #ffffff;
-  --raised: #f7f9fb;
-  --ink: #16202b;
-  --muted: #5a6675;
-  --line: #d6dde5;
-  --accent: #1d5d8a;
+  --ink: #18212b;
+  --muted: #687482;
+  --line: #dde2e8;
+  --accent: #245f8c;
   --accent-ink: #ffffff;
-  --accent-soft: #e2edf6;
   --late: #b3362e;
-  --late-soft: #fbe9e7;
   --risk: #a3650f;
-  --risk-soft: #fbf1df;
-  --ok: #2b7649;
-  --ok-soft: #e4f3ea;
-  --font-display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
-  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0d1319; --surface: #151d26; --raised: #1a2430; --ink: #e4eaf0; --muted: #98a5b3; --line: #283442;
-    --accent: #6badda; --accent-ink: #0d1319; --accent-soft: #1a2d3c; --late: #ef8379; --late-soft: #3a1f1d;
-    --risk: #e3ad5f; --risk-soft: #362a17; --ok: #72c290; --ok-soft: #17301f; color-scheme: dark;
-  }
+  :root:not([data-theme="light"]) { --bg: #0e141a; --surface: #18212b; --ink: #e6ebf0; --muted: #96a2af; --line: #2a3542; --accent: #6eaedb; --accent-ink: #0e141a; --late: #ef8379; --risk: #e3ad5f; color-scheme: dark; }
 }
-:root[data-theme="dark"] {
-  --bg: #0d1319; --surface: #151d26; --raised: #1a2430; --ink: #e4eaf0; --muted: #98a5b3; --line: #283442;
-  --accent: #6badda; --accent-ink: #0d1319; --accent-soft: #1a2d3c; --late: #ef8379; --late-soft: #3a1f1d;
-  --risk: #e3ad5f; --risk-soft: #362a17; --ok: #72c290; --ok-soft: #17301f; color-scheme: dark;
-}
+:root[data-theme="dark"] { --bg: #0e141a; --surface: #18212b; --ink: #e6ebf0; --muted: #96a2af; --line: #2a3542; --accent: #6eaedb; --accent-ink: #0e141a; --late: #ef8379; --risk: #e3ad5f; color-scheme: dark; }
 * { box-sizing: border-box; }
-body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--font-body); }
-button { font: inherit; color: inherit; }
-button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.shell { max-width: 1240px; margin: 0 auto; padding-inline: 16px; padding-block: 16px 40px; display: grid; gap: 14px; }
-
-/* top bar */
-.top { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
-.brand { font: 600 1.45rem/1 var(--font-display); letter-spacing: -0.01em; }
-.brand small { display: block; font: 500 11px/1.4 var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-top: 4px; }
-.people { display: flex; flex-wrap: wrap; gap: 6px; flex: 1 1 auto; }
-.people button { display: grid; text-align: left; gap: 1px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 7px 12px; cursor: pointer; min-width: 0; }
-.people button b { font: 600 14px/1.2 var(--font-display); }
-.people button span { font-size: 12px; color: var(--muted); }
-.people button[aria-selected="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: var(--accent-soft); }
-.clock { font: 500 13px/1.3 var(--font-mono); color: var(--muted); text-align: right; }
-.clock b { display: block; color: var(--ink); font-weight: 500; }
-.notice { font-size: 13px; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 8px; padding: 8px 12px; }
-.notice b { color: var(--ink); font-weight: 600; }
-
-/* app grid */
-.app { display: grid; grid-template-columns: minmax(280px, 380px) minmax(0, 1fr); gap: 14px; align-items: start; }
-.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; min-width: 0; }
-.inbox-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 14px 16px 10px; border-bottom: 1px solid var(--line); }
-.inbox-head h2 { font: 600 1.05rem/1.2 var(--font-display); margin: 0; }
-.inbox-head span { font-size: 13px; color: var(--muted); }
-.list { display: grid; padding: 6px; gap: 4px; }
-.item { display: grid; grid-template-columns: 4px minmax(0, 1fr); gap: 10px; text-align: left; background: none; border: 1px solid transparent; border-radius: 9px; padding: 10px 10px 10px 8px; cursor: pointer; }
-.item:hover { background: var(--raised); }
-.item[aria-current="true"] { background: var(--accent-soft); border-color: var(--accent); }
-.item .bar { border-radius: 4px; background: var(--line); }
-.item.late .bar { background: var(--late); } .item.at_risk .bar, .item.no_reply .bar, .item.never_replied .bar { background: var(--risk); }
-.item.assistant .bar { background: var(--accent); }
-.item .t { display: block; font-weight: 600; font-size: 14px; line-height: 1.35; overflow-wrap: anywhere; }
-.item .m { font-size: 12.5px; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin-top: 3px; }
-.pill { font: 500 10.5px/1 var(--font-mono); text-transform: uppercase; letter-spacing: 0.07em; padding: 4px 6px; border-radius: 4px; white-space: nowrap; }
-.pill.late { background: var(--late-soft); color: var(--late); }
-.pill.at_risk, .pill.no_reply, .pill.never_replied { background: var(--risk-soft); color: var(--risk); }
-.pill.ok { background: var(--ok-soft); color: var(--ok); }
-.pill.info { background: var(--accent-soft); color: var(--accent); }
-.pill.muted { background: var(--raised); color: var(--muted); border: 1px solid var(--line); }
-.list-sep { font: 500 11px/1 var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); padding: 12px 10px 4px; }
-
-/* pane */
-.pane { padding: 18px 20px 20px; display: grid; gap: 16px; }
-.pane h2 { font: 600 1.35rem/1.25 var(--font-display); margin: 0; text-wrap: balance; }
-.sub { color: var(--muted); font-size: 14px; margin: 2px 0 0; }
-.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 0; }
-.fact { background: var(--raised); border-radius: 8px; padding: 8px 10px; min-width: 0; }
-.fact dt { font: 500 11px/1.3 var(--font-mono); text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); }
-.fact dd { margin: 2px 0 0; font-weight: 500; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
-.trail { display: flex; flex-wrap: wrap; gap: 6px 16px; font: 13px/1.4 var(--font-mono); color: var(--muted); }
-.trail span::before { content: "● "; color: var(--line); }
-.trail .esc::before { color: var(--late); } .trail .rem::before { color: var(--risk); } .trail .mine { color: var(--ok); } .trail .mine::before { color: var(--ok); }
-.state { border-radius: 8px; padding: 9px 12px; font-size: 14px; background: var(--ok-soft); color: var(--ink); }
-.state b { color: var(--ok); }
-.actions { display: flex; flex-wrap: wrap; gap: 8px; }
-.btn { border-radius: 8px; padding: 9px 14px; cursor: pointer; border: 1px solid var(--line); background: var(--surface); font-weight: 500; }
-.btn:hover { border-color: var(--accent); }
-.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
-.btn:disabled { opacity: 0.5; cursor: default; }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.chips button { font-size: 13.5px; line-height: 1.35; text-align: left; background: var(--raised); border: 1px solid var(--line); border-radius: 16px; padding: 6px 11px; cursor: pointer; }
-.chips button:hover { border-color: var(--accent); }
-.section-label { font: 500 11px/1 var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 8px; }
-
-/* thread */
-.thread { display: grid; gap: 12px; }
-.thread:empty { display: none; }
-.you { justify-self: end; max-width: 85%; background: var(--accent); color: var(--accent-ink); border-radius: 12px 12px 3px 12px; padding: 8px 12px; overflow-wrap: anywhere; }
-.bot { background: var(--raised); border: 1px solid var(--line); border-radius: 3px 12px 12px 12px; padding: 12px 14px; min-width: 0; }
-.bot .tag { display: inline-block; font: 500 10.5px/1 var(--font-mono); letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-.bot .tag.draft { color: var(--risk); }
-.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font: 13px/1.45 var(--font-mono); color: var(--muted); }
-.steps li::before { content: "✓ "; color: var(--ok); }
-.steps li.run::before { content: "… "; color: var(--accent); }
-.steps li.no::before { content: "✕ "; color: var(--late); }
-details.how { margin-top: 10px; }
-details.how summary { cursor: pointer; font: 12.5px/1.4 var(--font-mono); color: var(--muted); }
-details.how .steps { margin-top: 6px; }
-.body p { margin: 0 0 6px; overflow-wrap: anywhere; }
-.body h4 { font: 600 14.5px/1.3 var(--font-display); margin: 12px 0 4px; }
-.body h4:first-child { margin-top: 0; }
-.body ul { margin: 2px 0 8px; padding-left: 20px; }
-.body li { overflow-wrap: anywhere; margin-bottom: 2px; }
-.sources { margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--muted); }
-.sources code { font-family: var(--font-mono); font-size: 12px; color: var(--ink); }
-.copy { margin-top: 8px; font-size: 13px; }
-.askrow { display: flex; gap: 8px; flex-wrap: wrap; }
-.askrow textarea { flex: 1 1 300px; min-width: 0; min-height: 46px; resize: vertical; font: 15px/1.45 var(--font-body); color: var(--ink); background: var(--raised); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
-.askrow .btns { display: flex; gap: 8px; align-items: flex-end; }
-.greet { font: 600 1.5rem/1.25 var(--font-display); margin: 0; text-wrap: balance; }
-.summary { display: flex; flex-wrap: wrap; gap: 8px; }
-.summary button { border: 1px solid var(--line); background: var(--raised); border-radius: 10px; padding: 8px 12px; cursor: pointer; text-align: left; }
-.summary button:hover { border-color: var(--accent); }
-.summary button b { display: block; font: 600 1.3rem/1.1 var(--font-display); font-variant-numeric: tabular-nums; }
-.summary button span { font-size: 12.5px; color: var(--muted); }
-.summary .late b { color: var(--late); } .summary .risk b { color: var(--risk); }
-.digest { white-space: pre-wrap; background: var(--raised); border-radius: 8px; padding: 12px 14px; font-size: 14px; overflow-wrap: anywhere; }
-details.presenter { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
-details.presenter summary { cursor: pointer; font: 600 15px/1.3 var(--font-display); }
-details.presenter ol { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 6px; }
-footer { color: var(--muted); font-size: 12.5px; max-width: 80ch; }
-@media (max-width: 860px) {
-  .app { grid-template-columns: 1fr; }
-  .clock { text-align: left; }
-}
-@media (prefers-reduced-motion: no-preference) { .item, .btn, .chips button { transition: background 0.12s, border-color 0.12s; } }
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--font); }
+button, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chat { max-width: 680px; height: 100%; margin: 0 auto; padding-inline: 16px; display: flex; flex-direction: column; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 14px 10px; }
+header h1 { font-size: 17px; font-weight: 600; margin: 0; }
+header h1 span { font-weight: 400; color: var(--muted); font-size: 13px; margin-left: 6px; }
+header select { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; max-width: 60%; }
+.log { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-block: 8px 12px; }
+.time { align-self: center; font-size: 12px; color: var(--muted); padding-block: 4px; }
+.msg { max-width: 88%; padding: 9px 13px; border-radius: 14px; overflow-wrap: anywhere; }
+.msg p { margin: 0; }
+.msg p + p, .msg ul + p, .msg p + ul { margin-top: 6px; }
+.msg ul { margin: 0; padding-left: 18px; }
+.athena { align-self: flex-start; background: var(--surface); border: 1px solid var(--line); border-bottom-left-radius: 4px; }
+.me { align-self: flex-end; background: var(--accent); color: var(--accent-ink); border-bottom-right-radius: 4px; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+.dot.late { background: var(--late); } .dot.risk { background: var(--risk); }
+.src { margin-top: 6px; font-size: 12px; color: var(--muted); }
+.typing { color: var(--muted); font-style: italic; }
+.replies { align-self: flex-start; display: flex; flex-wrap: wrap; gap: 6px; margin-top: -2px; }
+.replies button { background: none; border: 1px solid var(--accent); color: var(--accent); border-radius: 16px; padding: 4px 12px; font-size: 14px; cursor: pointer; }
+.replies button:hover { background: var(--accent); color: var(--accent-ink); }
+.replies button:disabled { opacity: 0.4; cursor: default; background: none; color: var(--accent); }
+form { display: flex; gap: 8px; padding-block: 10px 16px; border-top: 1px solid var(--line); }
+textarea { flex: 1; min-width: 0; resize: none; height: 44px; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 10px 16px; }
+form button { border: 0; border-radius: 22px; padding: 0 18px; background: var(--accent); color: var(--accent-ink); font-weight: 500; cursor: pointer; }
+form button:disabled { opacity: 0.5; cursor: default; }
+.about { font-size: 12.5px; color: var(--muted); padding-top: 8px; display: flex; gap: 8px; align-items: center; }
+.about button { background: none; border: 0; color: var(--accent); cursor: pointer; padding: 0; font-size: 12.5px; }
 </style>
 
-<div class="shell">
-  <header class="top">
-    <div class="brand">Athena<small>Personal assistant · demo</small></div>
-    <nav class="people" role="tablist" aria-label="Open Athena as" id="people"></nav>
-    <div class="clock" id="clock"></div>
+<div class="chat">
+  <header>
+    <h1>Athena <span>demo · made-up data</span></h1>
+    <label for="who" hidden>You are</label>
+    <select id="who"></select>
   </header>
-  <div class="notice" id="notice"></div>
-  <main class="app">
-    <aside class="panel" aria-label="Inbox">
-      <div class="inbox-head"><h2>Inbox</h2><span id="inbox-count"></span></div>
-      <div class="list" id="list"></div>
-    </aside>
-    <section class="panel pane" id="pane" aria-live="polite"></section>
-  </main>
-  <details class="presenter" id="presenter"><summary>Presenter notes: questions to ask this person afterwards</summary><ol id="ask-list"></ol></details>
-  <footer>All clients, people and numbers are synthetic. Athena reads data only: it never changes Smartsheet or any other system, never sends anything to a client, and drafts stay drafts. "I'm on it", snooze and "not useful" change only Athena's own alert records. In production every new alert rule runs in shadow mode for a week first.</footer>
+  <div class="log" id="log" aria-live="polite"></div>
+  <div class="about" id="about" hidden></div>
+  <form id="form" autocomplete="off">
+    <label for="q" hidden>Message Athena</label>
+    <textarea id="q" placeholder="Message Athena"></textarea>
+    <button id="send" type="submit">Send</button>
+  </form>
 </div>
 
 <script>
-const DEMO = /*DEMO_DATA*/null;
 const DATA = /*ASK_DATA*/null;
 const SUGGEST = /*SUGGESTIONS*/null;
 const CANNED = /*CANNED*/null;
 const INBOX = /*INBOX*/null;
 const OPENS_AT = /*OPENS_AT*/null;
+const DEMO = /*DEMO_DATA*/null;
 
 const PEOPLE = {
-  dm_am: { label: "DM/AM", name: "DM One", email: "dm.one@fixture.local", role: "Delivery manager, Northwind Orthopedics" },
-  hub_leader: { label: "Hub leader", name: "Hub Leader Key", email: "hl.key@fixture.local", role: "Key-clients hub: Northwind and Bluefield" },
-  csm: { label: "CSM", name: "CSM One", email: "csm.one@fixture.local", role: "Client success, Northwind and Bluefield (US hours)" },
-  ba: { label: "BA", name: "BA One", email: "ba.one@fixture.local", role: "Weekly client reports, all clients" },
-};
-const PRESENTER = {
-  dm_am: ["When is a task really late for you? Is 'due within 4 hours and no update for 2 hours' the right 'at risk'?", "How many alerts a day before it becomes noise? Reminder after 2h, escalation after 4h: right?", "When you tap 'I'm on it', how long should Athena stay quiet?", "Which questions did Athena answer badly? Write them down exactly."],
-  hub_leader: ["Is the 09:00 digest useful? What should it show and leave out?", "When an alert escalates to you, what do you want to see first?", "Which questions do you ask your DMs every week?", "What would make you turn Athena off?"],
-  csm: ["Is the pre-call brief in the right order? What is missing?", "Should 'no reply' alerts depend on ticket priority?", "Who is the CS lead, and after how long should tickets escalate?", "Which client questions do you prepare for before every call?"],
-  ba: ["Can you share the real weekly report template?", "How is each number in the report calculated, and which way is good?", "Which commentary do you write every week that Athena could draft?", "Which questions do managers ask you each week?"],
+  dm_am: { name: "DM One", email: "dm.one@fixture.local", role: "Delivery manager, Northwind Orthopedics" },
+  hub_leader: { name: "Hub Leader Key", email: "hl.key@fixture.local", role: "Hub leader, Northwind and Bluefield" },
+  csm: { name: "CSM One", email: "csm.one@fixture.local", role: "Client success, Northwind and Bluefield" },
+  ba: { name: "BA One", email: "ba.one@fixture.local", role: "Business analyst, all clients" },
 };
 const SRC = { get_tasks: "smartsheet", get_task_history: "smartsheet", get_team: "smartsheet", get_metrics: "supaboard", get_denials: "supaboard",
   get_ar_aging: "supaboard", get_tickets: "cs_hub", get_client_activity: "cs_hub", search_documents: "sharepoint" };
 const NOW = new Date(DATA.now);
 const HOUR = 3600e3;
-const state = loadState();          // per viewer: alert actions and threads (kept in this browser only)
-let person = "dm_am", view = "home", sampleFn = null, liveTools = false, ctl = null;
+const state = loadState();
+let person = "dm_am", sampleFn = null, liveTools = false, focus = null, busy = false;
 
-// ---------------------------------------------------------------- helpers
 function esc(s) { return String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
-function inline(s) { return esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"); }
 function fmt(iso) { return new Date(iso).toLocaleString("en-GB", { timeZone: "Asia/Kolkata", weekday: "short", day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit", hour12: false }); }
-function loadState() { try { return JSON.parse(localStorage.getItem("athena-demo-v2") || "{}"); } catch (_) { return {}; } }
-function saveState() { try { localStorage.setItem("athena-demo-v2", JSON.stringify(state)); } catch (_) {} }
-function S(key) { return (state[key] ||= { alerts: {}, threads: {} }); }
-function addMinutes(hhmm, mins) { const [d, t] = hhmm.split(" "); const [h, m] = t.split(":").map(Number); const x = h * 60 + m + mins; return `${d} ${String(Math.floor(x / 60) % 24).padStart(2, "0")}:${String(x % 60).padStart(2, "0")}`; }
 function personaOf(key) { return DATA.personas[DATA.people[PEOPLE[key].email].persona]; }
 function scopeOf(key) { const role = personaOf(key).scope_role, me = PEOPLE[key].email; return Object.keys(DATA.clients).filter(c => (DATA.clients[c].roles[role] || "").toLowerCase() === me); }
 function resolveClient(v) {
@@ -209,27 +102,7 @@ function resolveClient(v) {
 function oldest(rows) { return rows.reduce((m, r) => (!m || r._as_of < m ? r._as_of : m), null); }
 function words(s) { return (String(s).toLowerCase().match(/[a-z0-9]+/g) || []).filter(w => w.length > 2); }
 function since(days) { const d = new Date(NOW); d.setUTCDate(d.getUTCDate() - days); return d.toISOString().slice(0, 10); }
-function sevLabel(s) { return { late: "Late", at_risk: "At risk", no_reply: "No reply", never_replied: "Never replied" }[s] || s; }
-function alertState(key, id) { return S(key).alerts[id] || {}; }
-function items(key) { return INBOX[key] || []; }
-function alertsOf(key) { return items(key).filter(i => i.type === "alert"); }
 
-function renderBody(text) {
-  const [main, src] = String(text).split(/\n\nSources:\n/);
-  const out = []; let list = null;
-  for (const raw of main.replace(/\s*https?:\/\/\S+/g, "").split("\n")) {
-    const line = raw.trim(); if (!line) continue;
-    if (/^#{1,4} /.test(line) || /^\*\*[^*]+\*\*:?$/.test(line)) { list = null; out.push(`<h4>${esc(line.replace(/^#+ |\*\*|:$/g, ""))}</h4>`); continue; }
-    if (/^[-•*] /.test(line)) { if (!list) { list = []; out.push(list); } list.push(`<li>${inline(line.slice(2))}</li>`); continue; }
-    list = null; out.push(`<p>${inline(line)}</p>`);
-  }
-  let html = out.map(x => Array.isArray(x) ? `<ul>${x.join("")}</ul>` : x).join("");
-  if (src) html += `<div class="sources">Sources: ${src.split("\n").filter(Boolean).map(l => { const m = l.replace(/^- /, "").match(/^(\S+)(?: \([^)]*\))?, as of (.+)$/); return m ? `<code>${esc(m[1])}</code> as of ${esc(m[2])}` : esc(l); }).join(" · ")}</div>`;
-  return html;
-}
-
-// ---------------------------------------------------------------- Athena's tools, in the page
-// The page enforces what Athena's code enforces: only this person's clients and data sources.
 function makeTools(key, steps, redraw) {
   const persona = personaOf(key), scope = scopeOf(key);
   const clientParam = { type: "string", description: "Client name, e.g. Northwind Orthopedics" };
@@ -252,8 +125,8 @@ function makeTools(key, steps, redraw) {
   const T = (name, description, properties, required, fn) => ({ name, description, inputSchema: { type: "object", properties, required }, execute: fn });
   return [
     T("get_my_alerts", "This person's open Athena alerts right now: id, rule, severity, client, item, history, and whether they acknowledged, snoozed or marked it not useful.", {}, [], () => {
-      const rows = alertsOf(key).map(a => ({ alert_id: a.alert_id, rule: a.rule, severity: a.severity, client: a.client, item: a.title, facts: a.facts,
-        history: a.history.map(h => `${h.time} ${h.kind}`), your_action: alertState(key, a.alert_id).action || null }));
+      const rows = (INBOX[key] || []).filter(i => i.type === "alert").map(a => ({ alert_id: a.alert_id, rule: a.rule, severity: a.severity, client: a.client, item: a.title, facts: a.facts,
+        history: a.history.map(h => `${h.time} ${h.kind}`), your_action: null }));
       steps.push({ name: "get_my_alerts", text: `Read ${rows.length} open alerts`, n: rows.length, sources: [{ name: "athena.alerts", as_of: DATA.now }], stale: [] }); redraw();
       return { records: rows };
     }),
@@ -351,32 +224,11 @@ function makeTools(key, steps, redraw) {
   ];
 }
 
-function instructions(key, opts) {
-  const p = PEOPLE[key], persona = personaOf(key);
-  const metrics = Object.entries(DATA.metrics).map(([k, m]) => `- ${k}: ${m.meaning} (${m.better} is better)`).join("\n");
-  return [
-    "You are Athena, the personal operations assistant of a manager at Anka, a healthcare revenue-cycle (RCM) company. This is a demo on SYNTHETIC data.",
-    `You work for ${p.name} (${p.role}). Clients in their scope: ${scopeOf(key).map(k => DATA.clients[k].name).join(", ")}. Their data sources: ${persona.sources.join(", ")}.`,
-    `It is ${OPENS_AT[key]} IST on Monday 05 Oct 2026. Data snapshot: ${fmt(DATA.now)} IST.`,
-    "How to work:",
-    "- Think like a senior RCM operations manager. For 'why' and 'what should I do' questions, investigate: call several tools (in parallel where you can) such as denials by payer and reason, task history, team and leave, client activity and commitments, AR aging; then connect the evidence.",
-    "- Use only tool results. Never invent numbers, names or dates. Quote numbers with their date or period.",
-    "- If the tools cannot answer, start with \"I do not know\" and say what is missing. If a tool refuses (scope or source), say so plainly.",
-    "- If a tool warns that data is not current, say \"Data is not current\" and give the as_of time.",
-    "- Never give patient-level details. Never offer to send anything to a client or change a system: you can only read, and draft text for the user to review.",
-    "Format: plain text. Start with the direct answer in one or two sentences. Then short sections with **Bold title** lines and '- ' bullets. End with **Next steps** (up to 3 bullets) when the question asks what to do. No tables. Do not list sources (Athena adds them).",
-    opts.brief ? "This is a pre-call brief. Sections: Health and open tickets, Metrics, Open tasks, Commitments and recent activity, Risks to raise." : "",
-    opts.alert ? "The user is asking about this alert (investigate it with the tools before answering):\n" + JSON.stringify(opts.alert) : "",
-    opts.draft ? "Write a DRAFT note for the user to review and send themselves. Keep it under 120 words, polite and specific: what is wrong, why, and what is needed by when. Start with 'To:' and 'Subject:' lines." : "",
-    "Metric definitions:\n" + metrics,
-  ].filter(Boolean).join("\n");
-}
-
 function finish(text, steps) {
   const data = steps.filter(s => s.n > 0), refused = steps.filter(s => s.refused);
   let answer = (text || "").trim();
   if (refused.length && !data.length) answer = refused.some(r => r.refused === "scope") ? "I cannot answer this. That client is not in your scope." : refused.some(r => r.refused === "source") ? "I cannot answer this. That data source is not available to you." : answer;
-  else if (!data.length && !/^I do not know/i.test(answer)) answer = "I do not know. " + (steps.length ? "I checked: " + [...new Set(steps.map(s => s.text))].join("; ") + "." : "No data source covers this question.");
+  else if (!data.length && !/^I (do not|don't) know/i.test(answer)) answer = "I don't know. " + (steps.length ? "I checked: " + [...new Set(steps.map(s => s.text))].join("; ") + "." : "No data source covers this question.");
   const stale = data.flatMap(s => s.stale || []);
   if (stale.length && !/data is not current/i.test(answer)) answer = `Data is not current (${stale.map(s => `${s.name} as of ${fmt(s.as_of)}`).join("; ")}).\n` + answer;
   const seen = new Set(), src = [];
@@ -384,185 +236,171 @@ function finish(text, steps) {
   return answer + (src.length ? "\n\nSources:\n" + src.join("\n") : "");
 }
 
-// ---------------------------------------------------------------- conversation
-async function ask(threadId, question, opts = {}) {
-  question = question.trim(); if (!question) return;
-  const key = person, thread = (S(key).threads[threadId] ||= { msgs: [], turns: [] });
-  thread.msgs.push({ role: "you", text: opts.label || question });
-  const bot = { role: "bot", pending: true, steps: [] };
-  thread.msgs.push(bot);
-  drawThread(threadId);
-  if (!(sampleFn && liveTools)) {
-    const c = (CANNED?.[key] || []).find(x => x.q.toLowerCase() === question.toLowerCase());
-    const usable = c && !/^I do not know\. I (could not find|have no data source)/.test(c.answer);
-    Object.assign(bot, { pending: false, tag: "Scripted answer", text: usable ? c.answer + (c.footer ? "\n\n" + c.footer : "")
-      : "This question needs live answers. Open this page in Claude to ask Athena anything; in this view only simple questions have scripted answers." });
-    saveState(); drawThread(threadId); return;
+
+function sevDot(s) { return s === "late" ? "late" : "risk"; }
+function when(s) { return String(s || "").replace(/^04 Oct /, "yesterday ").replace(/^05 Oct /, "today ").replace(/^03 Oct /, "Sat "); }
+function shortDue(a) { return a.facts.due ? `due ${when(a.facts.due)}` : a.facts.last_reply_at ? `no reply since ${when(a.facts.last_reply_at)}` : a.facts.opened_at ? `opened ${when(a.facts.opened_at)}, no reply yet` : ""; }
+function shortText(s) { return String(s).replace(/\s*https?:\/\/\S+/g, "").trim(); }
+function digestLine(l) {
+  const m = l.replace(/^- /, "").match(/^(.+?): (.+?) is ([\d.]+) against target ([\d.]+)/);
+  return m ? `${m[1].split(" ")[0]} ${m[2]} ${Math.round(Number(m[3]) * 10) / 10} (target ${Number(m[4])})` : l.replace(/^- /, "");
+}
+function listItems(alerts) {
+  const shown = alerts.slice(0, 3);
+  return `<ul>${shown.map(a => `<li><span class="dot ${sevDot(a.severity)}"></span>${esc(a.title)}, ${esc(shortDue(a))}</li>`).join("")}</ul>${alerts.length > 3 ? `<p>…and ${alerts.length - 3} more.</p>` : ""}`;
+}
+
+// Athena's proactive messages for this person, in the order they arrived today. Short.
+function proactive(key) {
+  const items = INBOX[key] || [], events = {};
+  for (const i of items) {
+    if (i.type === "alert") for (const h of i.history) (events[`${h.time}|${h.kind}`] ||= []).push(i);
+    else (events[`${i.received}|${i.type}`] ||= []).push(i);
   }
-  const brief = /^\s*brief me on (?!my)/i.test(question) && personaOf(key).rules.includes("R4");
-  ctl = new AbortController();
-  setBusy(true);
-  const redraw = () => { if (person === key) drawThread(threadId); };
-  const input = [{ role: "user", content: instructions(key, { brief, alert: opts.alert, draft: opts.draft }) }, ...thread.turns.slice(-6), { role: "user", content: question }];
-  try {
-    const { text } = await sampleFn(input, { tools: makeTools(key, bot.steps, redraw), modelTier: "default", signal: ctl.signal, onText: () => { bot.writing = true; redraw(); } });
-    Object.assign(bot, { pending: false, text: opts.draft ? text.trim() : finish(text, bot.steps), tag: opts.draft ? "Draft · not sent" : "", draft: !!opts.draft });
-    thread.turns.push({ role: "user", content: question }, { role: "assistant", content: bot.text });
-  } catch (e) {
-    const copy = { cancelled: "Stopped.", rate_limited: "Too many questions at once. Wait a minute and ask again.", not_granted: "Live answers were not allowed. Simple suggested questions still have scripted answers.",
-      sampling_disabled: "Claude is not available for this account.", session_expired: "Please sign in to Claude again.", refused: "Claude declined this question. Try asking it another way." }[e?.code] || "Something went wrong. Please ask again.";
-    if (["not_granted", "sampling_disabled", "tools_unavailable", "not_declared", "capability_disabled"].includes(e?.code)) { liveTools = false; drawNotice(); }
-    Object.assign(bot, { pending: false, text: copy, tag: "" });
-  } finally { setBusy(false); saveState(); redraw(); }
-}
-
-function stepsHtml(steps, running) {
-  return `<ul class="steps">${steps.map(s => `<li class="${s.refused ? "no" : ""}">${esc(s.text)}${s.n === 0 ? " (nothing found)" : ""}</li>`).join("")}${running ? `<li class="run">${steps.length ? "Working…" : "Thinking…"}</li>` : ""}</ul>`;
-}
-function bubble(m) {
-  if (m.role === "you") return `<div class="you">${esc(m.text)}</div>`;
-  if (m.pending) return `<div class="bot"><span class="tag">Athena is working</span>${stepsHtml(m.steps || [], !m.writing)}${m.writing ? `<p class="sub">Writing the answer…</p>` : ""}</div>`;
-  const how = m.steps?.length ? `<details class="how"><summary>How Athena got this: ${m.steps.length} step${m.steps.length > 1 ? "s" : ""}</summary>${stepsHtml(m.steps, false)}</details>` : "";
-  const copy = m.draft ? `<button class="btn copy" type="button" data-copy="1">Copy draft</button>` : "";
-  return `<div class="bot">${m.tag ? `<span class="tag ${m.draft ? "draft" : ""}">${esc(m.tag)}</span>` : ""}<div class="body">${m.draft ? `<p style="white-space:pre-wrap">${esc(m.text)}</p>` : renderBody(m.text)}</div>${copy}${how}</div>`;
-}
-function drawThread(threadId) {
-  const el = document.getElementById("thread"); if (!el || el.dataset.id !== threadId) return;
-  const t = S(person).threads[threadId];
-  el.innerHTML = (t?.msgs || []).map(bubble).join("");
-  for (const b of el.querySelectorAll("[data-copy]")) b.addEventListener("click", () => {
-    const body = b.closest(".bot").querySelector(".body");
-    const fallback = () => { const r = document.createRange(); r.selectNodeContents(body); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent = "Selected: press Ctrl+C"; };
-    try { navigator.clipboard.writeText(body.innerText).then(() => { b.textContent = "Copied"; }, fallback); } catch (_) { fallback(); }
-  });
-  el.lastElementChild?.scrollIntoView({ block: "nearest", behavior: "smooth" });
-}
-function setBusy(busy) { for (const b of document.querySelectorAll("[data-ask], [data-q]")) b.disabled = busy; const s = document.getElementById("stop"); if (s) s.hidden = !busy; }
-function askBox(placeholder) {
-  return `<form class="askrow" id="askform" autocomplete="off"><label for="q" hidden>Your question</label>
-    <textarea id="q" rows="2" placeholder="${esc(placeholder)}"></textarea>
-    <div class="btns"><button class="btn primary" data-ask type="submit">Ask</button><button class="btn" id="stop" type="button" hidden>Stop</button></div></form>`;
-}
-function wireAsk(threadId, opts = {}) {
-  const form = document.getElementById("askform"); if (!form) return;
-  const box = form.querySelector("textarea");
-  form.addEventListener("submit", ev => { ev.preventDefault(); const q = box.value; box.value = ""; ask(threadId, q, opts); });
-  box.addEventListener("keydown", ev => { if (ev.key === "Enter" && !ev.shiftKey) { ev.preventDefault(); form.requestSubmit(); } });
-  document.getElementById("stop").addEventListener("click", () => ctl?.abort());
-  for (const b of document.querySelectorAll("#pane [data-q]")) b.addEventListener("click", () => ask(threadId, b.dataset.q, { ...opts, draft: b.dataset.draft === "1", label: b.dataset.label || undefined }));
-}
-
-// ---------------------------------------------------------------- views
-function drawNotice() {
-  document.getElementById("notice").innerHTML = (sampleFn && liveTools)
-    ? `<b>Live:</b> Athena's answers come from Claude reading this synthetic data through Athena's tools, as ${esc(PEOPLE[person].name)}. Hard questions take 20–60 seconds. Your first question asks to use your Claude account.`
-    : `<b>Scripted mode:</b> open this page in Claude to ask Athena anything. Alerts, actions and simple questions still work here.`;
-}
-function drawPeople() {
-  const nav = document.getElementById("people");
-  nav.innerHTML = Object.entries(PEOPLE).map(([k, p]) => `<button type="button" role="tab" aria-selected="${k === person}" data-p="${k}"><b>${esc(p.name)}</b><span>${esc(p.label)}</span></button>`).join("");
-  for (const b of nav.querySelectorAll("button")) b.addEventListener("click", () => { person = b.dataset.p; view = "home"; try { localStorage.setItem("athena-demo-person", person); } catch (_) {} drawAll(); });
-  document.getElementById("clock").innerHTML = `<b>${esc(OPENS_AT[person])} IST</b>05 Oct 2026`;
-}
-function drawList() {
-  const list = items(person), alerts = list.filter(i => i.type === "alert"), other = list.filter(i => i.type !== "alert");
-  const open = alerts.filter(a => !alertState(person, a.alert_id).action).length;
-  document.getElementById("inbox-count").textContent = alerts.length ? `${open} of ${alerts.length} alerts need you` : `${other.length} item${other.length === 1 ? "" : "s"}`;
-  const row = (i, idx) => {
-    if (i.type === "alert") {
-      const st = alertState(person, i.alert_id);
-      const chip = st.action === "ack" ? `<span class="pill ok">On it</span>` : st.action === "snooze" ? `<span class="pill muted">Snoozed</span>` : st.action === "wrong" ? `<span class="pill muted">Not useful</span>` : `<span class="pill ${i.severity}">${sevLabel(i.severity)}</span>`;
-      const last = i.history[i.history.length - 1];
-      return `<button class="item ${i.severity}" type="button" data-v="alert:${i.alert_id}" aria-current="${view === "alert:" + i.alert_id}"><span class="bar"></span><span><span class="t">${esc(i.title)}</span>
-        <span class="m">${chip}<span>${esc(i.client)}</span><span>${esc(last.time.replace("Mon ", ""))}${last.kind === "alert" ? "" : " · " + (last.kind === "escalation" ? "escalated" : last.kind)}</span></span></span></button>`;
+  const out = [];
+  for (const k of Object.keys(events).sort()) {
+    const [time, kind] = k.split("|"), group = events[k];
+    const client = [...new Set(group.map(a => (a.client || "").split(" ")[0]).filter(Boolean))].join(" and ");
+    if (kind === "digest") {
+      const lines = shortText(group[0].text).split("\n").filter(l => l.startsWith("- "));
+      out.push({ time, kind, html: `<p>Morning. ${lines.length} number${lines.length === 1 ? " is" : "s are"} off target:</p><ul>${lines.slice(0, 3).map(l => `<li>${esc(digestLine(l))}</li>`).join("")}</ul>${lines.length > 3 ? `<p>…and ${lines.length - 3} more.</p>` : ""}`,
+        replies: ["What should I act on first?"] });
+    } else if (kind === "draft") {
+      out.push({ time, kind, html: `<p>Your weekly report draft for ${esc(shortText(group[0].text).match(/for (.+?) \(/)?.[1] || "a client")} is ready to review.</p>`, replies: ["Draft the commentary"] });
+    } else if (kind === "alert") {
+      const tickets = group[0].rule === "R6";
+      out.push({ time, kind, alerts: group.map(a => a.alert_id), html: `<p>${tickets ? `${group.length} ${client} ticket${group.length > 1 ? "s have" : " has"} had no reply for over a day:` : `${group.length} ${client} task${group.length > 1 ? "s need" : " needs"} you:`}</p>${listItems(group)}`,
+        replies: ["On it", "Why?", "Later"] });
+    } else if (kind === "reminder") {
+      out.push({ time, kind, alerts: group.map(a => a.alert_id), html: `<p>Still open: ${esc(group[0].title)}${group.length > 1 ? ` and ${group.length - 1} more` : ""}.</p>`, replies: ["On it", "Why?", "Later"] });
+    } else if (kind === "escalation") {
+      out.push({ time, kind, alerts: group.map(a => a.alert_id), html: `<p>${group.length} ${client} item${group.length > 1 ? "s are" : " is"} still open after 4 hours, so ${group.length > 1 ? "they've" : "it's"} come to you:</p>${listItems(group)}`,
+        replies: ["On it", "Why?", "Later"] });
     }
-    return `<button class="item" type="button" data-v="item:${idx}" aria-current="${view === "item:" + idx}"><span class="bar"></span><span><span class="t">${esc(i.title)}</span><span class="m"><span class="pill info">${esc(i.type)}</span><span>${esc(i.received.replace("Mon ", ""))}</span></span></span></button>`;
-  };
-  document.getElementById("list").innerHTML =
-    `<button class="item assistant" type="button" data-v="home" aria-current="${view === "home"}"><span class="bar"></span><span><span class="t">Ask Athena</span><span class="m"><span>Questions, briefs and drafts</span></span></span></button>` +
-    (alerts.length ? `<div class="list-sep">Alerts</div>` + alerts.map(i => row(i)).join("") : "") +
-    (other.length ? `<div class="list-sep">Digests and drafts</div>` + other.map(i => row(i, list.indexOf(i))).join("") : "");
-  for (const b of document.querySelectorAll("#list .item")) b.addEventListener("click", () => { view = b.dataset.v; drawList(); drawPane(); if (matchMedia("(max-width: 860px)").matches) document.getElementById("pane").scrollIntoView({ behavior: "smooth" }); });
+  }
+  return out;
 }
-function homeHtml() {
-  const p = PEOPLE[person], alerts = alertsOf(person);
-  const late = alerts.filter(a => a.severity === "late").length, risk = alerts.length - late;
-  const hour = Number(OPENS_AT[person].slice(4, 6));
-  const greet = hour < 12 ? "Good morning" : hour < 17 ? "Good afternoon" : "Good evening";
-  const day = `<button type="button" data-q="Brief me on my day: what needs me, in order, and why."><b>→</b><span>Brief me on my day</span></button>`;
-  const sum = `<div class="summary">${late ? `<button class="late" type="button" data-q="Go through my late alerts: why is each one late, and what should I do first?"><b>${late}</b><span>late</span></button>` : ""}${risk ? `<button class="risk" type="button" data-q="Which of my at-risk or waiting items will become a problem today, and what can I do now?"><b>${risk}</b><span>at risk or waiting</span></button>` : ""}${day}</div>`;
-  return `<div><p class="greet">${greet}, ${esc(p.name)}.</p><p class="sub">${alerts.length ? `${alerts.length} alerts are waiting for you.` : "No alerts for you right now."} ${esc(p.role)}.</p></div>
-    ${sum}
-    <div><div class="section-label">Try asking</div><div class="chips">${(SUGGEST[person] || []).map(q => `<button type="button" data-q="${esc(q)}">${esc(q)}</button>`).join("")}</div></div>
-    <div class="thread" id="thread" data-id="home"></div>
-    ${askBox(`Ask anything about ${scopeOf(person).map(k => DATA.clients[k].name).join(" or ")}`)}`;
-}
-function alertHtml(a) {
-  const st = alertState(person, a.alert_id);
-  const facts = Object.entries({ Client: a.client, Item: a.facts.item_key, Due: a.facts.due, Status: a.facts.status, Owner: a.facts.owner, Opened: a.facts.opened_at, "Last reply": a.facts.last_reply_at })
-    .filter(([, v]) => v && v !== "-").map(([k, v]) => `<div class="fact"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
-  const trail = a.history.map(h => `<span class="${h.kind === "escalation" ? "esc" : h.kind === "reminder" ? "rem" : ""}">${esc(h.time.replace("Mon ", ""))} ${h.kind === "alert" ? "alert sent" : h.kind === "reminder" ? "reminder" : "escalated to you"}</span>`).join("")
-    + (st.action ? `<span class="mine">${esc(st.at.replace("Mon ", ""))} you: ${{ ack: "on it", snooze: "snoozed", wrong: "not useful" }[st.action]}</span>` : "");
-  const banner = st.action === "ack" ? `<div class="state"><b>You're on it.</b> No reminders or escalation until ${esc(st.until.replace("Mon ", ""))}. If it is still open then, Athena carries on.</div>`
-    : st.action === "snooze" ? `<div class="state"><b>Snoozed</b> until ${esc(st.until.replace("Mon ", ""))}.</div>`
-    : st.action === "wrong" ? `<div class="state"><b>Marked not useful.</b> This counts towards the rule's wrong-alert rate; too many and the rule is turned down automatically.</div>` : "";
-  const why = a.rule === "R6" ? ["Why has this ticket not been answered?", "What should I tell the client today?", "Is this client at risk of escalating?"] : ["Why is this late?", "Who could cover this today?", "What else is at risk for this client this week?"];
-  return `<div><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span class="pill ${a.severity}">${sevLabel(a.severity)}</span><span class="pill muted">${esc(a.rule)}</span></div>
-      <h2 style="margin-top:8px">${esc(a.title)}</h2><p class="sub">${esc(a.text.replace(/\s*https?:\/\/\S+/g, ""))}</p></div>
-    <dl class="facts">${facts}</dl>
-    <div class="trail">${trail}</div>
-    ${banner}
-    <div class="actions">
-      <button class="btn primary" type="button" data-act="ack" ${st.action ? "disabled" : ""}>I'm on it (2h)</button>
-      <button class="btn" type="button" data-act="snooze" ${st.action ? "disabled" : ""}>Snooze 4h</button>
-      <button class="btn" type="button" data-act="wrong" ${st.action === "wrong" ? "disabled" : ""}>Not useful</button>
-      ${st.action ? `<button class="btn" type="button" data-act="undo">Undo</button>` : ""}
-    </div>
-    <div><div class="section-label">Ask about this alert</div><div class="chips">${why.map(q => `<button type="button" data-q="${esc(q)}">${esc(q)}</button>`).join("")}
-      <button type="button" data-q="Draft a note to the person who owns this item about this alert." data-draft="1" data-label="Draft a note to the owner">Draft a note to the owner</button></div></div>
-    <div class="thread" id="thread" data-id="alert:${a.alert_id}"></div>
-    ${askBox("Ask Athena about this alert")}`;
-}
-function itemHtml(i) {
-  const qs = i.type === "digest" ? ["Which of these should I act on first, and why?", "What is behind Northwind's numbers in this digest?"] : ["Write the commentary for Northwind's weekly report: what moved and why, with numbers."];
-  return `<div><span class="pill info">${esc(i.type)}</span><h2 style="margin-top:8px">${esc(i.title)}</h2><p class="sub">Received ${esc(i.received)} IST</p></div>
-    <div class="digest">${esc(i.text.replace(/\s*https?:\/\/\S+/g, ""))}</div>
-    ${i.type === "draft" ? `<p class="sub">The draft deck is a PowerPoint file with every number calculated in code and a query ID in the slide notes. The BA reviews and sends it; Athena never sends it to the client.</p>` : ""}
-    <div class="chips">${qs.map(q => `<button type="button" data-q="${esc(q)}">${esc(q)}</button>`).join("")}</div>
-    <div class="thread" id="thread" data-id="${view}"></div>${askBox("Ask about this")}`;
-}
-function drawPane() {
-  const pane = document.getElementById("pane");
-  let threadId = view, opts = {};
-  if (view.startsWith("alert:")) {
-    const a = alertsOf(person).find(x => "alert:" + x.alert_id === view);
-    if (!a) { view = "home"; return drawPane(); }
-    pane.innerHTML = alertHtml(a);
-    opts = { alert: { alert_id: a.alert_id, rule: a.rule, severity: a.severity, client: a.client, item: a.title, facts: a.facts, history: a.history, message: a.text } };
-    for (const b of pane.querySelectorAll("[data-act]")) b.addEventListener("click", () => act(a, b.dataset.act));
-  } else if (view.startsWith("item:")) {
-    const i = items(person)[Number(view.slice(5))];
-    if (!i) { view = "home"; return drawPane(); }
-    pane.innerHTML = itemHtml(i);
-    opts = { alert: { item: i.title, received: i.received, text: i.text } };
-  } else { threadId = "home"; pane.innerHTML = homeHtml(); }
-  wireAsk(threadId, opts);
-  drawThread(threadId);
-}
-function act(a, what) {
-  const alerts = S(person).alerts;
-  if (what === "undo") delete alerts[a.alert_id];
-  else alerts[a.alert_id] = { action: what, at: OPENS_AT[person], until: what === "ack" ? addMinutes(OPENS_AT[person], 120) : what === "snooze" ? addMinutes(OPENS_AT[person], 240) : null };
-  saveState(); drawList(); drawPane();
-}
-function drawPresenter() { document.getElementById("ask-list").innerHTML = PRESENTER[person].map(q => `<li>${esc(q)}</li>`).join(""); }
-function drawAll() { drawPeople(); drawNotice(); drawList(); drawPane(); drawPresenter(); }
 
-try { const p = localStorage.getItem("athena-demo-person"); if (p && PEOPLE[p]) person = p; } catch (_) {}
+function log() { return (state[person] ||= { msgs: [], turns: [] }); }
+function loadState() { try { return JSON.parse(localStorage.getItem("athena-chat-v3") || "{}"); } catch (_) { return {}; } }
+function saveState() { try { localStorage.setItem("athena-chat-v3", JSON.stringify(state)); } catch (_) {} }
+
+function renderText(text) {
+  const [main, src] = String(text).split(/\n\nSources:\n/);
+  const out = []; let list = null;
+  for (const raw of main.replace(/\*\*/g, "").split("\n")) {
+    const line = raw.trim(); if (!line) continue;
+    if (/^[-•*] /.test(line)) { if (!list) { list = []; out.push(list); } list.push(`<li>${esc(line.slice(2))}</li>`); continue; }
+    list = null; out.push(`<p>${esc(line.replace(/^#+ /, ""))}</p>`);
+  }
+  let html = out.map(x => Array.isArray(x) ? `<ul>${x.join("")}</ul>` : x).join("");
+  if (src) {
+    const names = { smartsheet: "Smartsheet", supaboard: "Supaboard", cs_hub: "CS Hub", sharepoint: "SharePoint", owner_map: "owner list", client_profile: "client profile", athena: "Athena" };
+    const used = [...new Set(src.split("\n").filter(Boolean).map(l => names[l.replace(/^- /, "").split(/[.,]/)[0]] || l.split(/[.,]/)[0]))];
+    const when = (src.match(/as of (.+)$/m) || [])[1];
+    html += `<div class="src">From ${esc(used.join(", "))}${when ? `, ${esc(when.replace(/^\w+, /, ""))}` : ""}</div>`;
+  }
+  return html;
+}
+
+function draw() {
+  const el = document.getElementById("log");
+  const parts = [];
+  let lastTime = null;
+  const pro = proactive(person);
+  const msgs = log().msgs;
+  // proactive messages first (they happened earlier today), then the conversation
+  for (const [n, m] of pro.entries()) {
+    if (m.time !== lastTime) { parts.push(`<div class="time">${esc(m.time)}</div>`); lastTime = m.time; }
+    parts.push(`<div class="msg athena">${m.html}</div>`);
+    const answered = msgs.some(x => x.ref === n);
+    parts.push(`<div class="replies">${m.replies.map(r => `<button type="button" data-ref="${n}" data-r="${esc(r)}" ${answered || busy ? "disabled" : ""}>${esc(r)}</button>`).join("")}</div>`);
+  }
+  if (pro.length) { parts.push(`<div class="time">${esc(OPENS_AT[person])} · now</div>`); }
+  for (const m of msgs) {
+    if (m.role === "me") parts.push(`<div class="msg me"><p>${esc(m.text)}</p></div>`);
+    else parts.push(`<div class="msg athena">${m.pending ? `<p class="typing">${esc(m.status || "Looking into it…")}</p>` : m.draft ? `<p style="white-space:pre-wrap">${esc(m.text)}</p><div class="src">Draft. Not sent.</div>` : renderText(m.text)}</div>`);
+  }
+  if (!msgs.length) parts.push(`<div class="replies">${(SUGGEST[person] || []).map(q => `<button type="button" data-q="${esc(q)}" ${busy ? "disabled" : ""}>${esc(q)}</button>`).join("")}</div>`);
+  el.innerHTML = parts.join("");
+  for (const b of el.querySelectorAll("[data-r]")) b.addEventListener("click", () => quickReply(Number(b.dataset.ref), b.dataset.r));
+  for (const b of el.querySelectorAll("[data-q]")) b.addEventListener("click", () => send(b.dataset.q));
+  el.scrollTop = el.scrollHeight;
+  document.getElementById("send").disabled = busy;
+  const about = document.getElementById("about");
+  if (focus) { about.hidden = false; about.innerHTML = `About: ${esc(focus.label)} <button type="button" id="clear">clear</button>`; document.getElementById("clear").addEventListener("click", () => { focus = null; draw(); }); }
+  else about.hidden = true;
+}
+
+function say(text, extra = {}) { log().msgs.push({ role: "athena", text, ...extra }); saveState(); draw(); }
+
+function quickReply(ref, reply) {
+  const m = proactive(person)[ref];
+  const alerts = (m.alerts || []).map(id => (INBOX[person] || []).find(a => a.alert_id === id)).filter(Boolean);
+  focus = alerts.length ? { label: alerts.length > 1 ? `${alerts.length} items from ${m.time}` : alerts[0].title, alerts } : { label: m.kind, item: m };
+  if (reply === "On it") {
+    log().msgs.push({ role: "me", text: "On it", ref });
+    say(`Got it. I'll hold reminders and escalation for 2 hours.`);
+  } else if (reply === "Later") {
+    log().msgs.push({ role: "me", text: "Later", ref });
+    say(`OK. I'll bring ${alerts.length > 1 ? "these" : "it"} back at ${addMinutes(OPENS_AT[person], 120).slice(4)}.`);
+  } else {
+    send(reply === "Why?" ? (alerts.length > 1 ? "Why are these late, briefly?" : "Why is this late?") : reply, ref);
+  }
+}
+function addMinutes(hhmm, mins) { const [d, t] = hhmm.split(" "); const [h, m] = t.split(":").map(Number); const x = h * 60 + m + mins; return `${d} ${String(Math.floor(x / 60) % 24).padStart(2, "0")}:${String(x % 60).padStart(2, "0")}`; }
+
+function instructions() {
+  const p = PEOPLE[person], persona = personaOf(person);
+  const about = focus?.alerts ? "The user is replying about these alerts: " + JSON.stringify(focus.alerts.map(a => ({ id: a.alert_id, item: a.title, client: a.client, severity: a.severity, facts: a.facts })))
+    : focus?.item ? "The user is replying about this message: " + JSON.stringify(focus.item.html.replace(/<[^>]+>/g, " ")) : "";
+  return [
+    `You are Athena, a personal assistant in Microsoft Teams for ${p.name} (${p.role}) at Anka, a healthcare revenue-cycle company. Demo with made-up data.`,
+    `Their clients: ${scopeOf(person).map(k => DATA.clients[k].name).join(", ")}. Their data: ${persona.sources.join(", ")}. It is ${OPENS_AT[person]} IST, Monday 05 Oct 2026.`,
+    "Write like a sharp colleague replying in chat: 1 to 3 short sentences. If you must list, at most 3 short bullets. No headings, no bold, no preamble, no sign-off. Lead with the answer or the cause. Offer more detail only if useful, in a few words.",
+    "Investigate with the tools before answering 'why' questions (several in parallel: task history, team and leave, denials by payer and reason, client activity, AR aging). Use only tool results; never invent numbers, names or dates.",
+    "If you cannot answer, say \"I don't know\" and what is missing, in one sentence. If a tool refuses (not their client or not their data), say so in one sentence.",
+    "If data is old, say \"Data is not current\" and when it is from. Never give patient details. You only read data; you can draft text for the user, never send it.",
+    about,
+  ].filter(Boolean).join("\n");
+}
+
+async function send(text, ref) {
+  text = String(text || "").trim(); if (!text || busy) return;
+  log().msgs.push({ role: "me", text, ref });
+  const draft = /^draft\b/i.test(text);
+  if (!(sampleFn && liveTools)) {
+    const c = (CANNED?.[person] || []).find(x => x.q.toLowerCase() === text.toLowerCase());
+    say(c && !/^I do not know\. I (could not|have no)/.test(c.answer) ? c.answer + (c.footer ? "\n\n" + c.footer : "") : "Open this page in Claude to talk to Athena. Here it can only show its messages.");
+    return;
+  }
+  const bot = { role: "athena", pending: true, status: "Looking into it…" };
+  log().msgs.push(bot); busy = true; draw();
+  const steps = [];
+  const redraw = () => { const last = steps.at(-1); if (last) bot.status = `Checking ${last.text.toLowerCase()}…`; draw(); };
+  const turns = log().turns;
+  const input = [{ role: "user", content: instructions() + (draft ? "\nThe user wants a draft. Write it for them to review and send themselves: under 100 words, start with 'To:' and 'Subject:'." : "") }, ...turns.slice(-6), { role: "user", content: text }];
+  try {
+    const { text: out } = await sampleFn(input, { tools: makeTools(person, steps, redraw), modelTier: "default" });
+    Object.assign(bot, { pending: false, text: draft ? out.trim() : finish(out, steps), draft });
+    turns.push({ role: "user", content: text }, { role: "assistant", content: bot.text });
+  } catch (e) {
+    Object.assign(bot, { pending: false, text: { rate_limited: "Too many messages at once. Try again in a minute.", not_granted: "Athena needs permission to use Claude for live answers.",
+      refused: "I can't help with that one." }[e?.code] || "Something went wrong. Try again." });
+    if (["not_granted", "sampling_disabled", "tools_unavailable"].includes(e?.code)) liveTools = false;
+  } finally { busy = false; saveState(); draw(); }
+}
+
+function drawPicker() {
+  const sel = document.getElementById("who");
+  sel.innerHTML = Object.entries(PEOPLE).map(([k, p]) => `<option value="${k}" ${k === person ? "selected" : ""}>${esc(p.name)} · ${esc(p.role.split(",")[0])}</option>`).join("");
+  sel.onchange = () => { person = sel.value; focus = null; try { localStorage.setItem("athena-chat-person", person); } catch (_) {} draw(); };
+}
+
+document.getElementById("form").addEventListener("submit", ev => { ev.preventDefault(); const q = document.getElementById("q"); const v = q.value; q.value = ""; send(v); });
+document.getElementById("q").addEventListener("keydown", ev => { if (ev.key === "Enter" && !ev.shiftKey) { ev.preventDefault(); document.getElementById("form").requestSubmit(); } });
+try { const p = localStorage.getItem("athena-chat-person"); if (p && PEOPLE[p]) person = p; } catch (_) {}
 if (location.hash && PEOPLE[location.hash.slice(1)]) person = location.hash.slice(1);
-drawAll();
-(async () => {
-  try { sampleFn = await window.claude?.use?.("sample"); if (sampleFn) liveTools = !!(await sampleFn.limits().catch(() => null))?.tools; } catch (_) { sampleFn = null; }
-  drawNotice();
-})();
+drawPicker(); draw();
+(async () => { try { sampleFn = await window.claude?.use?.("sample"); if (sampleFn) liveTools = !!(await sampleFn.limits().catch(() => null))?.tools; } catch (_) { sampleFn = null; } })();
 </script>

@@ -290,36 +290,24 @@ def save_html(demo: Demo, template: Path, path: Path, cfg: AthenaConfig | None =
 
 SUGGESTIONS: dict[str, list[str]] = {
     "dm_am": [
-        "Why is Northwind's backlog growing, and what should I do this week?",
-        "What is driving the rise in Northwind's denial rate? Break it down by payer and reason.",
-        "Which late tasks put the recovery plan we promised Northwind at risk, and who could cover them?",
-        "Analyst N2 is out until Thursday. What slips, and what should I move?",
-        "Prepare me for a call with Northwind tomorrow: what changed in the last two weeks?",
-        "Show late tasks for Cedar Family Clinic",
+        "Why is Northwind's backlog growing?",
+        "What's driving Northwind's denials?",
+        "What slips while Analyst N2 is out?",
     ],
     "hub_leader": [
-        "Across my hub, which client needs my attention most this week, and why?",
-        "Compare Northwind and Bluefield on denial rate and AR over 90 days for the last 30 days.",
-        "Which commitments we made to clients are at risk? Give owner and date.",
-        "Are today's escalations caused by staffing or by process? Show the evidence.",
-        "What should I raise with DM One today, in three bullets?",
-        "What is the backlog for Cedar Family Clinic?",
+        "Which client needs me most this week?",
+        "Are any client commitments at risk?",
+        "What should I raise with DM One today?",
     ],
     "csm": [
         "Brief me on Northwind Orthopedics",
-        "Which tickets have had no reply for over a day, and what should I tell each client?",
-        "Give me talking points on Northwind's denial increase, using only the numbers.",
-        "Is Bluefield at risk of an escalation at quarter end?",
         "What did we promise Northwind, and are we on track?",
-        "What is the NPS for Northwind Orthopedics?",
+        "Is Bluefield at risk at quarter end?",
     ],
     "ba": [
-        "Write the commentary for Northwind's weekly report: what moved and why, with numbers.",
-        "Which metrics moved most week over week across all clients?",
-        "Explain the AR over 90 days trend for Cedar Family Clinic, week by week.",
-        "Which payer and reason codes explain Northwind's denials in the last 14 days?",
-        "How is first pass rate defined, and how did each client do last week?",
-        "Which tasks are late for Bluefield Imaging?",
+        "Draft the commentary for Northwind's weekly report.",
+        "Which metrics moved most last week?",
+        "Explain Cedar's AR over 90 days trend.",
     ],
 }
 
