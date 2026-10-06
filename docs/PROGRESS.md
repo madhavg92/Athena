@@ -35,7 +35,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M5.6 RUNBOOK
 
 ## Release 2
-- [ ] M6.1 Check types
+- [x] M6.1 Check types
 - [ ] M6.2 Scheduler tick
 - [ ] M6.3 Ladder
 - [ ] M6.4 Message templates
@@ -79,3 +79,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M5.4: Answer card (text, stale warning, Sources with links + as_of); alert card with Correct/Wrong review buttons for shadow mode.
 - M5.5: psycopg 3 + Alembic; migration 0001 for all tables; athena db upgrade [--sql]; tested on SQLite and a temporary Postgres 16.
 - M5.6: RUNBOOK (local, Teams test, Azure resources, app settings, deploy, rollback, kill switch); requirements.txt, host.json, .funcignore, local settings example.
+- M6.1: All SPEC ops, first severity wins, lt_field/gt_field, absence by list or calendar with grace; table-driven tests.
