@@ -16,5 +16,12 @@ Gates that only a person can open. Claude Code updates the status and adds "stuc
 | G10 | Real owner list: client, hub, hub leader, DM/AM, CSM, BA | Ops | Live mode | closed |
 | GD | Azure subscription and resource group; the user deploys | IT / Madhav | Production | closed |
 
+## Live parts waiting
+- M2.4 Smartsheet: live reader written (API 2.0, mock-tested). Needs G1: token in `.env`, real sheet IDs and column names in `context/smartsheet_map.yaml`. Then the user runs `athena connectors check --live`.
+- M2.5 Supaboard: interface defined in `athena/connectors/supaboard.py`. Needs G2 API documents to implement.
+- M2.6 CS Hub: interface defined in `athena/connectors/cshub.py`. Needs G3 read access to implement.
+- M2.7 SharePoint: live Graph search written (delegated, on-behalf-of, allowlisted paths, mock-tested). Needs G4 app registration, consent and Teams SSO.
+- M2.8 Entra: live Graph users written (app-only, mock-tested). Needs G4.
+
 ## Stuck items
 (none)

@@ -13,6 +13,8 @@ from athena.core.db import Database
 app = typer.Typer(help="Athena: Anka OS management assistant.", no_args_is_help=True)
 rules_app = typer.Typer(help="Rule files.", no_args_is_help=True)
 app.add_typer(rules_app, name="rules")
+connectors_app = typer.Typer(help="Data source connectors.", no_args_is_help=True)
+app.add_typer(connectors_app, name="connectors")
 
 
 @app.callback()
@@ -99,3 +101,35 @@ def whoami(as_: str = typer.Option(..., "--as", help="Email of the person.")) ->
     typer.echo(
         "Clients:  " + (", ".join(cfg.owner_map.clients[c].name for c in clients) or "(none)")
     )
+
+
+@connectors_app.command("check")
+def connectors_check(
+    live: bool = typer.Option(
+        False, "--live", help="Check live sources (prints counts and field names only)."
+    ),
+) -> None:
+    """For each source: record count, field names and newest as_of. Never prints record content."""
+    from athena.connectors.base import NotConfigured
+    from athena.connectors.registry import CONNECTORS, Sources
+
+    cfg = _config()
+    sources = Sources(cfg, run_mode="live" if live else "fixture")
+    typer.echo(f"Mode: {'live' if live else 'fixture'}")
+    for name, cls in CONNECTORS.items():
+        for dataset in cls.DATASETS:
+            label = f"{name}.{dataset}"
+            try:
+                rows = sources.read(label)
+            except NotConfigured as exc:
+                typer.echo(f"{label:<22} not configured: {exc}")
+                continue
+            except Exception as exc:  # report the type only; messages may hold data
+                typer.echo(f"{label:<22} error: {type(exc).__name__}")
+                continue
+            fields = sorted({k for r in rows for k in r.data})
+            newest = max((r.as_of for r in rows), default=None)
+            when = f"{newest:%Y-%m-%d %H:%M} UTC" if newest else "-"
+            typer.echo(
+                f"{label:<22} count={len(rows):<5} newest_as_of={when}  fields={','.join(fields)}"
+            )
