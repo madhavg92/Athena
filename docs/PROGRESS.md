@@ -46,7 +46,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M7.2 R3 and delivery routing
 - [ ] M8.1 Report builder (R5) — real template: G7 — builder done with a plain default template; real template waits for G7
 - [x] M8.2 `athena stats`
-- [ ] M9.1 Platform test (rule file only)
+- [x] M9.1 Platform test (rule file only)
 
 ## Log
 - M0: scaffold written from the bootstrap.
@@ -90,3 +90,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M7.2: R3 runs in fixture mode at 08:30 IST, queues off-target metrics; digest at 09:00 with open R2 alerts in scope; now rules bypass the digest.
 - M8.1: WBR draft per client: numbers + query IDs in code, guarded model comments, PPTX in drafts/, BA notified; plain template until G7.
 - M8.2: Per rule: alerts opened/closed/open, messages by status, drafts, wrong/correct marks and rate, median hours open-to-close; questions answered/IDK/stale/refused, latency; cost and tokens by rule and user.
+- M9.1: R6 ticket-without-reply added with YAML only (rule, cs_lead persona and role); validated; backtest 30 days: 12 alerts, max 2 messages/person/day. No platform gap.

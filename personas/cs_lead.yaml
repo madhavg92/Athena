@@ -1,0 +1,9 @@
+persona: cs_lead
+scope: clients where cs_lead = me
+rules: [R1, R6]
+sources: [cs_hub, supaboard, sharepoint]
+sharepoint_sites: client_context
+work_hours: "17:00-02:00"      # US-facing, like the CSMs; confirm (G8)
+digest_time: "17:00"
+tz: Asia/Kolkata
+must_not: [client_send, data_change]

@@ -1,6 +1,6 @@
 persona: csm
 scope: clients where csm = me
-rules: [R1, R4]
+rules: [R1, R4, R6]
 sources: [smartsheet, supaboard, cs_hub, sharepoint]
 sharepoint_sites: client_context
 work_hours: "17:00-02:00"      # US-facing hours; confirm (G8)

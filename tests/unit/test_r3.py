@@ -32,7 +32,7 @@ def make(cfg, db, now, live=False):
 def test_r3_routes_to_digest_then_one_message(cfg, db) -> None:
     app, clock = make(cfg, db, R3_TIME, live=True)
     out = scheduler.tick(app)
-    assert [r["rule_id"] for r in out["runs"]] == ["R2", "R3"]
+    assert [r["rule_id"] for r in out["runs"]] == ["R2", "R3", "R6"]
     with app.db.session() as s:
         items = list(s.scalars(select(DigestItem).where(DigestItem.user == HL)))
     assert items and all(i.sent_at is None for i in items)  # routed to digest, not sent now

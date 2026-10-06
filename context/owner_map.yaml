@@ -8,6 +8,7 @@ people:
   csm.one@fixture.local:  {name: CSM One, persona: csm}
   csm.two@fixture.local:  {name: CSM Two, persona: csm}
   ba.one@fixture.local:   {name: BA One,  persona: ba}
+  cs.lead@fixture.local:  {name: CS Lead, persona: cs_lead}
 clients:
   northwind_ortho:
     name: Northwind Orthopedics
@@ -16,6 +17,7 @@ clients:
     dm_am: dm.one@fixture.local
     csm: csm.one@fixture.local
     ba: ba.one@fixture.local
+    cs_lead: cs.lead@fixture.local
   bluefield_imaging:
     name: Bluefield Imaging
     hub: key_clients
@@ -23,6 +25,7 @@ clients:
     dm_am: dm.two@fixture.local
     csm: csm.one@fixture.local
     ba: ba.one@fixture.local
+    cs_lead: cs.lead@fixture.local
   cedar_family_clinic:
     name: Cedar Family Clinic
     hub: small_clients
@@ -30,3 +33,4 @@ clients:
     dm_am: dm.two@fixture.local
     csm: csm.two@fixture.local
     ba: ba.one@fixture.local
+    cs_lead: cs.lead@fixture.local

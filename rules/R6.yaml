@@ -1,0 +1,28 @@
+id: R6
+name: Ticket without reply
+trigger: {cron: "*/15 * * * *", tz: Asia/Kolkata}
+source: cs_hub.tickets
+check:
+  type: threshold
+  key: ticket_id
+  severities:              # checked in this order; first match wins
+    no_reply:              # replied before, but nothing for 24 hours
+      - {field: status, op: ne, value: closed}
+      - {field: last_reply_at, op: older_than, value: 24h}
+    never_replied:         # no reply at all, opened more than 24 hours ago
+      - {field: status, op: ne, value: closed}
+      - {field: last_reply_at, op: is_null}
+      - {field: opened_at, op: older_than, value: 24h}
+data_max_age: 30m
+owner: owner_map.client.csm
+ladder:
+  - {after: 0h, to: csm}
+  - {after: 8h, to: cs_lead}
+renudge_after: 4h
+close_when: {cleared: true}
+message: {writer: model, template: ticket_no_reply}
+action: notify
+delivery: now              # a client waiting more than a day needs action today
+phase: 1
+mode: shadow
+max_wrong_rate: 0.2        # placeholder; management sets the real value
