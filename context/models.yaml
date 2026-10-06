@@ -1,0 +1,11 @@
+default: stub
+models:
+  stub: {kind: stub}
+  candidate_a:
+    kind: openai_compatible
+    base_url_env: MODEL_A_BASE_URL
+    api_key_env: MODEL_A_API_KEY
+    model: "set-when-G5-opens"
+    price_per_mtok_in: 0.0
+    price_per_mtok_out: 0.0
+    contract_covers_data: unknown   # yes | no | unknown (G5)

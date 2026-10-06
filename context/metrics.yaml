@@ -1,0 +1,21 @@
+# Metric definitions. SYNTHETIC starter entries; the hub leader approves the real meanings.
+backlog:
+  meaning: "Number of open work items not yet worked at the end of the day."
+  source: supaboard.metrics
+  field: backlog
+  owner: hl.key@fixture.local
+first_pass_rate:
+  meaning: "Share of claims accepted by the payer on first submission, in percent."
+  source: supaboard.metrics
+  field: first_pass_rate
+  owner: hl.key@fixture.local
+ar_days:
+  meaning: "Average number of days that receivables stay open."
+  source: supaboard.metrics
+  field: ar_days
+  owner: hl.key@fixture.local
+denial_rate:
+  meaning: "Share of claims denied by the payer, in percent."
+  source: supaboard.metrics
+  field: denial_rate
+  owner: hl.key@fixture.local

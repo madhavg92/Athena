@@ -1,0 +1,11 @@
+# SYNTHETIC. Real sheet IDs and column names come from G1.
+columns:
+  task: Task Name
+  owner: Assigned To
+  due: Due Date
+  status: Status
+  last_update: Modified
+sheets:
+  northwind_ortho: 1000000000000001
+  bluefield_imaging: 1000000000000002
+  cedar_family_clinic: 1000000000000003
