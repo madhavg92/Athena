@@ -29,3 +29,25 @@ def test_demo_cli_and_json(tmp_path) -> None:
     assert "CSM  (csm.one@fixture.local)" in out.output and "DM/AM  (" not in out.output
     assert (tmp_path / "demo.json").exists()
     assert CliRunner().invoke(cli, ["demo", "--persona", "ceo"]).exit_code == 2
+
+
+def test_interactive_page_build(cfg, tmp_path) -> None:
+    from athena.core import phi
+
+    data = d.interactive_data(cfg)
+    assert (
+        data["tasks"] and data["metric_rows"] and set(data["clients"]) == set(cfg.owner_map.clients)
+    )
+    assert all(
+        not phi.lint(t["title"], ["fixture.local"]) for t in data["tasks"]
+    )  # scrubbed by the connectors
+    canned = d.canned_answers(cfg)
+    assert set(canned) == set(d.SUGGESTIONS) and all(
+        len(v) == len(d.SUGGESTIONS[k]) for k, v in canned.items()
+    )
+    page = d.save_html(
+        d.run(cfg, ["csm"]), cfg.root / "docs/demo/template.html", tmp_path / "p.html", cfg
+    ).read_text()
+    for marker in ("/*DEMO_DATA*/", "/*ASK_DATA*/", "/*SUGGESTIONS*/", "/*CANNED*/"):
+        assert marker not in page
+    assert "</script" not in page.split("const DEMO = ", 1)[1].split("const PEOPLE", 1)[0]

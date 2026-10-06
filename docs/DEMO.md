@@ -10,9 +10,20 @@ Everything in the demo is synthetic: three made-up clients (Northwind Orthopedic
 2. Optional, for live questions: a laptop with the repo and `pip install -e ".[dev]"`. Check `athena ask "What is the backlog for Northwind Orthopedics?" --as dm.one@fixture.local` works.
 3. Print or open `docs/DEMO_FEEDBACK.md`. One copy per person.
 
+## Let people ask their own questions
+
+Each tab on the page has an **Ask Athena** box. People type any question as that person (DM One, Hub Leader Key, CSM One, BA One), or tap a suggested one.
+
+- **Live answers** (the page opened in Claude): Claude reads the synthetic data through Athena's six tools, as that person. The page's own code enforces what Athena's code enforces: only that person's clients and data sources, a Sources footer made by code, "I do not know" when no tool returned data, and "Data is not current" for old data. Each answer shows a "Checked:" line listing the tools used. The first question asks the viewer to allow the page to use their Claude account (it uses their usage).
+- **Scripted answers** (Claude not available, e.g. a public link): the suggested questions still answer with Athena's scripted stand-in.
+
+Good live questions to show the guard rails: one for a client outside the person's scope, one for data Athena does not have (NPS, collections, FTEs), and a pre-call brief.
+
+Write down every question people type. Those are the real G9 questions.
+
 ## What to say first (1 minute)
 
-> Athena is an assistant for managers. It reads Smartsheet, Supaboard, CS Hub and SharePoint, tells the right person in Teams when something needs action, and answers questions with the source of every number. It only reads; it never changes a system and never sends anything to a client. Today everything is made-up data, and the answers come from a simple scripted stand-in, not the real AI model. So please judge what it does and when, not how clever the wording is.
+> Athena is an assistant for managers. It reads Smartsheet, Supaboard, CS Hub and SharePoint, tells the right person in Teams when something needs action, and answers questions with the source of every number. It only reads; it never changes a system and never sends anything to a client. Today everything is made-up data. In the Ask box a real AI model answers, but only from Athena's tools and only for the person you picked. Judge what it does and when, and ask the questions you really ask.
 
 ## Session 1: DM/AM (20 minutes)
 

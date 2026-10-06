@@ -7,7 +7,8 @@
       "Bash(git commit -q -m 'M1.2: keep markdown out of ruff format *)",
       "Bash(.venv/bin/ruff check *)",
       "Bash(.venv/bin/pytest -q)",
-      "Bash(git commit -q -m 'Demo kit: web page, script, feedback sheet, IT request draft *)"
+      "Bash(git commit -q -m 'Demo kit: web page, script, feedback sheet, IT request draft *)",
+      "Bash(python3 -)"
     ]
   }
 }

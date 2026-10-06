@@ -371,5 +371,7 @@ def demo(
     if json_out:
         typer.echo(f"JSON: {d.save_json(result, Path(json_out))}")
     if html_out:
-        page = d.save_html(result, cfg.root / "docs" / "demo" / "template.html", Path(html_out))
+        page = d.save_html(
+            result, cfg.root / "docs" / "demo" / "template.html", Path(html_out), cfg
+        )
         typer.echo(f"Page: {page}")

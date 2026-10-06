@@ -242,11 +242,128 @@ def save_json(demo: Demo, path: Path) -> Path:
     return path
 
 
-def save_html(demo: Demo, template: Path, path: Path) -> Path:
-    """Fill the demo page template (docs/demo/template.html) with this run's events."""
-    page = template.read_text().replace(
-        "/*DEMO_DATA*/null", demo.model_dump_json().replace("</", "<\\/")
-    )
+def save_html(demo: Demo, template: Path, path: Path, cfg: AthenaConfig | None = None) -> Path:
+    """Fill the demo page template with this run's events and, when `cfg` is given, the data the
+    page's interactive "Ask Athena" box needs (synthetic snapshot, suggestions, scripted answers)."""
+    import json
+
+    def js(value: Any) -> str:
+        return json.dumps(value, default=str).replace("</", "<\\/")
+
+    page = template.read_text().replace("/*DEMO_DATA*/null", js(demo.model_dump(mode="json")))
+    if cfg is not None:
+        page = page.replace("/*ASK_DATA*/null", js(interactive_data(cfg)))
+        page = page.replace("/*SUGGESTIONS*/null", js(SUGGESTIONS))
+        page = page.replace("/*CANNED*/null", js(canned_answers(cfg)))
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(page)
     return path
+
+
+# ---------------------------------------------------------------- interactive page data
+
+SUGGESTIONS: dict[str, list[str]] = {
+    "dm_am": [
+        "Which tasks are late for Northwind?",
+        "What is due in the next 4 hours for Northwind Orthopedics?",
+        "What is the backlog for Northwind Orthopedics against target?",
+        "How has the denial rate for Northwind moved this week?",
+        "Who is the CSM for Northwind Orthopedics?",
+        "Brief me on Northwind Orthopedics",
+        "Show late tasks for Cedar Family Clinic",
+        "How many FTEs are working on Northwind today?",
+    ],
+    "hub_leader": [
+        "Which of my clients are off target on backlog?",
+        "What is the first pass rate for Bluefield Imaging?",
+        "How many open tickets does Northwind Orthopedics have?",
+        "What are the AR days for Northwind over the last month?",
+        "Which tasks are late for Bluefield Imaging?",
+        "What is the escalation path for Bluefield Imaging?",
+        "What is the backlog for Cedar Family Clinic?",
+        "What is the net collection rate for Bluefield Imaging?",
+    ],
+    "csm": [
+        "Brief me on Northwind Orthopedics",
+        "Which tickets for Northwind Orthopedics have no reply yet?",
+        "What is the health score for Bluefield Imaging?",
+        "What does the escalation SOP say for Bluefield Imaging?",
+        "When is the weekly call with Northwind Orthopedics?",
+        "What are the timely filing rules in the Northwind payer list?",
+        "What is the health of Cedar Family Clinic?",
+        "What is the NPS for Northwind Orthopedics?",
+    ],
+    "ba": [
+        "What was the average backlog for Northwind Orthopedics last week?",
+        "Compare AR days for Cedar Family Clinic this week with the target.",
+        "Which metrics are off target for Bluefield Imaging?",
+        "How is first pass rate defined?",
+        "What is in the Cedar Family Clinic statement of work?",
+        "Which tasks are late for Bluefield Imaging?",
+        "What is the cost to collect for Bluefield Imaging?",
+    ],
+}
+
+
+def interactive_data(cfg: AthenaConfig) -> dict[str, Any]:
+    """The synthetic snapshot the page's own tools read. It goes through the real connectors,
+    so only allowlisted fields are included and free text is already scrubbed."""
+    snapshot = fixture_anchor()
+    sources = Sources(cfg, clock=lambda: snapshot, run_mode="fixture")
+
+    def iso(v: Any) -> Any:
+        return v.isoformat() if isinstance(v, datetime) else v
+
+    def rows(source: str) -> list[dict[str, Any]]:
+        return [
+            {**{k: iso(v) for k, v in r.data.items()}, "_as_of": r.as_of.isoformat()}
+            for r in sources.read(source)
+        ]
+
+    people = {e: {"name": p.name, "persona": p.persona} for e, p in cfg.owner_map.people.items()}
+    clients = {
+        k: {
+            "name": c.name,
+            "hub": c.hub,
+            "roles": c.roles,
+            "profile": (cfg.root / "context" / "clients" / f"{k}.md").read_text()
+            if (cfg.root / "context" / "clients" / f"{k}.md").exists()
+            else "",
+        }
+        for k, c in cfg.owner_map.clients.items()
+    }
+    personas = {
+        k: {"scope_role": p.scope_role, "sources": p.sources, "rules": p.rules}
+        for k, p in cfg.personas.items()
+    }
+    metrics = {k: {"meaning": m.meaning, "better": m.better} for k, m in cfg.metrics.items()}
+    return {
+        "now": snapshot.isoformat(),
+        "max_age_hours": cfg.rules["R1"].data_max_age.total_seconds() / 3600,
+        "people": people,
+        "clients": clients,
+        "personas": personas,
+        "metrics": metrics,
+        "tasks": rows("smartsheet.tasks"),
+        "metric_rows": [
+            {k: r[k] for k in ("client", "metric", "date", "actual", "target", "_as_of")}
+            for r in rows("supaboard.metrics")
+        ],
+        "tickets": rows("cs_hub.tickets"),
+        "health": rows("cs_hub.health"),
+        "documents": rows("sharepoint.documents"),
+    }
+
+
+def canned_answers(cfg: AthenaConfig) -> dict[str, list[dict[str, str]]]:
+    """Scripted (stub model) answers to the suggested questions, for viewers who cannot use Claude."""
+    snapshot = fixture_anchor()
+    app = build(cfg=cfg, db=Database("sqlite://"), clock=lambda: snapshot, run_mode="fixture")
+    out: dict[str, list[dict[str, str]]] = {}
+    for key, questions in SUGGESTIONS.items():
+        email = PERSONAS[key][1]
+        out[key] = []
+        for q in questions:
+            r = app.asker.ask(q, email, conversation_id=f"canned-{key}-{q}")
+            out[key].append({"q": q, "answer": r.answer, "footer": r.footer})
+    return out
