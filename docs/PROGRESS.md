@@ -38,7 +38,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M6.1 Check types
 - [x] M6.2 Scheduler tick
 - [x] M6.3 Ladder
-- [ ] M6.4 Message templates
+- [x] M6.4 Message templates
 - [ ] M6.5 Shadow mode and review
 - [ ] M6.6 Backtest
 - [ ] M6.7 Automatic phase demotion
@@ -82,3 +82,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M6.1: All SPEC ops, first severity wins, lt_field/gt_field, absence by list or calendar with grace; table-driven tests.
 - M6.2: due by cron + tz (one catch-up), freshness/no-data skip, open/update/close alerts, athena tick [--rule]; R3 uses metric direction on latest metrics.
 - M6.3: ladder steps by age, first + one reminder after renudge_after, max 2 per person per step, escalation to hub leader; fake-clock tests.
+- M6.4: Templates in context/templates/messages.yaml; model writes from the payload only; plain template when the model fails or the text is empty, too long or off-item.
