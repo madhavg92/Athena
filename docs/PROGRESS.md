@@ -18,7 +18,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [ ] M2.5 Supaboard connector (fixture) — live: G2 — fixture done; live waits for G2
 - [ ] M2.6 CS Hub connector (fixture) — live: G3 — fixture done; live waits for G3
 - [ ] M2.7 SharePoint search connector (fixture) — live: G4 — fixture done; live waits for G4
-- [ ] M2.8 Entra connector (fixture) — live: G4
+- [ ] M2.8 Entra connector (fixture) — live: G4 — fixture done; live waits for G4
 - [ ] M2.9 `athena connectors check`
 - [ ] M3.1 Six tools and registry
 - [ ] M3.2 Model layer (stub, OpenAI-compatible)
@@ -64,3 +64,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M2.5: Fixture metrics with targets and query IDs; live interface documented; waits for G2.
 - M2.6: Fixture tickets and health (one client stale on purpose); live interface documented; waits for G3.
 - M2.7: Fixture word search; live Graph /search/query with allowlisted paths and on-behalf-of token, mock-tested; live test waits for G4.
+- M2.8: Fixture users; live Graph /users with managers and paging, mock-tested; live test waits for G4.
