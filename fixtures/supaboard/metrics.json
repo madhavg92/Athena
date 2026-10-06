@@ -1,0 +1,6482 @@
+[
+ {
+  "actual": 243.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-06",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 248.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-07",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 250.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-08",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 269.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-09",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 307.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-10",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 297.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-11",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 292.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-12",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 307.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-13",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 301.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-14",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 314.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-15",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 298.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-16",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 342.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-17",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 294.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-18",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 330.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-19",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 320.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-20",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 336.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-21",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 353.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-22",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 308.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-23",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 313.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-24",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 317.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-25",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 328.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-26",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 317.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-27",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 280.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-28",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 389.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-29",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 319.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-30",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 317.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-31",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 325.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-01",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 303.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-02",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 352.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-03",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 334.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-04",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 376.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-05",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 361.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-06",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 358.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-07",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 379.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-08",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 412.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-09",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 349.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-10",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 355.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-11",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 406.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-12",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 331.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-13",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 411.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-14",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 361.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-15",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 387.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-16",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 385.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-17",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 419.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-18",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 387.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-19",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 425.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-20",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 415.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-21",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 382.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-22",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 416.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-23",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 487.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-24",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 394.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-25",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 406.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-26",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 421.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-27",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 416.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-28",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 384.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-29",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 385.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-30",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 412.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-01",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 426.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-02",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 363.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-03",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 483.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-04",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 93.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-06",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-07",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-08",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-09",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-10",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-11",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-12",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-13",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-14",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-15",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-16",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-17",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-18",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-19",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-20",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-21",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-22",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-23",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-24",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-25",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-26",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-27",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-28",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-29",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-30",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-31",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-01",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-02",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-03",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-04",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-05",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-06",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-07",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-08",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-09",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-10",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-11",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-12",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-13",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-14",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-15",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 92.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-16",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-17",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-18",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-19",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-20",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-21",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-22",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-23",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-24",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-25",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-26",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-27",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-28",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-29",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-30",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-01",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-02",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-03",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-04",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 37.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-06",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-07",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-08",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-09",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-10",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-11",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-12",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 36.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-13",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-14",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-15",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-16",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-17",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-18",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-19",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-20",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-21",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-22",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 36.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-23",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-24",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-25",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-26",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-27",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-28",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-29",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-30",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 36.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-31",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-01",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-02",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-03",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-04",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-05",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-06",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-07",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-08",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-09",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-10",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-11",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-12",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-13",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-14",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 46.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-15",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 43.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-16",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 43.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-17",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-18",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 44.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-19",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-20",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-21",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 43.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-22",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-23",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 43.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-24",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 43.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-25",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-26",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 43.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-27",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-28",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-29",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-30",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-01",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 44.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-02",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 44.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-03",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-04",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 7.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-06",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-07",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-08",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-09",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 6.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-10",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-11",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-12",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-13",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-14",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-15",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-16",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-17",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-18",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-19",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-20",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-21",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-22",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-23",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-24",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-25",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-26",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-27",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-28",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-29",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-30",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-08-31",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-01",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-02",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-03",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-04",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-05",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-06",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-07",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-08",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-09",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-10",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 6.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-11",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-12",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-13",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-14",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-15",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-16",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-17",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-18",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-19",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-20",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-21",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-22",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-23",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-24",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-25",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-26",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-27",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-28",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-29",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-09-30",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-01",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-02",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-03",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "northwind_ortho",
+  "date": "2026-10-04",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 261.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-06",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 275.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-07",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 251.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-08",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 260.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-09",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 296.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-10",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 321.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-11",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 286.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-12",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 319.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-13",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 332.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-14",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 266.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-15",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 317.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-16",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 310.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-17",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 297.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-18",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 301.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-19",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 305.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-20",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 267.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-21",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 300.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-22",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 346.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-23",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 282.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-24",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 300.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-25",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 319.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-26",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 312.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-27",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 353.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-28",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 278.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-29",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 270.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-30",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 304.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-31",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 306.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-01",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 313.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-02",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 336.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-03",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 338.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-04",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 360.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-05",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 300.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-06",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 362.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-07",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 288.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-08",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 335.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-09",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 350.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-10",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 368.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-11",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 361.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-12",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 356.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-13",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 321.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-14",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 329.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-15",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 331.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-16",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 388.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-17",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 323.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-18",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 391.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-19",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 340.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-20",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 353.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-21",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 346.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-22",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 350.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-23",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 331.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-24",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 395.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-25",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 337.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-26",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 388.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-27",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 325.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-28",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 356.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-29",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 406.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-30",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 403.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-01",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 397.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-02",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 378.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-03",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 354.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-04",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 95.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-06",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-07",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-08",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-09",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-10",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-11",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-12",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-13",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-14",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-15",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-16",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-17",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-18",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-19",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-20",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-21",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-22",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-23",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-24",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 97.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-25",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-26",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-27",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-28",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-29",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-30",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-31",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-01",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-02",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-03",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-04",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-05",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-06",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-07",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-08",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-09",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-10",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-11",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-12",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-13",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-14",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-15",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-16",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-17",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-18",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-19",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-20",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-21",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-22",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-23",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-24",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 92.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-25",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-26",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-27",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-28",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-29",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-30",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-01",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-02",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-03",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-04",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 36.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-06",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-07",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 36.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-08",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-09",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-10",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-11",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-12",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 36.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-13",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-14",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-15",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 36.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-16",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-17",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-18",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-19",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-20",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 36.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-21",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-22",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-23",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-24",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-25",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 36.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-26",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-27",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-28",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-29",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-30",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-31",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-01",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-02",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-03",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-04",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-05",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-06",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-07",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-08",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-09",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-10",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-11",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-12",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-13",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-14",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-15",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-16",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-17",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-18",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-19",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-20",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 43.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-21",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-22",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-23",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-24",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-25",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-26",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-27",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-28",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-29",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-30",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-01",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-02",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-03",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-04",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 6.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-06",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-07",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-08",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-09",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-10",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-11",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-12",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-13",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-14",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-15",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-16",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 6.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-17",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-18",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-19",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-20",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-21",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-22",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-23",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-24",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-25",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-26",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 6.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-27",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-28",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-29",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-30",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-08-31",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-01",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 6.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-02",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-03",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-04",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-05",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-06",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-07",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-08",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-09",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-10",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-11",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-12",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-13",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-14",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-15",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-16",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-17",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-18",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-19",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-20",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-21",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-22",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-23",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-24",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-25",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-26",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-27",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-28",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-29",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-09-30",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-01",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-02",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-03",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "bluefield_imaging",
+  "date": "2026-10-04",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 284.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-06",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 285.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-07",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 182.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-08",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 263.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-09",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 271.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-10",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 325.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-11",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 306.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-12",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 267.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-13",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 307.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-14",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 248.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-15",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 314.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-16",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 320.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-17",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 326.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-18",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 332.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-19",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 309.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-20",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 300.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-21",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 339.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-22",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 373.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-23",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 340.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-24",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 326.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-25",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 312.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-26",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 322.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-27",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 386.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-28",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 385.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-29",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 369.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-30",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 358.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-31",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 385.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-01",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 371.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-02",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 343.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-03",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 317.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-04",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 345.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-05",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 404.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-06",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 418.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-07",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 404.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-08",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 382.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-09",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 385.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-10",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 403.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-11",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 352.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-12",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 393.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-13",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 399.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-14",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 453.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-15",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 408.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-16",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 401.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-17",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 441.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-18",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 402.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-19",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 447.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-20",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 403.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-21",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 473.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-22",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 441.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-23",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 428.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-24",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 476.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-25",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 437.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-26",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 467.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-27",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 417.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-28",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 418.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-29",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 474.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-30",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 481.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-01",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 461.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-02",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 479.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-03",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 442.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-04",
+  "metric": "backlog",
+  "query_id": "sb.backlog.daily",
+  "target": 300.0
+ },
+ {
+  "actual": 94.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-06",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-07",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-08",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-09",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-10",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-11",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-12",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-13",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-14",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-15",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-16",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-17",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 96.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-18",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-19",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-20",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-21",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-22",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-23",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-24",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-25",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-26",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-27",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-28",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-29",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-30",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-31",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-01",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-02",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-03",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-04",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-05",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-06",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-07",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-08",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-09",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-10",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-11",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-12",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 92.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-13",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-14",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-15",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 95.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-16",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-17",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-18",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-19",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-20",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-21",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-22",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-23",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-24",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-25",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 94.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-26",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-27",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 91.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-28",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 92.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-29",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-30",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-01",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-02",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-03",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 93.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-04",
+  "metric": "first_pass_rate",
+  "query_id": "sb.first_pass_rate.daily",
+  "target": 95.0
+ },
+ {
+  "actual": 39.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-06",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-07",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-08",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-09",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 36.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-10",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-11",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-12",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-13",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 35.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-14",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-15",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 37.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-16",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-17",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-18",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-19",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-20",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-21",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 36.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-22",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-23",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-24",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-25",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-26",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-27",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-28",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-29",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-30",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 45.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-31",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-01",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-02",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-03",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-04",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-05",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 43.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-06",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 39.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-07",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-08",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 44.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-09",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 38.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-10",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-11",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 43.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-12",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-13",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 40.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-14",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 43.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-15",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-16",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-17",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 44.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-18",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 43.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-19",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 43.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-20",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-21",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-22",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-23",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 43.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-24",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-25",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 44.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-26",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-27",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-28",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 41.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-29",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 44.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-30",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 46.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-01",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-02",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-03",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 42.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-04",
+  "metric": "ar_days",
+  "query_id": "sb.ar_days.daily",
+  "target": 40.0
+ },
+ {
+  "actual": 8.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-06",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-07",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 6.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-08",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-09",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-10",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-11",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-12",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-13",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-14",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-15",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-16",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-17",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-18",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-19",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-20",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 6.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-21",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-22",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-23",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-24",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-25",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-26",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-27",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-28",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-29",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-30",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-08-31",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 6.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-01",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-02",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-03",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-04",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-05",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-06",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-07",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.7,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-08",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-09",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-10",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-11",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-12",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-13",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-14",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-15",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.9,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-16",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.1,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-17",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-18",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.0,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-19",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-20",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-21",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.3,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-22",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-23",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-24",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-25",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-26",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-27",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-28",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 9.5,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-29",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-09-30",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 7.2,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-01",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.8,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-02",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.6,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-03",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ },
+ {
+  "actual": 8.4,
+  "as_of": "2026-10-05T03:00:00Z",
+  "client": "cedar_family_clinic",
+  "date": "2026-10-04",
+  "metric": "denial_rate",
+  "query_id": "sb.denial_rate.daily",
+  "target": 8.0
+ }
+]

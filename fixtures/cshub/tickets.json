@@ -1,0 +1,182 @@
+[
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "last_reply_at": null,
+  "opened_at": "2026-10-02T22:00:00Z",
+  "priority": "high",
+  "status": "open",
+  "subject": "Report shows wrong payer mix",
+  "ticket_id": "CS-201"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "last_reply_at": "2026-10-04T21:00:00Z",
+  "opened_at": "2026-10-04T20:00:00Z",
+  "priority": "low",
+  "status": "open",
+  "subject": "Request for weekly call reschedule",
+  "ticket_id": "CS-202"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "last_reply_at": "2026-10-02T10:00:00Z",
+  "opened_at": "2026-10-02T08:00:00Z",
+  "priority": "medium",
+  "status": "pending",
+  "subject": "Question on denial trend",
+  "ticket_id": "CS-203"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "last_reply_at": "2026-10-01T21:00:00Z",
+  "opened_at": "2026-10-01T19:00:00Z",
+  "priority": "low",
+  "status": "closed",
+  "subject": "Missing remits for last week",
+  "ticket_id": "CS-204"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "last_reply_at": "2026-10-01T20:00:00Z",
+  "opened_at": "2026-10-01T18:00:00Z",
+  "priority": "medium",
+  "status": "open",
+  "subject": "Access to client portal",
+  "ticket_id": "CS-205"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "northwind_ortho",
+  "last_reply_at": "2026-10-01T02:00:00Z",
+  "opened_at": "2026-10-01T01:00:00Z",
+  "priority": "high",
+  "status": "closed",
+  "subject": "Escalation: slow charge entry",
+  "ticket_id": "CS-206"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "last_reply_at": null,
+  "opened_at": "2026-10-04T00:00:00Z",
+  "priority": "high",
+  "status": "open",
+  "subject": "Report shows wrong payer mix",
+  "ticket_id": "CS-207"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "last_reply_at": "2026-10-03T19:00:00Z",
+  "opened_at": "2026-10-03T16:00:00Z",
+  "priority": "low",
+  "status": "open",
+  "subject": "Request for weekly call reschedule",
+  "ticket_id": "CS-208"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "last_reply_at": "2026-10-04T12:00:00Z",
+  "opened_at": "2026-10-04T10:00:00Z",
+  "priority": "medium",
+  "status": "pending",
+  "subject": "Question on denial trend",
+  "ticket_id": "CS-209"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "last_reply_at": "2026-10-02T21:00:00Z",
+  "opened_at": "2026-10-02T18:00:00Z",
+  "priority": "low",
+  "status": "closed",
+  "subject": "Missing remits for last week",
+  "ticket_id": "CS-210"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "last_reply_at": "2026-10-02T13:00:00Z",
+  "opened_at": "2026-10-02T12:00:00Z",
+  "priority": "medium",
+  "status": "open",
+  "subject": "Access to client portal",
+  "ticket_id": "CS-211"
+ },
+ {
+  "assignee": "csm.one@fixture.local",
+  "client": "bluefield_imaging",
+  "last_reply_at": "2026-10-05T02:00:00Z",
+  "opened_at": "2026-10-04T23:00:00Z",
+  "priority": "high",
+  "status": "closed",
+  "subject": "Escalation: slow charge entry",
+  "ticket_id": "CS-212"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "last_reply_at": null,
+  "opened_at": "2026-10-01T21:00:00Z",
+  "priority": "high",
+  "status": "open",
+  "subject": "Report shows wrong payer mix",
+  "ticket_id": "CS-213"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "last_reply_at": "2026-09-30T21:00:00Z",
+  "opened_at": "2026-09-30T20:00:00Z",
+  "priority": "low",
+  "status": "open",
+  "subject": "Request for weekly call reschedule",
+  "ticket_id": "CS-214"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "last_reply_at": "2026-10-01T09:00:00Z",
+  "opened_at": "2026-10-01T08:00:00Z",
+  "priority": "medium",
+  "status": "pending",
+  "subject": "Question on denial trend",
+  "ticket_id": "CS-215"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "last_reply_at": "2026-10-03T14:00:00Z",
+  "opened_at": "2026-10-03T11:00:00Z",
+  "priority": "low",
+  "status": "closed",
+  "subject": "Missing remits for last week",
+  "ticket_id": "CS-216"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "last_reply_at": "2026-10-05T04:00:00Z",
+  "opened_at": "2026-10-05T01:00:00Z",
+  "priority": "medium",
+  "status": "open",
+  "subject": "Access to client portal",
+  "ticket_id": "CS-217"
+ },
+ {
+  "assignee": "csm.two@fixture.local",
+  "client": "cedar_family_clinic",
+  "last_reply_at": "2026-10-02T23:00:00Z",
+  "opened_at": "2026-10-02T22:00:00Z",
+  "priority": "high",
+  "status": "closed",
+  "subject": "Escalation: slow charge entry",
+  "ticket_id": "CS-218"
+ }
+]

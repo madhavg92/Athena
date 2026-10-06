@@ -12,7 +12,7 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - [x] M1.6 Gateway and receipts
 - [x] M1.7 `athena whoami`
 - [x] M2.1 Read-only HTTP client
-- [ ] M2.2 Synthetic fixture generator
+- [x] M2.2 Synthetic fixture generator
 - [ ] M2.3 Connector base
 - [ ] M2.4 Smartsheet connector (fixture) — live: G1
 - [ ] M2.5 Supaboard connector (fixture) — live: G2
@@ -58,3 +58,4 @@ Tick each task when it meets the definition of done in CLAUDE.md. Add a one-line
 - M1.6: Nine checks in SPEC order, receipts for every outcome incl. refusals, held messages released in work hours, digest queue.
 - M1.7: Shows name, persona, rules, hours and clients in scope; unknown users get the not-set-up message.
 - M2.1: GET only, POST only to token endpoints and Graph /search/query; 3 retries with backoff and Retry-After; no bodies or query strings logged.
+- M2.2: Seed 42, fixed anchor; tasks (late/at-risk/done + one PHI-like row), 60 days metrics, tickets, stale health for one client, docs, users, 60-day history + labels.

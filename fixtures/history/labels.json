@@ -1,0 +1,68 @@
+[
+ {
+  "item_key": "H-41",
+  "note": "agreed extension",
+  "rule_id": "R2",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "H-103",
+  "note": "agreed extension",
+  "rule_id": "R2",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "H-183",
+  "note": "agreed extension",
+  "rule_id": "R2",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "H-205",
+  "note": "agreed extension",
+  "rule_id": "R2",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "H-228",
+  "note": "agreed extension",
+  "rule_id": "R2",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "H-274",
+  "note": "agreed extension",
+  "rule_id": "R2",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "H-304",
+  "note": "agreed extension",
+  "rule_id": "R2",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "H-332",
+  "note": "agreed extension",
+  "rule_id": "R2",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "H-386",
+  "note": "agreed extension",
+  "rule_id": "R2",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "H-408",
+  "note": "agreed extension",
+  "rule_id": "R2",
+  "verdict": "wrong"
+ },
+ {
+  "item_key": "H-450",
+  "note": "agreed extension",
+  "rule_id": "R2",
+  "verdict": "wrong"
+ }
+]

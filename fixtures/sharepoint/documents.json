@@ -1,0 +1,65 @@
+[
+ {
+  "client": "northwind_ortho",
+  "modified": "2026-08-26T06:00:00Z",
+  "snippet": "Scope for Northwind Orthopedics: charge entry, payment posting, AR follow-up and denial management. Turnaround for charge entry is 48 hours.",
+  "title": "Northwind Orthopedics - Statement of Work",
+  "url": "https://example.sharepoint.com/sites/client-context/Shared%20Documents/northwind_ortho/sow.docx"
+ },
+ {
+  "client": "northwind_ortho",
+  "modified": "2026-09-23T06:00:00Z",
+  "snippet": "Escalations for Northwind Orthopedics go to the DM/AM first, then the hub leader after 4 hours.",
+  "title": "Northwind Orthopedics - Escalation SOP",
+  "url": "https://example.sharepoint.com/sites/client-context/Shared%20Documents/northwind_ortho/escalation-sop.docx"
+ },
+ {
+  "client": "northwind_ortho",
+  "modified": "2026-09-30T06:00:00Z",
+  "snippet": "Top payers for Northwind Orthopedics: Payer A, Payer B and Payer C. Timely filing limits differ by payer.",
+  "title": "Northwind Orthopedics - Payer list",
+  "url": "https://example.sharepoint.com/sites/client-context/Shared%20Documents/northwind_ortho/payers.xlsx"
+ },
+ {
+  "client": "bluefield_imaging",
+  "modified": "2026-08-26T06:00:00Z",
+  "snippet": "Scope for Bluefield Imaging: charge entry, payment posting, AR follow-up and denial management. Turnaround for charge entry is 48 hours.",
+  "title": "Bluefield Imaging - Statement of Work",
+  "url": "https://example.sharepoint.com/sites/client-context/Shared%20Documents/bluefield_imaging/sow.docx"
+ },
+ {
+  "client": "bluefield_imaging",
+  "modified": "2026-09-23T06:00:00Z",
+  "snippet": "Escalations for Bluefield Imaging go to the DM/AM first, then the hub leader after 4 hours.",
+  "title": "Bluefield Imaging - Escalation SOP",
+  "url": "https://example.sharepoint.com/sites/client-context/Shared%20Documents/bluefield_imaging/escalation-sop.docx"
+ },
+ {
+  "client": "bluefield_imaging",
+  "modified": "2026-09-30T06:00:00Z",
+  "snippet": "Top payers for Bluefield Imaging: Payer A, Payer B and Payer C. Timely filing limits differ by payer.",
+  "title": "Bluefield Imaging - Payer list",
+  "url": "https://example.sharepoint.com/sites/client-context/Shared%20Documents/bluefield_imaging/payers.xlsx"
+ },
+ {
+  "client": "cedar_family_clinic",
+  "modified": "2026-08-26T06:00:00Z",
+  "snippet": "Scope for Cedar Family Clinic: charge entry, payment posting, AR follow-up and denial management. Turnaround for charge entry is 48 hours.",
+  "title": "Cedar Family Clinic - Statement of Work",
+  "url": "https://example.sharepoint.com/sites/client-context/Shared%20Documents/cedar_family_clinic/sow.docx"
+ },
+ {
+  "client": "cedar_family_clinic",
+  "modified": "2026-09-23T06:00:00Z",
+  "snippet": "Escalations for Cedar Family Clinic go to the DM/AM first, then the hub leader after 4 hours.",
+  "title": "Cedar Family Clinic - Escalation SOP",
+  "url": "https://example.sharepoint.com/sites/client-context/Shared%20Documents/cedar_family_clinic/escalation-sop.docx"
+ },
+ {
+  "client": "cedar_family_clinic",
+  "modified": "2026-09-30T06:00:00Z",
+  "snippet": "Top payers for Cedar Family Clinic: Payer A, Payer B and Payer C. Timely filing limits differ by payer.",
+  "title": "Cedar Family Clinic - Payer list",
+  "url": "https://example.sharepoint.com/sites/client-context/Shared%20Documents/cedar_family_clinic/payers.xlsx"
+ }
+]

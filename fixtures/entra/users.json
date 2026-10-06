@@ -1,0 +1,44 @@
+[
+ {
+  "email": "hl.key@fixture.local",
+  "job_title": "Hub Leader",
+  "manager": null,
+  "name": "Hub Leader Key"
+ },
+ {
+  "email": "hl.small@fixture.local",
+  "job_title": "Hub Leader",
+  "manager": null,
+  "name": "Hub Leader Small"
+ },
+ {
+  "email": "dm.one@fixture.local",
+  "job_title": "Delivery Manager",
+  "manager": "hl.key@fixture.local",
+  "name": "DM One"
+ },
+ {
+  "email": "dm.two@fixture.local",
+  "job_title": "Delivery Manager",
+  "manager": "hl.key@fixture.local",
+  "name": "DM Two"
+ },
+ {
+  "email": "csm.one@fixture.local",
+  "job_title": "Client Success Manager",
+  "manager": null,
+  "name": "CSM One"
+ },
+ {
+  "email": "csm.two@fixture.local",
+  "job_title": "Client Success Manager",
+  "manager": null,
+  "name": "CSM Two"
+ },
+ {
+  "email": "ba.one@fixture.local",
+  "job_title": "Business Analyst",
+  "manager": null,
+  "name": "BA One"
+ }
+]

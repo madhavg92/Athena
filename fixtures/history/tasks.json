@@ -1,0 +1,7212 @@
+[
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-06T09:07:00Z",
+  "created_at": "2026-08-06T05:47:00Z",
+  "due": "2026-08-06T09:47:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-1",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-06T07:54:00Z",
+   "2026-08-06T08:50:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-06T11:52:00Z",
+  "created_at": "2026-08-06T05:05:00Z",
+  "due": "2026-08-06T14:05:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-2",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-06T06:19:00Z",
+   "2026-08-06T07:09:00Z",
+   "2026-08-06T08:58:00Z",
+   "2026-08-06T09:47:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-06T13:13:00Z",
+  "created_at": "2026-08-06T05:57:00Z",
+  "due": "2026-08-06T13:57:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-3",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-06T08:18:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-06T14:33:00Z",
+  "created_at": "2026-08-06T04:43:00Z",
+  "due": "2026-08-06T14:43:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-4",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-06T07:15:00Z",
+   "2026-08-06T09:48:00Z",
+   "2026-08-06T13:04:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-06T08:32:00Z",
+  "created_at": "2026-08-06T05:01:00Z",
+  "due": "2026-08-06T11:01:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-5",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-06T05:49:00Z",
+   "2026-08-06T06:23:00Z",
+   "2026-08-06T06:57:00Z",
+   "2026-08-06T07:59:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-06T10:18:00Z",
+  "created_at": "2026-08-06T05:13:00Z",
+  "due": "2026-08-06T12:13:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-6",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-06T07:55:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-06T12:31:00Z",
+  "created_at": "2026-08-06T05:30:00Z",
+  "due": "2026-08-06T15:30:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-7",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-06T05:48:00Z",
+   "2026-08-06T09:43:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-06T12:29:00Z",
+  "created_at": "2026-08-06T05:04:00Z",
+  "due": "2026-08-06T13:04:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-8",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-06T05:11:00Z",
+   "2026-08-06T05:55:00Z",
+   "2026-08-06T08:57:00Z",
+   "2026-08-06T09:33:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-07T14:22:00Z",
+  "created_at": "2026-08-07T05:51:00Z",
+  "due": "2026-08-07T14:51:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-9",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-07T07:13:00Z",
+   "2026-08-07T10:22:00Z",
+   "2026-08-07T11:37:00Z",
+   "2026-08-07T12:38:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-07T13:02:00Z",
+  "created_at": "2026-08-07T05:49:00Z",
+  "due": "2026-08-07T14:49:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-10",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-07T11:09:00Z",
+   "2026-08-07T11:56:00Z",
+   "2026-08-07T12:17:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-07T14:51:00Z",
+  "created_at": "2026-08-07T05:51:00Z",
+  "due": "2026-08-07T13:51:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-11",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-07T09:43:00Z",
+   "2026-08-07T10:45:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-07T14:02:00Z",
+  "created_at": "2026-08-07T05:37:00Z",
+  "due": "2026-08-07T14:37:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-12",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-07T07:02:00Z",
+   "2026-08-07T08:10:00Z",
+   "2026-08-07T11:32:00Z",
+   "2026-08-07T13:19:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-07T08:40:00Z",
+  "created_at": "2026-08-07T04:05:00Z",
+  "due": "2026-08-07T10:05:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-13",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-07T05:19:00Z",
+   "2026-08-07T07:16:00Z",
+   "2026-08-07T07:45:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-07T11:56:00Z",
+  "created_at": "2026-08-07T04:52:00Z",
+  "due": "2026-08-07T12:52:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-14",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-07T05:32:00Z",
+   "2026-08-07T06:21:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-07T11:40:00Z",
+  "created_at": "2026-08-07T05:51:00Z",
+  "due": "2026-08-07T12:51:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-15",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-07T07:04:00Z",
+   "2026-08-07T07:49:00Z",
+   "2026-08-07T09:47:00Z",
+   "2026-08-07T10:49:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-07T08:49:00Z",
+  "created_at": "2026-08-07T04:58:00Z",
+  "due": "2026-08-07T10:58:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-16",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-07T05:38:00Z",
+   "2026-08-07T07:17:00Z",
+   "2026-08-07T07:51:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-07T09:30:00Z",
+  "created_at": "2026-08-07T04:56:00Z",
+  "due": "2026-08-07T10:56:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-17",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-07T06:37:00Z",
+   "2026-08-07T07:04:00Z",
+   "2026-08-07T07:30:00Z",
+   "2026-08-07T08:49:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-08T07:32:00Z",
+  "created_at": "2026-08-08T04:13:00Z",
+  "due": "2026-08-08T09:13:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-18",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-08T04:18:00Z",
+   "2026-08-08T05:28:00Z",
+   "2026-08-08T07:12:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-08T08:13:00Z",
+  "created_at": "2026-08-08T04:35:00Z",
+  "due": "2026-08-08T08:35:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-19",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-08T05:48:00Z",
+   "2026-08-08T07:53:00Z",
+   "2026-08-08T07:59:00Z",
+   "2026-08-08T08:08:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-08T12:25:00Z",
+  "created_at": "2026-08-08T05:17:00Z",
+  "due": "2026-08-08T15:17:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-20",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-08T07:25:00Z",
+   "2026-08-08T10:34:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-08T11:43:00Z",
+  "created_at": "2026-08-08T04:12:00Z",
+  "due": "2026-08-08T13:12:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-21",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-08T04:29:00Z",
+   "2026-08-08T07:18:00Z",
+   "2026-08-08T09:08:00Z",
+   "2026-08-08T10:26:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-08T08:15:00Z",
+  "created_at": "2026-08-08T04:11:00Z",
+  "due": "2026-08-08T10:11:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-22",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-08T04:44:00Z",
+   "2026-08-08T05:02:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-08T10:33:00Z",
+  "created_at": "2026-08-08T05:52:00Z",
+  "due": "2026-08-08T11:52:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-23",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-08T08:03:00Z",
+   "2026-08-08T09:58:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-08T14:56:00Z",
+  "created_at": "2026-08-08T05:35:00Z",
+  "due": "2026-08-08T15:35:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-24",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-08T06:52:00Z",
+   "2026-08-08T07:59:00Z",
+   "2026-08-08T09:26:00Z",
+   "2026-08-08T12:21:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-08T12:54:00Z",
+  "created_at": "2026-08-08T04:11:00Z",
+  "due": "2026-08-08T14:11:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-25",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-08T11:56:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-08T11:47:00Z",
+  "created_at": "2026-08-08T05:26:00Z",
+  "due": "2026-08-08T14:26:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-26",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-08T06:21:00Z",
+   "2026-08-08T08:36:00Z",
+   "2026-08-08T10:52:00Z",
+   "2026-08-08T11:11:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-08T06:27:00Z",
+  "created_at": "2026-08-08T05:00:00Z",
+  "due": "2026-08-08T09:00:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-27",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-08T05:28:00Z",
+   "2026-08-08T06:18:00Z",
+   "2026-08-08T06:22:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-09T11:18:00Z",
+  "created_at": "2026-08-09T05:45:00Z",
+  "due": "2026-08-09T12:45:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-28",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-09T06:04:00Z",
+   "2026-08-09T06:08:00Z",
+   "2026-08-09T06:44:00Z",
+   "2026-08-09T06:56:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-09T14:03:00Z",
+  "created_at": "2026-08-09T05:03:00Z",
+  "due": "2026-08-09T09:03:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-29",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-09T11:40:00Z",
+   "2026-08-09T12:47:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-09T12:38:00Z",
+  "created_at": "2026-08-09T05:35:00Z",
+  "due": "2026-08-09T14:35:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-30",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-09T09:07:00Z",
+   "2026-08-09T11:10:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-09T11:25:00Z",
+  "created_at": "2026-08-09T05:46:00Z",
+  "due": "2026-08-09T12:46:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-31",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-09T08:55:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-09T09:21:00Z",
+  "created_at": "2026-08-09T04:56:00Z",
+  "due": "2026-08-09T09:56:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-32",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-09T05:27:00Z",
+   "2026-08-09T07:59:00Z",
+   "2026-08-09T08:19:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-09T06:18:00Z",
+  "created_at": "2026-08-09T04:24:00Z",
+  "due": "2026-08-09T08:24:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-33",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-09T05:48:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-09T14:07:00Z",
+  "created_at": "2026-08-09T05:22:00Z",
+  "due": "2026-08-09T14:22:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-34",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-09T11:03:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-09T11:09:00Z",
+  "created_at": "2026-08-09T05:40:00Z",
+  "due": "2026-08-09T13:40:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-35",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-09T07:30:00Z",
+   "2026-08-09T10:40:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-09T19:42:00Z",
+  "created_at": "2026-08-09T04:42:00Z",
+  "due": "2026-08-09T14:42:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-36",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-09T09:25:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-10T20:32:00Z",
+  "created_at": "2026-08-10T04:32:00Z",
+  "due": "2026-08-10T14:32:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-37",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-10T06:46:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-10T10:26:00Z",
+  "created_at": "2026-08-10T05:40:00Z",
+  "due": "2026-08-10T10:40:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-38",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-10T06:06:00Z",
+   "2026-08-10T07:55:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-10T12:08:00Z",
+  "created_at": "2026-08-10T05:34:00Z",
+  "due": "2026-08-10T12:34:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-39",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-10T08:39:00Z",
+   "2026-08-10T09:23:00Z",
+   "2026-08-10T09:56:00Z",
+   "2026-08-10T10:37:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-10T10:10:00Z",
+  "created_at": "2026-08-10T04:57:00Z",
+  "due": "2026-08-10T12:57:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-40",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-10T09:23:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-10T13:22:00Z",
+  "created_at": "2026-08-10T05:22:00Z",
+  "due": "2026-08-10T09:22:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-41",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-10T06:17:00Z",
+   "2026-08-10T09:00:00Z",
+   "2026-08-10T09:33:00Z",
+   "2026-08-10T11:13:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-10T09:44:00Z",
+  "created_at": "2026-08-10T04:10:00Z",
+  "due": "2026-08-10T10:10:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-42",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-10T06:30:00Z",
+   "2026-08-10T09:29:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-10T11:28:00Z",
+  "created_at": "2026-08-10T05:10:00Z",
+  "due": "2026-08-10T14:10:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-43",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-10T09:02:00Z",
+   "2026-08-10T09:28:00Z",
+   "2026-08-10T10:19:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-10T20:41:00Z",
+  "created_at": "2026-08-10T05:41:00Z",
+  "due": "2026-08-10T14:41:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-44",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-10T13:01:00Z",
+   "2026-08-10T13:23:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-10T12:11:00Z",
+  "created_at": "2026-08-10T05:45:00Z",
+  "due": "2026-08-10T12:45:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-45",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-10T08:25:00Z",
+   "2026-08-10T09:23:00Z",
+   "2026-08-10T11:25:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-11T12:52:00Z",
+  "created_at": "2026-08-11T04:19:00Z",
+  "due": "2026-08-11T13:19:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-46",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-11T05:46:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-11T07:10:00Z",
+  "created_at": "2026-08-11T04:55:00Z",
+  "due": "2026-08-11T08:55:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-47",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-11T05:10:00Z",
+   "2026-08-11T06:19:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-11T08:54:00Z",
+  "created_at": "2026-08-11T04:52:00Z",
+  "due": "2026-08-11T10:52:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-48",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-11T06:05:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-11T07:41:00Z",
+  "created_at": "2026-08-11T04:45:00Z",
+  "due": "2026-08-11T08:45:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-49",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-11T06:48:00Z",
+   "2026-08-11T07:33:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-11T07:16:00Z",
+  "created_at": "2026-08-11T05:48:00Z",
+  "due": "2026-08-11T09:48:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-50",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-11T06:02:00Z",
+   "2026-08-11T06:23:00Z",
+   "2026-08-11T07:01:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-11T09:54:00Z",
+  "created_at": "2026-08-11T05:43:00Z",
+  "due": "2026-08-11T12:43:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-51",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-11T08:18:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-11T08:54:00Z",
+  "created_at": "2026-08-11T04:23:00Z",
+  "due": "2026-08-11T10:23:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-52",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-11T04:26:00Z",
+   "2026-08-11T05:55:00Z",
+   "2026-08-11T07:22:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-11T13:26:00Z",
+  "created_at": "2026-08-11T05:12:00Z",
+  "due": "2026-08-11T14:12:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-53",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-11T05:58:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-12T10:58:00Z",
+  "created_at": "2026-08-12T04:48:00Z",
+  "due": "2026-08-12T11:48:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-54",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-12T07:27:00Z",
+   "2026-08-12T07:34:00Z",
+   "2026-08-12T10:57:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-12T08:27:00Z",
+  "created_at": "2026-08-12T05:16:00Z",
+  "due": "2026-08-12T09:16:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-55",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-12T05:28:00Z",
+   "2026-08-12T07:54:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-12T11:11:00Z",
+  "created_at": "2026-08-12T04:56:00Z",
+  "due": "2026-08-12T13:56:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-56",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-12T06:46:00Z",
+   "2026-08-12T07:15:00Z",
+   "2026-08-12T08:28:00Z",
+   "2026-08-12T09:18:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-12T17:44:00Z",
+  "created_at": "2026-08-12T04:44:00Z",
+  "due": "2026-08-12T11:44:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-57",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-12T05:30:00Z",
+   "2026-08-12T09:59:00Z",
+   "2026-08-12T13:43:00Z",
+   "2026-08-12T16:07:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-12T12:16:00Z",
+  "created_at": "2026-08-12T05:16:00Z",
+  "due": "2026-08-12T09:16:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-58",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-12T06:26:00Z",
+   "2026-08-12T11:48:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-12T10:06:00Z",
+  "created_at": "2026-08-12T04:00:00Z",
+  "due": "2026-08-12T11:00:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-59",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-12T07:14:00Z",
+   "2026-08-12T08:32:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-12T11:24:00Z",
+  "created_at": "2026-08-12T05:04:00Z",
+  "due": "2026-08-12T13:04:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-60",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-12T08:27:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-13T09:32:00Z",
+  "created_at": "2026-08-13T04:02:00Z",
+  "due": "2026-08-13T11:02:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-61",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-13T07:29:00Z",
+   "2026-08-13T07:35:00Z",
+   "2026-08-13T08:55:00Z",
+   "2026-08-13T09:29:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-13T14:14:00Z",
+  "created_at": "2026-08-13T04:14:00Z",
+  "due": "2026-08-13T11:14:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-62",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-13T10:24:00Z",
+   "2026-08-13T12:05:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-13T07:21:00Z",
+  "created_at": "2026-08-13T04:13:00Z",
+  "due": "2026-08-13T09:13:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-63",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-13T05:54:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-13T08:50:00Z",
+  "created_at": "2026-08-13T04:43:00Z",
+  "due": "2026-08-13T09:43:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-64",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-13T06:53:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-13T11:28:00Z",
+  "created_at": "2026-08-13T05:07:00Z",
+  "due": "2026-08-13T13:07:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-65",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-13T06:22:00Z",
+   "2026-08-13T10:37:00Z",
+   "2026-08-13T11:19:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-13T08:19:00Z",
+  "created_at": "2026-08-13T04:13:00Z",
+  "due": "2026-08-13T09:13:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-66",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-13T07:27:00Z",
+   "2026-08-13T07:27:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-13T12:14:00Z",
+  "created_at": "2026-08-13T04:22:00Z",
+  "due": "2026-08-13T14:22:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-67",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-13T09:11:00Z",
+   "2026-08-13T09:51:00Z",
+   "2026-08-13T10:10:00Z",
+   "2026-08-13T11:53:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-13T12:48:00Z",
+  "created_at": "2026-08-13T05:50:00Z",
+  "due": "2026-08-13T14:50:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-68",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-13T09:50:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-13T08:39:00Z",
+  "created_at": "2026-08-13T05:20:00Z",
+  "due": "2026-08-13T11:20:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-69",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-13T06:50:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-13T09:50:00Z",
+  "created_at": "2026-08-13T04:09:00Z",
+  "due": "2026-08-13T10:09:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-70",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-13T07:17:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-14T14:49:00Z",
+  "created_at": "2026-08-14T05:22:00Z",
+  "due": "2026-08-14T15:22:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-71",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-14T06:04:00Z",
+   "2026-08-14T13:02:00Z",
+   "2026-08-14T13:15:00Z",
+   "2026-08-14T14:49:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-14T08:12:00Z",
+  "created_at": "2026-08-14T05:23:00Z",
+  "due": "2026-08-14T10:23:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-72",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-14T05:38:00Z",
+   "2026-08-14T07:18:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-14T08:37:00Z",
+  "created_at": "2026-08-14T05:31:00Z",
+  "due": "2026-08-14T09:31:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-73",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-14T06:34:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-14T12:06:00Z",
+  "created_at": "2026-08-14T04:56:00Z",
+  "due": "2026-08-14T12:56:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-74",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-14T07:20:00Z",
+   "2026-08-14T08:06:00Z",
+   "2026-08-14T08:14:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-14T11:16:00Z",
+  "created_at": "2026-08-14T05:39:00Z",
+  "due": "2026-08-14T11:39:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-75",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-14T06:12:00Z",
+   "2026-08-14T06:27:00Z",
+   "2026-08-14T08:27:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-14T07:51:00Z",
+  "created_at": "2026-08-14T04:49:00Z",
+  "due": "2026-08-14T10:49:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-76",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-14T05:09:00Z",
+   "2026-08-14T06:14:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-14T08:55:00Z",
+  "created_at": "2026-08-14T05:24:00Z",
+  "due": "2026-08-14T10:24:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-77",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-14T05:45:00Z",
+   "2026-08-14T05:57:00Z",
+   "2026-08-14T07:56:00Z",
+   "2026-08-14T08:25:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-14T10:37:00Z",
+  "created_at": "2026-08-14T05:11:00Z",
+  "due": "2026-08-14T12:11:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-78",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-14T05:58:00Z",
+   "2026-08-14T09:40:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-14T14:05:00Z",
+  "created_at": "2026-08-14T05:05:00Z",
+  "due": "2026-08-14T11:05:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-79",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-14T08:44:00Z",
+   "2026-08-14T10:54:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-15T07:44:00Z",
+  "created_at": "2026-08-15T04:19:00Z",
+  "due": "2026-08-15T08:19:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-80",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-15T07:08:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-15T13:10:00Z",
+  "created_at": "2026-08-15T05:52:00Z",
+  "due": "2026-08-15T15:52:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-81",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-15T07:10:00Z",
+   "2026-08-15T07:15:00Z",
+   "2026-08-15T07:24:00Z",
+   "2026-08-15T12:57:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-15T15:32:00Z",
+  "created_at": "2026-08-15T05:32:00Z",
+  "due": "2026-08-15T12:32:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-82",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-15T10:23:00Z",
+   "2026-08-15T13:06:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-15T08:20:00Z",
+  "created_at": "2026-08-15T04:30:00Z",
+  "due": "2026-08-15T10:30:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-83",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-15T06:04:00Z",
+   "2026-08-15T07:23:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-15T13:12:00Z",
+  "created_at": "2026-08-15T04:59:00Z",
+  "due": "2026-08-15T14:59:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-84",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-15T06:21:00Z",
+   "2026-08-15T06:41:00Z",
+   "2026-08-15T11:49:00Z",
+   "2026-08-15T11:57:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-15T11:23:00Z",
+  "created_at": "2026-08-15T04:17:00Z",
+  "due": "2026-08-15T14:17:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-85",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-15T05:09:00Z",
+   "2026-08-15T07:27:00Z",
+   "2026-08-15T09:00:00Z",
+   "2026-08-15T10:21:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-15T08:57:00Z",
+  "created_at": "2026-08-15T05:48:00Z",
+  "due": "2026-08-15T09:48:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-86",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-15T06:25:00Z",
+   "2026-08-15T07:43:00Z",
+   "2026-08-15T07:59:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-16T09:17:00Z",
+  "created_at": "2026-08-16T05:56:00Z",
+  "due": "2026-08-16T10:56:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-87",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-16T07:42:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-16T11:02:00Z",
+  "created_at": "2026-08-16T04:50:00Z",
+  "due": "2026-08-16T12:50:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-88",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-16T08:01:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-16T05:44:00Z",
+  "created_at": "2026-08-16T04:40:00Z",
+  "due": "2026-08-16T08:40:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-89",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-16T04:44:00Z",
+   "2026-08-16T04:57:00Z",
+   "2026-08-16T04:58:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-16T15:12:00Z",
+  "created_at": "2026-08-16T05:57:00Z",
+  "due": "2026-08-16T15:57:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-90",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-16T06:02:00Z",
+   "2026-08-16T06:16:00Z",
+   "2026-08-16T07:18:00Z",
+   "2026-08-16T13:36:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-16T08:01:00Z",
+  "created_at": "2026-08-16T05:46:00Z",
+  "due": "2026-08-16T10:46:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-91",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-16T06:14:00Z",
+   "2026-08-16T06:46:00Z",
+   "2026-08-16T06:59:00Z",
+   "2026-08-16T07:03:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-16T06:17:00Z",
+  "created_at": "2026-08-16T04:06:00Z",
+  "due": "2026-08-16T09:06:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-92",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-16T04:10:00Z",
+   "2026-08-16T04:22:00Z",
+   "2026-08-16T04:34:00Z",
+   "2026-08-16T06:13:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-17T17:30:00Z",
+  "created_at": "2026-08-17T04:30:00Z",
+  "due": "2026-08-17T13:30:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-93",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-17T14:59:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-17T09:22:00Z",
+  "created_at": "2026-08-17T04:53:00Z",
+  "due": "2026-08-17T09:53:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-94",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-17T05:27:00Z",
+   "2026-08-17T09:12:00Z",
+   "2026-08-17T09:22:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-17T07:00:00Z",
+  "created_at": "2026-08-17T05:10:00Z",
+  "due": "2026-08-17T09:10:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-95",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-17T06:31:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-17T09:06:00Z",
+  "created_at": "2026-08-17T04:47:00Z",
+  "due": "2026-08-17T10:47:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-96",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-17T07:43:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-17T19:24:00Z",
+  "created_at": "2026-08-17T05:24:00Z",
+  "due": "2026-08-17T14:24:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-97",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-17T06:09:00Z",
+   "2026-08-17T07:40:00Z",
+   "2026-08-17T11:24:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-17T08:14:00Z",
+  "created_at": "2026-08-17T05:22:00Z",
+  "due": "2026-08-17T10:22:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-98",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-17T05:38:00Z",
+   "2026-08-17T05:56:00Z",
+   "2026-08-17T06:08:00Z",
+   "2026-08-17T08:03:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-17T09:03:00Z",
+  "created_at": "2026-08-17T04:04:00Z",
+  "due": "2026-08-17T10:04:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-99",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-17T06:45:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-17T09:36:00Z",
+  "created_at": "2026-08-17T05:05:00Z",
+  "due": "2026-08-17T12:05:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-100",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-17T05:23:00Z",
+   "2026-08-17T06:42:00Z",
+   "2026-08-17T07:14:00Z",
+   "2026-08-17T07:31:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-17T14:09:00Z",
+  "created_at": "2026-08-17T05:50:00Z",
+  "due": "2026-08-17T14:50:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-101",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-17T09:14:00Z",
+   "2026-08-17T09:33:00Z",
+   "2026-08-17T13:25:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-17T11:57:00Z",
+  "created_at": "2026-08-17T05:54:00Z",
+  "due": "2026-08-17T12:54:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-102",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-17T09:02:00Z",
+   "2026-08-17T10:08:00Z",
+   "2026-08-17T10:19:00Z",
+   "2026-08-17T11:48:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-18T17:33:00Z",
+  "created_at": "2026-08-18T05:33:00Z",
+  "due": "2026-08-18T12:33:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-103",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-18T10:33:00Z",
+   "2026-08-18T14:51:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-18T11:37:00Z",
+  "created_at": "2026-08-18T04:41:00Z",
+  "due": "2026-08-18T13:41:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-104",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-18T06:06:00Z",
+   "2026-08-18T07:40:00Z",
+   "2026-08-18T08:28:00Z",
+   "2026-08-18T10:34:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-18T12:46:00Z",
+  "created_at": "2026-08-18T05:33:00Z",
+  "due": "2026-08-18T15:33:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-105",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-18T06:02:00Z",
+   "2026-08-18T07:53:00Z",
+   "2026-08-18T11:00:00Z",
+   "2026-08-18T12:18:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-18T12:04:00Z",
+  "created_at": "2026-08-18T05:25:00Z",
+  "due": "2026-08-18T14:25:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-106",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-18T05:40:00Z",
+   "2026-08-18T06:38:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-18T13:40:00Z",
+  "created_at": "2026-08-18T05:40:00Z",
+  "due": "2026-08-18T12:40:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-107",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-18T11:10:00Z",
+   "2026-08-18T12:18:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-18T07:07:00Z",
+  "created_at": "2026-08-18T05:12:00Z",
+  "due": "2026-08-18T09:12:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-108",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-18T05:59:00Z",
+   "2026-08-18T06:08:00Z",
+   "2026-08-18T06:49:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-18T08:22:00Z",
+  "created_at": "2026-08-18T05:13:00Z",
+  "due": "2026-08-18T10:13:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-109",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-18T06:16:00Z",
+   "2026-08-18T06:24:00Z",
+   "2026-08-18T07:59:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-18T10:41:00Z",
+  "created_at": "2026-08-18T04:03:00Z",
+  "due": "2026-08-18T13:03:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-110",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-18T05:03:00Z",
+   "2026-08-18T06:17:00Z",
+   "2026-08-18T08:50:00Z",
+   "2026-08-18T10:39:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-19T08:34:00Z",
+  "created_at": "2026-08-19T04:57:00Z",
+  "due": "2026-08-19T09:57:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-111",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-19T05:15:00Z",
+   "2026-08-19T05:28:00Z",
+   "2026-08-19T05:31:00Z",
+   "2026-08-19T05:48:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-19T12:50:00Z",
+  "created_at": "2026-08-19T04:22:00Z",
+  "due": "2026-08-19T13:22:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-112",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-19T07:19:00Z",
+   "2026-08-19T10:03:00Z",
+   "2026-08-19T10:25:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-19T11:44:00Z",
+  "created_at": "2026-08-19T05:10:00Z",
+  "due": "2026-08-19T13:10:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-113",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-19T11:13:00Z",
+   "2026-08-19T11:14:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-19T11:00:00Z",
+  "created_at": "2026-08-19T05:41:00Z",
+  "due": "2026-08-19T11:41:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-114",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-19T06:52:00Z",
+   "2026-08-19T07:42:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-19T10:37:00Z",
+  "created_at": "2026-08-19T04:46:00Z",
+  "due": "2026-08-19T12:46:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-115",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-19T05:30:00Z",
+   "2026-08-19T09:59:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-19T09:27:00Z",
+  "created_at": "2026-08-19T04:39:00Z",
+  "due": "2026-08-19T11:39:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-116",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-19T05:16:00Z",
+   "2026-08-19T05:43:00Z",
+   "2026-08-19T07:21:00Z",
+   "2026-08-19T08:08:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-19T13:17:00Z",
+  "created_at": "2026-08-19T04:59:00Z",
+  "due": "2026-08-19T13:59:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-117",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-19T11:32:00Z",
+   "2026-08-19T13:13:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-19T12:31:00Z",
+  "created_at": "2026-08-19T04:55:00Z",
+  "due": "2026-08-19T12:55:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-118",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-19T09:20:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-19T15:38:00Z",
+  "created_at": "2026-08-19T04:38:00Z",
+  "due": "2026-08-19T09:38:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-119",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-19T10:32:00Z",
+   "2026-08-19T13:29:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-20T12:05:00Z",
+  "created_at": "2026-08-20T04:25:00Z",
+  "due": "2026-08-20T13:25:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-120",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-20T07:00:00Z",
+   "2026-08-20T09:45:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-20T08:15:00Z",
+  "created_at": "2026-08-20T05:08:00Z",
+  "due": "2026-08-20T09:08:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-121",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-20T05:51:00Z",
+   "2026-08-20T07:56:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-20T10:58:00Z",
+  "created_at": "2026-08-20T05:32:00Z",
+  "due": "2026-08-20T13:32:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-122",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-20T05:46:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-20T12:26:00Z",
+  "created_at": "2026-08-20T05:22:00Z",
+  "due": "2026-08-20T15:22:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-123",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-20T10:14:00Z",
+   "2026-08-20T11:54:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-20T20:19:00Z",
+  "created_at": "2026-08-20T05:19:00Z",
+  "due": "2026-08-20T14:19:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-124",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-20T10:28:00Z",
+   "2026-08-20T13:33:00Z",
+   "2026-08-20T16:16:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-20T10:26:00Z",
+  "created_at": "2026-08-20T04:51:00Z",
+  "due": "2026-08-20T10:51:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-125",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-20T08:23:00Z",
+   "2026-08-20T08:36:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-20T09:13:00Z",
+  "created_at": "2026-08-20T04:59:00Z",
+  "due": "2026-08-20T09:59:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-126",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-20T06:20:00Z",
+   "2026-08-20T08:02:00Z",
+   "2026-08-20T08:39:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-20T07:30:00Z",
+  "created_at": "2026-08-20T04:51:00Z",
+  "due": "2026-08-20T09:51:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-127",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-20T06:12:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-20T07:46:00Z",
+  "created_at": "2026-08-20T04:59:00Z",
+  "due": "2026-08-20T08:59:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-128",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-20T05:11:00Z",
+   "2026-08-20T05:23:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-21T13:00:00Z",
+  "created_at": "2026-08-21T05:50:00Z",
+  "due": "2026-08-21T13:50:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-129",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-21T08:30:00Z",
+   "2026-08-21T10:45:00Z",
+   "2026-08-21T11:59:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-21T08:16:00Z",
+  "created_at": "2026-08-21T05:37:00Z",
+  "due": "2026-08-21T10:37:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-130",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-21T05:42:00Z",
+   "2026-08-21T06:55:00Z",
+   "2026-08-21T07:44:00Z",
+   "2026-08-21T07:44:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-21T11:49:00Z",
+  "created_at": "2026-08-21T06:00:00Z",
+  "due": "2026-08-21T13:00:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-131",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-21T09:00:00Z",
+   "2026-08-21T10:58:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-21T08:39:00Z",
+  "created_at": "2026-08-21T04:36:00Z",
+  "due": "2026-08-21T11:36:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-132",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-21T04:38:00Z",
+   "2026-08-21T05:49:00Z",
+   "2026-08-21T06:53:00Z",
+   "2026-08-21T08:12:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-21T08:12:00Z",
+  "created_at": "2026-08-21T04:55:00Z",
+  "due": "2026-08-21T09:55:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-133",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-21T05:06:00Z",
+   "2026-08-21T05:08:00Z",
+   "2026-08-21T06:28:00Z",
+   "2026-08-21T06:37:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-21T09:56:00Z",
+  "created_at": "2026-08-21T04:24:00Z",
+  "due": "2026-08-21T10:24:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-134",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-21T06:47:00Z",
+   "2026-08-21T08:14:00Z",
+   "2026-08-21T08:42:00Z",
+   "2026-08-21T09:05:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-21T14:27:00Z",
+  "created_at": "2026-08-21T05:27:00Z",
+  "due": "2026-08-21T13:27:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-135",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-21T07:54:00Z",
+   "2026-08-21T11:14:00Z",
+   "2026-08-21T11:41:00Z",
+   "2026-08-21T11:49:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-21T13:51:00Z",
+  "created_at": "2026-08-21T04:51:00Z",
+  "due": "2026-08-21T12:51:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-136",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-21T10:32:00Z",
+   "2026-08-21T12:56:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-21T18:17:00Z",
+  "created_at": "2026-08-21T05:17:00Z",
+  "due": "2026-08-21T13:17:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-137",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-21T08:03:00Z",
+   "2026-08-21T11:59:00Z",
+   "2026-08-21T15:48:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-22T11:12:00Z",
+  "created_at": "2026-08-22T05:46:00Z",
+  "due": "2026-08-22T13:46:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-138",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-22T05:54:00Z",
+   "2026-08-22T08:54:00Z",
+   "2026-08-22T09:49:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-22T06:47:00Z",
+  "created_at": "2026-08-22T05:26:00Z",
+  "due": "2026-08-22T09:26:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-139",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-22T05:29:00Z",
+   "2026-08-22T06:42:00Z",
+   "2026-08-22T06:46:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-22T10:55:00Z",
+  "created_at": "2026-08-22T04:33:00Z",
+  "due": "2026-08-22T13:33:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-140",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-22T04:59:00Z",
+   "2026-08-22T10:42:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-22T07:13:00Z",
+  "created_at": "2026-08-22T05:01:00Z",
+  "due": "2026-08-22T10:01:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-141",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-22T05:09:00Z",
+   "2026-08-22T05:29:00Z",
+   "2026-08-22T05:38:00Z",
+   "2026-08-22T06:03:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-22T09:01:00Z",
+  "created_at": "2026-08-22T04:56:00Z",
+  "due": "2026-08-22T10:56:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-142",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-22T06:41:00Z",
+   "2026-08-22T07:04:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-22T12:32:00Z",
+  "created_at": "2026-08-22T05:57:00Z",
+  "due": "2026-08-22T12:57:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-143",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-22T07:43:00Z",
+   "2026-08-22T10:22:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-22T10:54:00Z",
+  "created_at": "2026-08-22T05:24:00Z",
+  "due": "2026-08-22T12:24:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-144",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-22T09:19:00Z",
+   "2026-08-22T09:56:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-22T08:15:00Z",
+  "created_at": "2026-08-22T05:09:00Z",
+  "due": "2026-08-22T11:09:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-145",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-22T05:58:00Z",
+   "2026-08-22T07:12:00Z",
+   "2026-08-22T07:45:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-22T11:09:00Z",
+  "created_at": "2026-08-22T04:35:00Z",
+  "due": "2026-08-22T12:35:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-146",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-22T06:21:00Z",
+   "2026-08-22T10:28:00Z",
+   "2026-08-22T10:35:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-23T09:41:00Z",
+  "created_at": "2026-08-23T05:01:00Z",
+  "due": "2026-08-23T11:01:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-147",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-23T06:03:00Z",
+   "2026-08-23T08:15:00Z",
+   "2026-08-23T09:39:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-23T10:57:00Z",
+  "created_at": "2026-08-23T05:44:00Z",
+  "due": "2026-08-23T11:44:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-148",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-23T06:05:00Z",
+   "2026-08-23T06:24:00Z",
+   "2026-08-23T08:11:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-23T10:46:00Z",
+  "created_at": "2026-08-23T05:58:00Z",
+  "due": "2026-08-23T12:58:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-149",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-23T07:41:00Z",
+   "2026-08-23T10:33:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-23T16:29:00Z",
+  "created_at": "2026-08-23T05:29:00Z",
+  "due": "2026-08-23T11:29:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-150",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-23T06:20:00Z",
+   "2026-08-23T09:37:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-23T11:29:00Z",
+  "created_at": "2026-08-23T04:29:00Z",
+  "due": "2026-08-23T08:29:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-151",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-23T05:20:00Z",
+   "2026-08-23T05:39:00Z",
+   "2026-08-23T10:17:00Z",
+   "2026-08-23T11:03:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-23T08:47:00Z",
+  "created_at": "2026-08-23T05:58:00Z",
+  "due": "2026-08-23T10:58:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-152",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-23T06:49:00Z",
+   "2026-08-23T07:11:00Z",
+   "2026-08-23T07:20:00Z",
+   "2026-08-23T08:44:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-23T08:50:00Z",
+  "created_at": "2026-08-23T05:22:00Z",
+  "due": "2026-08-23T09:22:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-153",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-23T07:38:00Z",
+   "2026-08-23T08:31:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-23T15:53:00Z",
+  "created_at": "2026-08-23T04:53:00Z",
+  "due": "2026-08-23T14:53:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-154",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-23T05:31:00Z",
+   "2026-08-23T08:03:00Z",
+   "2026-08-23T09:49:00Z",
+   "2026-08-23T13:20:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-23T07:42:00Z",
+  "created_at": "2026-08-23T05:17:00Z",
+  "due": "2026-08-23T09:17:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-155",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-23T07:13:00Z",
+   "2026-08-23T07:31:00Z",
+   "2026-08-23T07:36:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-24T12:49:00Z",
+  "created_at": "2026-08-24T05:48:00Z",
+  "due": "2026-08-24T13:48:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-156",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-24T08:37:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-24T11:36:00Z",
+  "created_at": "2026-08-24T05:33:00Z",
+  "due": "2026-08-24T12:33:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-157",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-24T08:25:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-24T12:40:00Z",
+  "created_at": "2026-08-24T05:26:00Z",
+  "due": "2026-08-24T15:26:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-158",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-24T08:13:00Z",
+   "2026-08-24T09:04:00Z",
+   "2026-08-24T09:49:00Z",
+   "2026-08-24T12:29:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-24T15:51:00Z",
+  "created_at": "2026-08-24T04:51:00Z",
+  "due": "2026-08-24T13:51:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-159",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-24T04:57:00Z",
+   "2026-08-24T09:05:00Z",
+   "2026-08-24T09:18:00Z",
+   "2026-08-24T10:22:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-24T10:09:00Z",
+  "created_at": "2026-08-24T05:36:00Z",
+  "due": "2026-08-24T11:36:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-160",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-24T07:49:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-24T11:28:00Z",
+  "created_at": "2026-08-24T05:28:00Z",
+  "due": "2026-08-24T10:28:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-161",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-24T06:49:00Z",
+   "2026-08-24T08:05:00Z",
+   "2026-08-24T08:55:00Z",
+   "2026-08-24T11:19:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-24T08:45:00Z",
+  "created_at": "2026-08-24T05:38:00Z",
+  "due": "2026-08-24T11:38:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-162",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-24T06:34:00Z",
+   "2026-08-24T07:12:00Z",
+   "2026-08-24T08:15:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-24T17:17:00Z",
+  "created_at": "2026-08-24T04:17:00Z",
+  "due": "2026-08-24T11:17:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-163",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-24T11:22:00Z",
+   "2026-08-24T13:39:00Z",
+   "2026-08-24T16:15:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-24T13:29:00Z",
+  "created_at": "2026-08-24T05:42:00Z",
+  "due": "2026-08-24T14:42:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-164",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-24T10:11:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-24T11:33:00Z",
+  "created_at": "2026-08-24T05:07:00Z",
+  "due": "2026-08-24T14:07:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-165",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-24T05:38:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-25T11:33:00Z",
+  "created_at": "2026-08-25T04:25:00Z",
+  "due": "2026-08-25T12:25:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-166",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-25T05:24:00Z",
+   "2026-08-25T08:11:00Z",
+   "2026-08-25T08:51:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-25T11:11:00Z",
+  "created_at": "2026-08-25T05:31:00Z",
+  "due": "2026-08-25T13:31:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-167",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-25T05:59:00Z",
+   "2026-08-25T06:38:00Z",
+   "2026-08-25T09:23:00Z",
+   "2026-08-25T09:53:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-25T16:58:00Z",
+  "created_at": "2026-08-25T04:58:00Z",
+  "due": "2026-08-25T12:58:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-168",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-25T05:20:00Z",
+   "2026-08-25T09:18:00Z",
+   "2026-08-25T11:43:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-25T12:14:00Z",
+  "created_at": "2026-08-25T05:14:00Z",
+  "due": "2026-08-25T09:14:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-169",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-25T09:51:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-25T16:59:00Z",
+  "created_at": "2026-08-25T05:59:00Z",
+  "due": "2026-08-25T12:59:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-170",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-25T08:17:00Z",
+   "2026-08-25T16:55:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-25T11:08:00Z",
+  "created_at": "2026-08-25T05:54:00Z",
+  "due": "2026-08-25T12:54:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-171",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-25T06:35:00Z",
+   "2026-08-25T07:02:00Z",
+   "2026-08-25T08:52:00Z",
+   "2026-08-25T10:30:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-25T11:01:00Z",
+  "created_at": "2026-08-25T05:08:00Z",
+  "due": "2026-08-25T12:08:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-172",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-25T05:19:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-25T12:01:00Z",
+  "created_at": "2026-08-25T04:59:00Z",
+  "due": "2026-08-25T13:59:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-173",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-25T06:56:00Z",
+   "2026-08-25T07:05:00Z",
+   "2026-08-25T08:54:00Z",
+   "2026-08-25T12:00:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-26T08:57:00Z",
+  "created_at": "2026-08-26T04:35:00Z",
+  "due": "2026-08-26T09:35:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-174",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-26T08:09:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-26T09:11:00Z",
+  "created_at": "2026-08-26T05:38:00Z",
+  "due": "2026-08-26T09:38:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-175",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-26T08:10:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-26T13:54:00Z",
+  "created_at": "2026-08-26T05:16:00Z",
+  "due": "2026-08-26T14:16:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-176",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-26T06:01:00Z",
+   "2026-08-26T12:07:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-26T12:05:00Z",
+  "created_at": "2026-08-26T04:29:00Z",
+  "due": "2026-08-26T12:29:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-177",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-26T06:57:00Z",
+   "2026-08-26T08:46:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-26T12:07:00Z",
+  "created_at": "2026-08-26T05:44:00Z",
+  "due": "2026-08-26T14:44:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-178",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-26T06:57:00Z",
+   "2026-08-26T07:45:00Z",
+   "2026-08-26T08:18:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-26T08:20:00Z",
+  "created_at": "2026-08-26T04:52:00Z",
+  "due": "2026-08-26T10:52:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-179",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-26T07:32:00Z",
+   "2026-08-26T07:45:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-26T15:11:00Z",
+  "created_at": "2026-08-26T05:11:00Z",
+  "due": "2026-08-26T12:11:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-180",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-26T10:37:00Z",
+   "2026-08-26T12:09:00Z",
+   "2026-08-26T12:17:00Z",
+   "2026-08-26T14:08:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-27T12:29:00Z",
+  "created_at": "2026-08-27T05:36:00Z",
+  "due": "2026-08-27T13:36:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-181",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-27T06:49:00Z",
+   "2026-08-27T11:38:00Z",
+   "2026-08-27T12:28:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-27T08:01:00Z",
+  "created_at": "2026-08-27T05:57:00Z",
+  "due": "2026-08-27T09:57:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-182",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-27T06:28:00Z",
+   "2026-08-27T06:46:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-27T17:42:00Z",
+  "created_at": "2026-08-27T04:42:00Z",
+  "due": "2026-08-27T13:42:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-183",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-27T06:16:00Z",
+   "2026-08-27T13:50:00Z",
+   "2026-08-27T17:03:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-27T13:28:00Z",
+  "created_at": "2026-08-27T04:48:00Z",
+  "due": "2026-08-27T13:48:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-184",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-27T08:00:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-27T12:22:00Z",
+  "created_at": "2026-08-27T05:25:00Z",
+  "due": "2026-08-27T13:25:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-185",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-27T05:32:00Z",
+   "2026-08-27T07:13:00Z",
+   "2026-08-27T08:00:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-27T07:22:00Z",
+  "created_at": "2026-08-27T05:34:00Z",
+  "due": "2026-08-27T09:34:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-186",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-27T06:51:00Z",
+   "2026-08-27T07:03:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-27T08:28:00Z",
+  "created_at": "2026-08-27T04:50:00Z",
+  "due": "2026-08-27T09:50:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-187",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-27T06:21:00Z",
+   "2026-08-27T06:49:00Z",
+   "2026-08-27T07:06:00Z",
+   "2026-08-27T07:36:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-27T08:16:00Z",
+  "created_at": "2026-08-27T04:33:00Z",
+  "due": "2026-08-27T10:33:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-188",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-27T04:58:00Z",
+   "2026-08-27T06:33:00Z",
+   "2026-08-27T07:37:00Z",
+   "2026-08-27T07:58:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-28T08:13:00Z",
+  "created_at": "2026-08-28T04:47:00Z",
+  "due": "2026-08-28T10:47:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-189",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-28T05:24:00Z",
+   "2026-08-28T07:56:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-28T09:55:00Z",
+  "created_at": "2026-08-28T04:33:00Z",
+  "due": "2026-08-28T12:33:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-190",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-28T05:51:00Z",
+   "2026-08-28T06:13:00Z",
+   "2026-08-28T07:04:00Z",
+   "2026-08-28T07:21:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-28T12:42:00Z",
+  "created_at": "2026-08-28T05:12:00Z",
+  "due": "2026-08-28T15:12:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-191",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-28T07:23:00Z",
+   "2026-08-28T11:42:00Z",
+   "2026-08-28T12:12:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-28T12:25:00Z",
+  "created_at": "2026-08-28T05:32:00Z",
+  "due": "2026-08-28T14:32:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-192",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-08-28T11:47:00Z",
+   "2026-08-28T12:19:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-28T07:06:00Z",
+  "created_at": "2026-08-28T04:21:00Z",
+  "due": "2026-08-28T09:21:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-193",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-28T06:39:00Z",
+   "2026-08-28T07:05:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-28T13:42:00Z",
+  "created_at": "2026-08-28T04:04:00Z",
+  "due": "2026-08-28T14:04:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-194",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-28T11:06:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-28T13:59:00Z",
+  "created_at": "2026-08-28T05:47:00Z",
+  "due": "2026-08-28T14:47:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-195",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-28T07:38:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-28T16:58:00Z",
+  "created_at": "2026-08-28T04:58:00Z",
+  "due": "2026-08-28T10:58:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-196",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-28T05:04:00Z",
+   "2026-08-28T05:14:00Z",
+   "2026-08-28T13:17:00Z",
+   "2026-08-28T16:13:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-28T06:41:00Z",
+  "created_at": "2026-08-28T04:01:00Z",
+  "due": "2026-08-28T08:01:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-197",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-28T04:05:00Z",
+   "2026-08-28T05:51:00Z",
+   "2026-08-28T06:09:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-29T08:46:00Z",
+  "created_at": "2026-08-29T05:57:00Z",
+  "due": "2026-08-29T09:57:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-198",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-29T08:11:00Z",
+   "2026-08-29T08:35:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-29T09:53:00Z",
+  "created_at": "2026-08-29T05:44:00Z",
+  "due": "2026-08-29T11:44:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-199",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-29T07:19:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-29T09:05:00Z",
+  "created_at": "2026-08-29T05:12:00Z",
+  "due": "2026-08-29T10:12:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-200",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-29T08:07:00Z",
+   "2026-08-29T08:43:00Z",
+   "2026-08-29T08:49:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-29T15:05:00Z",
+  "created_at": "2026-08-29T05:23:00Z",
+  "due": "2026-08-29T15:23:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-201",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-29T12:18:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-29T09:55:00Z",
+  "created_at": "2026-08-29T04:48:00Z",
+  "due": "2026-08-29T12:48:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-202",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-29T06:15:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-29T11:14:00Z",
+  "created_at": "2026-08-29T05:48:00Z",
+  "due": "2026-08-29T12:48:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-203",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-29T10:18:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-29T06:54:00Z",
+  "created_at": "2026-08-29T04:29:00Z",
+  "due": "2026-08-29T09:29:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-204",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-29T04:40:00Z",
+   "2026-08-29T04:48:00Z",
+   "2026-08-29T05:38:00Z",
+   "2026-08-29T05:40:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-29T17:12:00Z",
+  "created_at": "2026-08-29T05:12:00Z",
+  "due": "2026-08-29T14:12:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-205",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-29T08:44:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-30T11:19:00Z",
+  "created_at": "2026-08-30T05:45:00Z",
+  "due": "2026-08-30T12:45:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-206",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-08-30T07:48:00Z",
+   "2026-08-30T10:33:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-30T13:18:00Z",
+  "created_at": "2026-08-30T05:46:00Z",
+  "due": "2026-08-30T15:46:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-207",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-30T09:02:00Z",
+   "2026-08-30T12:04:00Z",
+   "2026-08-30T12:12:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-30T12:23:00Z",
+  "created_at": "2026-08-30T05:41:00Z",
+  "due": "2026-08-30T14:41:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-208",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-08-30T06:08:00Z",
+   "2026-08-30T06:31:00Z",
+   "2026-08-30T09:24:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-30T07:00:00Z",
+  "created_at": "2026-08-30T05:47:00Z",
+  "due": "2026-08-30T09:47:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-209",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-30T05:50:00Z",
+   "2026-08-30T06:21:00Z",
+   "2026-08-30T06:28:00Z",
+   "2026-08-30T06:44:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-30T10:45:00Z",
+  "created_at": "2026-08-30T04:45:00Z",
+  "due": "2026-08-30T12:45:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-210",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-30T09:44:00Z",
+   "2026-08-30T10:33:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-30T12:57:00Z",
+  "created_at": "2026-08-30T04:10:00Z",
+  "due": "2026-08-30T14:10:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-211",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-30T05:34:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-30T12:59:00Z",
+  "created_at": "2026-08-30T04:48:00Z",
+  "due": "2026-08-30T13:48:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-212",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-08-30T05:34:00Z",
+   "2026-08-30T05:42:00Z",
+   "2026-08-30T07:30:00Z",
+   "2026-08-30T07:52:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-30T10:41:00Z",
+  "created_at": "2026-08-30T06:00:00Z",
+  "due": "2026-08-30T12:00:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-213",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-30T07:07:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-31T09:34:00Z",
+  "created_at": "2026-08-31T04:55:00Z",
+  "due": "2026-08-31T11:55:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-214",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-08-31T05:08:00Z",
+   "2026-08-31T05:40:00Z",
+   "2026-08-31T05:47:00Z",
+   "2026-08-31T07:56:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-08-31T10:38:00Z",
+  "created_at": "2026-08-31T04:11:00Z",
+  "due": "2026-08-31T12:11:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-215",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-08-31T04:17:00Z",
+   "2026-08-31T06:40:00Z",
+   "2026-08-31T07:29:00Z",
+   "2026-08-31T07:42:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-31T12:43:00Z",
+  "created_at": "2026-08-31T05:55:00Z",
+  "due": "2026-08-31T13:55:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-216",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-31T09:09:00Z",
+   "2026-08-31T11:45:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-31T08:01:00Z",
+  "created_at": "2026-08-31T04:17:00Z",
+  "due": "2026-08-31T10:17:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-217",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-31T04:33:00Z",
+   "2026-08-31T04:59:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-31T11:06:00Z",
+  "created_at": "2026-08-31T04:35:00Z",
+  "due": "2026-08-31T11:35:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-218",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-08-31T06:41:00Z",
+   "2026-08-31T06:43:00Z",
+   "2026-08-31T10:44:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-08-31T12:39:00Z",
+  "created_at": "2026-08-31T05:16:00Z",
+  "due": "2026-08-31T13:16:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-219",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-08-31T05:19:00Z",
+   "2026-08-31T07:51:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-31T12:13:00Z",
+  "created_at": "2026-08-31T05:47:00Z",
+  "due": "2026-08-31T13:47:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-220",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-08-31T08:38:00Z",
+   "2026-08-31T09:27:00Z",
+   "2026-08-31T10:51:00Z",
+   "2026-08-31T11:20:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-31T09:37:00Z",
+  "created_at": "2026-08-31T04:38:00Z",
+  "due": "2026-08-31T10:38:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-221",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-31T06:08:00Z",
+   "2026-08-31T07:18:00Z",
+   "2026-08-31T07:21:00Z",
+   "2026-08-31T08:01:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-08-31T11:57:00Z",
+  "created_at": "2026-08-31T05:34:00Z",
+  "due": "2026-08-31T14:34:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-222",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-08-31T08:20:00Z",
+   "2026-08-31T08:46:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-01T07:45:00Z",
+  "created_at": "2026-09-01T04:46:00Z",
+  "due": "2026-09-01T08:46:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-223",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-01T07:06:00Z",
+   "2026-09-01T07:40:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-01T11:30:00Z",
+  "created_at": "2026-09-01T05:33:00Z",
+  "due": "2026-09-01T12:33:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-224",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-01T06:08:00Z",
+   "2026-09-01T08:02:00Z",
+   "2026-09-01T09:02:00Z",
+   "2026-09-01T11:27:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-01T12:03:00Z",
+  "created_at": "2026-09-01T04:17:00Z",
+  "due": "2026-09-01T13:17:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-225",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-01T07:53:00Z",
+   "2026-09-01T10:23:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-01T11:05:00Z",
+  "created_at": "2026-09-01T04:57:00Z",
+  "due": "2026-09-01T12:57:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-226",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-01T05:15:00Z",
+   "2026-09-01T08:01:00Z",
+   "2026-09-01T09:35:00Z",
+   "2026-09-01T10:56:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-01T13:39:00Z",
+  "created_at": "2026-09-01T05:16:00Z",
+  "due": "2026-09-01T14:16:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-227",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-01T10:52:00Z",
+   "2026-09-01T10:56:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-01T19:22:00Z",
+  "created_at": "2026-09-01T05:22:00Z",
+  "due": "2026-09-01T13:22:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-228",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-01T11:01:00Z",
+   "2026-09-01T12:42:00Z",
+   "2026-09-01T18:12:00Z",
+   "2026-09-01T18:57:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-01T07:11:00Z",
+  "created_at": "2026-09-01T04:33:00Z",
+  "due": "2026-09-01T09:33:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-229",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-01T06:08:00Z",
+   "2026-09-01T06:27:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-02T12:20:00Z",
+  "created_at": "2026-09-02T05:38:00Z",
+  "due": "2026-09-02T14:38:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-230",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-02T05:50:00Z",
+   "2026-09-02T08:34:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-02T09:42:00Z",
+  "created_at": "2026-09-02T04:13:00Z",
+  "due": "2026-09-02T10:13:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-231",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-02T05:25:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-02T09:37:00Z",
+  "created_at": "2026-09-02T04:39:00Z",
+  "due": "2026-09-02T10:39:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-232",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-02T05:28:00Z",
+   "2026-09-02T07:37:00Z",
+   "2026-09-02T08:23:00Z",
+   "2026-09-02T08:42:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-02T16:08:00Z",
+  "created_at": "2026-09-02T04:08:00Z",
+  "due": "2026-09-02T10:08:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-233",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-02T04:31:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-02T21:26:00Z",
+  "created_at": "2026-09-02T05:26:00Z",
+  "due": "2026-09-02T15:26:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-234",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-02T08:24:00Z",
+   "2026-09-02T14:14:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-02T11:02:00Z",
+  "created_at": "2026-09-02T05:11:00Z",
+  "due": "2026-09-02T12:11:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-235",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-02T06:45:00Z",
+   "2026-09-02T06:46:00Z",
+   "2026-09-02T10:33:00Z",
+   "2026-09-02T10:38:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-02T12:03:00Z",
+  "created_at": "2026-09-02T04:03:00Z",
+  "due": "2026-09-02T13:03:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-236",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-02T04:05:00Z",
+   "2026-09-02T07:22:00Z",
+   "2026-09-02T07:42:00Z",
+   "2026-09-02T09:06:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-02T10:00:00Z",
+  "created_at": "2026-09-02T04:26:00Z",
+  "due": "2026-09-02T10:26:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-237",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-02T09:00:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-02T10:07:00Z",
+  "created_at": "2026-09-02T04:46:00Z",
+  "due": "2026-09-02T10:46:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-238",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-02T07:26:00Z",
+   "2026-09-02T08:56:00Z",
+   "2026-09-02T09:16:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-03T10:39:00Z",
+  "created_at": "2026-09-03T05:18:00Z",
+  "due": "2026-09-03T12:18:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-239",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-03T06:46:00Z",
+   "2026-09-03T09:12:00Z",
+   "2026-09-03T10:34:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-03T13:13:00Z",
+  "created_at": "2026-09-03T05:57:00Z",
+  "due": "2026-09-03T13:57:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-240",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-03T06:57:00Z",
+   "2026-09-03T07:59:00Z",
+   "2026-09-03T08:33:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-03T08:03:00Z",
+  "created_at": "2026-09-03T04:23:00Z",
+  "due": "2026-09-03T10:23:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-241",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-03T04:58:00Z",
+   "2026-09-03T06:10:00Z",
+   "2026-09-03T06:50:00Z",
+   "2026-09-03T06:55:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-03T08:28:00Z",
+  "created_at": "2026-09-03T04:23:00Z",
+  "due": "2026-09-03T11:23:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-242",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-03T05:05:00Z",
+   "2026-09-03T06:45:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-03T07:31:00Z",
+  "created_at": "2026-09-03T04:36:00Z",
+  "due": "2026-09-03T09:36:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-243",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-03T06:07:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-03T08:14:00Z",
+  "created_at": "2026-09-03T05:02:00Z",
+  "due": "2026-09-03T10:02:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-244",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-03T06:46:00Z",
+   "2026-09-03T06:48:00Z",
+   "2026-09-03T07:07:00Z",
+   "2026-09-03T07:57:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-03T07:15:00Z",
+  "created_at": "2026-09-03T04:21:00Z",
+  "due": "2026-09-03T08:21:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-245",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-03T04:29:00Z",
+   "2026-09-03T05:18:00Z",
+   "2026-09-03T05:31:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-03T07:02:00Z",
+  "created_at": "2026-09-03T04:36:00Z",
+  "due": "2026-09-03T09:36:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-246",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-03T05:04:00Z",
+   "2026-09-03T06:46:00Z",
+   "2026-09-03T06:56:00Z",
+   "2026-09-03T07:02:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-03T12:51:00Z",
+  "created_at": "2026-09-03T04:34:00Z",
+  "due": "2026-09-03T14:34:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-247",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-03T11:03:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-04T17:27:00Z",
+  "created_at": "2026-09-04T04:27:00Z",
+  "due": "2026-09-04T11:27:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-248",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-04T05:00:00Z",
+   "2026-09-04T09:31:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-04T16:50:00Z",
+  "created_at": "2026-09-04T05:50:00Z",
+  "due": "2026-09-04T15:50:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-249",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-04T09:24:00Z",
+   "2026-09-04T15:52:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-04T11:31:00Z",
+  "created_at": "2026-09-04T05:18:00Z",
+  "due": "2026-09-04T14:18:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-250",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-04T07:03:00Z",
+   "2026-09-04T07:03:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-04T08:30:00Z",
+  "created_at": "2026-09-04T05:12:00Z",
+  "due": "2026-09-04T11:12:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-251",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-04T06:34:00Z",
+   "2026-09-04T08:12:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-04T08:52:00Z",
+  "created_at": "2026-09-04T05:13:00Z",
+  "due": "2026-09-04T11:13:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-252",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-04T05:47:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-04T07:00:00Z",
+  "created_at": "2026-09-04T05:57:00Z",
+  "due": "2026-09-04T09:57:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-253",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-04T06:13:00Z",
+   "2026-09-04T06:28:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-04T09:41:00Z",
+  "created_at": "2026-09-04T05:31:00Z",
+  "due": "2026-09-04T11:31:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-254",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-04T06:07:00Z",
+   "2026-09-04T06:39:00Z",
+   "2026-09-04T07:58:00Z",
+   "2026-09-04T08:12:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-04T08:24:00Z",
+  "created_at": "2026-09-04T04:57:00Z",
+  "due": "2026-09-04T08:57:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-255",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-04T06:08:00Z",
+   "2026-09-04T07:08:00Z",
+   "2026-09-04T07:54:00Z",
+   "2026-09-04T08:08:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-04T11:48:00Z",
+  "created_at": "2026-09-04T04:58:00Z",
+  "due": "2026-09-04T11:58:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-256",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-04T11:12:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-04T13:55:00Z",
+  "created_at": "2026-09-04T05:21:00Z",
+  "due": "2026-09-04T14:21:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-257",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-04T08:57:00Z",
+   "2026-09-04T09:04:00Z",
+   "2026-09-04T12:40:00Z",
+   "2026-09-04T13:47:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-05T09:09:00Z",
+  "created_at": "2026-09-05T05:46:00Z",
+  "due": "2026-09-05T11:46:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-258",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-05T07:50:00Z",
+   "2026-09-05T08:10:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-05T14:33:00Z",
+  "created_at": "2026-09-05T05:54:00Z",
+  "due": "2026-09-05T14:54:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-259",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-05T13:44:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-05T18:15:00Z",
+  "created_at": "2026-09-05T04:15:00Z",
+  "due": "2026-09-05T14:15:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-260",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-05T11:33:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-05T13:32:00Z",
+  "created_at": "2026-09-05T05:52:00Z",
+  "due": "2026-09-05T14:52:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-261",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-05T11:27:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-05T05:36:00Z",
+  "created_at": "2026-09-05T04:32:00Z",
+  "due": "2026-09-05T08:32:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-262",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-05T04:38:00Z",
+   "2026-09-05T05:22:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-05T12:32:00Z",
+  "created_at": "2026-09-05T05:29:00Z",
+  "due": "2026-09-05T15:29:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-263",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-05T11:29:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-05T08:17:00Z",
+  "created_at": "2026-09-05T04:00:00Z",
+  "due": "2026-09-05T09:00:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-264",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-05T04:04:00Z",
+   "2026-09-05T07:47:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-05T09:31:00Z",
+  "created_at": "2026-09-05T05:29:00Z",
+  "due": "2026-09-05T11:29:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-265",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-05T05:47:00Z",
+   "2026-09-05T07:31:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-05T08:13:00Z",
+  "created_at": "2026-09-05T04:49:00Z",
+  "due": "2026-09-05T08:49:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-266",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-05T06:09:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-06T10:33:00Z",
+  "created_at": "2026-09-06T04:17:00Z",
+  "due": "2026-09-06T11:17:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-267",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-06T04:52:00Z",
+   "2026-09-06T08:48:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-06T09:59:00Z",
+  "created_at": "2026-09-06T04:01:00Z",
+  "due": "2026-09-06T12:01:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-268",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-06T05:18:00Z",
+   "2026-09-06T05:50:00Z",
+   "2026-09-06T09:22:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-06T13:13:00Z",
+  "created_at": "2026-09-06T05:18:00Z",
+  "due": "2026-09-06T14:18:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-269",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-06T12:57:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-06T07:48:00Z",
+  "created_at": "2026-09-06T05:36:00Z",
+  "due": "2026-09-06T09:36:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-270",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-06T06:11:00Z",
+   "2026-09-06T06:56:00Z",
+   "2026-09-06T07:25:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-06T18:35:00Z",
+  "created_at": "2026-09-06T04:35:00Z",
+  "due": "2026-09-06T13:35:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-271",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-06T05:02:00Z",
+   "2026-09-06T16:22:00Z",
+   "2026-09-06T17:52:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-06T08:40:00Z",
+  "created_at": "2026-09-06T05:05:00Z",
+  "due": "2026-09-06T10:05:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-272",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-06T08:25:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-06T16:03:00Z",
+  "created_at": "2026-09-06T05:03:00Z",
+  "due": "2026-09-06T12:03:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-273",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-06T14:03:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-06T16:59:00Z",
+  "created_at": "2026-09-06T05:59:00Z",
+  "due": "2026-09-06T11:59:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-274",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-06T08:55:00Z",
+   "2026-09-06T12:13:00Z",
+   "2026-09-06T14:01:00Z",
+   "2026-09-06T15:18:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-06T07:48:00Z",
+  "created_at": "2026-09-06T04:08:00Z",
+  "due": "2026-09-06T08:08:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-275",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-06T07:30:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-07T11:40:00Z",
+  "created_at": "2026-09-07T04:36:00Z",
+  "due": "2026-09-07T13:36:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-276",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-07T05:18:00Z",
+   "2026-09-07T08:01:00Z",
+   "2026-09-07T10:03:00Z",
+   "2026-09-07T10:35:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-07T14:08:00Z",
+  "created_at": "2026-09-07T05:08:00Z",
+  "due": "2026-09-07T13:08:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-277",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-07T06:28:00Z",
+   "2026-09-07T08:36:00Z",
+   "2026-09-07T13:51:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-07T09:54:00Z",
+  "created_at": "2026-09-07T04:50:00Z",
+  "due": "2026-09-07T12:50:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-278",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-07T07:28:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-07T14:21:00Z",
+  "created_at": "2026-09-07T05:33:00Z",
+  "due": "2026-09-07T15:33:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-279",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-07T12:57:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-07T19:18:00Z",
+  "created_at": "2026-09-07T05:18:00Z",
+  "due": "2026-09-07T13:18:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-280",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-07T05:30:00Z",
+   "2026-09-07T07:20:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-07T08:57:00Z",
+  "created_at": "2026-09-07T04:20:00Z",
+  "due": "2026-09-07T11:20:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-281",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-07T05:24:00Z",
+   "2026-09-07T05:45:00Z",
+   "2026-09-07T07:30:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-07T09:16:00Z",
+  "created_at": "2026-09-07T05:33:00Z",
+  "due": "2026-09-07T09:33:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-282",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-07T06:42:00Z",
+   "2026-09-07T07:22:00Z",
+   "2026-09-07T08:59:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-07T10:43:00Z",
+  "created_at": "2026-09-07T04:33:00Z",
+  "due": "2026-09-07T13:33:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-283",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-07T08:47:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-07T16:05:00Z",
+  "created_at": "2026-09-07T05:05:00Z",
+  "due": "2026-09-07T11:05:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-284",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-07T07:46:00Z",
+   "2026-09-07T11:21:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-08T20:26:00Z",
+  "created_at": "2026-09-08T05:26:00Z",
+  "due": "2026-09-08T14:26:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-285",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-08T06:11:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-08T10:12:00Z",
+  "created_at": "2026-09-08T05:00:00Z",
+  "due": "2026-09-08T11:00:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-286",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-08T05:18:00Z",
+   "2026-09-08T09:43:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-08T08:57:00Z",
+  "created_at": "2026-09-08T04:28:00Z",
+  "due": "2026-09-08T10:28:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-287",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-08T05:07:00Z",
+   "2026-09-08T05:29:00Z",
+   "2026-09-08T07:38:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-08T14:26:00Z",
+  "created_at": "2026-09-08T05:26:00Z",
+  "due": "2026-09-08T09:26:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-288",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-08T12:16:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-08T15:07:00Z",
+  "created_at": "2026-09-08T05:39:00Z",
+  "due": "2026-09-08T15:39:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-289",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-08T05:47:00Z",
+   "2026-09-08T09:04:00Z",
+   "2026-09-08T10:37:00Z",
+   "2026-09-08T11:56:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-08T10:28:00Z",
+  "created_at": "2026-09-08T05:40:00Z",
+  "due": "2026-09-08T11:40:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-290",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-08T07:20:00Z",
+   "2026-09-08T08:48:00Z",
+   "2026-09-08T09:52:00Z",
+   "2026-09-08T10:19:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-08T08:03:00Z",
+  "created_at": "2026-09-08T04:19:00Z",
+  "due": "2026-09-08T08:19:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-291",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-08T05:47:00Z",
+   "2026-09-08T06:37:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-08T12:32:00Z",
+  "created_at": "2026-09-08T04:00:00Z",
+  "due": "2026-09-08T14:00:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-292",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-08T07:30:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-08T11:05:00Z",
+  "created_at": "2026-09-08T04:30:00Z",
+  "due": "2026-09-08T11:30:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-293",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-08T06:53:00Z",
+   "2026-09-08T10:34:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-08T06:42:00Z",
+  "created_at": "2026-09-08T04:05:00Z",
+  "due": "2026-09-08T09:05:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-294",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-08T04:26:00Z",
+   "2026-09-08T05:40:00Z",
+   "2026-09-08T06:02:00Z",
+   "2026-09-08T06:33:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-09T12:48:00Z",
+  "created_at": "2026-09-09T04:17:00Z",
+  "due": "2026-09-09T13:17:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-295",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-09T11:42:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-09T09:00:00Z",
+  "created_at": "2026-09-09T04:30:00Z",
+  "due": "2026-09-09T10:30:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-296",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-09T06:49:00Z",
+   "2026-09-09T07:12:00Z",
+   "2026-09-09T07:17:00Z",
+   "2026-09-09T08:21:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-09T14:09:00Z",
+  "created_at": "2026-09-09T04:09:00Z",
+  "due": "2026-09-09T09:09:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-297",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-09T06:48:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-09T08:32:00Z",
+  "created_at": "2026-09-09T04:59:00Z",
+  "due": "2026-09-09T10:59:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-298",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-09T05:52:00Z",
+   "2026-09-09T06:54:00Z",
+   "2026-09-09T08:16:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-09T16:33:00Z",
+  "created_at": "2026-09-09T04:33:00Z",
+  "due": "2026-09-09T14:33:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-299",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-09T05:14:00Z",
+   "2026-09-09T14:50:00Z",
+   "2026-09-09T16:26:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-09T11:41:00Z",
+  "created_at": "2026-09-09T04:41:00Z",
+  "due": "2026-09-09T09:41:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-300",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-09T05:06:00Z",
+   "2026-09-09T08:03:00Z",
+   "2026-09-09T09:03:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-09T06:17:00Z",
+  "created_at": "2026-09-09T04:22:00Z",
+  "due": "2026-09-09T08:22:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-301",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-09T04:34:00Z",
+   "2026-09-09T05:21:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-09T10:15:00Z",
+  "created_at": "2026-09-09T04:15:00Z",
+  "due": "2026-09-09T08:15:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-302",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-09T05:56:00Z",
+   "2026-09-09T07:40:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-09T20:00:00Z",
+  "created_at": "2026-09-09T06:00:00Z",
+  "due": "2026-09-09T15:00:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-303",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-09T06:22:00Z",
+   "2026-09-09T07:16:00Z",
+   "2026-09-09T19:52:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-10T17:56:00Z",
+  "created_at": "2026-09-10T04:56:00Z",
+  "due": "2026-09-10T14:56:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-304",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-10T05:39:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-10T12:07:00Z",
+  "created_at": "2026-09-10T05:58:00Z",
+  "due": "2026-09-10T13:58:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-305",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-10T06:13:00Z",
+   "2026-09-10T09:13:00Z",
+   "2026-09-10T09:36:00Z",
+   "2026-09-10T11:47:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-10T08:25:00Z",
+  "created_at": "2026-09-10T04:45:00Z",
+  "due": "2026-09-10T09:45:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-306",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-10T04:53:00Z",
+   "2026-09-10T05:23:00Z",
+   "2026-09-10T06:39:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-10T11:54:00Z",
+  "created_at": "2026-09-10T05:19:00Z",
+  "due": "2026-09-10T13:19:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-307",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-10T05:50:00Z",
+   "2026-09-10T08:49:00Z",
+   "2026-09-10T09:24:00Z",
+   "2026-09-10T10:00:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-10T06:55:00Z",
+  "created_at": "2026-09-10T04:49:00Z",
+  "due": "2026-09-10T09:49:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-308",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-10T06:09:00Z",
+   "2026-09-10T06:31:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-10T08:00:00Z",
+  "created_at": "2026-09-10T05:41:00Z",
+  "due": "2026-09-10T09:41:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-309",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-10T07:09:00Z",
+   "2026-09-10T07:45:00Z",
+   "2026-09-10T07:49:00Z",
+   "2026-09-10T08:00:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-10T13:49:00Z",
+  "created_at": "2026-09-10T04:49:00Z",
+  "due": "2026-09-10T10:49:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-310",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-10T05:19:00Z",
+   "2026-09-10T09:36:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-10T09:58:00Z",
+  "created_at": "2026-09-10T05:07:00Z",
+  "due": "2026-09-10T11:07:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-311",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-10T05:58:00Z",
+   "2026-09-10T07:13:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-10T12:10:00Z",
+  "created_at": "2026-09-10T04:34:00Z",
+  "due": "2026-09-10T12:34:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-312",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-10T09:28:00Z",
+   "2026-09-10T11:47:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-10T13:51:00Z",
+  "created_at": "2026-09-10T04:45:00Z",
+  "due": "2026-09-10T14:45:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-313",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-10T08:47:00Z",
+   "2026-09-10T10:10:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-11T10:28:00Z",
+  "created_at": "2026-09-11T04:03:00Z",
+  "due": "2026-09-11T13:03:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-314",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-11T05:39:00Z",
+   "2026-09-11T08:51:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-11T12:09:00Z",
+  "created_at": "2026-09-11T05:09:00Z",
+  "due": "2026-09-11T11:09:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-315",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-11T05:37:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-11T10:28:00Z",
+  "created_at": "2026-09-11T04:02:00Z",
+  "due": "2026-09-11T12:02:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-316",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-11T05:08:00Z",
+   "2026-09-11T06:56:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-11T14:25:00Z",
+  "created_at": "2026-09-11T05:57:00Z",
+  "due": "2026-09-11T15:57:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-317",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-11T06:08:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-11T08:06:00Z",
+  "created_at": "2026-09-11T05:30:00Z",
+  "due": "2026-09-11T10:30:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-318",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-11T05:48:00Z",
+   "2026-09-11T07:05:00Z",
+   "2026-09-11T07:11:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-11T09:28:00Z",
+  "created_at": "2026-09-11T04:12:00Z",
+  "due": "2026-09-11T10:12:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-319",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-11T07:55:00Z",
+   "2026-09-11T08:21:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-11T10:35:00Z",
+  "created_at": "2026-09-11T04:22:00Z",
+  "due": "2026-09-11T13:22:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-320",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-11T06:16:00Z",
+   "2026-09-11T09:23:00Z",
+   "2026-09-11T10:02:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-11T09:23:00Z",
+  "created_at": "2026-09-11T04:48:00Z",
+  "due": "2026-09-11T10:48:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-321",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-11T04:48:00Z",
+   "2026-09-11T06:18:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-11T15:30:00Z",
+  "created_at": "2026-09-11T05:48:00Z",
+  "due": "2026-09-11T15:48:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-322",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-11T09:34:00Z",
+   "2026-09-11T11:13:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-11T17:13:00Z",
+  "created_at": "2026-09-11T04:13:00Z",
+  "due": "2026-09-11T11:13:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-323",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-11T08:16:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-11T12:49:00Z",
+  "created_at": "2026-09-11T04:21:00Z",
+  "due": "2026-09-11T13:21:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-324",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-11T04:26:00Z",
+   "2026-09-11T06:36:00Z",
+   "2026-09-11T08:09:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-12T08:51:00Z",
+  "created_at": "2026-09-12T05:28:00Z",
+  "due": "2026-09-12T09:28:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-325",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-12T05:40:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-12T13:04:00Z",
+  "created_at": "2026-09-12T04:56:00Z",
+  "due": "2026-09-12T13:56:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-326",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-12T07:55:00Z",
+   "2026-09-12T08:09:00Z",
+   "2026-09-12T09:08:00Z",
+   "2026-09-12T12:27:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-12T11:35:00Z",
+  "created_at": "2026-09-12T04:12:00Z",
+  "due": "2026-09-12T14:12:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-327",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-12T05:35:00Z",
+   "2026-09-12T08:03:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-12T16:42:00Z",
+  "created_at": "2026-09-12T05:42:00Z",
+  "due": "2026-09-12T15:42:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-328",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-12T06:57:00Z",
+   "2026-09-12T07:29:00Z",
+   "2026-09-12T10:09:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-12T07:18:00Z",
+  "created_at": "2026-09-12T04:48:00Z",
+  "due": "2026-09-12T09:48:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-329",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-12T06:14:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-12T10:54:00Z",
+  "created_at": "2026-09-12T05:54:00Z",
+  "due": "2026-09-12T12:54:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-330",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-12T07:14:00Z",
+   "2026-09-12T09:36:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-12T09:14:00Z",
+  "created_at": "2026-09-12T04:12:00Z",
+  "due": "2026-09-12T10:12:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-331",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-12T06:27:00Z",
+   "2026-09-12T06:36:00Z",
+   "2026-09-12T08:48:00Z",
+   "2026-09-12T08:55:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-12T13:30:00Z",
+  "created_at": "2026-09-12T04:30:00Z",
+  "due": "2026-09-12T08:30:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-332",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-12T04:33:00Z",
+   "2026-09-12T05:25:00Z",
+   "2026-09-12T07:07:00Z",
+   "2026-09-12T10:39:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-12T12:33:00Z",
+  "created_at": "2026-09-12T05:45:00Z",
+  "due": "2026-09-12T14:45:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-333",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-12T05:58:00Z",
+   "2026-09-12T06:34:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-13T09:10:00Z",
+  "created_at": "2026-09-13T05:21:00Z",
+  "due": "2026-09-13T11:21:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-334",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-13T06:39:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-13T10:43:00Z",
+  "created_at": "2026-09-13T05:00:00Z",
+  "due": "2026-09-13T12:00:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-335",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-13T10:28:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-13T08:39:00Z",
+  "created_at": "2026-09-13T04:23:00Z",
+  "due": "2026-09-13T10:23:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-336",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-13T04:45:00Z",
+   "2026-09-13T08:11:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-13T10:38:00Z",
+  "created_at": "2026-09-13T04:56:00Z",
+  "due": "2026-09-13T11:56:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-337",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-13T06:13:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-13T10:42:00Z",
+  "created_at": "2026-09-13T04:10:00Z",
+  "due": "2026-09-13T13:10:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-338",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-13T06:06:00Z",
+   "2026-09-13T08:53:00Z",
+   "2026-09-13T09:11:00Z",
+   "2026-09-13T10:37:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-13T11:17:00Z",
+  "created_at": "2026-09-13T05:44:00Z",
+  "due": "2026-09-13T13:44:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-339",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-13T07:44:00Z",
+   "2026-09-13T08:17:00Z",
+   "2026-09-13T09:47:00Z",
+   "2026-09-13T10:37:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-13T12:32:00Z",
+  "created_at": "2026-09-13T04:50:00Z",
+  "due": "2026-09-13T14:50:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-340",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-13T05:51:00Z",
+   "2026-09-13T11:17:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-13T08:23:00Z",
+  "created_at": "2026-09-13T04:22:00Z",
+  "due": "2026-09-13T09:22:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-341",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-13T04:32:00Z",
+   "2026-09-13T06:10:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-14T07:05:00Z",
+  "created_at": "2026-09-14T04:55:00Z",
+  "due": "2026-09-14T09:55:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-342",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-14T06:01:00Z",
+   "2026-09-14T06:16:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-14T08:40:00Z",
+  "created_at": "2026-09-14T04:11:00Z",
+  "due": "2026-09-14T11:11:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-343",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-14T06:32:00Z",
+   "2026-09-14T08:05:00Z",
+   "2026-09-14T08:37:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-14T12:17:00Z",
+  "created_at": "2026-09-14T05:40:00Z",
+  "due": "2026-09-14T14:40:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-344",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-14T06:37:00Z",
+   "2026-09-14T06:55:00Z",
+   "2026-09-14T06:56:00Z",
+   "2026-09-14T09:12:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-14T12:40:00Z",
+  "created_at": "2026-09-14T05:15:00Z",
+  "due": "2026-09-14T13:15:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-345",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-14T10:03:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-14T11:56:00Z",
+  "created_at": "2026-09-14T05:51:00Z",
+  "due": "2026-09-14T13:51:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-346",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-14T09:07:00Z",
+   "2026-09-14T09:59:00Z",
+   "2026-09-14T11:26:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-14T15:17:00Z",
+  "created_at": "2026-09-14T05:17:00Z",
+  "due": "2026-09-14T12:17:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-347",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-14T05:56:00Z",
+   "2026-09-14T07:44:00Z",
+   "2026-09-14T12:02:00Z",
+   "2026-09-14T12:08:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-14T11:48:00Z",
+  "created_at": "2026-09-14T04:06:00Z",
+  "due": "2026-09-14T13:06:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-348",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-14T04:16:00Z",
+   "2026-09-14T06:58:00Z",
+   "2026-09-14T11:04:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-14T14:00:00Z",
+  "created_at": "2026-09-14T04:35:00Z",
+  "due": "2026-09-14T14:35:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-349",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-14T06:52:00Z",
+   "2026-09-14T09:42:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-14T13:43:00Z",
+  "created_at": "2026-09-14T05:39:00Z",
+  "due": "2026-09-14T15:39:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-350",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-14T07:15:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-14T12:13:00Z",
+  "created_at": "2026-09-14T04:27:00Z",
+  "due": "2026-09-14T14:27:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-351",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-14T04:55:00Z",
+   "2026-09-14T08:50:00Z",
+   "2026-09-14T11:27:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-15T12:55:00Z",
+  "created_at": "2026-09-15T04:39:00Z",
+  "due": "2026-09-15T13:39:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-352",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-15T06:07:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-15T15:28:00Z",
+  "created_at": "2026-09-15T05:52:00Z",
+  "due": "2026-09-15T15:52:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-353",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-15T06:25:00Z",
+   "2026-09-15T13:39:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-15T08:22:00Z",
+  "created_at": "2026-09-15T05:30:00Z",
+  "due": "2026-09-15T10:30:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-354",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-15T05:37:00Z",
+   "2026-09-15T06:01:00Z",
+   "2026-09-15T06:31:00Z",
+   "2026-09-15T08:12:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-15T10:51:00Z",
+  "created_at": "2026-09-15T05:02:00Z",
+  "due": "2026-09-15T13:02:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-355",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-15T06:25:00Z",
+   "2026-09-15T07:14:00Z",
+   "2026-09-15T07:58:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-15T07:45:00Z",
+  "created_at": "2026-09-15T04:36:00Z",
+  "due": "2026-09-15T08:36:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-356",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-15T05:32:00Z",
+   "2026-09-15T07:21:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-15T08:05:00Z",
+  "created_at": "2026-09-15T04:26:00Z",
+  "due": "2026-09-15T10:26:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-357",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-15T07:45:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-15T07:17:00Z",
+  "created_at": "2026-09-15T05:00:00Z",
+  "due": "2026-09-15T10:00:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-358",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-15T05:57:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-15T12:23:00Z",
+  "created_at": "2026-09-15T05:17:00Z",
+  "due": "2026-09-15T15:17:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-359",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-15T08:15:00Z",
+   "2026-09-15T08:29:00Z",
+   "2026-09-15T08:53:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-15T07:09:00Z",
+  "created_at": "2026-09-15T04:32:00Z",
+  "due": "2026-09-15T09:32:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-360",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-15T04:33:00Z",
+   "2026-09-15T04:58:00Z",
+   "2026-09-15T06:42:00Z",
+   "2026-09-15T07:01:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-16T11:56:00Z",
+  "created_at": "2026-09-16T05:22:00Z",
+  "due": "2026-09-16T13:22:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-361",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-16T09:28:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-16T09:23:00Z",
+  "created_at": "2026-09-16T04:43:00Z",
+  "due": "2026-09-16T10:43:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-362",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-16T05:59:00Z",
+   "2026-09-16T06:19:00Z",
+   "2026-09-16T07:15:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-16T07:54:00Z",
+  "created_at": "2026-09-16T05:37:00Z",
+  "due": "2026-09-16T10:37:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-363",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-16T05:43:00Z",
+   "2026-09-16T06:12:00Z",
+   "2026-09-16T06:58:00Z",
+   "2026-09-16T07:44:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-16T11:14:00Z",
+  "created_at": "2026-09-16T04:33:00Z",
+  "due": "2026-09-16T11:33:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-364",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-16T07:28:00Z",
+   "2026-09-16T10:44:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-16T12:27:00Z",
+  "created_at": "2026-09-16T05:08:00Z",
+  "due": "2026-09-16T14:08:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-365",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-16T06:35:00Z",
+   "2026-09-16T12:18:00Z",
+   "2026-09-16T12:20:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-16T12:23:00Z",
+  "created_at": "2026-09-16T04:23:00Z",
+  "due": "2026-09-16T10:23:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-366",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-16T09:09:00Z",
+   "2026-09-16T10:34:00Z",
+   "2026-09-16T11:16:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-16T10:49:00Z",
+  "created_at": "2026-09-16T05:55:00Z",
+  "due": "2026-09-16T11:55:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-367",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-16T07:49:00Z",
+   "2026-09-16T08:32:00Z",
+   "2026-09-16T09:30:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-16T08:39:00Z",
+  "created_at": "2026-09-16T04:47:00Z",
+  "due": "2026-09-16T10:47:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-368",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-16T06:47:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-16T12:46:00Z",
+  "created_at": "2026-09-16T05:14:00Z",
+  "due": "2026-09-16T13:14:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-369",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-16T06:15:00Z",
+   "2026-09-16T06:53:00Z",
+   "2026-09-16T09:30:00Z",
+   "2026-09-16T12:38:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-16T10:19:00Z",
+  "created_at": "2026-09-16T05:07:00Z",
+  "due": "2026-09-16T11:07:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-370",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-16T06:49:00Z",
+   "2026-09-16T08:02:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-16T18:12:00Z",
+  "created_at": "2026-09-16T05:12:00Z",
+  "due": "2026-09-16T12:12:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-371",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-16T06:34:00Z",
+   "2026-09-16T13:31:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-16T10:11:00Z",
+  "created_at": "2026-09-16T04:22:00Z",
+  "due": "2026-09-16T10:22:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-372",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-16T05:48:00Z",
+   "2026-09-16T06:09:00Z",
+   "2026-09-16T06:42:00Z",
+   "2026-09-16T09:17:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-17T14:57:00Z",
+  "created_at": "2026-09-17T05:40:00Z",
+  "due": "2026-09-17T15:40:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-373",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-17T12:33:00Z",
+   "2026-09-17T12:59:00Z",
+   "2026-09-17T12:59:00Z",
+   "2026-09-17T13:48:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-17T06:15:00Z",
+  "created_at": "2026-09-17T04:00:00Z",
+  "due": "2026-09-17T08:00:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-374",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-17T05:22:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-17T05:34:00Z",
+  "created_at": "2026-09-17T04:24:00Z",
+  "due": "2026-09-17T08:24:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-375",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-17T04:52:00Z",
+   "2026-09-17T05:08:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-17T09:45:00Z",
+  "created_at": "2026-09-17T04:13:00Z",
+  "due": "2026-09-17T11:13:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-376",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-17T04:36:00Z",
+   "2026-09-17T04:46:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-17T08:55:00Z",
+  "created_at": "2026-09-17T04:37:00Z",
+  "due": "2026-09-17T11:37:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-377",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-17T05:45:00Z",
+   "2026-09-17T07:32:00Z",
+   "2026-09-17T08:19:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-17T14:36:00Z",
+  "created_at": "2026-09-17T05:36:00Z",
+  "due": "2026-09-17T10:36:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-378",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-17T09:29:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-17T06:36:00Z",
+  "created_at": "2026-09-17T04:16:00Z",
+  "due": "2026-09-17T09:16:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-379",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-17T04:47:00Z",
+   "2026-09-17T05:49:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-17T11:22:00Z",
+  "created_at": "2026-09-17T04:48:00Z",
+  "due": "2026-09-17T13:48:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-380",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-17T09:52:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-18T12:51:00Z",
+  "created_at": "2026-09-18T04:13:00Z",
+  "due": "2026-09-18T13:13:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-381",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-18T11:19:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-18T06:37:00Z",
+  "created_at": "2026-09-18T04:48:00Z",
+  "due": "2026-09-18T08:48:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-382",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-18T05:14:00Z",
+   "2026-09-18T06:16:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-18T08:39:00Z",
+  "created_at": "2026-09-18T04:38:00Z",
+  "due": "2026-09-18T11:38:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-383",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-18T07:13:00Z",
+   "2026-09-18T07:17:00Z",
+   "2026-09-18T07:37:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-18T12:33:00Z",
+  "created_at": "2026-09-18T04:53:00Z",
+  "due": "2026-09-18T14:53:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-384",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-18T07:17:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-18T08:46:00Z",
+  "created_at": "2026-09-18T05:03:00Z",
+  "due": "2026-09-18T10:03:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-385",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-18T06:34:00Z",
+   "2026-09-18T08:03:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-18T13:37:00Z",
+  "created_at": "2026-09-18T04:37:00Z",
+  "due": "2026-09-18T09:37:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-386",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-18T10:15:00Z",
+   "2026-09-18T12:49:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-18T05:55:00Z",
+  "created_at": "2026-09-18T04:11:00Z",
+  "due": "2026-09-18T08:11:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-387",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-18T04:22:00Z",
+   "2026-09-18T05:50:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-18T11:54:00Z",
+  "created_at": "2026-09-18T04:09:00Z",
+  "due": "2026-09-18T13:09:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-388",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-18T06:40:00Z",
+   "2026-09-18T08:02:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-18T10:59:00Z",
+  "created_at": "2026-09-18T04:59:00Z",
+  "due": "2026-09-18T08:59:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-389",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-18T07:27:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-18T11:06:00Z",
+  "created_at": "2026-09-18T04:40:00Z",
+  "due": "2026-09-18T11:40:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-390",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-18T04:44:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-19T08:20:00Z",
+  "created_at": "2026-09-19T05:22:00Z",
+  "due": "2026-09-19T10:22:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-391",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-19T05:45:00Z",
+   "2026-09-19T06:49:00Z",
+   "2026-09-19T06:57:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-19T09:08:00Z",
+  "created_at": "2026-09-19T04:14:00Z",
+  "due": "2026-09-19T11:14:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-392",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-19T07:31:00Z",
+   "2026-09-19T07:49:00Z",
+   "2026-09-19T08:18:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-19T08:49:00Z",
+  "created_at": "2026-09-19T04:14:00Z",
+  "due": "2026-09-19T09:14:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-393",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-19T05:07:00Z",
+   "2026-09-19T07:47:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-19T12:59:00Z",
+  "created_at": "2026-09-19T05:01:00Z",
+  "due": "2026-09-19T15:01:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-394",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-19T08:15:00Z",
+   "2026-09-19T10:13:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-19T13:20:00Z",
+  "created_at": "2026-09-19T04:03:00Z",
+  "due": "2026-09-19T14:03:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-395",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-19T05:58:00Z",
+   "2026-09-19T11:04:00Z",
+   "2026-09-19T11:34:00Z",
+   "2026-09-19T12:22:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-19T09:55:00Z",
+  "created_at": "2026-09-19T04:08:00Z",
+  "due": "2026-09-19T10:08:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-396",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-19T07:01:00Z",
+   "2026-09-19T09:50:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-19T13:32:00Z",
+  "created_at": "2026-09-19T05:06:00Z",
+  "due": "2026-09-19T14:06:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-397",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-19T07:13:00Z",
+   "2026-09-19T09:12:00Z",
+   "2026-09-19T10:44:00Z",
+   "2026-09-19T11:18:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-19T13:36:00Z",
+  "created_at": "2026-09-19T05:24:00Z",
+  "due": "2026-09-19T14:24:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-398",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-19T05:29:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-19T11:56:00Z",
+  "created_at": "2026-09-19T05:48:00Z",
+  "due": "2026-09-19T12:48:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-399",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-19T09:59:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-19T10:08:00Z",
+  "created_at": "2026-09-19T04:30:00Z",
+  "due": "2026-09-19T10:30:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-400",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-19T09:11:00Z",
+   "2026-09-19T09:59:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-19T12:44:00Z",
+  "created_at": "2026-09-19T04:51:00Z",
+  "due": "2026-09-19T14:51:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-401",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-19T05:36:00Z",
+   "2026-09-19T08:40:00Z",
+   "2026-09-19T09:44:00Z",
+   "2026-09-19T11:41:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-19T14:57:00Z",
+  "created_at": "2026-09-19T04:57:00Z",
+  "due": "2026-09-19T10:57:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-402",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-19T06:42:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-20T06:26:00Z",
+  "created_at": "2026-09-20T05:10:00Z",
+  "due": "2026-09-20T09:10:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-403",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-20T05:36:00Z",
+   "2026-09-20T06:15:00Z",
+   "2026-09-20T06:21:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-20T09:36:00Z",
+  "created_at": "2026-09-20T04:43:00Z",
+  "due": "2026-09-20T10:43:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-404",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-20T07:32:00Z",
+   "2026-09-20T07:49:00Z",
+   "2026-09-20T08:45:00Z",
+   "2026-09-20T09:29:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-20T07:08:00Z",
+  "created_at": "2026-09-20T04:14:00Z",
+  "due": "2026-09-20T08:14:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-405",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-20T05:41:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-20T13:22:00Z",
+  "created_at": "2026-09-20T05:46:00Z",
+  "due": "2026-09-20T14:46:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-406",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-20T06:09:00Z",
+   "2026-09-20T06:40:00Z",
+   "2026-09-20T11:45:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-20T12:23:00Z",
+  "created_at": "2026-09-20T04:17:00Z",
+  "due": "2026-09-20T14:17:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-407",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-20T06:27:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-20T13:25:00Z",
+  "created_at": "2026-09-20T04:25:00Z",
+  "due": "2026-09-20T09:25:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-408",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-20T07:40:00Z",
+   "2026-09-20T12:13:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-20T06:13:00Z",
+  "created_at": "2026-09-20T04:53:00Z",
+  "due": "2026-09-20T08:53:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-409",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-20T05:50:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-20T17:15:00Z",
+  "created_at": "2026-09-20T05:15:00Z",
+  "due": "2026-09-20T13:15:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-410",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-20T14:18:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-20T12:35:00Z",
+  "created_at": "2026-09-20T04:55:00Z",
+  "due": "2026-09-20T14:55:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-411",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-20T09:51:00Z",
+   "2026-09-20T10:49:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-20T19:33:00Z",
+  "created_at": "2026-09-20T05:33:00Z",
+  "due": "2026-09-20T15:33:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-412",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-20T12:06:00Z",
+   "2026-09-20T12:41:00Z",
+   "2026-09-20T14:09:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-20T09:00:00Z",
+  "created_at": "2026-09-20T05:37:00Z",
+  "due": "2026-09-20T10:37:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-413",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-20T06:11:00Z",
+   "2026-09-20T06:12:00Z",
+   "2026-09-20T07:32:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-21T11:59:00Z",
+  "created_at": "2026-09-21T05:29:00Z",
+  "due": "2026-09-21T14:29:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-414",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-21T10:12:00Z",
+   "2026-09-21T11:33:00Z",
+   "2026-09-21T11:46:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-21T08:01:00Z",
+  "created_at": "2026-09-21T04:25:00Z",
+  "due": "2026-09-21T09:25:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-415",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-21T04:58:00Z",
+   "2026-09-21T07:17:00Z",
+   "2026-09-21T07:26:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-21T11:32:00Z",
+  "created_at": "2026-09-21T05:04:00Z",
+  "due": "2026-09-21T13:04:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-416",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-21T08:04:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-21T10:01:00Z",
+  "created_at": "2026-09-21T05:01:00Z",
+  "due": "2026-09-21T13:01:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-417",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-21T05:07:00Z",
+   "2026-09-21T07:27:00Z",
+   "2026-09-21T08:37:00Z",
+   "2026-09-21T09:34:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-21T17:03:00Z",
+  "created_at": "2026-09-21T04:03:00Z",
+  "due": "2026-09-21T11:03:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-418",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-21T07:27:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-21T09:33:00Z",
+  "created_at": "2026-09-21T04:20:00Z",
+  "due": "2026-09-21T10:20:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-419",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-21T06:51:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-21T09:28:00Z",
+  "created_at": "2026-09-21T04:04:00Z",
+  "due": "2026-09-21T10:04:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-420",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-21T07:23:00Z",
+   "2026-09-21T08:51:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-21T13:42:00Z",
+  "created_at": "2026-09-21T05:05:00Z",
+  "due": "2026-09-21T15:05:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-421",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-21T11:35:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-21T13:23:00Z",
+  "created_at": "2026-09-21T04:53:00Z",
+  "due": "2026-09-21T14:53:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-422",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-21T04:59:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-21T10:22:00Z",
+  "created_at": "2026-09-21T04:25:00Z",
+  "due": "2026-09-21T12:25:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-423",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-21T09:49:00Z",
+   "2026-09-21T09:56:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-22T13:10:00Z",
+  "created_at": "2026-09-22T05:09:00Z",
+  "due": "2026-09-22T14:09:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-424",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-22T06:39:00Z",
+   "2026-09-22T08:58:00Z",
+   "2026-09-22T10:58:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-22T08:43:00Z",
+  "created_at": "2026-09-22T04:23:00Z",
+  "due": "2026-09-22T09:23:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-425",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-22T04:43:00Z",
+   "2026-09-22T06:38:00Z",
+   "2026-09-22T06:45:00Z",
+   "2026-09-22T08:02:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-22T12:09:00Z",
+  "created_at": "2026-09-22T04:20:00Z",
+  "due": "2026-09-22T12:20:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-426",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-22T05:39:00Z",
+   "2026-09-22T08:18:00Z",
+   "2026-09-22T10:23:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-22T07:29:00Z",
+  "created_at": "2026-09-22T04:19:00Z",
+  "due": "2026-09-22T10:19:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-427",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-22T06:24:00Z",
+   "2026-09-22T06:39:00Z",
+   "2026-09-22T06:45:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-22T13:34:00Z",
+  "created_at": "2026-09-22T05:40:00Z",
+  "due": "2026-09-22T14:40:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-428",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-22T06:14:00Z",
+   "2026-09-22T10:06:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-22T09:27:00Z",
+  "created_at": "2026-09-22T04:20:00Z",
+  "due": "2026-09-22T11:20:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-429",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-22T07:18:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-22T09:59:00Z",
+  "created_at": "2026-09-22T05:24:00Z",
+  "due": "2026-09-22T11:24:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-430",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-22T09:27:00Z",
+   "2026-09-22T09:55:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-22T15:33:00Z",
+  "created_at": "2026-09-22T05:45:00Z",
+  "due": "2026-09-22T15:45:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-431",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-22T11:39:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-23T12:06:00Z",
+  "created_at": "2026-09-23T05:55:00Z",
+  "due": "2026-09-23T14:55:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-432",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-23T06:15:00Z",
+   "2026-09-23T11:44:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-23T13:00:00Z",
+  "created_at": "2026-09-23T04:48:00Z",
+  "due": "2026-09-23T14:48:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-433",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-23T07:12:00Z",
+   "2026-09-23T09:24:00Z",
+   "2026-09-23T10:58:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-23T13:25:00Z",
+  "created_at": "2026-09-23T05:45:00Z",
+  "due": "2026-09-23T15:45:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-434",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-23T06:07:00Z",
+   "2026-09-23T08:16:00Z",
+   "2026-09-23T09:54:00Z",
+   "2026-09-23T13:24:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-23T13:41:00Z",
+  "created_at": "2026-09-23T04:41:00Z",
+  "due": "2026-09-23T12:41:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-435",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-23T04:48:00Z",
+   "2026-09-23T05:48:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-23T08:41:00Z",
+  "created_at": "2026-09-23T05:39:00Z",
+  "due": "2026-09-23T10:39:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-436",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-23T06:31:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-23T12:45:00Z",
+  "created_at": "2026-09-23T05:46:00Z",
+  "due": "2026-09-23T14:46:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-437",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-23T12:08:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-23T13:26:00Z",
+  "created_at": "2026-09-23T04:58:00Z",
+  "due": "2026-09-23T13:58:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-438",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-23T05:25:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-23T09:04:00Z",
+  "created_at": "2026-09-23T05:41:00Z",
+  "due": "2026-09-23T11:41:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-439",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-23T06:47:00Z",
+   "2026-09-23T07:25:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-24T12:06:00Z",
+  "created_at": "2026-09-24T05:20:00Z",
+  "due": "2026-09-24T12:20:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-440",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-24T05:23:00Z",
+   "2026-09-24T06:20:00Z",
+   "2026-09-24T09:53:00Z",
+   "2026-09-24T11:04:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-24T13:47:00Z",
+  "created_at": "2026-09-24T04:08:00Z",
+  "due": "2026-09-24T14:08:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-441",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-24T10:14:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-24T08:46:00Z",
+  "created_at": "2026-09-24T04:13:00Z",
+  "due": "2026-09-24T10:13:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-442",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-24T06:37:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-24T12:39:00Z",
+  "created_at": "2026-09-24T04:50:00Z",
+  "due": "2026-09-24T14:50:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-443",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-24T06:42:00Z",
+   "2026-09-24T09:23:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-24T10:06:00Z",
+  "created_at": "2026-09-24T05:35:00Z",
+  "due": "2026-09-24T12:35:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-444",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-24T06:48:00Z",
+   "2026-09-24T08:07:00Z",
+   "2026-09-24T08:46:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-24T14:29:00Z",
+  "created_at": "2026-09-24T05:10:00Z",
+  "due": "2026-09-24T15:10:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-445",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-24T05:15:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-24T12:19:00Z",
+  "created_at": "2026-09-24T04:50:00Z",
+  "due": "2026-09-24T12:50:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-446",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-24T06:37:00Z",
+   "2026-09-24T11:09:00Z",
+   "2026-09-24T11:13:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-24T09:06:00Z",
+  "created_at": "2026-09-24T04:27:00Z",
+  "due": "2026-09-24T11:27:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-447",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-24T05:49:00Z",
+   "2026-09-24T06:01:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-24T14:39:00Z",
+  "created_at": "2026-09-24T05:18:00Z",
+  "due": "2026-09-24T15:18:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-448",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-24T06:13:00Z",
+   "2026-09-24T13:10:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-24T08:55:00Z",
+  "created_at": "2026-09-24T04:09:00Z",
+  "due": "2026-09-24T10:09:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-449",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-24T05:50:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-25T16:42:00Z",
+  "created_at": "2026-09-25T04:42:00Z",
+  "due": "2026-09-25T10:42:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-450",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-25T06:24:00Z",
+   "2026-09-25T09:33:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-25T08:50:00Z",
+  "created_at": "2026-09-25T04:24:00Z",
+  "due": "2026-09-25T10:24:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-451",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-25T05:42:00Z",
+   "2026-09-25T07:05:00Z",
+   "2026-09-25T07:30:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-25T07:15:00Z",
+  "created_at": "2026-09-25T04:21:00Z",
+  "due": "2026-09-25T08:21:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-452",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-25T04:55:00Z",
+   "2026-09-25T05:31:00Z",
+   "2026-09-25T05:53:00Z",
+   "2026-09-25T07:14:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-25T10:31:00Z",
+  "created_at": "2026-09-25T04:59:00Z",
+  "due": "2026-09-25T11:59:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-453",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-25T05:54:00Z",
+   "2026-09-25T06:28:00Z",
+   "2026-09-25T09:41:00Z",
+   "2026-09-25T10:29:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-25T13:25:00Z",
+  "created_at": "2026-09-25T04:10:00Z",
+  "due": "2026-09-25T14:10:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-454",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-25T05:28:00Z",
+   "2026-09-25T08:39:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-25T07:03:00Z",
+  "created_at": "2026-09-25T05:54:00Z",
+  "due": "2026-09-25T09:54:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-455",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-25T06:45:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-25T07:27:00Z",
+  "created_at": "2026-09-25T05:56:00Z",
+  "due": "2026-09-25T09:56:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-456",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-25T06:15:00Z",
+   "2026-09-25T06:42:00Z",
+   "2026-09-25T06:46:00Z",
+   "2026-09-25T07:19:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-25T14:30:00Z",
+  "created_at": "2026-09-25T05:54:00Z",
+  "due": "2026-09-25T15:54:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-457",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-25T13:49:00Z",
+   "2026-09-25T14:27:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-26T07:51:00Z",
+  "created_at": "2026-09-26T04:50:00Z",
+  "due": "2026-09-26T10:50:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-458",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-26T07:27:00Z",
+   "2026-09-26T07:45:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-26T15:36:00Z",
+  "created_at": "2026-09-26T05:36:00Z",
+  "due": "2026-09-26T13:36:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-459",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-26T15:15:00Z",
+   "2026-09-26T15:15:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-26T16:00:00Z",
+  "created_at": "2026-09-26T06:00:00Z",
+  "due": "2026-09-26T12:00:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-460",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-26T07:04:00Z",
+   "2026-09-26T10:30:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-26T08:43:00Z",
+  "created_at": "2026-09-26T05:25:00Z",
+  "due": "2026-09-26T10:25:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-461",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-26T05:35:00Z",
+   "2026-09-26T05:36:00Z",
+   "2026-09-26T07:21:00Z",
+   "2026-09-26T07:25:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-26T10:21:00Z",
+  "created_at": "2026-09-26T04:13:00Z",
+  "due": "2026-09-26T13:13:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-462",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-26T06:27:00Z",
+   "2026-09-26T08:51:00Z",
+   "2026-09-26T09:09:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-26T11:08:00Z",
+  "created_at": "2026-09-26T04:48:00Z",
+  "due": "2026-09-26T13:48:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-463",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-26T09:12:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-26T08:08:00Z",
+  "created_at": "2026-09-26T04:48:00Z",
+  "due": "2026-09-26T09:48:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-464",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-26T06:51:00Z",
+   "2026-09-26T06:52:00Z",
+   "2026-09-26T07:22:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-27T09:44:00Z",
+  "created_at": "2026-09-27T05:52:00Z",
+  "due": "2026-09-27T10:52:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-465",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-27T08:03:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-27T07:45:00Z",
+  "created_at": "2026-09-27T04:27:00Z",
+  "due": "2026-09-27T09:27:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-466",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-27T07:16:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-27T14:14:00Z",
+  "created_at": "2026-09-27T04:53:00Z",
+  "due": "2026-09-27T14:53:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-467",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-27T07:38:00Z",
+   "2026-09-27T08:28:00Z",
+   "2026-09-27T13:03:00Z",
+   "2026-09-27T13:03:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-27T14:02:00Z",
+  "created_at": "2026-09-27T04:02:00Z",
+  "due": "2026-09-27T09:02:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-468",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-27T06:19:00Z",
+   "2026-09-27T12:46:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-27T08:11:00Z",
+  "created_at": "2026-09-27T04:07:00Z",
+  "due": "2026-09-27T09:07:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-469",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-27T04:11:00Z",
+   "2026-09-27T06:31:00Z",
+   "2026-09-27T06:40:00Z",
+   "2026-09-27T06:50:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-27T07:00:00Z",
+  "created_at": "2026-09-27T04:10:00Z",
+  "due": "2026-09-27T09:10:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-470",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-27T04:53:00Z",
+   "2026-09-27T05:06:00Z",
+   "2026-09-27T05:55:00Z",
+   "2026-09-27T06:43:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-27T12:47:00Z",
+  "created_at": "2026-09-27T05:45:00Z",
+  "due": "2026-09-27T15:45:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-471",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-27T07:10:00Z",
+   "2026-09-27T11:36:00Z",
+   "2026-09-27T11:55:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-27T12:31:00Z",
+  "created_at": "2026-09-27T05:58:00Z",
+  "due": "2026-09-27T12:58:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-472",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-09-27T09:11:00Z",
+   "2026-09-27T09:15:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-27T05:54:00Z",
+  "created_at": "2026-09-27T04:13:00Z",
+  "due": "2026-09-27T08:13:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-473",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-27T04:25:00Z",
+   "2026-09-27T04:32:00Z",
+   "2026-09-27T04:35:00Z",
+   "2026-09-27T05:30:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-27T11:29:00Z",
+  "created_at": "2026-09-27T05:55:00Z",
+  "due": "2026-09-27T13:55:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-474",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-27T06:42:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-28T12:06:00Z",
+  "created_at": "2026-09-28T04:16:00Z",
+  "due": "2026-09-28T12:16:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-475",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-28T07:25:00Z",
+   "2026-09-28T07:51:00Z",
+   "2026-09-28T08:43:00Z",
+   "2026-09-28T11:43:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-28T11:16:00Z",
+  "created_at": "2026-09-28T05:29:00Z",
+  "due": "2026-09-28T13:29:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-476",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-28T06:19:00Z",
+   "2026-09-28T08:28:00Z",
+   "2026-09-28T10:23:00Z",
+   "2026-09-28T10:30:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-28T09:08:00Z",
+  "created_at": "2026-09-28T04:17:00Z",
+  "due": "2026-09-28T10:17:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-477",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-28T06:42:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-28T12:54:00Z",
+  "created_at": "2026-09-28T05:52:00Z",
+  "due": "2026-09-28T13:52:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-478",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-09-28T11:55:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-28T07:20:00Z",
+  "created_at": "2026-09-28T05:06:00Z",
+  "due": "2026-09-28T09:06:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-479",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-28T06:26:00Z",
+   "2026-09-28T06:50:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-28T06:34:00Z",
+  "created_at": "2026-09-28T04:13:00Z",
+  "due": "2026-09-28T09:13:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-480",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-28T05:19:00Z",
+   "2026-09-28T06:01:00Z",
+   "2026-09-28T06:30:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-28T10:55:00Z",
+  "created_at": "2026-09-28T04:46:00Z",
+  "due": "2026-09-28T12:46:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-481",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-28T08:17:00Z",
+   "2026-09-28T09:28:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-28T07:29:00Z",
+  "created_at": "2026-09-28T05:01:00Z",
+  "due": "2026-09-28T10:01:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-482",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-28T06:05:00Z",
+   "2026-09-28T06:19:00Z",
+   "2026-09-28T06:29:00Z",
+   "2026-09-28T07:28:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-28T13:37:00Z",
+  "created_at": "2026-09-28T04:17:00Z",
+  "due": "2026-09-28T14:17:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-483",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-28T07:02:00Z",
+   "2026-09-28T11:54:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-28T10:51:00Z",
+  "created_at": "2026-09-28T04:27:00Z",
+  "due": "2026-09-28T12:27:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-484",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-28T05:49:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-28T08:34:00Z",
+  "created_at": "2026-09-28T05:21:00Z",
+  "due": "2026-09-28T09:21:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-485",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-28T05:37:00Z",
+   "2026-09-28T05:43:00Z",
+   "2026-09-28T07:12:00Z",
+   "2026-09-28T07:54:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-28T11:28:00Z",
+  "created_at": "2026-09-28T04:28:00Z",
+  "due": "2026-09-28T10:28:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-486",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-09-28T07:53:00Z",
+   "2026-09-28T08:54:00Z",
+   "2026-09-28T09:42:00Z",
+   "2026-09-28T10:03:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-29T11:14:00Z",
+  "created_at": "2026-09-29T04:07:00Z",
+  "due": "2026-09-29T14:07:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-487",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-29T04:12:00Z",
+   "2026-09-29T05:50:00Z",
+   "2026-09-29T07:51:00Z",
+   "2026-09-29T09:43:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-29T14:36:00Z",
+  "created_at": "2026-09-29T04:36:00Z",
+  "due": "2026-09-29T09:36:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-488",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-29T05:12:00Z",
+   "2026-09-29T07:29:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-29T12:00:00Z",
+  "created_at": "2026-09-29T04:00:00Z",
+  "due": "2026-09-29T09:00:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-489",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-29T07:00:00Z",
+   "2026-09-29T07:22:00Z",
+   "2026-09-29T07:27:00Z",
+   "2026-09-29T09:42:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-29T12:28:00Z",
+  "created_at": "2026-09-29T04:01:00Z",
+  "due": "2026-09-29T13:01:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-490",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-29T08:47:00Z",
+   "2026-09-29T10:12:00Z",
+   "2026-09-29T11:05:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-29T11:59:00Z",
+  "created_at": "2026-09-29T04:44:00Z",
+  "due": "2026-09-29T14:44:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-491",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-09-29T08:10:00Z",
+   "2026-09-29T08:36:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-29T15:00:00Z",
+  "created_at": "2026-09-29T04:00:00Z",
+  "due": "2026-09-29T10:00:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-492",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-29T13:32:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-29T07:28:00Z",
+  "created_at": "2026-09-29T04:43:00Z",
+  "due": "2026-09-29T08:43:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-493",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-29T06:19:00Z",
+   "2026-09-29T06:36:00Z",
+   "2026-09-29T07:07:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-29T09:29:00Z",
+  "created_at": "2026-09-29T05:36:00Z",
+  "due": "2026-09-29T11:36:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-494",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-29T05:43:00Z",
+   "2026-09-29T08:06:00Z",
+   "2026-09-29T09:16:00Z",
+   "2026-09-29T09:25:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-29T16:14:00Z",
+  "created_at": "2026-09-29T04:14:00Z",
+  "due": "2026-09-29T10:14:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-495",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-29T15:47:00Z",
+   "2026-09-29T16:12:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-30T11:28:00Z",
+  "created_at": "2026-09-30T04:45:00Z",
+  "due": "2026-09-30T12:45:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-496",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-30T05:32:00Z",
+   "2026-09-30T07:12:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-30T13:57:00Z",
+  "created_at": "2026-09-30T05:26:00Z",
+  "due": "2026-09-30T14:26:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-497",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-09-30T10:47:00Z",
+   "2026-09-30T13:33:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-09-30T11:29:00Z",
+  "created_at": "2026-09-30T04:27:00Z",
+  "due": "2026-09-30T12:27:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-498",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-09-30T06:09:00Z",
+   "2026-09-30T06:27:00Z",
+   "2026-09-30T10:43:00Z",
+   "2026-09-30T10:44:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-30T08:13:00Z",
+  "created_at": "2026-09-30T04:26:00Z",
+  "due": "2026-09-30T09:26:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-499",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-09-30T04:53:00Z",
+   "2026-09-30T05:05:00Z",
+   "2026-09-30T07:45:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-30T06:58:00Z",
+  "created_at": "2026-09-30T05:57:00Z",
+  "due": "2026-09-30T09:57:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-500",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-09-30T05:57:00Z",
+   "2026-09-30T06:36:00Z",
+   "2026-09-30T06:45:00Z",
+   "2026-09-30T06:51:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-09-30T11:17:00Z",
+  "created_at": "2026-09-30T04:05:00Z",
+  "due": "2026-09-30T14:05:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-501",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-30T06:25:00Z",
+   "2026-09-30T08:17:00Z",
+   "2026-09-30T08:59:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-30T12:31:00Z",
+  "created_at": "2026-09-30T05:37:00Z",
+  "due": "2026-09-30T13:37:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-502",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-09-30T06:04:00Z",
+   "2026-09-30T10:06:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-09-30T16:01:00Z",
+  "created_at": "2026-09-30T05:01:00Z",
+  "due": "2026-09-30T13:01:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-503",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-09-30T07:04:00Z",
+   "2026-09-30T07:59:00Z",
+   "2026-09-30T12:49:00Z",
+   "2026-09-30T13:51:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-10-01T10:23:00Z",
+  "created_at": "2026-10-01T04:01:00Z",
+  "due": "2026-10-01T13:01:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-504",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-10-01T06:47:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-10-01T12:48:00Z",
+  "created_at": "2026-10-01T05:18:00Z",
+  "due": "2026-10-01T15:18:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-505",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-10-01T07:19:00Z",
+   "2026-10-01T07:35:00Z",
+   "2026-10-01T09:19:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-10-01T08:43:00Z",
+  "created_at": "2026-10-01T04:46:00Z",
+  "due": "2026-10-01T09:46:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-506",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-10-01T06:19:00Z",
+   "2026-10-01T06:21:00Z",
+   "2026-10-01T07:45:00Z",
+   "2026-10-01T07:58:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-10-01T13:35:00Z",
+  "created_at": "2026-10-01T04:35:00Z",
+  "due": "2026-10-01T11:35:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-507",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-10-01T06:17:00Z",
+   "2026-10-01T09:11:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-10-01T12:01:00Z",
+  "created_at": "2026-10-01T05:49:00Z",
+  "due": "2026-10-01T12:49:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-508",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-10-01T05:53:00Z",
+   "2026-10-01T07:19:00Z",
+   "2026-10-01T09:24:00Z",
+   "2026-10-01T10:04:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-01T10:52:00Z",
+  "created_at": "2026-10-01T05:06:00Z",
+  "due": "2026-10-01T13:06:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-509",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-10-01T07:14:00Z",
+   "2026-10-01T09:53:00Z",
+   "2026-10-01T09:56:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-01T08:25:00Z",
+  "created_at": "2026-10-01T04:50:00Z",
+  "due": "2026-10-01T08:50:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-510",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-10-01T05:55:00Z",
+   "2026-10-01T08:18:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-01T20:47:00Z",
+  "created_at": "2026-10-01T05:47:00Z",
+  "due": "2026-10-01T14:47:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-511",
+  "title": "Coding audit sample",
+  "updates": [
+   "2026-10-01T10:13:00Z",
+   "2026-10-01T11:55:00Z",
+   "2026-10-01T11:56:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-01T09:48:00Z",
+  "created_at": "2026-10-01T05:43:00Z",
+  "due": "2026-10-01T11:43:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-512",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-10-01T07:12:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-10-02T10:46:00Z",
+  "created_at": "2026-10-02T05:13:00Z",
+  "due": "2026-10-02T13:13:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-513",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-10-02T07:38:00Z",
+   "2026-10-02T08:14:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-10-02T11:22:00Z",
+  "created_at": "2026-10-02T05:26:00Z",
+  "due": "2026-10-02T13:26:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-514",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-10-02T08:41:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-10-02T13:07:00Z",
+  "created_at": "2026-10-02T04:59:00Z",
+  "due": "2026-10-02T13:59:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-515",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-10-02T08:34:00Z",
+   "2026-10-02T10:12:00Z",
+   "2026-10-02T10:22:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-10-02T14:21:00Z",
+  "created_at": "2026-10-02T04:51:00Z",
+  "due": "2026-10-02T14:51:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-516",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-10-02T08:44:00Z",
+   "2026-10-02T10:42:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-10-02T12:22:00Z",
+  "created_at": "2026-10-02T04:40:00Z",
+  "due": "2026-10-02T13:40:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-517",
+  "title": "AR follow-up over 90 days",
+  "updates": [
+   "2026-10-02T06:58:00Z",
+   "2026-10-02T08:27:00Z",
+   "2026-10-02T11:19:00Z",
+   "2026-10-02T12:14:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-02T11:20:00Z",
+  "created_at": "2026-10-02T05:15:00Z",
+  "due": "2026-10-02T13:15:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-518",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-10-02T05:26:00Z",
+   "2026-10-02T06:49:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-02T10:03:00Z",
+  "created_at": "2026-10-02T05:33:00Z",
+  "due": "2026-10-02T10:33:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-519",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-10-02T06:58:00Z",
+   "2026-10-02T08:56:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-02T06:01:00Z",
+  "created_at": "2026-10-02T04:12:00Z",
+  "due": "2026-10-02T08:12:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-520",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-10-02T04:15:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-02T14:31:00Z",
+  "created_at": "2026-10-02T05:07:00Z",
+  "due": "2026-10-02T15:07:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-521",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-10-02T06:33:00Z",
+   "2026-10-02T07:46:00Z",
+   "2026-10-02T11:46:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-10-03T10:41:00Z",
+  "created_at": "2026-10-03T04:31:00Z",
+  "due": "2026-10-03T13:31:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-522",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-10-03T05:38:00Z",
+   "2026-10-03T09:00:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-10-03T06:30:00Z",
+  "created_at": "2026-10-03T04:03:00Z",
+  "due": "2026-10-03T08:03:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-523",
+  "title": "Month-end reconciliation",
+  "updates": [
+   "2026-10-03T05:12:00Z",
+   "2026-10-03T06:02:00Z",
+   "2026-10-03T06:21:00Z",
+   "2026-10-03T06:23:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-10-03T18:29:00Z",
+  "created_at": "2026-10-03T05:29:00Z",
+  "due": "2026-10-03T13:29:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-524",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-10-03T15:06:00Z",
+   "2026-10-03T16:15:00Z",
+   "2026-10-03T16:20:00Z",
+   "2026-10-03T18:15:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-10-03T11:43:00Z",
+  "created_at": "2026-10-03T05:21:00Z",
+  "due": "2026-10-03T13:21:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-525",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-10-03T06:06:00Z",
+   "2026-10-03T07:17:00Z",
+   "2026-10-03T09:07:00Z",
+   "2026-10-03T09:57:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-03T11:52:00Z",
+  "created_at": "2026-10-03T04:52:00Z",
+  "due": "2026-10-03T10:52:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-526",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-10-03T09:19:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-03T17:00:00Z",
+  "created_at": "2026-10-03T05:00:00Z",
+  "due": "2026-10-03T13:00:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-527",
+  "title": "Payer portal enrolment",
+  "updates": [
+   "2026-10-03T05:09:00Z",
+   "2026-10-03T09:59:00Z",
+   "2026-10-03T10:06:00Z",
+   "2026-10-03T12:20:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-03T10:05:00Z",
+  "created_at": "2026-10-03T04:00:00Z",
+  "due": "2026-10-03T12:00:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-528",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-10-03T05:23:00Z",
+   "2026-10-03T06:07:00Z",
+   "2026-10-03T07:22:00Z",
+   "2026-10-03T09:30:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-10-04T16:28:00Z",
+  "created_at": "2026-10-04T04:28:00Z",
+  "due": "2026-10-04T10:28:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-529",
+  "title": "Charge entry backlog",
+  "updates": [
+   "2026-10-04T13:17:00Z",
+   "2026-10-04T14:55:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-10-04T11:40:00Z",
+  "created_at": "2026-10-04T05:35:00Z",
+  "due": "2026-10-04T13:35:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-530",
+  "title": "Eligibility checks for tomorrow",
+  "updates": [
+   "2026-10-04T06:10:00Z",
+   "2026-10-04T07:08:00Z"
+  ]
+ },
+ {
+  "client": "northwind_ortho",
+  "completed_at": "2026-10-04T05:49:00Z",
+  "created_at": "2026-10-04T04:37:00Z",
+  "due": "2026-10-04T08:37:00Z",
+  "owner": "dm.one@fixture.local",
+  "task_id": "H-531",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-10-04T05:01:00Z",
+   "2026-10-04T05:11:00Z",
+   "2026-10-04T05:18:00Z",
+   "2026-10-04T05:39:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-10-04T13:06:00Z",
+  "created_at": "2026-10-04T04:06:00Z",
+  "due": "2026-10-04T12:06:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-532",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-10-04T06:14:00Z",
+   "2026-10-04T08:41:00Z",
+   "2026-10-04T11:34:00Z"
+  ]
+ },
+ {
+  "client": "bluefield_imaging",
+  "completed_at": "2026-10-04T06:42:00Z",
+  "created_at": "2026-10-04T04:19:00Z",
+  "due": "2026-10-04T08:19:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-533",
+  "title": "Post payments batch",
+  "updates": [
+   "2026-10-04T05:38:00Z",
+   "2026-10-04T05:54:00Z",
+   "2026-10-04T06:17:00Z",
+   "2026-10-04T06:26:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-04T13:23:00Z",
+  "created_at": "2026-10-04T04:10:00Z",
+  "due": "2026-10-04T14:10:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-534",
+  "title": "Credit balance review",
+  "updates": [
+   "2026-10-04T08:42:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-04T11:10:00Z",
+  "created_at": "2026-10-04T04:09:00Z",
+  "due": "2026-10-04T12:09:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-535",
+  "title": "Work denial queue",
+  "updates": [
+   "2026-10-04T04:15:00Z",
+   "2026-10-04T07:24:00Z",
+   "2026-10-04T11:07:00Z"
+  ]
+ },
+ {
+  "client": "cedar_family_clinic",
+  "completed_at": "2026-10-04T12:35:00Z",
+  "created_at": "2026-10-04T05:38:00Z",
+  "due": "2026-10-04T14:38:00Z",
+  "owner": "dm.two@fixture.local",
+  "task_id": "H-536",
+  "title": "Prior auth follow-up",
+  "updates": [
+   "2026-10-04T05:55:00Z",
+   "2026-10-04T11:55:00Z"
+  ]
+ }
+]
