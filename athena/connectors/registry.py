@@ -35,9 +35,11 @@ class Sources:
         cfg: AthenaConfig,
         clock: Callable[[], datetime] = utcnow,
         run_mode: str | None = None,
+        data_clock: Callable[[], datetime] | None = None,
         **kw: Any,
     ):
         self.cfg, self.clock, self.run_mode, self.kw = cfg, clock, run_mode, kw
+        self.data_clock = data_clock
         self._cache: dict[str, Connector] = {}
 
     def connector(self, name: str) -> Connector:
@@ -45,7 +47,11 @@ class Sources:
             raise KeyError(f"unknown connector {name!r}; known: {', '.join(CONNECTORS)}")
         if name not in self._cache:
             self._cache[name] = CONNECTORS[name](
-                self.cfg, clock=self.clock, run_mode=self.run_mode, **self.kw.get(name, {})
+                self.cfg,
+                clock=self.clock,
+                run_mode=self.run_mode,
+                data_clock=self.data_clock,
+                **self.kw.get(name, {}),
             )
         return self._cache[name]
 

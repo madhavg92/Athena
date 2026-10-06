@@ -17,7 +17,7 @@ def test_pick_rule() -> None:
 
 def test_answer_with_sources_footer(app) -> None:
     r = app.asker.ask("What is the backlog for Northwind Orthopedics?", DM)
-    assert r.answer.startswith("backlog for Northwind Orthopedics is")
+    assert r.answer.startswith("Backlog for Northwind Orthopedics is")
     assert r.footer.startswith("Sources:\n- supaboard.metrics, as of")
     assert r.tools_used == ["get_metrics"] and not r.idk and r.status == "sent"
     with app.db.session() as s:

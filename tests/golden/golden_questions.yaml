@@ -46,7 +46,7 @@
   persona: hub_leader
   user: hl.key@fixture.local
   question: "What is the first pass rate for Bluefield Imaging?"
-  expect: {contains: ["first_pass_rate for Bluefield Imaging", "target 95.0"], tools: [get_metrics]}
+  expect: {contains: ["first pass rate for Bluefield Imaging", "target 95.0"], tools: [get_metrics]}
 - id: G08
   persona: hub_leader
   user: hl.key@fixture.local
@@ -117,7 +117,7 @@
   persona: ba
   user: ba.one@fixture.local
   question: "What is the first pass rate for Northwind Orthopedics?"
-  expect: {contains: ["first_pass_rate for Northwind Orthopedics", "target 95.0"], tools: [get_metrics]}
+  expect: {contains: ["first pass rate for Northwind Orthopedics", "target 95.0"], tools: [get_metrics]}
 - id: G21
   persona: ba
   user: ba.one@fixture.local

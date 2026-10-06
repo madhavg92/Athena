@@ -76,8 +76,12 @@ class Connector:
         fixtures: Path = FIXTURES,
         run_mode: str | None = None,
         http: Any = None,
+        data_clock: Callable[[], datetime] | None = None,
     ) -> None:
         self.cfg = cfg
+        self.data_clock = (
+            data_clock or clock
+        )  # fixture times shift to this clock (the demo freezes it)
         self.http = http  # a ReadOnlyClient; built lazily in live mode
         self.clock = clock
         self.fixtures = fixtures
@@ -105,8 +109,8 @@ class Connector:
     def _fixture(self, dataset: str) -> tuple[list[dict], datetime]:
         spec = self.DATASETS[dataset]
         rows = _fixture_file(str(self.fixtures / spec["file"]))
-        shift = self.clock() - fixture_anchor(self.fixtures)
-        day_shift = (self.clock().date() - fixture_anchor(self.fixtures).date()).days
+        shift = self.data_clock() - fixture_anchor(self.fixtures)
+        day_shift = (self.data_clock().date() - fixture_anchor(self.fixtures).date()).days
         time_fields = set(spec.get("times", ())) | {"as_of"}
         date_fields = set(spec.get("dates", ()))
         out = []

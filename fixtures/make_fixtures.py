@@ -80,7 +80,7 @@ def tasks(rng: random.Random) -> list[dict]:
                 {
                     "task_id": f"T-{1000 + n}",
                     "client": client,
-                    "title": f"{title} ({info['name']})",
+                    "title": title,
                     "owner": info["dm_am"],
                     "due": iso(due),
                     "status": status,

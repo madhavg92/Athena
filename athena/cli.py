@@ -342,3 +342,30 @@ def stats(days: int = typer.Option(7, "--days", help="Look back this many days."
         + (", ".join(f"{k} {v}" for k, v in data["cost_usd_by_user"].items()) or "-")
     )
     typer.echo("Not measured yet: " + "; ".join(data["not_measured"]))
+
+
+@app.command()
+def demo(
+    persona: list[str] = typer.Option(
+        None, "--persona", help="dm_am, hub_leader, csm, ba (default: all)."
+    ),
+    alerts: int = typer.Option(3, "--alerts", help="Alerts to show for each persona and kind."),
+    json_out: str = typer.Option(None, "--json", help="Also write the demo as JSON to this path."),
+) -> None:
+    """A synthetic Monday at Anka, persona by persona. Uses fixture data and an in-memory database."""
+    from pathlib import Path
+
+    from athena import demo as d
+
+    cfg = _config()
+    unknown = set(persona or []) - set(d.PERSONAS)
+    if unknown:
+        typer.echo(
+            f"Unknown persona(s): {', '.join(sorted(unknown))}. Use: {', '.join(d.PERSONAS)}",
+            err=True,
+        )
+        raise typer.Exit(2)
+    result = d.run(cfg, persona or None)
+    typer.echo(d.as_text(result, alerts))
+    if json_out:
+        typer.echo(f"JSON: {d.save_json(result, Path(json_out))}")

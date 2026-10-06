@@ -10,7 +10,7 @@ def test_ask_cli(monkeypatch, tmp_path) -> None:
         ["ask", "What is the backlog for Northwind Orthopedics?", "--as", "csm.one@fixture.local"],
     )
     assert result.exit_code == 0, result.output
-    assert "backlog for Northwind Orthopedics is" in result.output and "Sources:" in result.output
+    assert "Backlog for Northwind Orthopedics is" in result.output and "Sources:" in result.output
 
 
 def test_ask_cli_unknown_user(monkeypatch, tmp_path) -> None:

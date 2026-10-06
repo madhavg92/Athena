@@ -77,7 +77,7 @@ def test_stub_answers_from_results() -> None:
         ),
         TOOLS,
     )
-    assert reply.text == "backlog for Northwind Orthopedics is 412.0 (target 300.0) on 2026-10-04."
+    assert reply.text == "Backlog for Northwind Orthopedics is 412.0 (target 300.0) on 2026-10-04."
 
 
 def test_stub_scope_refusal_and_stale() -> None:

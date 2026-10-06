@@ -26,6 +26,7 @@ class SupaboardConnector(Connector):
                 "query_id",
                 "client_metric",
                 "off_target",
+                "metric_label",
             ],
             "dates": ["date"],
             "fixture_age_minutes": 180,
@@ -50,6 +51,7 @@ class SupaboardConnector(Connector):
     def _derive(self, row: dict) -> None:
         """Fields computed in code: client_metric key, and off_target using the metric's direction."""
         row["client_metric"] = f"{row['client']}:{row['metric']}"
+        row["metric_label"] = row["metric"].replace("_", " ")
         metric = self.cfg.metrics.get(row["metric"])
         better = metric.better if metric else "higher"
         actual, target = row.get("actual"), row.get("target")

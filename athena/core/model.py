@@ -96,7 +96,13 @@ TOOL_WORDS = [
     ("get_client_profile", ("profile", "about", "weekly call", "specialty", "watch")),
 ]
 BRIEF_TOOLS = ["get_tickets", "get_metrics", "get_tasks", "search_documents", "get_client_profile"]
-ROLE_LABELS = {"hub_leader": "Hub leader", "dm_am": "DM/AM", "csm": "CSM", "ba": "BA"}
+ROLE_LABELS = {
+    "hub_leader": "Hub leader",
+    "dm_am": "DM/AM",
+    "csm": "CSM",
+    "ba": "BA",
+    "cs_lead": "CS lead",
+}
 
 
 class StubModel:
@@ -149,8 +155,13 @@ class StubModel:
         available = {t["function"]["name"] for t in tools}
         calls = self._plan(question, available)
         if not calls:
+            client = self._client(question)
+            if client:
+                return ModelReply(
+                    text=f"I do not know. I have no data source that answers this for {client}."
+                )
             return ModelReply(
-                text="I do not know. I could not find a client or a matching data source in the question."
+                text="I do not know. I could not find one of your clients in the question."
             )
         return ModelReply(
             tool_calls=[
@@ -280,7 +291,7 @@ def _summarise(name: str, data: dict) -> list[str]:
         return out
     if name == "get_metrics":
         last = rows[-1]
-        metric = data.get("metric", "metric")
+        metric = str(data.get("metric", "metric")).replace("_", " ").capitalize()
         if len(rows) == 1:
             return [
                 f"{metric} for {client} is {last['actual']} (target {last['target']}) on {last['date']}."
@@ -306,7 +317,9 @@ def _summarise(name: str, data: dict) -> list[str]:
     if name == "get_owner":
         r = rows[0]
         parts = [
-            f"{ROLE_LABELS.get(k, k)}: {v}" for k, v in r.items() if k not in ("client", "hub")
+            f"{ROLE_LABELS.get(k, k.replace('_', ' '))}: {v}"
+            for k, v in r.items()
+            if k not in ("client", "hub")
         ]
         return [f"Owners for {r['client']}: " + "; ".join(parts) + "."]
     if name == "search_documents":

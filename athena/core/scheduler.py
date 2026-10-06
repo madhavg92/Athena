@@ -21,6 +21,7 @@ from athena.connectors.base import NotConfigured, Record
 from athena.core import ladder
 from athena.core.config import AbsenceCheck, CronTrigger, Rule
 from athena.core.db import Alert, RuleState, as_utc
+from athena.core.durations import format_duration
 from athena.core.gateway import Action, Source
 from athena.core.templates import write_message
 
@@ -108,6 +109,9 @@ def payload_for(app: App, rule: Rule, alert: Alert) -> dict[str, Any]:
             )[1]
             v = v.astimezone(ZoneInfo(tz)).strftime("%d %b %H:%M")
         out.setdefault(k, v)
+    owner = app.cfg.person(str(out.get("owner", "")))
+    if owner:
+        out["owner"] = owner.name
     return out
 
 
@@ -191,6 +195,14 @@ def run_rule(app: App, rule: Rule) -> RuleRun:
     return result
 
 
+def _prefix(kind: str, step: int, rule: Rule) -> str:
+    if kind == "reminder":
+        return "Reminder: "
+    if kind == "first" and step > 0:
+        return f"Escalation (still open after {format_duration(rule.ladder[step].after)}): "
+    return ""
+
+
 def send_due(app: App, rule: Rule, as_of: datetime) -> dict[str, int]:
     now = app.clock()
     counts: dict[str, int] = {}
@@ -214,7 +226,7 @@ def send_due(app: App, rule: Rule, as_of: datetime) -> dict[str, int]:
                 actor="athena",
                 recipients=[person],
                 clients=[alert.client] if alert.client else [],
-                text=text if kind != "reminder" else f"Reminder: {text}",
+                text=_prefix(kind, step, rule) + text,
                 payload=payload,
                 delivery=rule.delivery,
                 sources=[Source(name=rule.source or rule.id, as_of=as_of)],

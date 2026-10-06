@@ -58,8 +58,14 @@ def message_templates(root: str) -> dict[str, str]:
 
 def render(root: Path, template: str, payload: dict[str, Any]) -> str:
     templates = message_templates(str(root))
-    text = templates.get(template) or templates.get("default") or "{severity_label}: {item_key}"
-    return " ".join(text.format_map(_Safe(payload)).split())
+    text = (
+        templates.get(f"{template}.{payload.get('severity')}")
+        or templates.get(template)
+        or templates.get("default")
+        or "{severity_label}: {item_key}"
+    )
+    values = _Safe({k: v for k, v in payload.items() if v not in (None, "")})
+    return " ".join(text.format_map(values).split())
 
 
 def write_message(
