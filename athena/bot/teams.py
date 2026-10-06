@@ -7,6 +7,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from athena.app import App
+from athena.bot.cards import answer_card
 from athena.connectors.base import NotConfigured
 from athena.core.ask import NOT_SET_UP, AskResult
 
@@ -61,4 +62,5 @@ class TeamsBot:
         result = self.app.asker.ask(
             question, email, conversation_id=conversation_id, user_assertion=user_assertion
         )
-        return Reply(text=result.text, result=result)
+        card = answer_card(result, self.app.cfg.work_hours_of(email)[1])
+        return Reply(text=result.text, result=result, card=card)
