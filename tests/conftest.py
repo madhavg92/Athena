@@ -26,3 +26,17 @@ def cfg():
     from athena.core.config import load_config
 
     return load_config(ROOT)
+
+
+@pytest.fixture
+def anchor():
+    from athena.connectors.base import fixture_anchor
+
+    return fixture_anchor()
+
+
+@pytest.fixture
+def app(cfg, db, anchor):
+    from athena.app import build
+
+    return build(cfg=cfg, db=db, clock=lambda: anchor, run_mode="fixture")
